@@ -1,4 +1,5 @@
 /.idea
+*.local.php
 /vendor
 /node_modules
 /cgi-bin

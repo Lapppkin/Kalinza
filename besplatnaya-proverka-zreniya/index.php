@@ -189,6 +189,22 @@ if ($arData['CITY']['NAME']==''){echo '
                                                 <span class="radio-custom"></span>
                                                 <span class="label">ул. Ейское шоссе 40, ТЦ «Магнит»</span>
                                             </label>
+
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. Западный обход 29, ТЦ «Лента»">
+                                                <span class="radio-custom"></span>
+                                                <span class="label">ул. Западный обход 29, ТЦ «Лента»</span>
+                                            </label>
+
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. Крылатая 2, ТЦ «Oz Молл»">
+                                                <span class="radio-custom"></span>
+                                                <span class="label">ул. Крылатая 2, ТЦ «Oz Молл»</span>
+                                            </label>
+                                            
+                                            
+                                            
+                                            
 ';}
 
 if ($arData['CITY']['NAME']!='' and $arData['CITY']['NAME']!='Краснодар' and $arData['CITY']['NAME']!='Ижевск' and $arData['CITY']['NAME']!='Новосибирск' and $arData['CITY']['NAME']!='Ставрополь' and $arData['CITY']['NAME']!='Железногорск' and $arData['CITY']['NAME']!='Шахты'){echo '
