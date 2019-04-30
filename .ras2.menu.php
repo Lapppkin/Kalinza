@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Alcon", 
+		"/catalog/alcon_r/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Avizor Int.", 
+		"/catalog/avizor_int/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Baush&Lomb", 
+		"/catalog/baush_lomb_r/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Maxima Vision", 
+		"/catalog/maxima_vision_r/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Optimed", 
+		"/catalog/optimed/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Медстар", 
+		"/catalog/medstar/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Bausch&Lomb", 
+		"/catalog/bausch_lomb_c/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Gelflex", 
+		"/catalog/gelflex_c/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Interojo", 
+		"/catalog/interojo_c/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Johnson&Johnson", 
+		"/catalog/johnson_johnson_c/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"OKVision", 
+		"/catalog/okvision/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Sauflon", 
+		"/catalog/sauflon/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ALCON", 
+		"/catalog/alcon_c/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Южная Корея", 
+		"/catalog/yuzhnaya_koreya/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
