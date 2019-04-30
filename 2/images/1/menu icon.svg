@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>menu icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Kalinza-Lk-Change-password-Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-288.000000, -15.000000)">
+        <g id="menu-icon" transform="translate(288.000000, 15.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M11.016,8 L0.984,8 C0.456,8 0.024,8.42857143 0.024,8.95238095 C0.024,9.47619048 0.456,9.9047619 0.984,9.9047619 L11.04,9.9047619 C11.568,9.9047619 12,9.47619048 12,8.95238095 C12,8.42857143 11.544,8 11.016,8 Z" id="Shape"></path>
+            <path d="M11.016,4.04761905 L0.984,4.04761905 C0.456,4.04761905 0.024,4.47619048 0.024,5 C0.024,5.52380952 0.456,5.95238095 0.984,5.95238095 L11.04,5.95238095 C11.568,5.95238095 12,5.52380952 12,5 C12,4.47619048 11.544,4.04761905 11.016,4.04761905 Z" id="Shape"></path>
+            <path d="M11.016,0.0952380952 L0.984,0.0952380952 C0.456,0.0952380952 0.024,0.523809524 0.024,1.04761905 C0.024,1.57142857 0.456,2 0.984,2 L11.04,2 C11.568,2 12,1.57142857 12,1.04761905 C12,0.523809524 11.544,0.0952380952 11.016,0.0952380952 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
