@@ -4,21 +4,19 @@ $APPLICATION->SetPageProperty("description", "KALINZA.ru - проверь зре
 $APPLICATION->SetPageProperty("keywords", "проверка зрения, бесплатная проверка зрения");
 $APPLICATION->SetPageProperty("title", "Бесплатная проверка зрения в Краснодаре");
 $APPLICATION->SetTitle("Title");
-?>         
-		<link rel="stylesheet" href="/2/css/style_2.css">
-       <div style="height: 0px; width: 100%; clear: both;"></div>
+?><div style="height: 0px; width: 100%; clear: both;"></div>
 
                 <div class="container container-fix">
                     <div class="row ddddffff">
                         <div class="col-md-8" style="z-index: 999;">
                                 <h1>Бесплатная проверка зрения</h1>
 
-                                <h5>После проверки вам не обязательно ничего покупать. Мы проверим ваше зрение одинаково качественно, вне зависимости, купите вы у нас или нет.</h3>
+                                <h5>После проверки вам не обязательно ничего покупать. Мы проверим ваше зрение одинаково качественно, вне зависимости, купите вы у нас или нет.</h5>
 
                                  <div style="height: 15px; width: 100%; clear: both;"></div>
                                 <form class="rf" action="/2/mail5.php" method="post">
                                 <table class="fdgsfg dfdfdfdfdfdf" style="width: 600px;">
-                                    <tr>
+                                    <tbody><tr>
                                         <td style="vertical-align: top;">
                                             <label class="id10"><b>Дата</b></label>
                                             <br>
@@ -31,7 +29,7 @@ $APPLICATION->SetTitle("Title");
                                     </tr>
                                     <tr>
                                         <td>
-                                            <select class="seleee" name="day" required>
+                                            <select class="seleee" name="day" required="">
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -63,7 +61,7 @@ $APPLICATION->SetTitle("Title");
                                             <option value="30">30</option>
                                             <option value="31">31</option></select>
 
-                                            <select class="seleee" name="mes" required>
+                                            <select class="seleee" name="mes" required="">
                                             <option value="Январь">Январь</option>
                                             <option value="Февраль">Февраль</option>
                                             <option value="Март">Март</option>
@@ -77,11 +75,11 @@ $APPLICATION->SetTitle("Title");
                                             <option value="Ноябрь">Ноябрь</option>
                                             <option value="Декабрь">Декабрь</option></select>
 
-                                            <select class="seleee"  name="god" required>
-                                            <option value="2018">2018</option></select>
+                                            <select class="seleee" name="god" required="">
+                                            <option value="2019">2019</option></select>
                                         </td>
                                         <td>
-                                            <select class="seleee" name="time" required>
+                                            <select class="seleee" name="time" required="">
                                             <option value="09:00">09:00</option>
                                             <option value="10:00">10:00</option>
                                             <option value="11:00">11:00</option>
@@ -96,12 +94,12 @@ $APPLICATION->SetTitle("Title");
                                             <option value="20:00">20:00</option></select>
                                         </td>
                                     </tr>
-                                </table>
+                                </tbody></table>
 
                                  <div style="height: 15px; width: 100%; clear: both;"></div>
                                 
                                 <table class="fdgsfg dfdfdfdfdfdf" style="width: 500px;">
-                                        <tr>
+                                        <tbody><tr>
                                         <td style="vertical-align: top;">
                                             <label class="id10"><b>Представьтесь пожалуйста</b></label>
                                             <br>
@@ -109,15 +107,15 @@ $APPLICATION->SetTitle("Title");
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="id3" type="text" name="name" style="width: 350px;" placeholder="Имя" required>
+                                            <input class="id3" type="text" name="name" style="width: 350px;" placeholder="Имя" required="">
                                         </td>
                                     </tr>
-                                </table>
+                                </tbody></table>
 
                                  <div style="height: 25px; width: 100%; clear: both;"></div>
                                 
                                 <table class="fdgsfg dfdfdfdfdfdf" style="width: 500px;">
-                                        <tr>
+                                        <tbody><tr>
                                         <td style="vertical-align: top;">
                                             <label class="id10"><b>Телефон для связи</b></label>
                                             <br>
@@ -125,16 +123,16 @@ $APPLICATION->SetTitle("Title");
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="id3" type="text" name="phone" style="width: 350px;" placeholder="Номер, например + 7 987 654-32-10" required>
+                                            <input class="id3" type="text" name="phone" style="width: 350px;" placeholder="Номер, например + 7 987 654-32-10" required="">
                                         </td>
                                     </tr>
                                     <tr><td><label>В ближайшее время с вами свяжется специалист и подтвердит возможность консультации в выбранное вами время</label></td></tr>
-                                </table>
+                                </tbody></table>
 
                                  <div style="height: 25px; width: 100%; clear: both;"></div>
 
                                 <table class="fdgsfg fdfdfdfdfd" style="width: 300px;">
-                                    <tr style="width: 300px; display: grid;">
+                                    <tbody><tr style="width: 300px; display: grid;">
                                         <td style=" vertical-align: top;">
                                             <label class="id10"><b>Ближайший к вам адрес</b></label>
                                             <br>
@@ -350,9 +348,9 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
                                         <td>
                                             <div style="width: 310px;">
                                             <div class="owl-carousel owl-theme" style="box-shadow: 0px 5px 10px #c3c3c3;border-radius: 15px;">
-		<div class="item"><img src="/2/img/kalinza_photo/krd/6/1.jpeg" /></div>
-		<div class="item"><img src="/2/img/kalinza_photo/krd/6/2.jpeg" /></div>
-		<div class="item"><img src="/2/img/kalinza_photo/krd/6/3.jpeg" /></div>
+		<div class="item"><img src="/2/img/kalinza_photo/krd/6/1.jpeg"></div>
+		<div class="item"><img src="/2/img/kalinza_photo/krd/6/2.jpeg"></div>
+		<div class="item"><img src="/2/img/kalinza_photo/krd/6/3.jpeg"></div>
                                             </div>
                                             </div>
                                         </td>
@@ -366,19 +364,19 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
 
                                     <tr>
                                         <td style="margin:0 auto; text-align: left;">
-                                         <font>Если Вы пользуетесь контактными линзами, то необходимо снять их за 40 минут до визита, иначе данные проверки будут не точными.</font>
+                                         Если Вы пользуетесь контактными линзами, то необходимо снять их за 40 минут до визита, иначе данные проверки будут не точными.
                                         </td><td></td>
                                     </tr>
-                                </form>
-                                </table>
-                        </div>
+                                
+                                </tbody></table>
+                        </form></div>
                         <div class="col-md-4" style="z-index: 1;">
                             <div class="block_2">
                                 <p>Нужны очки?</p>
                                 <p>Получи свой сертификат<br>на 500 рублей</p>
                                 <form class="contact-form" method="post" action="/2/mail2.php">
                                     <div class="form-group">
-										<input type="email" class="form-control" required name="email" placeholder="Адрес электронной почты" style="margin:0 auto !important; color:#fff;">
+										<input type="email" class="form-control" required="" name="email" placeholder="Адрес электронной почты" style="margin:0 auto !important; color:#fff;">
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" class="btn btn-primary btn-send-message btn-md" value="Отправить">
@@ -395,7 +393,7 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
                                             <div class="flexslider">
                                                 <ul class="slides">
                                                     <a href="/kalinza-v-litsakh/" style="color:#000;text-decoration:none;"><li>
-														<img src="/2/images/1/lica.png"/>
+														<img src="/2/images/1/lica.png">
                                                         <div class="overlay"></div>
                                                         <div class="container2">
                                                             <div class="row">
@@ -440,152 +438,129 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
                             <div class="wrap">
                                 <h2>Может быть интересно</h2>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	"bootstrap_v5", 
-	array(
-		"IBLOCK_TYPE_ID" => "catalog",
-		"IBLOCK_ID" => "2",
-		"BASKET_URL" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-		"COMPONENT_TEMPLATE" => "bootstrap_v5",
-		"IBLOCK_TYPE" => "catalog",
-		"SECTION_ID" => "",
-		"SECTION_CODE" => "",
-		"SECTION_USER_FIELDS" => array(
-			0 => "UF_BACKGROUND_IMAGE",
-			1 => "",
-		),
-		"ELEMENT_SORT_FIELD" => "shows",
-		"ELEMENT_SORT_ORDER" => "asc",
-		"ELEMENT_SORT_FIELD2" => "shows",
-		"ELEMENT_SORT_ORDER2" => "asc",
-		"FILTER_NAME" => "trendFilter",
-		"INCLUDE_SUBSECTIONS" => "A",
-		"SHOW_ALL_WO_SECTION" => "Y",
-		"HIDE_NOT_AVAILABLE" => "N",
-		"PAGE_ELEMENT_COUNT" => "24",
-		"LINE_ELEMENT_COUNT" => "3",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"OFFERS_FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "",
-		),
-		"OFFERS_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"OFFERS_SORT_FIELD" => "shows",
-		"OFFERS_SORT_ORDER" => "asc",
-		"OFFERS_SORT_FIELD2" => "shows",
-		"OFFERS_SORT_ORDER2" => "asc",
-		"TEMPLATE_THEME" => "",
-		"PRODUCT_DISPLAY_MODE" => "N",
+	"bitrix:catalog.section",
+	"bootstrap_v5",
+	Array(
+		"ACTION_VARIABLE" => "action",
 		"ADD_PICT_PROP" => "-",
-		"LABEL_PROP" => array(
-		),
-		"OFFER_ADD_PICT_PROP" => "-",
-		"OFFER_TREE_PROPS" => "",
-		"PRODUCT_SUBSCRIPTION" => "N",
-		"SHOW_DISCOUNT_PERCENT" => "N",
-		"SHOW_OLD_PRICE" => "Y",
-		"SHOW_CLOSE_POPUP" => "N",
-		"MESS_BTN_BUY" => "Купить",
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
-		"MESS_BTN_SUBSCRIBE" => "Подписаться",
-		"MESS_BTN_DETAIL" => "Подробнее",
-		"MESS_NOT_AVAILABLE" => "Нет в наличии",
-		"SECTION_URL" => "/catalog/#SECTION_CODE#/#CODE#/",
-		"DETAIL_URL" => "/catalog/#SECTION_CODE#/#CODE#/",
-		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SEF_MODE" => "Y",
+		"ADD_PROPERTIES_TO_BASKET" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_TO_BASKET_ACTION" => "BUY",
 		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000000",
-		"CACHE_GROUPS" => "Y",
-		"SET_TITLE" => "Y",
-		"SET_BROWSER_TITLE" => "Y",
+		"BACKGROUND_IMAGE" => "-",
+		"BASKET_URL" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 		"BROWSER_TITLE" => "-",
-		"SET_META_KEYWORDS" => "Y",
-		"META_KEYWORDS" => "-",
-		"SET_META_DESCRIPTION" => "Y",
-		"META_DESCRIPTION" => "-",
-		"SET_LAST_MODIFIED" => "N",
-		"USE_MAIN_ELEMENT_SECTION" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
 		"CACHE_FILTER" => "N",
-		"ACTION_VARIABLE" => "action",
-		"PRODUCT_ID_VARIABLE" => "id",
-		"PRICE_CODE" => array(
-			0 => "BASE",
-		),
-		"USE_PRICE_COUNT" => "N",
-		"SHOW_PRICE_COUNT" => "1",
-		"PRICE_VAT_INCLUDE" => "Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COMPATIBLE_MODE" => "N",
+		"COMPONENT_TEMPLATE" => "bootstrap_v5",
 		"CONVERT_CURRENCY" => "N",
-		"USE_PRODUCT_QUANTITY" => "N",
-		"PRODUCT_QUANTITY_VARIABLE" => "",
-		"ADD_PROPERTIES_TO_BASKET" => "Y",
-		"PRODUCT_PROPS_VARIABLE" => "prop",
-		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
-		"PRODUCT_PROPERTIES" => array(
-		),
-		"OFFERS_CART_PROPERTIES" => array(
-			0 => "ARTNUMBER",
-		),
-		"ADD_TO_BASKET_ACTION" => "BUY",
-		"PAGER_TEMPLATE" => ".default",
-		"DISPLAY_TOP_PAGER" => "N",
+		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[{\"CLASS_ID\":\"CondIBSection\",\"DATA\":{\"logic\":\"Equal\",\"value\":19}}]}",
+		"DETAIL_URL" => "/catalog/#SECTION_CODE#/#CODE#/",
+		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "N",
-		"PAGER_TITLE" => "Товары",
-		"PAGER_SHOW_ALWAYS" => "N",
+		"DISPLAY_COMPARE" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_SORT_FIELD" => "shows",
+		"ELEMENT_SORT_FIELD2" => "shows",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_ORDER2" => "asc",
+		"ENLARGE_PRODUCT" => "STRICT",
+		"ENLARGE_PROP" => "-",
+		"FILTER_NAME" => "trendFilter",
+		"HIDE_NOT_AVAILABLE" => "N",
+		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "catalog",
+		"IBLOCK_TYPE_ID" => "catalog",
+		"INCLUDE_SUBSECTIONS" => "A",
+		"LABEL_PROP" => array(),
+		"LABEL_PROP_MOBILE" => "",
+		"LABEL_PROP_POSITION" => "top-left",
+		"LAZY_LOAD" => "N",
+		"LINE_ELEMENT_COUNT" => "3",
+		"LOAD_ON_SCROLL" => "N",
+		"MESSAGE_404" => "",
+		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
+		"MESS_BTN_BUY" => "Купить",
+		"MESS_BTN_DETAIL" => "Подробнее",
+		"MESS_BTN_SUBSCRIBE" => "Подписаться",
+		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"OFFERS_CART_PROPERTIES" => array(0=>"ARTNUMBER",),
+		"OFFERS_FIELD_CODE" => array(0=>"NAME",1=>"",),
+		"OFFERS_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"OFFERS_SORT_FIELD" => "shows",
+		"OFFERS_SORT_FIELD2" => "shows",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_ORDER2" => "asc",
+		"OFFER_ADD_PICT_PROP" => "-",
+		"OFFER_TREE_PROPS" => "",
+		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SET_STATUS_404" => "N",
-		"SHOW_404" => "N",
-		"MESSAGE_404" => "",
-		"COMPATIBLE_MODE" => "N",
-		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[{\"CLASS_ID\":\"CondIBSection\",\"DATA\":{\"logic\":\"Equal\",\"value\":19}}]}",
-		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
-		"BACKGROUND_IMAGE" => "-",
-		"DISPLAY_COMPARE" => "N",
-		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
-		"PROPERTY_CODE_MOBILE" => array(
-		),
-		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false}]",
-		"ENLARGE_PRODUCT" => "STRICT",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Товары",
+		"PAGE_ELEMENT_COUNT" => "24",
+		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
+		"PRICE_CODE" => array(0=>"BASE",),
+		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"PRODUCT_DISPLAY_MODE" => "N",
+		"PRODUCT_ID_VARIABLE" => "id",
+		"PRODUCT_PROPERTIES" => array(),
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"PRODUCT_QUANTITY_VARIABLE" => "",
+		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false}]",
+		"PRODUCT_SUBSCRIPTION" => "N",
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
+		"PROPERTY_CODE_MOBILE" => array(),
+		"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
+		"RCM_TYPE" => "personal",
+		"SECTION_CODE" => "",
+		"SECTION_CODE_PATH" => "",
+		"SECTION_ID" => "",
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"SECTION_URL" => "/catalog/#SECTION_CODE#/#CODE#/",
+		"SECTION_USER_FIELDS" => array(0=>"UF_BACKGROUND_IMAGE",1=>"",),
+		"SEF_MODE" => "Y",
+		"SEF_RULE" => "",
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SHOW_ALL_WO_SECTION" => "Y",
+		"SHOW_CLOSE_POPUP" => "N",
+		"SHOW_DISCOUNT_PERCENT" => "N",
+		"SHOW_FROM_SECTION" => "N",
+		"SHOW_MAX_QUANTITY" => "N",
+		"SHOW_OLD_PRICE" => "Y",
+		"SHOW_PRICE_COUNT" => "1",
 		"SHOW_SLIDER" => "Y",
 		"SLIDER_INTERVAL" => "3000",
 		"SLIDER_PROGRESS" => "N",
-		"ENLARGE_PROP" => "-",
-		"LABEL_PROP_MOBILE" => "",
-		"LABEL_PROP_POSITION" => "top-left",
-		"SHOW_MAX_QUANTITY" => "N",
-		"RCM_TYPE" => "personal",
-		"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
-		"SHOW_FROM_SECTION" => "N",
+		"TEMPLATE_THEME" => "",
 		"USE_ENHANCED_ECOMMERCE" => "N",
-		"LAZY_LOAD" => "N",
-		"LOAD_ON_SCROLL" => "N",
-		"SEF_RULE" => "",
-		"SECTION_CODE_PATH" => ""
-	),
-	false
+		"USE_MAIN_ELEMENT_SECTION" => "N",
+		"USE_PRICE_COUNT" => "N",
+		"USE_PRODUCT_QUANTITY" => "N"
+	)
 );?>
 
 
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+                </div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

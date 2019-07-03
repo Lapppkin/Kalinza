@@ -306,7 +306,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                                             </div>
                                         </div>
                                         <div class="bb2">
-                                            <b>ул. Мира 1</b><br><br>«ТЦ Магнит»<br>9:00-21:00<br>+7 (962) 861-30-27<br><br>
+                                            <b>ул. Мира 1</b><br><br>«ТЦ Магнит»<br>09:00-21:00<br>+7 (962) 861-30-27<br><br>
                                             <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
                                         </div>
                                     </div>
@@ -334,6 +334,23 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                                             <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
                                         </div>
                                     </div>
+								<div style="height: 20px; width: 100%; clear: both;"></div>
+                                    <div class="dddddd">
+                                        <div class="bb1">
+                                            <div class="owl-carousel owl-theme">
+                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/1.jpg"/></div>
+                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/2.jpg"/></div>
+                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/3.jpg"/></div>
+    											<div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/4.jpg"/></div>
+ 												<div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/5.jpg"/></div>
+                                            </div>
+                                        </div>
+                                        <div class="bb2">
+                                            <b>ул. Эйхе, 2<br></b><br><br>09:00-21:00<br>+7 (953) 884-80-90<br><br>
+                                            <a id="adress" data-city-id="0" data-shop-id="2" href="#map">Показать на карте</a>
+                                        </div>
+                                    </div>
+
                                     <div style="height: 20px; width: 100%; clear: both;"></div>
                                 </div>
                             </li>
@@ -362,29 +379,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                                 </div>
                             </li>
 
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="5"><b>Шахты</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/shaht/1.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/shaht/2.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/shaht/3.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/shaht/4.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/shaht/5.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/shaht/6.jpeg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>пр. Победы революции 113</b><br><br>«ТЦ Семейный магнит»<br>10:00-22:00<br>+7 (928) 165-79-19<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
+                          
                             <div style="height: 5px; width: 100%; clear: both;"></div>
                             <li>
                                 <a class="ttt333" id="city" data-city-id="6"><b>Курск</b></a>
@@ -483,6 +478,10 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                     {
                         'coordinates': [54.96401833971174, 82.93559206679532],
                         'name':        'ул. Ватутина, 107'
+                    },
+					{
+                        'coordinates': [54.96966913023103,83.09994980555724],
+                        'name':        'ул. Эйхе, 2'
                     }
                 ]
             },
@@ -503,16 +502,6 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                     {
                         'coordinates': [52.352134478346585, 35.366176381614636],
                         'name':        'ул. Мира 62'
-                    }
-                ]
-            },
-
-            {
-                'city_name': 'Шахты',
-                'shops':     [
-                    {
-                        'coordinates': [47.69788404213196, 40.20960751650686],
-                        'name':        'пр. Победы революции 113'
                     }
                 ]
             },

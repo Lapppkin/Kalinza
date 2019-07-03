@@ -1,4 +1,12 @@
 <?
+$PERM["sochi"]["2"]="D";
+$PERM["sochi"]["6"]="D";
+$PERM["sochi"]["3"]="D";
+$PERM["sochi"]["4"]="D";
+$PERM["sochi"]["9"]="D";
+$PERM["sochi"]["7"]="X";
+$PERM["sochi"]["5"]="D";
+$PERM["sochi"]["8"]="D";
 $PERM["desktop_app"]["*"]="D";
 $PERM["personal"]["8"]="W";
 $PERM["catalog"]["8"]="W";
