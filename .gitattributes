@@ -1,0 +1,5 @@
+public_html/local/**/*.css      binary
+public_html/local/**/*.css.map  binary
+*.pdf                           binary
+yarn.lock                       binary
+composer.lock                   binary

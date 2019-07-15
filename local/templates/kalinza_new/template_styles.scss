@@ -1,0 +1,63 @@
+.row.row-slider-wrapper {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: flex-start;
+    align-items:     flex-start;
+
+    .slider-wrapper {
+        width: calc(100% - 403px);
+        float: none;
+
+        aside#colorlib-hero {
+            display: block;
+            width:   100%;
+            height:  360px;
+            float:   none;
+            margin:  0;
+
+            ul.slides {
+                height: 100%;
+
+                > li {
+                    display:             block;
+                    position:            relative;
+                    height:              100%;
+                    background-size:     contain;
+                    background-repeat:   no-repeat;
+                    background-position: right center;
+
+                    a.btn {
+                        transition:  color 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s;
+                        display:     block;
+                        position:    absolute;
+                        top:         165px;
+                        right:       15px;
+                        margin:      0;
+                        padding:     10px 50px;
+                        z-index:     9999;
+                        background:  #ffffff;
+                        color:       #15a0dc;
+                        font-family: SegoeUIBold, Arial, sans-serif;
+                        font-size:   16px;
+                        line-height: 1.42857143;
+                        font-weight: 400;
+
+                        &:hover, &:focus {
+                            background:   #3eabd8 !important;
+                            border-color: #3eabd8 !important;
+                            color:        white !important;
+                            box-shadow:   0 0 5px white !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .block_0 {
+        display: block;
+        width:   403px;
+        float:   none;
+    }
+}
