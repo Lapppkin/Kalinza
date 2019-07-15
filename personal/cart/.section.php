@@ -1,6 +1,6 @@
 <?
 $sSectionName = "Моя корзина";
-$arDirProperties = array(
-
+$arDirProperties = Array(
+   "ROBOTS" => "noindex, nofollow"
 );
 ?>

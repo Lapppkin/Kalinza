@@ -72,7 +72,7 @@ $arUrlRewrite=array (
     'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
-  20 => 
+  23 => 
   array (
     'CONDITION' => '#^/\\??(.*)#',
     'RULE' => '&$1',

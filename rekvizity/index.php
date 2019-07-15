@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Реквизиты Kalinza.ru");
 $APPLICATION->SetTitle("Реквизиты");
-?>
-<noindex>
+?><noindex>
 <p>
 	 Карточка ИП Харченко Антон Игоревич
 </p>

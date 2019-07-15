@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Мы продаем только сертифицированный товар. На этой странице приведены основные сертификаты на контактные линзы и аксессуары");
 $APPLICATION->SetTitle("Сертификаты");
-?>
-<h1>Сертификаты</h1>
+?><h1>Сертификаты</h1>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
             <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 

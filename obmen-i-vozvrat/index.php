@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Правила обмена и возврата товара");
 $APPLICATION->SetTitle("ОБМЕН И ВОЗВРАТ");
-?>
-<h1>Обмен/Возврат</h1>
+?><h1>Обмен/Возврат</h1>
 <p>
 	 Дорогие клиенты Вы всегда можете требовать возврата денег или замены товара, если:
 </p>
