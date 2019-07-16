@@ -56,8 +56,23 @@
     }
 
     .block_0 {
-        display: block;
-        width:   403px;
-        float:   none;
+        display:   block;
+        max-width: 403px;
+        width:     403px;
+        float:     none;
+    }
+
+    @media (max-width: 767px) {
+        .slider-wrapper {
+            display: none !important;
+
+            aside#colorlib-hero {
+                display: none !important;
+            }
+        }
+
+        .block_0 {
+            margin: 0 auto;
+        }
     }
 }
