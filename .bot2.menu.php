@@ -29,6 +29,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Полугодовые",
+		"/catalog/polugodovye/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
 		"Непрерывного ношения", 
 		"/catalog/nepreryvnogo_nosheniya/", 
 		Array(), 
