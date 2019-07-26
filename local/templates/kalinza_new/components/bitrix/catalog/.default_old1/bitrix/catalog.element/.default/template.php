@@ -344,18 +344,20 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                         if (isset($_POST['nazvanie_knopki'])) {
 
                                             if (CModule::IncludeModule("sale")) {
-                                                $productnam       = '';
-                                                $products_in_cart = CSaleBasket::GetList(
-                                                    [],
-                                                    [
-                                                        'FUSER_ID' => CSaleBasket::GetBasketUserID(),
-                                                        'LID'      => SITE_ID,
-                                                        'ORDER_ID' => null,
-                                                    ],
-                                                    false,
-                                                    false,
-                                                    ['ID', 'NAME', 'PRODUCT_PRICE_ID', 'PRICE', 'CURRENCY', 'QUANTITY', 'DETAIL_PAGE_URL']
-                                                );
+                                                $productnam       = [];
+                                                $products_in_cart = CSaleBasket::GetList([], [
+                                                    'FUSER_ID' => CSaleBasket::GetBasketUserID(),
+                                                    'LID'      => SITE_ID,
+                                                    'ORDER_ID' => null,
+                                                ], false, false, [
+                                                    'ID',
+                                                    'NAME',
+                                                    'PRODUCT_PRICE_ID',
+                                                    'PRICE',
+                                                    'CURRENCY',
+                                                    'QUANTITY',
+                                                    'DETAIL_PAGE_URL',
+                                                ]);
 
                                                 while ($product = $products_in_cart->GetNext()) {
                                                     $productnam[] = $product['NAME'];
