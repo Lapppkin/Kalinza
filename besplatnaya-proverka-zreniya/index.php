@@ -4,144 +4,146 @@ $APPLICATION->SetPageProperty("description", "KALINZA.ru - проверь зре
 $APPLICATION->SetPageProperty("keywords", "проверка зрения, бесплатная проверка зрения");
 $APPLICATION->SetPageProperty("title", "Бесплатная проверка зрения в Краснодаре");
 $APPLICATION->SetTitle("Title");
-?><div style="height: 0px; width: 100%; clear: both;"></div>
-
-                <div class="container container-fix">
-                    <div class="row ddddffff">
-                        <div class="col-md-8" style="z-index: 999;">
-                                <h1>Бесплатная проверка зрения</h1>
-
-                                <h5>После проверки вам не обязательно ничего покупать. Мы проверим ваше зрение одинаково качественно, вне зависимости, купите вы у нас или нет.</h5>
-
-                                 <div style="height: 15px; width: 100%; clear: both;"></div>
-                                <form class="rf" action="/2/mail5.php" method="post">
-                                <table class="fdgsfg dfdfdfdfdfdf" style="width: 600px;">
-                                    <tbody><tr>
-                                        <td style="vertical-align: top;">
-                                            <label class="id10"><b>Дата</b></label>
-                                            <br>
-                                        </td>
-                                        <td style="vertical-align: top;">
-                                            <label class="id10"><b>Время</b></label>
-                                            <br>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <select class="seleee" name="day" required="">
-                                            <option value="01">01</option>
-                                            <option value="02">02</option>
-                                            <option value="03">03</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="09">09</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option></select>
-
-                                            <select class="seleee" name="mes" required="">
-                                            <option value="Январь">Январь</option>
-                                            <option value="Февраль">Февраль</option>
-                                            <option value="Март">Март</option>
-                                            <option value="Апрель">Апрель</option>
-                                            <option value="Май">Май</option>
-                                            <option value="Июнь">Июнь</option>
-                                            <option value="Июль">Июль</option>
-                                            <option value="Август">Август</option>
-                                            <option value="Сентябрь">Сентябрь</option>
-                                            <option value="Октябрь">Октябрь</option>
-                                            <option value="Ноябрь">Ноябрь</option>
-                                            <option value="Декабрь">Декабрь</option></select>
-
-                                            <select class="seleee" name="god" required="">
-                                            <option value="2019">2019</option></select>
-                                        </td>
-                                        <td>
-                                            <select class="seleee" name="time" required="">
-                                            <option value="09:00">09:00</option>
-                                            <option value="10:00">10:00</option>
-                                            <option value="11:00">11:00</option>
-											<option value="12:00">12:00</option>
-                                            <option value="13:00">13:00</option>
-                                            <option value="14:00">14:00</option>
-                                            <option value="15:00">15:00</option>
-                                            <option value="16:00">16:00</option>
-                                            <option value="17:00">17:00</option>
-                                            <option value="18:00">18:00</option>
-                                            <option value="19:00">19:00</option>
-                                            <option value="20:00">20:00</option></select>
-                                        </td>
-                                    </tr>
-                                </tbody></table>
-
-                                 <div style="height: 15px; width: 100%; clear: both;"></div>
-                                
-                                <table class="fdgsfg dfdfdfdfdfdf" style="width: 500px;">
-                                        <tbody><tr>
-                                        <td style="vertical-align: top;">
-                                            <label class="id10"><b>Представьтесь пожалуйста</b></label>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="id3" type="text" name="name" style="width: 350px;" placeholder="Имя" required="">
-                                        </td>
-                                    </tr>
-                                </tbody></table>
-
-                                 <div style="height: 25px; width: 100%; clear: both;"></div>
-                                
-                                <table class="fdgsfg dfdfdfdfdfdf" style="width: 500px;">
-                                        <tbody><tr>
-                                        <td style="vertical-align: top;">
-                                            <label class="id10"><b>Телефон для связи</b></label>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="id3" type="text" name="phone" style="width: 350px;" placeholder="Номер, например + 7 987 654-32-10" required="">
-                                        </td>
-                                    </tr>
-                                    <tr><td><label>В ближайшее время с вами свяжется специалист и подтвердит возможность консультации в выбранное вами время</label></td></tr>
-                                </tbody></table>
-
-                                 <div style="height: 25px; width: 100%; clear: both;"></div>
-
-                                <table class="fdgsfg fdfdfdfdfd" style="width: 300px;">
-                                    <tbody><tr style="width: 300px; display: grid;">
-                                        <td style=" vertical-align: top;">
-                                            <label class="id10"><b>Ближайший к вам адрес</b></label>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-right: 100px;">
-
-<? 
+?><div style="height: 0px; width: 100%; clear: both;">
+</div>
+<div class="container container-fix">
+	<div class="row ddddffff">
+		<div class="col-md-8" style="z-index: 999;">
+			<h1>Бесплатная проверка зрения</h1>
+			<h5>После проверки вам не обязательно ничего покупать. Мы проверим ваше зрение одинаково качественно, вне зависимости, купите вы у нас или нет.</h5>
+			<div style="height: 15px; width: 100%; clear: both;">
+			</div>
+			<form class="rf" action="/2/mail5.php" method="post">
+				<table class="fdgsfg dfdfdfdfdfdf" style="width: 600px;">
+				<tbody>
+				<tr>
+					<td style="vertical-align: top;">
+ <label class="id10"><b>Дата</b></label> <br>
+					</td>
+					<td style="vertical-align: top;">
+ <label class="id10"><b>Время</b></label> <br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select class="seleee" name="day" required="">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select>
+						<select class="seleee" name="mes" required="">
+							<option value="Январь">Январь</option>
+							<option value="Февраль">Февраль</option>
+							<option value="Март">Март</option>
+							<option value="Апрель">Апрель</option>
+							<option value="Май">Май</option>
+							<option value="Июнь">Июнь</option>
+							<option value="Июль">Июль</option>
+							<option value="Август">Август</option>
+							<option value="Сентябрь">Сентябрь</option>
+							<option value="Октябрь">Октябрь</option>
+							<option value="Ноябрь">Ноябрь</option>
+							<option value="Декабрь">Декабрь</option>
+						</select>
+						<select class="seleee" name="god" required="">
+							<option value="2019">2019</option>
+						</select>
+					</td>
+					<td>
+						<select class="seleee" name="time" required="">
+							<option value="09:00">09:00</option>
+							<option value="10:00">10:00</option>
+							<option value="11:00">11:00</option>
+							<option value="12:00">12:00</option>
+							<option value="13:00">13:00</option>
+							<option value="14:00">14:00</option>
+							<option value="15:00">15:00</option>
+							<option value="16:00">16:00</option>
+							<option value="17:00">17:00</option>
+							<option value="18:00">18:00</option>
+							<option value="19:00">19:00</option>
+							<option value="20:00">20:00</option>
+						</select>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<div style="height: 15px; width: 100%; clear: both;">
+				</div>
+				<table class="fdgsfg dfdfdfdfdfdf" style="width: 500px;">
+				<tbody>
+				<tr>
+					<td style="vertical-align: top;">
+ <label class="id10"><b>Представьтесь пожалуйста</b></label> <br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+ <input class="id3" type="text" name="name" style="width: 350px;" placeholder="Имя" required="">
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<div style="height: 25px; width: 100%; clear: both;">
+				</div>
+				<table class="fdgsfg dfdfdfdfdfdf" style="width: 500px;">
+				<tbody>
+				<tr>
+					<td style="vertical-align: top;">
+ <label class="id10"><b>Телефон для связи</b></label> <br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+ <input class="id3" type="text" name="phone" style="width: 350px;" placeholder="Номер, например + 7 987 654-32-10" required="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+ <label>В ближайшее время с вами свяжется специалист и подтвердит возможность консультации в выбранное вами время</label>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<div style="height: 25px; width: 100%; clear: both;">
+				</div>
+				<table class="fdgsfg fdfdfdfdfd" style="width: 300px;">
+				<tbody>
+				<tr style="width: 300px; display: grid;">
+					<td style=" vertical-align: top;">
+ <label class="id10"><b>Ближайший к вам адрес</b></label> <br>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-right: 100px;">
+						 <? 
 if(CModule::IncludeModule("altasib.geobase")) {
 $arData = CAltasibGeoBase::GetDataKladr();
 
@@ -291,6 +293,17 @@ if ($arData['CITY']['NAME']=='Краснодар'){echo '
                                                 <span class="radio-custom"></span>
                                                 <span class="label">ул. Ейское шоссе 40, ТЦ «Магнит»</span>
                                             </label>
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. Западный обход 29, ТЦ «Гипермаркет Лента»">
+                                                <span class="radio-custom"></span>
+                                                <span class="label">ул. Западный обход 29, ТЦ «Гипермаркет Лента»</span>
+                                            </label>
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. Крылатая 2, ТЦ «Oz Молл»">
+                                                <span class="radio-custom"></span>
+                                                <span class="label">ул. Крылатая 2, ТЦ «Oz Молл»</span>
+                                            </label>
+ 
 ';}
 
 if ($arData['CITY']['NAME']=='Ижевск'){echo '
@@ -308,6 +321,12 @@ if ($arData['CITY']['NAME']=='Новосибирск'){echo '
                                                 <span class="radio-custom"></span>
                                                 <span class="label">ул. Ватутина, 107 «Мега Ашан»</span>
                                             </label>
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. Эйхе, 2">
+                                                <span class="radio-custom"></span>
+                                                <span class="label">ул. Эйхе, 2</span>
+                                            </label>
+
 ';}
 
 if ($arData['CITY']['NAME']=='Ставрополь'){echo '
@@ -337,76 +356,88 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
                                             </label>
 ';}
 
-} ?>
-
-
-
-                                            <br>
-                                            <b><a href="/nashi-magaziny/">Показать Kalinza</a> в других городах</b>
-                                            <div style="padding-bottom: 20px;"></div>
-                                        </td>
-                                        <td>
-                                            <div style="width: 310px;">
-                                            <div class="owl-carousel owl-theme" style="box-shadow: 0px 5px 10px #c3c3c3;border-radius: 15px;">
-		<div class="item"><img src="/2/img/kalinza_photo/krd/6/1.jpeg"></div>
-		<div class="item"><img src="/2/img/kalinza_photo/krd/6/2.jpeg"></div>
-		<div class="item"><img src="/2/img/kalinza_photo/krd/6/3.jpeg"></div>
-                                            </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="margin:0 auto; text-align: center;">
-                                            <input type="submit" class="btn btn-primary btn-lg" value="Записаться" style="padding: 10px 50px !important;">
-                                        </td><td></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="margin:0 auto; text-align: left;">
-                                         Если Вы пользуетесь контактными линзами, то необходимо снять их за 40 минут до визита, иначе данные проверки будут не точными.
-                                        </td><td></td>
-                                    </tr>
-                                
-                                </tbody></table>
-                        </form></div>
-                        <div class="col-md-4" style="z-index: 1;">
-                            <div class="block_2">
-                                <p>Нужны очки?</p>
-                                <p>Получи свой сертификат<br>на 500 рублей</p>
-                                <form class="contact-form" method="post" action="/2/mail2.php">
-                                    <div class="form-group">
-										<input type="email" class="form-control" required="" name="email" placeholder="Адрес электронной почты" style="margin:0 auto !important; color:#fff;">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="submit" class="btn btn-primary btn-send-message btn-md" value="Отправить">
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div style="height: 15px; width: 100%; clear: both;"></div>
-
-                            <div class="block_3">
-                                <h4>Наши специалисты</h4>
-                                    <div class=" ">
-                                        <aside id="colorlib-hero22">
-                                            <div class="flexslider">
-                                                <ul class="slides">
-                                                    <a href="/kalinza-v-litsakh/" style="color:#000;text-decoration:none;"><li>
-														<img src="/2/images/1/lica.png">
-                                                        <div class="overlay"></div>
-                                                        <div class="container2">
-                                                            <div class="row">
-                                                                <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
-                                                                    <div class="slider-text-inner">
-                                                                        <h4 style="margin:0px;">Артюхов Сергей</h4>
-																		<b style="color:#000; font-size:16px; line-height:25px;">Оптометрист</b>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-													</li></a>
-                                                    <!-- <li >
+} ?> <br>
+ <b><a href="/nashi-magaziny/">Показать Kalinza</a> в других городах</b>
+						<div style="padding-bottom: 20px;">
+						</div>
+					</td>
+					<td>
+						<div style="width: 310px;">
+							<div class="owl-carousel owl-theme" style="box-shadow: 0px 5px 10px #c3c3c3;border-radius: 15px;">
+								<div class="item">
+ <img src="/2/img/kalinza_photo/krd/6/1.jpeg">
+								</div>
+								<div class="item">
+ <img src="/2/img/kalinza_photo/krd/6/2.jpeg">
+								</div>
+								<div class="item">
+ <img src="/2/img/kalinza_photo/krd/6/3.jpeg">
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="margin:0 auto; text-align: center;">
+ <input type="submit" class="btn btn-primary btn-lg" value="Записаться" style="padding: 10px 50px !important;">
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td style="margin:0 auto; text-align: left;">
+						 Если Вы пользуетесь контактными линзами, то необходимо снять их за 40 минут до визита, иначе данные проверки будут не точными.
+					</td>
+					<td>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+			</form>
+		</div>
+		<div class="col-md-4" style="z-index: 1;">
+			<div class="block_2">
+				<p>
+					 Нужны очки?
+				</p>
+				<p>
+					 Получи свой сертификат<br>
+					 на 500 рублей
+				</p>
+				<form class="contact-form" method="post" action="/2/mail2.php">
+					<div class="form-group">
+ <input type="email" class="form-control" required="" name="email" placeholder="Адрес электронной почты" style="margin:0 auto !important; color:#fff;">
+					</div>
+					<div class="form-group">
+ <input type="submit" class="btn btn-primary btn-send-message btn-md" value="Отправить">
+					</div>
+				</form>
+			</div>
+			<div style="height: 15px; width: 100%; clear: both;">
+			</div>
+			<div class="block_3">
+				<h4>Наши специалисты</h4>
+				<div class=" ">
+ <aside id="colorlib-hero22">
+					<div class="flexslider">
+						<ul class="slides">
+ <a href="/kalinza-v-litsakh/" style="color:#000;text-decoration:none;">
+							<li> <img src="/2/images/1/lica.png">
+							<div class="overlay">
+							</div>
+							<div class="container2">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+										<div class="slider-text-inner">
+											<h4 style="margin:0px;">Артюхов Сергей</h4>
+ <b style="color:#000; font-size:16px; line-height:25px;">Оптометрист</b>
+										</div>
+									</div>
+								</div>
+							</div>
+ </li>
+ </a>
+							<!-- <li >
 														<img src="/2/images/1/lica.png"/>
                                                         <div class="overlay"></div>
                                                         <div class="container2">
@@ -420,24 +451,22 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
                                                             </div>
                                                         </div>
                                                     </li> -->
-                                                </ul>
-                                            </div>
-                                        </aside>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="height: 45px; width: 100%; clear: both;"></div>
-
-
-        <div class="container container-fix">
-                    <div class="row">
-                        <div class=" ">
-                            <div class="wrap">
-                                <h2>Может быть интересно</h2>
-<?$APPLICATION->IncludeComponent(
+						</ul>
+					</div>
+ </aside>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="height: 45px; width: 100%; clear: both;">
+</div>
+<div class="container container-fix">
+	<div class="row">
+		<div class=" ">
+			<div class="wrap">
+				<h2>Может быть интересно</h2>
+				 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section",
 	"bootstrap_v5",
 	Array(
@@ -558,9 +587,8 @@ if ($arData['CITY']['NAME']=='Шахты'){echo '
 		"USE_PRODUCT_QUANTITY" => "N"
 	)
 );?>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+			</div>
+		</div>
+	</div>
+</div>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

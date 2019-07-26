@@ -4,13 +4,11 @@ $APPLICATION->SetTitle("Наши магазины");
 ?><?php
 $APPLICATION->AddHeadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
 $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jquery-2.2.0.min.js');
-?>
-    <style>
+?> <style>
         /* .container-fix {
              width: 1256px;
          } */
-    </style>
-    <style>
+    </style> <style>
         #cityShop {
             margin-bottom: 10px;
         }
@@ -89,30 +87,25 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
             height: 100vh !important;
         }
     </style>
-
-    <div class=" ">
-        <div class="container container-fix">
-            <div class="row">
-                <div class="col-md-6" style="height:100vh; overflow:scroll;">
-
-                    <div class="bread">
-                        <a href="/">Главная</a> &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;
-                        <a href="#">Наши магазины</a>
-                    </div>
-                    <h1>Наши магазины</h1>
-
-                    <div class="gfgfgfgfg">
-                        <ul class="accordion">
-                            <li class="">
-                                <a class="ttt333" id="city" data-city-id="0"><b>Краснодар</b></a>
-                                <div class="main tryyy" style="height: 100%;">
-
-                                    <!-- <div class="dddddd">
+<div class=" ">
+	<div class="container container-fix">
+		<div class="row">
+			<div class="col-md-6" style="height:100vh; overflow:scroll;">
+				<div class="bread">
+ <a href="/">Главная</a> &nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp; <a href="#">Наши магазины</a>
+				</div>
+				<h1>Наши магазины</h1>
+				<div class="gfgfgfgfg">
+					<ul class="accordion">
+						<li>
+						<a class="ttt333" id="city" data-city-id="0" ><b>Краснодар</b></a>
+						<div class="main tryyy" style="height: 100%;">
+							 <!-- <div class="dddddd">
                                         <div class="bb1">
                                             <div class="owl-carousel owl-theme">
-                            <div class="item"><img src="/2/img/kalinza_photo/krd/5/1.jpeg" /></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/5/2.jpeg" /></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/5/3.jpeg" /></div>
+                                                <div class="item"><img src="/2/img/kalinza_photo/krd/mega/1.jpeg"></div>
+                                                <div class="item"><img src="/2/img/kalinza_photo/krd/mega/2.jpeg"></div>
+                                                <div class="item"><img src="/2/img/kalinza_photo/krd/mega/3.jpeg"></div>
                                             </div>
                                         </div>
                                         <div class="bb2">
@@ -120,300 +113,530 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                                             <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
                                         </div>
                                     </div> -->
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/5/3.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/5/2.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/5/1.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/5/4.jpeg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>Тургеневское шоссе 27,<br>ТРЦ «МЕГА АДЫГЕЯ»</b><br><br>10:00-22:00<br>+7 (960) 478-71-80<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="4" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/Чекистов/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/Чекистов/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/Чекистов/3.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Чекистов 36,<br>ТЦ «5 Звезд»</b><br><br>10:00-21:00<br>+7 (861) 292-16-40<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="2" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/Сбс/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/Сбс/2.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Уральская 79/1,<br>ТЦ «АШАН СБС Мегамолл»</b><br><br>10:00-22:00<br>+7 (918) 417-88-06<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="3" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/Атарбекова/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/Атарбекова/3.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/Атарбекова/4.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Атарбекова 1/1<br>ТЦ «BOSS HOUSE»</b><br><br>
-                                            10:00-21:00<br>+7 (861) 292-16-40<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="1" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/чайка/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/чайка/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/чайка/3.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Лизы Чайкиной 2/1,<br>ТЦ «Магнит»</b><br><br>09:00-21:00<br>+7 (964) 900-67-74<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="5" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/ейское/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/ейское/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/ейское/3.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Ейское шоссе 40,<br>ТЦ «Магнит»</b><br><br>09:00-22:00<br>+7 (906) 433-08-29<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="6" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/krdd/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krdd/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krdd/3.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krdd/4.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krdd/5.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krdd/6.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул.Западный обход 29,<br>ТЦ «Гипермаркет Лента»</b><br><br>09:00-21:00<br>+7 (961) 855-13-15<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="7" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/ozmall/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/ozmall/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/ozmall/3.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/ozmall/4.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Крылатая 2,<br>ТЦ «Oz Молл»</b><br><br>10:00-22:00<br>+7 (918) 243-99-84<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="8" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="1"><b>Ижевск</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/izh/1.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/izh/4.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/izh/5.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/izh/7.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/izh/8.jpeg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Ленина 136</b><br>Ашан<br><br>10:00-22:00<br>+7 (964) 182-10-29<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
-
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="7"><b>Нижний Новгород</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/nizh_nov/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nizh_nov/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nizh_nov/3.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nizh_nov/4.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nizh_nov/5.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>Кстовский район, с.Федяково</b><br><br>«ТЦ МЕГА»<br>10:00-22:00<br>+7 (920) 013-32-88<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
-
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="8"><b>Новороссийск</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/novoros/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/novoros/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/novoros/3.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/novoros/1.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Мира 1</b><br><br>«ТЦ Магнит»<br>09:00-21:00<br>+7 (962) 861-30-27<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
-
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="2"><b>Новосибирск</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/1.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/2.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/3.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/4.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/5.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/6.jpeg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Ватутина, 107</b><br><br>«Мега Ашан»<br>10:00-22:00<br>8 (960) 789-21-23<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-								<div style="height: 20px; width: 100%; clear: both;"></div>
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/3.jpg"/></div>
-    											<div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/4.jpg"/></div>
- 												<div class="item"><img src="/2/img/kalinza_photo/nsb/eyhe/5.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Эйхе, 2<br></b><br><br>09:00-21:00<br>+7 (953) 884-80-90<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="2" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
-
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="3"><b>Ставрополь</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/stav/1.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/stav/5.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/stav/6.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/stav/7.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/stav/8.jpeg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/stav/2.jpeg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Доватерцев 64</b><br><br>«ТЦ Магнит»<br>10:00-22:00<br>+7 (928) 339-24-21<br><br>
-                                            <a id="adress" data-city-id="0" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
-
-                          
-                            <div style="height: 5px; width: 100%; clear: both;"></div>
-                            <li>
-                                <a class="ttt333" id="city" data-city-id="6"><b>Курск</b></a>
-                                <div class="main">
-                                    <div class="dddddd">
-                                        <div class="bb1">
-                                            <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/kursk/1.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/kursk/2.jpg"/></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/kursk/3.jpg"/></div>
-                                            </div>
-                                        </div>
-                                        <div class="bb2">
-                                            <b>ул. Энгельса, 115 Д</b><br><br>«ТЦ Гипермаркет Лента»<br>09:00-21:00<br>+7 (906) 575-72-42<br><br>
-                                            <a id="adress" data-city-id="6" data-shop-id="0" href="#map">Показать на карте</a>
-                                        </div>
-                                    </div>
-                                    <div style="height: 20px; width: 100%; clear: both;"></div>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div style="height: 5px; width: 100%; clear: both;"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="map" style="min-height:100%;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <link rel="stylesheet" href="/2/css/global.css">
-    <script>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/mega/3.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/mega/2.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/mega/1.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/mega/4.jpeg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>Тургеневское шоссе 27,<br>
+									 ТРЦ «МЕГА АДЫГЕЯ»</b><br>
+ <br>
+									 10:00-22:00<br>
+									 +7 (960) 478-71-80<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="4" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/chekistov/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/chekistov/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/chekistov/3.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Чекистов 36,<br>
+									 ТЦ «5 Звезд»</b><br>
+ <br>
+									 10:00-21:00<br>
+									 +7 (861) 292-16-40<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="2" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/sbs/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/sbs/2.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Уральская 79/1,<br>
+									 ТЦ «АШАН СБС Мегамолл»</b><br>
+ <br>
+									 10:00-22:00<br>
+									 +7 (918) 417-88-06<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="3" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/atarbekova/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/atarbekova/3.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/atarbekova/4.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Атарбекова 1/1<br>
+									 ТЦ «BOSS HOUSE»</b><br>
+ <br>
+									 10:00-21:00<br>
+									 +7 (861) 292-16-40<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="1" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lisa/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lisa/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lisa/3.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Лизы Чайкиной 2/1,<br>
+									 ТЦ «Магнит»</b><br>
+ <br>
+									 09:00-21:00<br>
+									 +7 (964) 900-67-74<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="5" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/eiskoe/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/eiskoe/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/eiskoe/3.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Ейское шоссе 40,<br>
+									 ТЦ «Магнит»</b><br>
+ <br>
+									 09:00-22:00<br>
+									 +7 (906) 433-08-29<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="6" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lenta/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lenta/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lenta/3.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lenta/4.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lenta/5.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/lenta/6.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул.Западный обход 29,<br>
+									 ТЦ «Гипермаркет Лента»</b><br>
+ <br>
+									 09:00-21:00<br>
+									 +7 (961) 855-13-15<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="7" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/ozmall/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/ozmall/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/ozmall/3.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/krd/ozmall/4.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Крылатая 2,<br>
+									 ТЦ «Oz Молл»</b><br>
+ <br>
+									 10:00-22:00<br>
+									 +7 (918) 243-99-84<br>
+ <br>
+ <a id="adress" data-city-id="0" data-shop-id="8" href="#map">Показать на карте</a>
+								</div>
+							</div>
+						</div>
+ </li>
+						<div style="height: 5px; width: 100%; clear: both;">
+						</div>
+						<li>
+						<a class="ttt333" id="city" data-city-id="1" ><b>Ижевск</b></a>
+						<div class="main">
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/izh/1.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/izh/4.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/izh/5.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/izh/7.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/izh/8.jpeg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Ленина, 136</b><br>
+									 Ашан<br>
+ <br>
+									 10:00-22:00<br>
+									 +7 (964) 182-10-29<br>
+ <br>
+ <a id="adress" data-city-id="1" data-shop-id="0" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+						</div>
+ </li>
+						<div style="height: 5px; width: 100%; clear: both;">
+						</div>
+						<li>
+						<a class="ttt333" id="city" data-city-id="6" ><b>Нижний Новгород</b></a>
+						<div class="main">
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nizh_nov/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nizh_nov/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nizh_nov/3.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nizh_nov/4.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nizh_nov/5.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>Кстовский район, с.Федяково</b><br>
+ <br>
+									 ТЦ «МЕГА»<br>
+									 10:00-22:00<br>
+									 +7 (920) 013-32-88<br>
+ <br>
+ <a id="adress" data-city-id="6" data-shop-id="0" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+						</div>
+ </li>
+						<div style="height: 5px; width: 100%; clear: both;">
+						</div>
+						<li>
+						<a class="ttt333" id="city" data-city-id="7" ><b>Новороссийск</b></a>
+						<div class="main">
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/novoros/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/novoros/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/novoros/3.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/novoros/1.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Мира 1</b><br>
+ <br>
+									 «ТЦ Магнит»<br>
+									 09:00-21:00<br>
+									 +7 (962) 861-30-27<br>
+ <br>
+ <a id="adress" data-city-id="7" data-shop-id="0" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+						</div>
+ </li>
+						<div style="height: 5px; width: 100%; clear: both;">
+						</div>
+						<li>
+						<a class="ttt333" id="city" data-city-id="2" ><b>Новосибирск</b></a>
+						<div class="main">
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/1.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/2.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/3.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/4.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/5.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/6.jpeg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Ватутина, 107</b><br>
+ <br>
+									 «Мега Ашан»<br>
+									 10:00-22:00<br>
+									 8 (960) 789-21-23<br>
+ <br>
+ <a id="adress" data-city-id="2" data-shop-id="0" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/eyhe/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/eyhe/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/eyhe/3.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/eyhe/4.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/nsb/eyhe/5.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Эйхе, 2<br>
+ </b><br>
+ <br>
+									 09:00-21:00<br>
+									 +7 (953) 884-80-90<br>
+ <br>
+ <a id="adress" data-city-id="2" data-shop-id="1" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+						</div>
+ </li>
+						<div style="height: 5px; width: 100%; clear: both;">
+						</div>
+						<li>
+						<a class="ttt333" id="city" data-city-id="3" ><b>Ставрополь</b></a>
+						<div class="main">
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/stav/1.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/stav/5.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/stav/6.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/stav/7.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/stav/8.jpeg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/stav/2.jpeg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Доватерцев 64</b><br>
+ <br>
+									 ТЦ «Магнит»<br>
+									 10:00-22:00<br>
+									 +7 (928) 339-24-21<br>
+ <br>
+ <a id="adress" data-city-id="3" data-shop-id="0" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+						</div>
+ </li>
+						<div style="height: 5px; width: 100%; clear: both;">
+						</div>
+						<li>
+						<a class="ttt333" id="city" data-city-id="5" ><b>Курск</b></a>
+						<div class="main">
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/kursk/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/kursk/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/kursk/3.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. Энгельса, 115 Д</b><br>
+ <br>
+									 «ТЦ Гипермаркет Лента»<br>
+									 09:00-21:00<br>
+									 +7 (906) 575-72-42<br>
+ <br>
+ <a id="adress" data-city-id="5" data-shop-id="0" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+							<div class="dddddd">
+								<div class="bb1">
+									<div class="owl-carousel owl-theme">
+										<div class="item">
+ <img src="/2/img/kalinza_photo/kursk2/1.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/kursk2/2.jpg">
+										</div>
+										<div class="item">
+ <img src="/2/img/kalinza_photo/kursk2/3.jpeg">
+										</div>
+									</div>
+								</div>
+								<div class="bb2">
+ <b>ул. 50 лет Октября, 98,<br>
+									 Гипермаркет «Линия»</b><br>
+ <br>
+									 09:00-21:00<br>
+									 +7 (961)196-07-55<br>
+ <br>
+ <a id="adress" data-city-id="5" data-shop-id="1" href="#map">Показать на карте</a>
+								</div>
+							</div>
+							<div style="height: 20px; width: 100%; clear: both;">
+							</div>
+						</div>
+ </li>
+					</ul>
+					<div style="height: 5px; width: 100%; clear: both;">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div id="map" style="min-height:100%;">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
         var map;
         var placemarkCollection;
         var placemarkList = {};
@@ -467,7 +690,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                 'shops':     [
                     {
                         'coordinates': [56.8474685678539, 53.27726499999999],
-                        'name':        'ул. Ленина 136'
+                        'name':        'ул. Ленина, 136'
                     }
                 ]
             },
@@ -491,7 +714,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                 'shops':     [
                     {
                         'coordinates': [44.999328410844385, 41.92680837235259],
-                        'name':        'ул. Доватерцев 64'
+                        'name':        'ул. Доватерцев, 64'
                     }
                 ]
             },
@@ -501,7 +724,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                 'shops':     [
                     {
                         'coordinates': [52.352134478346585, 35.366176381614636],
-                        'name':        'ул. Мира 62'
+                        'name':        'ул. Мира, 62'
                     }
                 ]
             },
@@ -511,8 +734,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                 'shops':     [
                     {
                         'coordinates': [51.69959184827574, 36.15715199153339],
-                        'name':        'ул. Энгельса, 115 Д'
+                        'name':        'ул. Энгельса, 115Д'
+                    },
+					{
+                        'coordinates': [51.740011478623344, 36.14607838954915],
+                        'name':        'ул. 50 лет Октября, 98'
                     }
+
                 ]
             },
 
@@ -530,8 +758,8 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                 'city_name': 'Новороссийск',
                 'shops':     [
                     {
-                        'coordinates': [44.7614415, 37.719826799999964],
-                        'name':        'ул. Ленина 136'
+                        'coordinates': [44.727780706, 37.767314584],
+                        'name':        'ул. Мира, 1'
                     }
                 ]
             },
@@ -602,7 +830,4 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
             showShopListFromCity(0);
             placemarkList[cityId].events.fire('click');
         }
-    </script>
-
-    <script src="/2/js/index.js"></script>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+    </script> <script src="/2/js/index.js"></script><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

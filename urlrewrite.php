@@ -96,7 +96,7 @@ $arUrlRewrite=array (
     'PATH' => '/tovar/index.php',
     'SORT' => 100,
   ),
-  21 => 
+  24 => 
   array (
     'CONDITION' => '#^\\??(.*)#',
     'RULE' => '&$1',
