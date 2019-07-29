@@ -525,7 +525,8 @@ $k++;
 		}?>
 <div class="tovar <? echo ($arItem['SECOND_PICT'] ? 'bx_catalog_item  ' : 'bx_catalog_item'); ?>">
 <div class="bx_catalog_item_container" id="<? echo $strMainID; ?>">
-		<a id="<? echo $arItemIDs['PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images" style="background-image: url('<? echo $arItem['PREVIEW_PICTURE']['SRC']; ?>')" title="<? echo $imgTitle; ?>"><?
+    <?php $resizeImg = \CFile::ResizeImageGet($arItem['PREVIEW_PICTURE']['ID'], ['width' => 200, 'height' => 9999], BX_RESIZE_IMAGE_PROPORTIONAL_ALT); ?>
+		<a id="<? echo $arItemIDs['PICT']; ?>" href="<? echo $arItem['DETAIL_PAGE_URL']; ?>" class="bx_catalog_item_images" style="background-image: url('<? echo $resizeImg['src']; ?>')" title="<? echo $imgTitle; ?>"><?
 	if ('Y' == $arParams['SHOW_DISCOUNT_PERCENT'])
 	{
 	?>

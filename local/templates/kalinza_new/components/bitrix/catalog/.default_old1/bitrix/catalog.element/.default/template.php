@@ -114,8 +114,12 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                 <ul class="pagination">
                                                     <?
                                                     foreach ($arResult['MORE_PHOTO'] as &$arOnePhoto) {
+                                                        $resizeImg = \CFile::ResizeImageGet($arOnePhoto['ID'], [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
                                                         ?>
-                                                        <li><a data-fancybox="gallery" href="<? echo $arOnePhoto['SRC']; ?>"><img src="<? echo $arOnePhoto['SRC']; ?>"
+                                                        <li><a data-fancybox="gallery" href="<? echo $arOnePhoto['SRC']; ?>"><img src="<?= $resizeImg['src']; ?>"
                                                                                                                                   width="55"
                                                                                                                                   alt="<? echo $arOnePhoto['ID']; ?>"></a></li>
                                                         <?
@@ -128,7 +132,11 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                     $ID_PICTYRE1 = $arResult["PROPERTIES"]["dopf1"]["VALUE"];
                                                     $URL         = CFile::GetPath($ID_PICTYRE1);
                                                     if (!empty($URL)) {
-                                                        echo '<li><a data-fancybox="gallery" id="f1" href="' . $URL . '"><img src="' . $URL . '" width="55" alt="' . $URL . '"></a></li>';
+                                                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE1, [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+                                                        echo '<li><a data-fancybox="gallery" id="f1" href="' . $URL . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL . '"></a></li>';
                                                     }
                                                     $URL         = '';
                                                     $ID_PICTYRE1 = '';
@@ -139,7 +147,11 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                     $ID_PICTYRE2 = $arResult["PROPERTIES"]["dopf2"]["VALUE"];
                                                     $URL2        = CFile::GetPath($ID_PICTYRE2);
                                                     if (!empty($URL2)) {
-                                                        echo '<li><a data-fancybox="gallery" id="f2" href="' . $URL2 . '"><img src="' . $URL2 . '" width="55" alt="' . $URL2 . '"></a></li>';
+                                                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE2, [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+                                                        echo '<li><a data-fancybox="gallery" id="f2" href="' . $URL2 . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL2 . '"></a></li>';
                                                     }
                                                     $URL2        = '';
                                                     $ID_PICTYRE2 = '';
@@ -150,7 +162,11 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                     $ID_PICTYRE3 = $arResult["PROPERTIES"]["dopf3"]["VALUE"];
                                                     $URL3        = CFile::GetPath($ID_PICTYRE3);
                                                     if (!empty($URL3)) {
-                                                        echo '<li><a data-fancybox="gallery" id="f3" href="' . $URL3 . '"><img src="' . $URL3 . '" width="55" alt="' . $URL3 . '"></a></li>';
+                                                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE3, [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+                                                        echo '<li><a data-fancybox="gallery" id="f3" href="' . $URL3 . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL3 . '"></a></li>';
                                                     }
                                                     $URL3        = '';
                                                     $ID_PICTYRE3 = '';
@@ -161,7 +177,11 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                     $ID_PICTYRE4 = $arResult["PROPERTIES"]["dopf4"]["VALUE"];
                                                     $URL4        = CFile::GetPath($ID_PICTYRE4);
                                                     if (!empty($URL4)) {
-                                                        echo '<li><a data-fancybox="gallery" id="f4" href="' . $URL4 . '"><img src="' . $URL4 . '" width="55" alt="' . $URL4 . '"></a></li>';
+                                                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE4, [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+                                                        echo '<li><a data-fancybox="gallery" id="f4" href="' . $URL4 . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL4 . '"></a></li>';
                                                     }
                                                     $URL4        = '';
                                                     $ID_PICTYRE4 = '';
@@ -172,7 +192,11 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                     $ID_PICTYRE5 = $arResult["PROPERTIES"]["dopf5"]["VALUE"];
                                                     $URL5        = CFile::GetPath($ID_PICTYRE5);
                                                     if (!empty($URL5)) {
-                                                        echo '<li><a data-fancybox="gallery" id="f5" href="' . $URL5 . '"><img src="' . $URL5 . '" width="55" alt="' . $URL5 . '"></a></li>';
+                                                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE5, [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+                                                        echo '<li><a data-fancybox="gallery" id="f5" href="' . $URL5 . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL5 . '"></a></li>';
                                                     }
                                                     $URL5        = '';
                                                     $ID_PICTYRE5 = '';
@@ -183,7 +207,12 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                                     $ID_PICTYRE6 = $arResult["PROPERTIES"]["dopf6"]["VALUE"];
                                                     $URL6        = CFile::GetPath($ID_PICTYRE6);
                                                     if (!empty($URL6)) {
-                                                        echo '<li><a data-fancybox="gallery" id="f6" href="' . $URL6 . '"><img src="' . $URL6 . '" width="55" alt="' . $URL6 . '"></a></li>';
+                                                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE6, [
+                                                            'width'  => 366,
+                                                            'height' => 9999,
+                                                        ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
+
+                                                        echo '<li><a data-fancybox="gallery" id="f6" href="' . $URL6 . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL6 . '"></a></li>';
                                                     }
                                                     $URL6        = '';
                                                     $ID_PICTYRE6 = '';
@@ -193,8 +222,12 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                             <div class="slides_container">
                                                 <?
                                                 foreach ($arResult['MORE_PHOTO'] as &$arOnePhoto) {
+                                                    $resizeImg = \CFile::ResizeImageGet($arOnePhoto['ID'], [
+                                                        'width'  => 366,
+                                                        'height' => 9999,
+                                                    ], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
                                                     ?>
-                                                    <a data-fancybox="gallery" href="<? echo $arOnePhoto['SRC']; ?>"><img src="<? echo $arOnePhoto['SRC']; ?>"
+                                                    <a data-fancybox="gallery" href="<? echo $arOnePhoto['SRC']; ?>"><img src="<?= $resizeImg['src']; ?>"
                                                                                                                           width="366"
                                                                                                                           alt="<? echo $arOnePhoto['ID']; ?>"></a>
                                                     <?
