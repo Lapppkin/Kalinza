@@ -225,7 +225,7 @@ if ($arData['CITY']['NAME']!='' and $arData['CITY']['NAME']!='Краснодар
                                                 <span class="radio-custom"></span>
                                                 <span class="label">ул. Чекистов 36, ТЦ «5 Звезд»</span>
                                             </label>
-					-->
+					
                                             <label style="display: flex;">
                                                 <input class="radio" type="radio" name="contact" value="ул. Уральская 79/1, ТЦ «АШАН СБС Мегамолл»" checked>
                                                 <span class="radio-custom"></span>
@@ -248,7 +248,7 @@ if ($arData['CITY']['NAME']!='' and $arData['CITY']['NAME']!='Краснодар
                                                 <input class="radio" type="radio" name="contact" value="ул. Ейское шоссе 40, ТЦ «Магнит»">
                                                 <span class="radio-custom"></span>
                                                 <span class="label">ул. Ейское шоссе 40, ТЦ «Магнит»</span>
-                                            </label>
+                                            </label>-->
 ';}
 
 if ($arData['CITY']['NAME']=='Краснодар'){echo '
@@ -329,6 +329,25 @@ if ($arData['CITY']['NAME']=='Новосибирск'){echo '
 
 ';}
 
+
+if ($arData['CITY']['NAME']=='Курск'){echo '
+
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. Энгельса, 115Д, Гипермаркет «Лента»" checked>
+                                                <span class="radio-custom"></span> 
+                                                <span class="label">ул. Энгельса, 115Д Гипермаркет «Лента»</span>
+                                            </label>
+                                            <label style="display: flex;">
+                                                <input class="radio" type="radio" name="contact" value="ул. 50 лет Октября 98, Гипермаркет «Линия»">
+                                                <span class="radio-custom"></span> 
+                                                <span class="label">ул. 50 лет Октября 98, Гипермаркет «Линия»</span>
+                                            </label>
+';}
+
+
+
+
+
 if ($arData['CITY']['NAME']=='Ставрополь'){echo '
 
                                             <label style="display: flex;">
@@ -338,23 +357,7 @@ if ($arData['CITY']['NAME']=='Ставрополь'){echo '
                                             </label>
 ';}
 
-if ($arData['CITY']['NAME']=='Железногорск'){echo '
 
-                                            <label style="display: flex;">
-                                                <input class="radio" type="radio" name="contact" value="ул. Мира 62 «ТЦ Ашан»" checked>
-                                                <span class="radio-custom"></span>
-                                                <span class="label">ул. Мира 62 «ТЦ Ашан»</span>
-                                            </label>
-';}
-
-if ($arData['CITY']['NAME']=='Шахты'){echo '
-
-                                            <label style="display: flex;">
-                                                <input class="radio" type="radio" name="contact" value="пр. Победы революции 113 «ТЦ Семейный магнит»" checked>
-                                                <span class="radio-custom"></span> 
-                                                <span class="label">пр. Победы революции 113 «ТЦ Семейный магнит»</span>
-                                            </label>
-';}
 
 } ?> <br>
  <b><a href="/nashi-magaziny/">Показать Kalinza</a> в других городах</b>

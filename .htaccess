@@ -2,41 +2,31 @@ Options -Indexes
 ErrorDocument 404 /404.php
 
 <IfModule mod_php5.c>
-  php_flag session.use_trans_sid off
-  #php_value display_errors 1
-  #php_value mbstring.internal_encoding UTF-8
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+	#php_value display_errors 1
+
+	#php_value mbstring.internal_encoding UTF-8
 </IfModule>
 
 <IfModule mod_rewrite.c>
-  Options +FollowSymLinks
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.kalinza.ru$ [NC]
-RewriteRule ^(.*)$ https://kalinza.ru/$1 [R=301,L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
-  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
-  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
-	Redirect 301 /products/6/ https://kalinza.ru/catalog/kontaktnye_linzy/
-	Redirect 301 /products/5/ https://kalinza.ru/catalog/cvetnye_linzy/
-	Redirect 301 /products/4/ https://kalinza.ru/catalog/rastvory/
-	Redirect 301 /products/3/ https://kalinza.ru/catalog/catalog/kapli/
-	Redirect 301 /products/2/ https://kalinza.ru/catalog/catalog/aksessuary/
-	Redirect 301 /products/19/ https://kalinza.ru/catalog/catalog/toricheskie/
-	Redirect 301 /products/type/carnaval/ https://kalinza.ru/catalog/karnavalnye_linzy/
-	Redirect 301 /besplatnaya-proverka-zreniya/index.php/ https://kalinza.ru/besplatnaya-proverka-zreniya/
+	Options +FollowSymLinks
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
 <IfModule mod_dir.c>
-  DirectoryIndex index.php index.html
+	DirectoryIndex index.php index.html
 </IfModule>
 
 <IfModule mod_expires.c>
-  ExpiresActive on
-  ExpiresByType image/jpeg "access plus 3 day"
-  ExpiresByType image/gif "access plus 3 day"
-  ExpiresByType image/png "access plus 3 day"
-  ExpiresByType text/css "access plus 3 day"
-  ExpiresByType application/javascript "access plus 3 day"  
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
 </IfModule>

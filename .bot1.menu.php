@@ -48,6 +48,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Офтальмикс", 
+		"/catalog/oftalmiks/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

@@ -137,7 +137,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТРЦ «МЕГА АДЫГЕЯ»</b><br>
  <br>
 									 10:00-22:00<br>
-									 +7 (960) 478-71-80<br>
+									 <a href="tel:+79604787180">+7 (960) 478-71-80</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="4" href="#map">Показать на карте</a>
 								</div>
@@ -163,7 +163,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «5 Звезд»</b><br>
  <br>
 									 10:00-21:00<br>
-									 +7 (861) 292-16-40<br>
+									  <a href="tel:+79530926381">+7 (953) 092-63-81</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="2" href="#map">Показать на карте</a>
 								</div>
@@ -186,7 +186,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «АШАН СБС Мегамолл»</b><br>
  <br>
 									 10:00-22:00<br>
-									 +7 (918) 417-88-06<br>
+									 <a href="tel:+79184178806">+7 (918) 417-88-06</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="3" href="#map">Показать на карте</a>
 								</div>
@@ -212,7 +212,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «BOSS HOUSE»</b><br>
  <br>
 									 10:00-21:00<br>
-									 +7 (861) 292-16-40<br>
+									<a href="tel:+79530916844">+7 (953) 091-68-44</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="1" href="#map">Показать на карте</a>
 								</div>
@@ -238,7 +238,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «Магнит»</b><br>
  <br>
 									 09:00-21:00<br>
-									 +7 (964) 900-67-74<br>
+									 <a href="tel:+79649006774">+7 (964) 900-67-74</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="5" href="#map">Показать на карте</a>
 								</div>
@@ -264,7 +264,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «Магнит»</b><br>
  <br>
 									 09:00-22:00<br>
-									 +7 (906) 433-08-29<br>
+									 <a href="tel:+79064330829">+7 (906) 433-08-29</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="6" href="#map">Показать на карте</a>
 								</div>
@@ -299,7 +299,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «Гипермаркет Лента»</b><br>
  <br>
 									 09:00-21:00<br>
-									 +7 (961) 855-13-15<br>
+									 <a href="tel:+79618551315">+7 (961) 855-13-15</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="7" href="#map">Показать на карте</a>
 								</div>
@@ -328,7 +328,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 									 ТЦ «Oz Молл»</b><br>
  <br>
 									 10:00-22:00<br>
-									 +7 (918) 243-99-84<br>
+									 <a href="tel:+79182439984">+7 (918) 243-99-84</a><br>
  <br>
  <a id="adress" data-city-id="0" data-shop-id="8" href="#map">Показать на карте</a>
 								</div>

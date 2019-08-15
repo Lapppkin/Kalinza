@@ -1,0 +1,18 @@
+.altasib_geobase_yc_btn{
+	background-color:#0097f6;
+}
+.altasib_geobase_yc_btn:hover{
+	background-color:#0062C1;
+}
+a#altasib_geobase_yc_n.altasib_geobase_yc_btn{
+	color:#0097f6 !important;
+}
+a#altasib_geobase_yc_n.altasib_geobase_yc_btn:hover{
+	color:#0062C1 !important;
+}
+.altasib_geobase_yc_mb_btn{
+	background-color:#0097f6 !important;
+}
+.altasib_geobase_yc_mb_btn:hover{
+	background-color:#0062C1 !important;
+}
