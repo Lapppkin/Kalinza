@@ -163,7 +163,7 @@
         </div>
         <div class="row row-md">
             <div class="col-md-6 cccc bottom_padd_blo">
-                © 2009—2019 «Калинза». Все права защищены. <a href="/politika-konfidentsialnosti-i-soglasie-s-rassylkoy-i-nasha-otvetstvennost.php">Политики конфиденциальности</a>
+                © 2009—2019 «Калинза». Все права защищены. <a href="/privacy/">Политики конфиденциальности</a>
             </div>
             <div class="col-md-6 cccc bottom_raz">
                 <a href="http://lapkinlab.ru/" target="_blank" rel="nofollow noopener">Разработка сайта - </a><a href="http://msk.lapkinlab.ru/"

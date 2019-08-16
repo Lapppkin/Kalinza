@@ -1,9 +1,10 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+
 $APPLICATION->SetTitle("Персональный раздел");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:sale.personal.section", 
-	"template1", 
+
+$APPLICATION->IncludeComponent(
+	"bitrix:sale.personal.section",
+	"template1",
 	array(
 		"ACCOUNT_PAYMENT_ELIMINATED_PAY_SYSTEMS" => array(
 			0 => "0",
@@ -85,5 +86,7 @@ $APPLICATION->SetTitle("Персональный раздел");
 		)
 	),
 	false
-);?><br>
-	<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<br>
+<br>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
