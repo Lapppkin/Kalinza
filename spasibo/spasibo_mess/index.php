@@ -12,7 +12,7 @@ $APPLICATION->SetTitle("Спасибо");
 <?
 	if ($USER->GetID() == 6){
 		$USER->Logout();
-		header('Location: http://kalinza.ru/spasibo/');
+		header('Location: http://kalinza.ru/spasibo');
 	}
 
 ?>

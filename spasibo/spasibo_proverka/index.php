@@ -13,7 +13,7 @@ $APPLICATION->SetTitle("Спасибо");
 <?
 	if ($USER->GetID() == 6){
 		$USER->Logout();
-		header('Location: http://kalinza.ru/spasibo_proverka/');
+		header('Location: http://kalinza.ru/spasibo/spasibo_proverka/');
 	}
 
 ?>
@@ -23,7 +23,7 @@ $APPLICATION->SetTitle("Спасибо");
                                         <p>Получи свой сертификат<br>на 500 рублей</p>
                                         <form class="contact-form">
                                             <div class="form-group">
-												<input type="name" class="form-control" id="name" placeholder="Адрес электронной почты" style="text-align:center !important; 
+												<input type="name" class="form-control" id="name" placeholder="Адрес электронной почты" style="text-align:center !important;
 margin:0 auto !important; color: #fff;">
                                             </div>
                                             <div class="form-group">
