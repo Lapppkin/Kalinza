@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS b_kreattika_oneclickbuy_order_entity;

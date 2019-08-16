@@ -1,0 +1,33 @@
+.oneclickbuy-form { display: block; }
+.oneclickbuy-form h2 {  }
+.kocb-captcha, .kocb-line { width:100%; }
+.kocb-submit { width:100%; text-align: right; padding: 0px;}
+.kocb-line label { }
+.kocb-line input {
+    width:100%;
+	box-sizing: border-box; 
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+.kocb-line input[type="checkbox"], .kocb-line input[type="radio"] {
+    width: 20px;
+}
+.kocb-line select {
+    width:100%;
+	box-sizing: border-box; 
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+.kocb-line textarea {
+    width:100%; 
+	box-sizing: border-box;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+.kocb-line span.kocb-req { color:red; }
+.kocb-success-text { color:green; }
+.oneclickbuy-form input[type="submit"] {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.oneclickbuy-form input[type="submit"]:hover {}

@@ -1,0 +1,1 @@
+<?define("SOUVENIRS_IBLOCK_ID", 10);?>

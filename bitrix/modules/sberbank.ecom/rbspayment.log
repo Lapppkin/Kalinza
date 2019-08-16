@@ -1,0 +1,132 @@
+Host: kalinza.ru
+Date: 2018-10-16 11:40:28
+Module: sberbank.ecom
+RBS PAYMENT https://3dsec.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"212_0","language":"ru","amount":219000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=212","description":"","currency":643,"userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u041f\u043b\u0430\u0442\u0435\u0436\u0438 \u0441 \u043f\u0440\u0435\u0434\u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0435\u0439 \u043d\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u044b"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-16 11:40:43
+Module: sberbank.ecom
+RBS PAYMENT https://3dsec.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"213_0","language":"ru","amount":134000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=213","description":"","currency":643,"userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u041f\u043b\u0430\u0442\u0435\u0436\u0438 \u0441 \u043f\u0440\u0435\u0434\u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0435\u0439 \u043d\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u044b"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-16 11:41:24
+Module: sberbank.ecom
+RBS PAYMENT https://3dsec.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"214_0","language":"ru","amount":84000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=214","description":"","currency":643,"userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u041f\u043b\u0430\u0442\u0435\u0436\u0438 \u0441 \u043f\u0440\u0435\u0434\u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0435\u0439 \u043d\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u044b"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-16 12:02:01
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/register.do REQUEST: {"orderNumber":"215_0","language":"ru","amount":84000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=215","description":"","currency":"643","orderBundle":"{\"orderCreationDate\":1539679953,\"customerDetails\":{\"email\":\"test@test.ru\",\"contact\":\"\\u0422\\u0435\\u0441\\u0442\"},\"cartItems\":{\"items\":[{\"positionId\":1,\"name\":\"\\u041f\\u043e\\u0434\\u0430\\u0440\\u043e\\u043a\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":0,\"itemCode\":\"577\",\"itemPrice\":0,\"tax\":{\"taxType\":0}},{\"positionId\":2,\"name\":\"SEA CLEAR PLUS 3PK\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":69000,\"itemCode\":\"321\",\"itemPrice\":69000,\"tax\":{\"taxType\":0}},{\"positionId\":3,\"name\":\"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":15000,\"itemCode\":\"215_DELIVERY\",\"itemPrice\":15000,\"tax\":{\"taxType\":0}}]}}","taxSystem":"0","userName":"kalinza-operator","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-16 12:02:17
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/register.do REQUEST: {"orderNumber":"216_0","language":"ru","amount":144000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=216","description":"","currency":"643","orderBundle":"{\"orderCreationDate\":1539680358,\"customerDetails\":{\"email\":\"test@test.ru\",\"contact\":\"\\u0422\\u0435\\u0441\\u0442\"},\"cartItems\":{\"items\":[{\"positionId\":1,\"name\":\"\\u041f\\u043e\\u0434\\u0430\\u0440\\u043e\\u043a\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":0,\"itemCode\":\"577\",\"itemPrice\":0,\"tax\":{\"taxType\":0}},{\"positionId\":2,\"name\":\"FRESHLOOK COLORS\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":129000,\"itemCode\":\"533\",\"itemPrice\":129000,\"tax\":{\"taxType\":0}},{\"positionId\":3,\"name\":\"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":15000,\"itemCode\":\"216_DELIVERY\",\"itemPrice\":15000,\"tax\":{\"taxType\":0}}]}}","taxSystem":"0","userName":"kalinza-operator","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-16 12:02:30
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/register.do REQUEST: {"orderNumber":"217_0","language":"ru","amount":84000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=217","description":"","currency":"643","orderBundle":"{\"orderCreationDate\":1539680390,\"customerDetails\":{\"email\":\"test@test.ru\",\"contact\":\"\\u0422\\u0435\\u0441\\u0442\"},\"cartItems\":{\"items\":[{\"positionId\":1,\"name\":\"\\u041f\\u043e\\u0434\\u0430\\u0440\\u043e\\u043a\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":0,\"itemCode\":\"577\",\"itemPrice\":0,\"tax\":{\"taxType\":0}},{\"positionId\":2,\"name\":\"SEA CLEAR PLUS 3PK\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":69000,\"itemCode\":\"321\",\"itemPrice\":69000,\"tax\":{\"taxType\":0}},{\"positionId\":3,\"name\":\"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430\",\"quantity\":{\"value\":1,\"measure\":\"\\u0428\\u0442\\u0443\\u043a\\u0430\"},\"itemAmount\":15000,\"itemCode\":\"217_DELIVERY\",\"itemPrice\":15000,\"tax\":{\"taxType\":0}}]}}","taxSystem":"0","userName":"kalinza-operator","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-18 11:41:31
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"235_0","language":"ru","amount":509000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=235","description":"\u0418\u0433\u043e\u0440\u044c \u0422\u0440\u0443\u0444\u0430\u043d\u043e\u0432\n","currency":"643","userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-18 11:42:55
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"234_0","language":"ru","amount":509000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=234","description":"\u0418\u0433\u043e\u0440\u044c \u0422\u0440\u0443\u0444\u0430\u043d\u043e\u0432\n","currency":"643","userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-18 11:54:25
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"238_0","language":"ru","amount":149000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=238","description":"\u0418\u0433\u043e\u0440\u044c \u0422\u0440\u0443\u0444\u0430\u043d\u043e\u0432\n","currency":"643","userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-18 11:54:34
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"238_0","language":"ru","amount":149000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=238","description":"\u0418\u0433\u043e\u0440\u044c \u0422\u0440\u0443\u0444\u0430\u043d\u043e\u0432\n","currency":"643","userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-18 11:54:50
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"238_0","language":"ru","amount":149000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=238","description":"\u0418\u0433\u043e\u0440\u044c \u0422\u0440\u0443\u0444\u0430\u043d\u043e\u0432\n","currency":"643","userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------
+Host: kalinza.ru
+Date: 2018-10-18 11:58:17
+Module: sberbank.ecom
+RBS PAYMENT https://securepayments.sberbank.ru/payment/rest/registerPreAuth.do REQUEST: {"orderNumber":"240_0","language":"ru","amount":509000,"returnUrl":"https:\/\/kalinza.ru\/sale\/payment\/result.php?ID=240","description":"\u0418\u0433\u043e\u0440\u044c \u0422\u0440\u0443\u0444\u0430\u043d\u043e\u0432\n","currency":"643","userName":"kalinza-api","password":"kalinza","CMS":"Bitrix 18.0.0","jsonParams":"{\"CMS\":\"Bitrix 18.0.0\",\"Module-Version\":\"3.1.5\"}"} RESPONSE: {"errorCode":"5","errorMessage":"\u0414\u043e\u0441\u0442\u0443\u043f \u0437\u0430\u043f\u0440\u0435\u0449\u0451\u043d"}
+    RBS::logger < RBS::gateway < RBS::register_order < require_once < require
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:122
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/rbs.php:169
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sberbank.ecom/payment/payment.php:218
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/php_interface/include/sale_payment/payment/payment.php:2
+	/var/www/u0531573/data/www/kalinza.ru/bitrix/modules/sale/lib/paysystem/compatibilityhandler.php:205
+----------

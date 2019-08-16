@@ -1,0 +1,1 @@
+<?define("kreattika_oneclickbuy_TEMPORARY_CACHE", "cGFTXH5gAARsBnAzVmdTLQgh");?>

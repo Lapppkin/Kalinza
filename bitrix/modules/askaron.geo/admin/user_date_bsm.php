@@ -1,0 +1,1 @@
+<?define("askaron_geo_TEMPORARY_CACHE", "fGBTXHBlAwRtVH1iUW1TeQB1");?>
