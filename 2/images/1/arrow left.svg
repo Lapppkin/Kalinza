@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="35px" viewBox="0 0 20 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Kalinza-main-sign-in" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-50.000000, -388.000000)" opacity="0.049999997">
+        <g id="Main" transform="translate(0.000000, 9.000000)" fill="#000000">
+            <g id="Banner--1" transform="translate(35.000000, 216.000000)" opacity="0.100000001">
+                <polygon id="arrow-left" points="34.3797696 165.10823 19.1849991 180.465423 34.4587382 195.902332 32.3807271 198 15 180.454861 32.2912956 163"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
