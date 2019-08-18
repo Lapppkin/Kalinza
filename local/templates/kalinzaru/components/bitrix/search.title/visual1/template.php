@@ -11,8 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$this->addExternalCss("/bitrix/css/main/bootstrap.css");
-$this->addExternalCss("/bitrix/css/main/font-awesome.css");
 
 $INPUT_ID = trim($arParams["~INPUT_ID"]);
 if(strlen($INPUT_ID) <= 0)
@@ -27,7 +25,7 @@ $CONTAINER_ID = CUtil::JSEscape($CONTAINER_ID);
 if($arParams["SHOW_INPUT"] !== "N"):?>
 <div id="<?echo $CONTAINER_ID?>" class="search">
 	<form action="<?echo $arResult["FORM_ACTION"]?>">
-            <input id="<?echo $INPUT_ID?>" type="search" name="q" value="<?=htmlspecialcharsbx($_REQUEST["q"])?>" autocomplete="off">
+            <input id="<?echo $INPUT_ID?>" type="search" name="q" value="<?=htmlspecialcharsbx($_REQUEST["q"])?>" autocomplete="off" placeholder="Поиск товаров">
             <input type="submit" name="s" value="">
 	</form>
 </div>

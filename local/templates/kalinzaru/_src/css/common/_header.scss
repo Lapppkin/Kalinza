@@ -69,6 +69,7 @@
     // LOGO
 
     &--logo {
+      flex-basis: 260px;
       a {
         img {
           max-width: 260px;
@@ -78,13 +79,55 @@
 
     // SEARCH
 
-    &--search {}
+    &--search {
+      flex-grow: 1;
+      margin-left: $size-padding-large;
+      margin-right: $size-padding-large;
+      .search {
+        width: 100%;
+        padding: 0;
+        form {
+          position: relative;
+          width: 100%;
+        }
+      }
+      input[type="search"] {
+        width: 100%;
+        margin: 0;
+        height: 34px;
+        line-height: 32px;
+        border-radius: 4px;
+        padding-right: 50px;
+        color: $app-color-black;
+        &:focus,
+        &:hover {
+          border-color: $app-color-black;
+        }
+      }
+      input[type="submit"] {
+        background-color: transparent;
+        border: 0;
+        background-image: url("../images/svg/search.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        height: 34px;
+        line-height: 34px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
 
     // CONTACTS
 
     &--contacts {
       display: flex;
       flex-wrap: wrap;
+      flex-basis: 260px;
       &-phone {
         flex-basis: 100%;
         display: flex;
