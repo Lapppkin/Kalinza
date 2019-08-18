@@ -1,6 +1,13 @@
 // MESSENGERS ICONS
 
 .messenger-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
   .kalinza-icon {
     width: 65%;
     height: 65%;
@@ -13,12 +20,20 @@
   &-whatsapp { background-color: #17d30a; }
   &-skype { background-color: #00b1f1; }
   &-viber { background-color: #844796; }
+  &-vk { background-color: #008ec1; }
   &-mess { background-color: #047cf4; }
 }
 
 // SOCIAL ICONS
 
 .social-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
   .kalinza-icon {
     width: 65%;
     height: 65%;

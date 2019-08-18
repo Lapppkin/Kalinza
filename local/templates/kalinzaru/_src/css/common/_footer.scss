@@ -15,28 +15,52 @@
     color: $app-color-notice;
     padding-top: $size-padding;
     padding-bottom: $size-padding;
+    &--wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     &--socials {
+      margin-bottom: $size-padding-small;
       &-label {
         color: $app-color-white;
+        margin-bottom: 5px;
       }
-      &-items {}
+      &-items {
+        display: flex;
+        flex-wrap: wrap;
+        .social-icon {
+          margin-right: 8px;
+        }
+      }
     }
     &--messengers {
+      margin-bottom: $size-padding-small;
       &-label {
         color: $app-color-white;
+        margin-bottom: 5px;
       }
-      &-items {}
+      &-items {
+        display: flex;
+        flex-wrap: wrap;
+        .messenger-icon {
+          margin-right: 8px;
+        }
+      }
     }
     &--regions {
+      margin-bottom: $size-padding-small;
       &-label {
         color: $app-color-white;
+        margin-bottom: 5px;
       }
       &-items {}
     }
     &--contacts {
+      margin-bottom: $size-padding-small;
       &-label {
         color: $app-color-white;
+        margin-bottom: 5px;
       }
       &-content {}
     }
