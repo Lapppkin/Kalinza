@@ -1,0 +1,46 @@
+// Fixes
+
+body a:focus,
+body a:active,
+body a:hover,
+body img:focus,
+body img:active,
+body img:hover,
+:focus {
+  outline: none;
+}
+::selection {
+  color: $app-color-white;
+  background-color: $app-color-active;
+}
+img, a {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+// Outline fixes
+
+a:hover, a:active, a:focus, a:link, a:visited {
+  outline: 0 !important;
+  outline-style:none;
+}
+button, object, embed {
+  outline: 0;
+}
+input::-moz-focus-inner {
+  outline: 0;
+}
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner{
+  outline: 0;
+}
+
+::-webkit-input-placeholder { color: $app-color-active; }
+::-moz-placeholder          { color: $app-color-active; } // Firefox 19+
+:-moz-placeholder           { color: $app-color-active; } // Firefox 18-
+:-ms-input-placeholder      { color: $app-color-active; }
+
+.search::-webkit-input-placeholder { color: $app-color-primary; }
+.search::-moz-placeholder          { color: $app-color-primary; } // Firefox 19+
+.search:-moz-placeholder           { color: $app-color-primary; } // Firefox 18-
+.search:-ms-input-placeholder      { color: $app-color-primary; }

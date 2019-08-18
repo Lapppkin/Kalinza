@@ -1,0 +1,67 @@
+// MESSAGES
+
+.alert,
+.messages {
+  margin-bottom: 20px;
+}
+
+.alert,
+.message {
+	position: relative;
+
+	font-size: $fontsize-small;
+	display: flex;
+	background-color: $app-color-background;
+
+	@media (min-width: 768px){
+		padding: 24px 40px 24px 24px;
+		flex-wrap: wrap;
+	}
+	@media (max-width: 767px){
+		padding: 24px 12px;
+	}
+
+	&.transparent {
+		background-color: transparent;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&__icon,
+	.kalinza-icon:not(.kalinza-icon-close) {
+		width: 18px;
+		min-width: 18px;
+		color: $app-color-red;
+		margin-right: 10px;
+	}
+	&__text {
+		margin: 0;
+		line-height: 1.2;
+		flex: 1;
+		a {
+			color: $app-color-red;
+		}
+		p {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__close {
+		&.disabled {
+			display: none;
+		}
+	}
+}
+
+// ALERT (BITRIX)
+
+.alert {
+  &-danger {
+    color: $app-color-red;
+    background-color: rgba($app-color-red, 0.1);
+  }
+  &-warning {
+    color: $app-color-yellow;
+    background-color: rgba($app-color-yellow, 0.1);
+  }
+}

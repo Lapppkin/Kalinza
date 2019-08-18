@@ -1,0 +1,57 @@
+// VARIABLES
+
+// COLORS
+
+$app-color-white: #fff;
+$app-color-black: #221e1f;
+
+$app-color-primary: #1fa4dc;
+$app-color-secondary: #4475c1;
+
+$app-color-active: #93c44e;
+$app-color-active-hover: lighten($app-color-active, 10%);
+
+$app-color-border: #ccc;
+$app-color-delimiter: #e6e6e6;
+$app-color-background: #f7f7f7;
+
+$app-color-gray: #444;
+$app-color-gray-light: #555;
+$app-color-gray-lighter: #707070;
+
+$app-color-error: #c4044f;
+
+$app-color-footer-bg: #ebebeb;
+$app-color-notice: #c4c4af;
+
+// SIZES
+
+$size-header: 90px;
+$size-topnav: 68px;
+$size-footer: 80px;
+$size-footer-bottom: 80px;
+
+$size-input: 48px;
+$size-button: 48px;
+$size-checkbox: 16px;
+$size-tab: 40px;
+
+$size-padding: 30px;
+
+// FONT SIZES
+
+$fontsize-title: 50px;
+
+$fontsize-h1: 37px;
+$fontsize-h2: 33px;
+$fontsize-h3: 26px;
+$fontsize-h4: 24px;
+$fontsize-h5: 19px;
+$fontsize-h6: 16px;
+
+$fontsize-normal: 16px;
+$fontsize-small: 15px;
+$fontsize-smaller: 14px;
+$fontsize-smallest: 12px;
+
+$opacity: 0.74;

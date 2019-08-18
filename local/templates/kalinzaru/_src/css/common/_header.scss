@@ -1,0 +1,87 @@
+// HEADER
+
+.header {
+
+  &--topbar {
+    background-color: $app-color-background;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--left {
+      display: flex;
+      align-items: center;
+      .kalinza-icon {
+        margin-right: 5px;
+      }
+      .altasib_geobase_link {
+        margin-right: 10px;
+      }
+      ul.menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li {
+          margin: 0 5px;
+          padding: 0;
+          a {
+            color: $app-color-gray;
+            &:hover,
+            &:focus {
+              color: $app-color-black;
+            }
+          }
+        }
+      }
+    }
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &--header {
+    padding-top: $size-padding;
+    padding-bottom: $size-padding;
+    &--wrapper {
+      display: flex;
+    }
+
+    &--logo {
+      a {
+        img {
+          max-width: 260px;
+        }
+      }
+    }
+    &--search {}
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      &-tel {
+        flex-basis: 100%;
+        a[href^="tel:"] {
+
+        }
+      }
+      &-callback {
+        flex-basis: 50%;
+        a {
+          color: $app-color-gray;
+        }
+      }
+      &-messengers {
+        flex-basis: 50%;
+        a {
+
+        }
+      }
+    }
+
+  }
+
+}

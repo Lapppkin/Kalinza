@@ -1,0 +1,45 @@
+// Init
+
+@import "init/variables";
+@import "init/mixins";
+@import "init/fixes";
+@import "init/fonts"; // загрузка шрифтов перенесена в отдельный файл
+
+// Grid
+
+@import "bootstrap/bootstrap";
+
+// Common
+
+@import "common";
+//@import "common/modals";
+
+@import "common/header";
+@import "common/navigation";
+@import "common/footer";
+//@import "common/sidebar";
+//@import "common/messages";
+
+//@import "common/main";
+//@import "forms";
+
+// Blocks
+
+//@import "blocks/block";
+
+// Vendors
+
+@import "vendor/owl.carousel";
+@import "vendor/bootstrap_select";
+@import "vendor/rangeslider";
+@import "vendor/jquery.fancybox";
+//@import "vendor/animate";
+
+// Sprites
+
+@import "init/svg_sprites";
+@import "init/png_sprites";
+
+// Media Queries
+
+//@import "media_queries";

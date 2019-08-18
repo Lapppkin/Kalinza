@@ -1,0 +1,48 @@
+// FORMS
+
+.subscribe-news-form {
+  .title {
+    @include headfont;
+    margin-bottom: $size-padding / 1.5;
+  }
+  a {
+    color: $app-color-primary;
+    text-decoration: none;
+    &:hover {
+      color: $app-color-active;
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    label {
+      margin-bottom: 0;
+    }
+    input:not([type="submit"]) {
+      min-width: 333px;
+      @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+        min-width: initial;
+        max-width: 190px;
+      }
+    }
+  }
+  .form-group {
+    margin-right: 10px;
+  }
+}
+
+// PRIVACY POLICY
+
+.privacy {
+  margin-top: $size-padding / 2;
+  line-height: 1.2;
+  font-size: $fontsize-smaller;
+  a {
+    text-decoration: underline;
+    color: $app-color-primary;
+    &:hover {
+      color: $app-color-active;
+    }
+  }
+}
+

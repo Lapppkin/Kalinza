@@ -1,0 +1,55 @@
+// Footer
+
+.footer {
+  background-color: $app-color-gray;
+  color: $app-color-notice;
+
+  &--menu {
+    background-color: $app-color-gray-light;
+    padding-top: $size-padding;
+    padding-bottom: $size-padding;
+  }
+
+  &--bottom {
+    background-color: $app-color-gray;
+    color: $app-color-notice;
+    padding-top: $size-padding;
+    padding-bottom: $size-padding;
+
+    &--socials {
+      &-label {
+        color: $app-color-white;
+      }
+      &-items {}
+    }
+    &--messengers {
+      &-label {
+        color: $app-color-white;
+      }
+      &-items {}
+    }
+    &--regions {
+      &-label {
+        color: $app-color-white;
+      }
+      &-items {}
+    }
+    &--contacts {
+      &-label {
+        color: $app-color-white;
+      }
+      &-content {}
+    }
+    &--copyrights {
+      color: $app-color-notice;
+    }
+    &--info {
+      padding-top: $size-padding;
+      color: $app-color-gray-lighter;
+      text-transform: uppercase;
+      font-size: $fontsize-h5;
+    }
+
+  }
+
+}
