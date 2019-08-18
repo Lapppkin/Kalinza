@@ -15,6 +15,12 @@
     color: $app-color-notice;
     padding-top: $size-padding;
     padding-bottom: $size-padding;
+    a {
+      color: $app-color-primary;
+      &:hover {
+        color: $app-color-white;
+      }
+    }
     &--wrapper {
       display: flex;
       flex-wrap: wrap;

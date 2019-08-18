@@ -14,7 +14,7 @@ use Deadie\Helper;
                         <a href="#" class="social-icon social-icon-vk" rel="nofollow" target="_blank">
                             <?= Helper::renderIcon('vk') ?>
                         </a>
-                        <a href="#" class="social-icon social-icon-instagram" rel="nofollow" target="_blank">
+                        <a href="https://www.instagram.com/optika_kalinza/" class="social-icon social-icon-instagram" rel="nofollow" target="_blank">
                             <?= Helper::renderIcon('instagram') ?>
                         </a>
                         <a href="#" class="social-icon social-icon-ok" rel="nofollow" target="_blank">
