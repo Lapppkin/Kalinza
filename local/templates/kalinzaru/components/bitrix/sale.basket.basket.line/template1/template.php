@@ -8,18 +8,17 @@ $cartStyle = 'bx-basket';
 $cartId = "bx_basket".$this->randString();
 $arParams['cartId'] = $cartId;
 
-if ($arParams['POSITION_FIXED'] == 'Y')
-{
+if ($arParams['POSITION_FIXED'] == 'Y') {
 	$cartStyle .= "-fixed {$arParams['POSITION_HORIZONTAL']} {$arParams['POSITION_VERTICAL']}";
-	if ($arParams['SHOW_PRODUCTS'] == 'Y')
-		$cartStyle .= ' bx-closed';
-}
-else
-{
+	if ($arParams['SHOW_PRODUCTS'] == 'Y') {
+        $cartStyle .= ' bx-closed';
+    }
+} else {
 	$cartStyle .= ' bx-opener';
 }
-?><script>
-var <?=$cartId?> = new BitrixSmallCart;
+?>
+<script>
+    var <?=$cartId?> = new BitrixSmallCart;
 </script>
 <div id="<?=$cartId?>" class="<?=$cartStyle?>"><?
 	/** @var \Bitrix\Main\Page\FrameBuffered $frame */
@@ -31,7 +30,7 @@ var <?=$cartId?> = new BitrixSmallCart;
 		unset($arResult['COMPOSITE_STUB']);
 	$frame->end();
 ?></div>
-<script type="text/javascript">
+<script>
 	<?=$cartId?>.siteId       = '<?=SITE_ID?>';
 	<?=$cartId?>.cartId       = '<?=$cartId?>';
 	<?=$cartId?>.ajaxPath     = '<?=$componentPath?>/ajax.php';

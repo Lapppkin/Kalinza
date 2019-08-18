@@ -1,4 +1,7 @@
 <?if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
+
+use Deadie\Helper;
+
 /**
  * @global array $arParams
  * @global CUser $USER
@@ -8,7 +11,6 @@
 $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STUB'] == 'Y');
 ?>
 
-
 		<?if ($USER->IsAuthorized()):
 			$name = trim($USER->GetFullName());
 			if (! $name)
@@ -17,7 +19,7 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 				$name = substr($name, 0, 12).'...';
 			?>
 			<a href="<?=$arParams['PATH_TO_PROFILE']?>" style="color:#000;"><?=htmlspecialcharsbx($name)?></a>
-			&nbsp;<img src="/2/images/Login-icon.svg">
+			&nbsp;<?= Helper::renderIcon('key') ?>
 			<a href="?logout=yes"><?=GetMessage('TSB1_LOGOUT')?></a>
 		<?else:
 			$arParamsToDelete = array(
@@ -34,30 +36,21 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 				"auth_service_id",
 				"clear_cache"
 			);
-
 			$currentUrl = urlencode($APPLICATION->GetCurPageParam("", $arParamsToDelete));
-			if ($arParams['AJAX'] == 'N')
-			{
-				?><script type="text/javascript"><?=$cartId?>.currentUrl = '<?=$currentUrl?>';</script><?
-			}
-			else
-			{
+			if ($arParams['AJAX'] == 'N') {?>
+                <script>
+                    <?=$cartId?>.currentUrl = '<?=$currentUrl?>';
+                </script>
+            <? } else {
 				$currentUrl = '#CURRENT_URL#';
-			}
-			?>
-			<img src="/2/images/Login-icon.svg">
-
+			} ?>
+			<?= Helper::renderIcon('key') ?>
 			<a class="button_modal" data-modal="modal_1" href="#">
 				<?=GetMessage('TSB1_LOGIN')?>
 			</a>
-			<?
-			if ($arParams['SHOW_REGISTRATION'] === 'N')
-			{
-				?>
+			<? if ($arParams['SHOW_REGISTRATION'] === 'N') {?>
 				<a href="<?=$arParams['PATH_TO_REGISTER']?>?register=yes&backurl=<?=$currentUrl; ?>">
 					<?=GetMessage('TSB1_REGISTER')?>
 				</a>
-				<?
-			}
-			?>
+            <? } ?>
 		<?endif?>
