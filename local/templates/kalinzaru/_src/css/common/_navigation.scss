@@ -7,7 +7,11 @@ $nav-height: 40px;
   color: $app-color-white;
   &--wrapper {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+
+  // MAIN MENU
 
   ul.menu {
     display: flex;
@@ -21,7 +25,7 @@ $nav-height: 40px;
       display: flex;
       align-items: center;
       a {
-        padding: 0 12px;
+        padding: 0 10px;
         min-height: $nav-height;
         display: flex;
         align-items: center;
@@ -31,6 +35,9 @@ $nav-height: 40px;
           background-color: $app-color-active-hover;
           text-decoration: none;
           color: $app-color-black;
+          .kalinza-icon {
+            color: $app-color-black;
+          }
         }
         &.active {
           background-color: $app-color-active;
@@ -54,6 +61,40 @@ $nav-height: 40px;
         }
       }
 
+    }
+  }
+
+  // BASKET
+
+  .bx-basket {
+    display: flex;
+    align-items: center;
+    min-height: $nav-height;
+    p {
+      margin: 0;
+      display: block;
+      width: 100%;
+      height: $nav-height;
+    }
+    .kalinza-icon {
+      margin-right: 5px;
+      color: $app-color-white;
+    }
+    a {
+      color: $app-color-white;
+      text-decoration: none;
+      height: $nav-height;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      &:hover {
+        background-color: $app-color-active-hover;
+        color: $app-color-black;
+        .kalinza-icon {
+          color: $app-color-black;
+        }
+      }
     }
   }
 

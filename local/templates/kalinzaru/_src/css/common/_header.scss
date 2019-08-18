@@ -2,6 +2,8 @@
 
 .header {
 
+  // TOP BAR
+
   &--topbar {
     background-color: $app-color-background;
     padding-top: 10px;
@@ -18,6 +20,12 @@
       }
       .altasib_geobase_link {
         margin-right: 10px;
+        &_city {
+          color: $app-color-active;
+          &:hover {
+            color: $app-color-active-hover;
+          }
+        }
       }
       ul.menu {
         margin: 0;
@@ -41,15 +49,24 @@
     &--right {
       display: flex;
       justify-content: flex-end;
+      a.button_modal {
+        color: $app-color-black;
+      }
     }
   }
 
+  // HEADER
+
   &--header {
-    padding-top: $size-padding;
-    padding-bottom: $size-padding;
+    padding-top: $size-padding-small;
+    padding-bottom: $size-padding-small;
     &--wrapper {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
+    // LOGO
 
     &--logo {
       a {
@@ -58,26 +75,56 @@
         }
       }
     }
+
+    // SEARCH
+
     &--search {}
+
+    // CONTACTS
+
     &--contacts {
       display: flex;
       flex-wrap: wrap;
-      &-tel {
+      &-phone {
         flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 5px;
         a[href^="tel:"] {
-
+          color: $app-color-black;
+          text-decoration: none;
+          font-size: $fontsize-h3;
+          line-height: 1;
+          &:hover {
+            color: $app-color-gray;
+            text-decoration: underline;
+          }
         }
       }
       &-callback {
-        flex-basis: 50%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
         a {
-          color: $app-color-gray;
+          font-size: $fontsize-small;
+          color: $app-color-gray-light;
+          &:hover {
+            color: $app-color-black;
+          }
         }
       }
       &-messengers {
-        flex-basis: 50%;
+        display: flex;
+        justify-content: flex-end;
         a {
-
+          width: 24px;
+          height: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          border-radius: 4px;
+          margin-left: 8px;
         }
       }
     }
