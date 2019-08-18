@@ -1,0 +1,35 @@
+// MESSENGERS ICONS
+
+.messenger-icon {
+  .kalinza-icon {
+    width: 65%;
+    height: 65%;
+    color: $app-color-white;
+  }
+  &:hover {
+    filter: brightness(1.1);
+  }
+  &-telegram { background-color: #39bae7; }
+  &-whatsapp { background-color: #17d30a; }
+  &-skype { background-color: #00b1f1; }
+  &-viber { background-color: #844796; }
+  &-mess { background-color: #047cf4; }
+}
+
+// SOCIAL ICONS
+
+.social-icon {
+  .kalinza-icon {
+    width: 65%;
+    height: 65%;
+    color: $app-color-white;
+  }
+  &:hover {
+    filter: brightness(1.1);
+  }
+  &-vk { background-color: #008ec1; }
+  &-ok { background-color: #ff940f; }
+  &-facebook { background-color: #477dc9; }
+  &-instagram { background-color: #ff0074; }
+  &-youtube { background-color: #f00; }
+}
