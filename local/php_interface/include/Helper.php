@@ -186,8 +186,8 @@ final class Helper
      */
     public static function renderIcon(string $name, string $class = ''): string {
         return self::checkIE()
-            ? "<span class=\"leather-i leather-i-{$name} {$class}\"></span>"
-            : "<svg class=\"leather-icon leather-icon-{$name} {$class}\"><use xlink:href=\"#{$name}\"></use></svg>";
+            ? "<span class=\"kalinza-i kalinza-i-{$name} {$class}\"></span>"
+            : "<svg class=\"kalinza-icon kalinza-{$name} {$class}\"><use xlink:href=\"#{$name}\"></use></svg>";
     }
 
     /**
