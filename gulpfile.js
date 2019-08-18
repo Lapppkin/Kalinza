@@ -12,7 +12,7 @@ var gulp = require('gulp'), // основной плагин gulp
     cssnext = require('postcss-cssnext'), // postcss autoprefixer и пр.
     spritesmith = require('gulp.spritesmith'), // генератор спрайтов
     terser = require('gulp-terser'), // минификация js
-    //imagemin = require('gulp-imagemin'), //минимизация изображений
+    imagemin = require('gulp-imagemin'), //минимизация изображений
     prettify = require('gulp-jsbeautifier'), //бьютифайер
     babel = require('gulp-babel'), // babel
     merge = require('merge-stream'); // объединение потоков
@@ -38,6 +38,7 @@ var path = {
         css: templatePath + 'css',
         sprite: templatePath + 'images',
         svg: templatePath + 'images',
+        img: templatePath + 'images',
     },
 
     // sources
@@ -60,6 +61,7 @@ var path = {
         css: sourcesPath + 'css/[^_]*.scss',
         cssSprites: sourcesPath + 'css/init',
         sprite: sourcesPath + 'images/sprites/*.png',
+        imgSvg: sourcesPath + 'images/**/*.svg',
         svg: sourcesPath + 'svg/*.svg',
         svgTemplate: sourcesPath + 'svg/_template.scss',
         mustache: sourcesPath + 'images/sprites/_leather.mustache'
@@ -69,7 +71,7 @@ var path = {
     watch: {
         js: sourcesPath + 'js/*.js',
         css: [
-            sourcesPath + 'css/blocks/*.scss',
+            sourcesPath + 'css/components/*.scss',
             sourcesPath + 'css/bootstrap/*.scss',
             sourcesPath + 'css/common/*.scss',
             sourcesPath + 'css/init/*.scss',
@@ -100,6 +102,17 @@ function cssBuild() {
         pipe(minify()).
         pipe(sourcemaps.write('.')).
         pipe(gulp.dest(path.build.css));
+}
+
+// images (SVG)
+function imageSvgBuild() {
+    return gulp.src(path.src.imgSvg).
+        pipe(imagemin({
+            svgoPlugins: [{
+                removeViewBox: false
+            }]
+        })).
+        pipe(gulp.dest(path.build.img));
 }
 
 // sprites (PNG)
@@ -205,6 +218,7 @@ function jsBuild() {
 // tasks
 gulp.task('css:build', cssBuild);
 gulp.task('sprite:build', spriteBuild);
+gulp.task('imageSvg:build', imageSvgBuild);
 gulp.task('svg:build', svgBuild);
 gulp.task('jsVendor:build', jsVendorBuild);
 gulp.task('js:build', jsBuild);
@@ -213,7 +227,7 @@ gulp.task('js:build', jsBuild);
 function watch() {
     gulp.watch(path.watch.css, gulp.series('css:build'));
     gulp.watch(path.watch.js, gulp.series('js:build'));
-    gulp.watch(path.watch.svg, gulp.series('svg:build'));
+    gulp.watch(path.watch.svg, gulp.series('svg:build', 'imageSvg:build'));
     gulp.watch(path.watch.sprite, gulp.series('sprite:build'));
 }
 
@@ -225,7 +239,8 @@ gulp.task('build', gulp.series(
     'css:build',
     'js:build',
     'jsVendor:build',
-    'svg:build'
+    'svg:build',
+    'imageSvg:build'
 ));
 
 // default task
