@@ -17,7 +17,9 @@ if (empty($arResult))
 	return;
 ?>
 		<?foreach($arResult as $itemIdex => $arItem):?>
-			<?if ($arItem["DEPTH_LEVEL"] == "1"):?>
-				<li class="bx-inclinksfooter-item"><a href="<?=htmlspecialcharsbx($arItem["LINK"])?>"><?=htmlspecialcharsbx($arItem["TEXT"])?></a></li>
+            <?if ($arItem["DEPTH_LEVEL"] == "1"):?>
+				<li class="bx-inclinksfooter-item">
+                    <a href="<?=htmlspecialcharsbx($arItem["LINK"])?>" <?if($arItem["SELECTED"]):?>class="active"<?endif?>><?=htmlspecialcharsbx($arItem["TEXT"])?></a>
+                </li>
 			<?endif?>
 		<?endforeach;?>

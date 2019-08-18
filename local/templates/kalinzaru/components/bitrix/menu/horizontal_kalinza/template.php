@@ -75,7 +75,7 @@ CUtil::InitJSCore();
 <?foreach($arResult["MENU_STRUCTURE"] as $itemID => $arColumns):?>
     <?$existPictureDescColomn = ($arResult["ALL_ITEMS"][$itemID]["PARAMS"]["picture_src"] || $arResult["ALL_ITEMS"][$itemID]["PARAMS"]["description"]) ? true : false;?>
     <li>
-        <a href="<?=$arResult["ALL_ITEMS"][$itemID]["LINK"]?>">
+        <a href="<?=$arResult["ALL_ITEMS"][$itemID]["LINK"]?>" <?if($arResult["ALL_ITEMS"][$itemID]["SELECTED"]):?>class="active"<?endif;?>>
             <?=$arResult["ALL_ITEMS"][$itemID]["TEXT"]?>
         </a>
     </li>

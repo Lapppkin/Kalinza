@@ -1,8 +1,60 @@
 // NAVIGATION
 
+$nav-height: 40px;
+
 .navigation {
   background-color: $app-color-primary;
   color: $app-color-white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  &--wrapper {
+    display: flex;
+  }
+
+  ul.menu {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: $nav-height;
+    li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      a {
+        padding: 0 12px;
+        min-height: $nav-height;
+        display: flex;
+        align-items: center;
+        color: $app-color-white;
+        text-decoration: none;
+        &:hover {
+          background-color: $app-color-active-hover;
+          text-decoration: none;
+          color: $app-color-black;
+        }
+        &.active {
+          background-color: $app-color-active;
+        }
+      }
+      &.has-dropdown {
+
+      }
+
+      > ul.dropdown {
+        display: none;
+        li {
+          a {
+            &:hover {
+
+            }
+            &.active {
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+
 }
