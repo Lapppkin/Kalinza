@@ -16,8 +16,10 @@ body {
 
 // HEADERS
 
-//.h1,.h2,.h3,.h4,.h5,.h6,
-//h1,h2,h3,h4,h5,h6 {}
+.h1,.h2,.h3,.h4,.h5,.h6,
+h1,h2,h3,h4,h5,h6 {
+  @include headfont;
+}
 
 h1, .h1 {
   font-size: $fontsize-h1;
@@ -382,23 +384,23 @@ input {
 }
 
 .btn {
-  background-color: $app-color-white;
+  background-color: $app-color-active;
   border-style: solid;
   border-color: $app-color-active;
-  border-width: 2px !important;
-  color: $app-color-active;
-  padding-left: 25px;
-  padding-right: 25px;
-  height: $size-button + 4px;
-  line-height: $size-button - 4px;
+  border-width: 0 !important;
+  color: $app-color-white;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: $size-button;
+  line-height: $size-button;
   white-space: nowrap;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: $fontsize-small;
+  font-size: $fontsize-normal;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 6px;
   cursor: pointer;
   &-block {
     width: 100%;
