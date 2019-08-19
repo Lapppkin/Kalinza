@@ -15,8 +15,9 @@
     color: $app-color-notice;
     padding-top: $size-padding;
     padding-bottom: $size-padding;
+    font-size: $fontsize-small;
     a {
-      color: $app-color-primary;
+      color: $app-color-white;
       &:hover {
         color: $app-color-white;
       }
@@ -56,9 +57,12 @@
     }
     &--regions {
       margin-bottom: $size-padding-small;
+      display: flex;
+      flex-wrap: wrap;
       &-label {
         color: $app-color-white;
         margin-bottom: 5px;
+        margin-right: 10px;
       }
       &-items {}
     }
@@ -68,7 +72,11 @@
         color: $app-color-white;
         margin-bottom: 5px;
       }
-      &-content {}
+      &-content {
+        p {
+          margin: 0;
+        }
+      }
     }
     &--copyrights {
       color: $app-color-notice;

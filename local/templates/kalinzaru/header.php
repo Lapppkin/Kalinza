@@ -26,6 +26,7 @@ CModule::IncludeModule('mcart.souvenirs');
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <? $APPLICATION->ShowHead() ?>
         <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css'); ?>
+        <? Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap&subset=cyrillic,cyrillic-ext'); ?>
 
         <meta name="yandex-verification" content="a56dfc858ae0a85a">
     </head>

@@ -21,10 +21,7 @@
       .altasib_geobase_link {
         margin-right: 10px;
         &_city {
-          color: $app-color-active;
-          &:hover {
-            color: $app-color-active-hover;
-          }
+          color: $app-color-black;
         }
       }
       ul.menu {
