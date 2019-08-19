@@ -1,6 +1,4 @@
-<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
-    die();
-}
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 use \Bitrix\Main;
 
@@ -96,12 +94,11 @@ if (isset($arResult['ITEM'])) {
     $buttonSizeClass = isset($arResult['BIG_BUTTONS']) && $arResult['BIG_BUTTONS'] === 'Y' ? 'btn-md' : 'btn-sm';
     ?>
 
-    <div class="tovar"
-         id="<?= $areaId ?>" data-entity="item">
+    <div class="product" id="<?= $areaId ?>" data-entity="item">
         <?php
         $documentRoot = Main\Application::getDocumentRoot();
         $templatePath = strtolower($arResult['TYPE']) . '/template.php';
-        $file         = new Main\IO\File($documentRoot . $templateFolder . '/' . $templatePath);
+        $file = new Main\IO\File($documentRoot . $templateFolder . '/' . $templatePath);
         if ($file->isExists()) {
             include($file->getPath());
         }

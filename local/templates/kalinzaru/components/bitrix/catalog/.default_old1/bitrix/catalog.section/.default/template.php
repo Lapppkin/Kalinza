@@ -115,8 +115,8 @@ if (!empty($arResult['ITEMS']))
                                         <article id="ac_1">
 											<ul style="color:#000 !important;">
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "bot2",
 										"MENU_CACHE_TYPE" => "A",
@@ -143,8 +143,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "bot1",
 										"MENU_CACHE_TYPE" => "A",
@@ -171,8 +171,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "kl_3",
 										"MENU_CACHE_TYPE" => "A",
@@ -205,8 +205,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
 											<ul style="color:#000 !important;">
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "cvl1",
 										"MENU_CACHE_TYPE" => "A",
@@ -233,8 +233,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "cvl4",
 										"MENU_CACHE_TYPE" => "A",
@@ -261,8 +261,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "cvl3",
 										"MENU_CACHE_TYPE" => "A",
@@ -289,8 +289,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "cvl2",
 										"MENU_CACHE_TYPE" => "A",
@@ -327,8 +327,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
 											<ul style="color:#000 !important;">
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "ras1",
 										"MENU_CACHE_TYPE" => "A",
@@ -355,8 +355,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "ras2",
 										"MENU_CACHE_TYPE" => "A",
@@ -383,8 +383,8 @@ if (!empty($arResult['ITEMS']))
                                         <article>
                                             <ul>
 								<?$APPLICATION->IncludeComponent(
-									"bitrix:menu", 
-									"bottom_menu", 
+									"bitrix:menu",
+									"bottom_menu",
 									array(
 										"ROOT_MENU_TYPE" => "ras3",
 										"MENU_CACHE_TYPE" => "A",

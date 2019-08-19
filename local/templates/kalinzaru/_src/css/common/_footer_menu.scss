@@ -1,0 +1,42 @@
+// Footer menu
+
+.footer--menu {
+
+  &--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--title {
+    color: $app-color-white;
+    margin-bottom: 10px;
+  }
+
+  &--items {
+    flex-basis: calc(16.666% - 20px);
+    margin-right: $size-padding-small;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin: 0 0 10px;
+        padding: 0;
+        flex-basis: 100%;
+        width: 100%;
+        line-height: 1.1;
+        a {
+          color: $app-color-notice;
+          text-decoration: none;
+          &:hover {
+            color: $app-color-white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+}

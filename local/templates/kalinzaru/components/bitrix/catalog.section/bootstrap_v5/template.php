@@ -1,4 +1,4 @@
-<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 use \Bitrix\Main\Localization\Loc;
 
@@ -14,8 +14,7 @@ use \Bitrix\Main\Localization\Loc;
 
 $this->setFrameMode(true);
 
-if (!empty($arResult['NAV_RESULT']))
-{
+if (!empty($arResult['NAV_RESULT'])) {
 	$navParams =  array(
 		'NavPageCount' => $arResult['NAV_RESULT']->NavPageCount,
 		'NavPageNomer' => $arResult['NAV_RESULT']->NavPageNomer,
@@ -35,8 +34,7 @@ $showTopPager = false;
 $showBottomPager = false;
 $showLazyLoad = false;
 
-if ($arParams['PAGE_ELEMENT_COUNT'] > 0 && $navParams['NavPageCount'] > 1)
-{
+if ($arParams['PAGE_ELEMENT_COUNT'] > 0 && $navParams['NavPageCount'] > 1) {
 	$showTopPager = $arParams['DISPLAY_TOP_PAGER'];
 	$showBottomPager = $arParams['DISPLAY_BOTTOM_PAGER'];
 	$showLazyLoad = $arParams['LAZY_LOAD'] === 'Y' && $navParams['NavPageNomer'] != $navParams['NavPageCount'];
@@ -45,8 +43,7 @@ if ($arParams['PAGE_ELEMENT_COUNT'] > 0 && $navParams['NavPageCount'] > 1)
 $templateLibrary = array('popup', 'ajax', 'fx');
 $currencyList = '';
 
-if (!empty($arResult['CURRENCIES']))
-{
+if (!empty($arResult['CURRENCIES'])) {
 	$templateLibrary[] = 'currency';
 	$currencyList = CUtil::PhpToJSObject($arResult['CURRENCIES'], false, true, true);
 }
@@ -72,19 +69,15 @@ $positionClassMap = array(
 );
 
 $discountPositionClass = '';
-if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y' && !empty($arParams['DISCOUNT_PERCENT_POSITION']))
-{
-	foreach (explode('-', $arParams['DISCOUNT_PERCENT_POSITION']) as $pos)
-	{
+if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y' && !empty($arParams['DISCOUNT_PERCENT_POSITION'])) {
+	foreach (explode('-', $arParams['DISCOUNT_PERCENT_POSITION']) as $pos)	{
 		$discountPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
 	}
 }
 
 $labelPositionClass = '';
-if (!empty($arParams['LABEL_PROP_POSITION']))
-{
-	foreach (explode('-', $arParams['LABEL_PROP_POSITION']) as $pos)
-	{
+if (!empty($arParams['LABEL_PROP_POSITION'])) {
+	foreach (explode('-', $arParams['LABEL_PROP_POSITION']) as $pos) {
 		$labelPositionClass .= isset($positionClassMap[$pos]) ? ' '.$positionClassMap[$pos] : '';
 	}
 }
@@ -144,88 +137,49 @@ $generalParams = array(
 $obName = 'ob'.preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($navParams['NavNum']));
 $containerName = 'container-'.$navParams['NavNum'];
 
+if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])) {
+    $areaIds = array();
+    foreach ($arResult['ITEMS'] as $item) {
+        $uniqueId = $item['ID'].'_'.md5($this->randString().$component->getAction());
+        $areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
+        $this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
+        $this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
+    }
+    foreach ($arResult['ITEM_ROWS'] as $rowData) {
+        //$rowData['COUNT']
+        $countt = 18;
+        $rowItems = array_splice($arResult['ITEMS'], 0, $countt);
 
-?>
+        foreach ($rowItems as $item) { ?>
+        <div class="popular-products--item">
+            <?
+            $APPLICATION->IncludeComponent(
+                'bitrix:catalog.item',
+                'bootstrap_v5',
+                array(
+                    'RESULT' => array(
+                        'ITEM' => $item,
+                        'AREA_ID' => $areaIds[$item['ID']],
+                        'TYPE' => $rowData['TYPE'],
+                        'BIG_LABEL' => 'N',
+                        'BIG_DISCOUNT_PERCENT' => 'N',
+                        'BIG_BUTTONS' => 'N',
+                        'SCALABLE' => 'N'
+                    ),
+                    'PARAMS' => $generalParams + array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
+                ),
+                $component,
+                array(
+                    'HIDE_ICONS' => 'Y'
+                )
+            );
+            ?>
+        </div>
+        <?php }
+    }
+    unset($generalParams, $rowItems);
+}
 
-<div class="frame" id="centered" style="overflow: hidden;">
-	<?
-	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
-	{
-		$areaIds = array();
-
-		foreach ($arResult['ITEMS'] as $item)
-		{
-			$uniqueId = $item['ID'].'_'.md5($this->randString().$component->getAction());
-			$areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
-			$this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
-			$this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
-		}
-		?>
-
-		<?
-		foreach ($arResult['ITEM_ROWS'] as $rowData)
-		{
-			//$rowData['COUNT']
-			$countt=18;
-			$rowItems = array_splice($arResult['ITEMS'], 0, $countt);
-			?>
-				<ul class="clearfix">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<li>
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'bootstrap_v5',
-											array(
-												'RESULT' => array(
-													'ITEM' => $item,
-													'AREA_ID' => $areaIds[$item['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</li>
-									<?
-								}
-								?>
-				</ul>
-			<?
-		}
-		unset($generalParams, $rowItems);
-		?>
-	<?
-	}
-	?>
-
-
-
-</div>
-                                <div class="scrollbar">
-                                    <div class="handle" style="transform: translateZ(0px) translateX(76px); width: 190px;">
-                                        <div class="mousearea"></div>
-                                    </div>
-                                </div>
-
-                                <div class="controls">
-									<button class="btn prev"><img src="/2/images/1/Arrow.png"/></button>
-									<button class="btn next"><img src="/2/images/1/Arrow.png" style="transform: rotate(180deg);"/></button>
-                                </div>
-
-
-<?
 $signer = new \Bitrix\Main\Security\Sign\Signer;
 $signedTemplate = $signer->sign($templateName, 'catalog.section');
 $signedParams = $signer->sign(base64_encode(serialize($arResult['ORIGINAL_PARAMETERS'])), 'catalog.section');
-?>

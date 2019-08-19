@@ -1,4 +1,4 @@
-<? if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 /**
  * @var \CMain $APPLICATION
@@ -18,15 +18,15 @@ CModule::IncludeModule('mcart.souvenirs');
 <!doctype html>
 <html lang="<?= LANGUAGE_ID ?>">
     <head>
-        <title><? $APPLICATION->ShowTitle() ?></title>
+        <title><?php $APPLICATION->ShowTitle() ?></title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <? $APPLICATION->ShowHead() ?>
-        <? Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css'); ?>
-        <? Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap&subset=cyrillic,cyrillic-ext'); ?>
+        <?php $APPLICATION->ShowHead() ?>
+        <?php Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css'); ?>
+        <?php Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap&subset=cyrillic,cyrillic-ext'); ?>
 
         <meta name="yandex-verification" content="a56dfc858ae0a85a">
     </head>
@@ -42,7 +42,7 @@ CModule::IncludeModule('mcart.souvenirs');
                     <div class="container">
                         <div class="row">
                             <div class="header--topbar--wrapper col-12">
-                                <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/header_topbar.php'); ?>
+                                <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/header_topbar.php'); ?>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ CModule::IncludeModule('mcart.souvenirs');
                     <div class="container">
                         <div class="row">
                             <div class="header--header--wrapper col-12">
-                                <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/header.php'); ?>
+                                <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/header.php'); ?>
                             </div>
                         </div>
                     </div>
@@ -64,18 +64,18 @@ CModule::IncludeModule('mcart.souvenirs');
                 <div class="container">
                     <div class="row">
                         <div class="navigation--wrapper col-12">
-                            <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/navigation.php'); ?>
+                            <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/navigation.php'); ?>
                         </div>
                     </div>
                 </div>
             </nav>
 
-            <? if (!$isIndex): ?>
+            <?php if (!$isIndex): ?>
             <div id="breadcrumb" class="breadcrumb">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 breadcrumb--wrapper">
-                            <?
+                            <?php
                             $APPLICATION->IncludeComponent(
                                 "bitrix:breadcrumb",
                                 ".default",
@@ -94,7 +94,7 @@ CModule::IncludeModule('mcart.souvenirs');
                     </div>
                 </div>
             </div>
-            <? endif; ?>
+            <?php endif; ?>
 
             <main id="main">
                 <div class="container">

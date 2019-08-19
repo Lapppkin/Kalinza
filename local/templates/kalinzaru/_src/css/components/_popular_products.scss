@@ -1,0 +1,32 @@
+// POPULAR PRODUCTS
+
+.popular-products {
+  margin-top: $size-padding-large;
+  margin-bottom: $size-padding-large;
+
+  &--title {
+    margin-bottom: $size-padding;
+  }
+
+  &--wrapper {
+    width: 100%;
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &--item {
+    flex-basis: calc(25% - 20px);
+    background-color: $app-color-white;
+    @include shadow;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      @include shadow-hover;
+    }
+  }
+
+}
