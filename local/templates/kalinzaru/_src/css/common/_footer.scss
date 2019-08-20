@@ -1,4 +1,4 @@
-// Footer
+// FOOTER
 
 .footer {
   background-color: $app-color-gray;
@@ -32,6 +32,7 @@
       &-label {
         color: $app-color-white;
         margin-bottom: 5px;
+        @include mediumfont;
       }
       &-items {
         display: flex;
@@ -46,6 +47,7 @@
       &-label {
         color: $app-color-white;
         margin-bottom: 5px;
+        @include mediumfont;
       }
       &-items {
         display: flex;
@@ -63,6 +65,7 @@
         color: $app-color-white;
         margin-bottom: 5px;
         margin-right: 10px;
+        @include mediumfont;
       }
       &-items {}
     }
@@ -71,6 +74,7 @@
       &-label {
         color: $app-color-white;
         margin-bottom: 5px;
+        @include mediumfont;
       }
       &-content {
         p {

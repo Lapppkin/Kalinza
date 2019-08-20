@@ -21,6 +21,7 @@
     flex-basis: 100%;
     a {
       text-decoration: none;
+      @include mediumfont;
       &:hover {
         text-decoration: underline;
       }

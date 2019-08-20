@@ -1,4 +1,4 @@
-// Footer menu
+// FOOTER MENU
 
 .footer--menu {
 
@@ -10,6 +10,8 @@
   &--title {
     color: $app-color-white;
     margin-bottom: 10px;
+    @include mediumfont;
+    line-height: 1.1;
   }
 
   &--items {
