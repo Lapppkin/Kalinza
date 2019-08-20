@@ -1,0 +1,31 @@
+// BREADCRUMB
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  &--wrapper {
+    min-height: 40px;
+    .bx-breadcrumb {
+      margin: 0;
+      padding: 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 40px;
+    }
+    .bx-breadcrumb-item {
+      font-size: $fontsize-small;
+      display: inline-flex;
+      margin: 0 10px 0 0 !important;
+      a {
+        span {
+          @include redularfont;
+        }
+      }
+      span {
+        font-family: inherit !important;
+      }
+    }
+  }
+
+}
