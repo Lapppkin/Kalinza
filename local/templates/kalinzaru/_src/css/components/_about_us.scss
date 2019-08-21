@@ -1,0 +1,58 @@
+// ABOUT US
+
+.about-us {
+  padding-top: $size-padding-large;
+  padding-bottom: $size-padding-large;
+  background-color: $app-color-background;
+
+  &--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--item {
+    width: 33.333%;
+    flex-basis: 33.333%;
+    display: flex;
+    flex-wrap: wrap;
+    &--title {
+      flex-basis: 100%;
+      text-align: center;
+      font-size: $fontsize-h4;
+      @include headfont;
+      margin-bottom: $size-padding-small;
+    }
+    &--image {
+      flex-basis: 100%;
+      width: 100%;
+      height: 220px;
+      position: relative;
+      a {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        &:hover {
+          img {
+            filter: brightness(1.15);
+            @include shadow-hover;
+          }
+        }
+        img {
+          transition: all 0.3s ease-in-out;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  .find-yours {}
+  .kalinza-faces {}
+  .free-delivery {}
+
+}

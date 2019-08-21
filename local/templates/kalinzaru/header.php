@@ -18,20 +18,20 @@ CModule::IncludeModule('mcart.souvenirs');
 <!doctype html>
 <html lang="<?= LANGUAGE_ID ?>">
     <head>
-        <title><?php $APPLICATION->ShowTitle() ?></title>
+        <title><?php $APPLICATION->ShowTitle(); ?></title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <?php $APPLICATION->ShowHead() ?>
+        <?php $APPLICATION->ShowHead(); ?>
         <?php Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css'); ?>
         <?php Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap&subset=cyrillic,cyrillic-ext'); ?>
 
         <meta name="yandex-verification" content="a56dfc858ae0a85a">
     </head>
     <body>
-        <div id="panel"><? $APPLICATION->ShowPanel() ?></div>
+        <div id="panel"><?php $APPLICATION->ShowPanel() ?></div>
 
         <div id="svg-container" hidden></div>
         <div class="wrapper">
@@ -97,5 +97,7 @@ CModule::IncludeModule('mcart.souvenirs');
             <?php endif; ?>
 
             <main id="main">
+                <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
                 <div class="container">
                     <div class="row">
+                <?php endif; ?>

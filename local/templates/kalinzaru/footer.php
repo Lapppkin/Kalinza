@@ -7,8 +7,10 @@
 use Bitrix\Main\Page\Asset;
 
 ?>
+            <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
                     </div>
                 </div>
+            <?php endif; ?>
             </main>
 
             <footer id="footer">

@@ -21,7 +21,8 @@
     flex-basis: 100%;
     a {
       text-decoration: none;
-      @include mediumfont;
+      @include headfont;
+      font-size: $fontsize-h5;
       &:hover {
         text-decoration: underline;
       }
@@ -35,8 +36,7 @@
     padding-right: 10px;
     .price_new {
       font-size: 1.3em;
-      @include headfont;
-      font-weight: 600;
+      @include redularfont;
       color: $app-color-secondary;
     }
   }
