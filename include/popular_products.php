@@ -9,7 +9,7 @@
                     $trendFilter = array();
                     $APPLICATION->IncludeComponent(
                         'bitrix:catalog.section',
-                        'bootstrap_v5',
+                        'popular_products',
                         array(
                             'ACTION_VARIABLE'                 => 'action',
                             'ADD_PICT_PROP'                   => '-',
