@@ -2,15 +2,14 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Kalinza в лицах");
 ?>
-<h1>Kalinza в лицах</h1>
 
-<style>
-	.turrr img{float:left; padding: 10px;}
-</style>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<h1 class="col-12">Kalinza в лицах</h1>
 
-							<div class="col-md-12 turrr">
+<style>.turrr img{float:left; padding: 10px;}</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+<div class="col-12 turrr">
 
 <a data-fancybox="gallery" href="/2/img/kalinza_photo/izh/1.jpeg">
 <img src="/2/img/kalinza_photo/izh/1.jpeg" width="50%">

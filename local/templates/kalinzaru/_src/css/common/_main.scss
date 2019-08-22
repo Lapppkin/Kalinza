@@ -4,9 +4,9 @@ main {
   margin-top: $size-padding;
   margin-bottom: $size-padding;
   h1, .h1 {
-    margin-top: 15px;
+    text-align: center;
     @include headfont;
-    color: $app-color-active;
+    color: $app-color-black;
   }
 }
 
