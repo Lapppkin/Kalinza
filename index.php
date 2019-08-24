@@ -6,7 +6,7 @@ $APPLICATION->SetTitle('Купить контактные и цветные ли
     <div class="main--content">
         <div class="container">
             <div class="row">
-                <div class="main--content--wrapper">
+                <div class="main--content--wrapper col-12">
                     <?php $APPLICATION->IncludeFile('/include/slider.php'); ?>
                     <?php $APPLICATION->IncludeFile('/include/offers.php'); ?>
                 </div>
