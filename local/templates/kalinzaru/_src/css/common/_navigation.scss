@@ -34,7 +34,7 @@ $nav-height: 40px;
         }
       }
       a {
-        padding: 0 10px;
+        padding: 0 15px;
         min-height: $nav-height;
         display: flex;
         align-items: center;
@@ -57,7 +57,7 @@ $nav-height: 40px;
       }
 
       > ul.dropdown {
-        transition: all 0.3s ease-in-out;
+        transition: all 0.4s ease-in-out;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
