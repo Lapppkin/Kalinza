@@ -51,7 +51,7 @@ use Deadie\Helper;
         <a href="tel:88001234567">8-800-123-45-67</a>
     </div>
     <div class="header--header--contacts-callback">
-        <a href="#">Заказать звонок</a>
+        <a href="#" data-toggle="modal" data-target="#modal--callback">Заказать звонок</a>
     </div>
     <div class="header--header--contacts-messengers">
         <a href="http://t-do.ru/kalinza" class="messenger-icon messenger-icon-telegram" rel="nofollow" target="_blank">

@@ -103,9 +103,9 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 							 <!-- <div class="dddddd">
                                         <div class="bb1">
                                             <div class="owl-carousel owl-theme">
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/mega/1.jpeg"></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/mega/2.jpeg"></div>
-                                                <div class="item"><img src="/2/img/kalinza_photo/krd/mega/3.jpeg"></div>
+                                                <div class="item"><img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/1.jpeg"></div>
+                                                <div class="item"><img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/2.jpeg"></div>
+                                                <div class="item"><img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/3.jpeg"></div>
                                             </div>
                                         </div>
                                         <div class="bb2">
@@ -119,16 +119,16 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/mega/3.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/3.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/mega/2.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/2.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/mega/1.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/1.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/mega/4.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/mega/4.jpeg">
 										</div>
 									</div>
 								</div>
@@ -148,13 +148,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/chekistov/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/chekistov/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/chekistov/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/chekistov/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/chekistov/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/chekistov/3.jpg">
 										</div>
 									</div>
 								</div>
@@ -174,10 +174,10 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/sbs/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/sbs/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/sbs/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/sbs/2.jpg">
 										</div>
 									</div>
 								</div>
@@ -197,13 +197,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/atarbekova/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/atarbekova/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/atarbekova/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/atarbekova/3.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/atarbekova/4.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/atarbekova/4.jpg">
 										</div>
 									</div>
 								</div>
@@ -223,13 +223,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lisa/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lisa/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lisa/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lisa/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lisa/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lisa/3.jpg">
 										</div>
 									</div>
 								</div>
@@ -249,13 +249,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/eiskoe/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/eiskoe/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/eiskoe/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/eiskoe/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/eiskoe/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/eiskoe/3.jpg">
 										</div>
 									</div>
 								</div>
@@ -275,22 +275,22 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lenta/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lenta/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lenta/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lenta/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lenta/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lenta/3.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lenta/4.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lenta/4.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lenta/5.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lenta/5.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/lenta/6.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/lenta/6.jpg">
 										</div>
 									</div>
 								</div>
@@ -310,16 +310,16 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/ozmall/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/ozmall/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/ozmall/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/ozmall/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/ozmall/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/ozmall/3.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/krd/ozmall/4.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/ozmall/4.jpg">
 										</div>
 									</div>
 								</div>
@@ -344,19 +344,19 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/izh/1.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/1.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/izh/4.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/4.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/izh/5.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/5.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/izh/7.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/7.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/izh/8.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/8.jpeg">
 										</div>
 									</div>
 								</div>
@@ -383,19 +383,19 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/nizh_nov/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nizh_nov/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nizh_nov/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nizh_nov/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nizh_nov/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nizh_nov/3.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nizh_nov/4.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nizh_nov/4.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nizh_nov/5.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nizh_nov/5.jpg">
 										</div>
 									</div>
 								</div>
@@ -422,16 +422,16 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/novoros/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/novoros/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/novoros/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/novoros/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/novoros/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/novoros/3.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/novoros/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/novoros/1.jpg">
 										</div>
 									</div>
 								</div>
@@ -458,22 +458,22 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/1.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/1.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/2.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/2.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/3.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/3.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/4.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/4.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/5.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/5.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/6.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/6.jpeg">
 										</div>
 									</div>
 								</div>
@@ -493,19 +493,19 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/eyhe/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/eyhe/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/eyhe/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/eyhe/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/eyhe/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/eyhe/3.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/eyhe/4.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/eyhe/4.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/nsb/eyhe/5.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/nsb/eyhe/5.jpg">
 										</div>
 									</div>
 								</div>
@@ -532,22 +532,22 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/stav/1.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/1.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/stav/5.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/5.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/stav/6.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/6.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/stav/7.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/7.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/stav/8.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/8.jpeg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/stav/2.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/2.jpeg">
 										</div>
 									</div>
 								</div>
@@ -574,13 +574,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/kursk/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/kursk/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/kursk/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/kursk/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/kursk/3.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/kursk/3.jpg">
 										</div>
 									</div>
 								</div>
@@ -600,13 +600,13 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
 								<div class="bb1">
 									<div class="owl-carousel owl-theme">
 										<div class="item">
- <img src="/2/img/kalinza_photo/kursk2/1.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/kursk2/1.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/kursk2/2.jpg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/kursk2/2.jpg">
 										</div>
 										<div class="item">
- <img src="/2/img/kalinza_photo/kursk2/3.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/kursk2/3.jpeg">
 										</div>
 									</div>
 								</div>

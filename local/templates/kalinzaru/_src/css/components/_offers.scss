@@ -1,7 +1,7 @@
 // OFFERS
 
 .offers {
-  flex-basis: 22%;
+  flex-basis: 27%;
   margin-left: 30px;
   &--wrapper {
     display: flex;
@@ -19,42 +19,35 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($app-color-black, 0.35);
+      z-index: 0;
+    }
     p {
+      position: relative;
+      z-index: 1;
       flex-basis: 100%;
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 0;
       line-height: 1.1;
       @include mediumfont;
+      color: $app-color-white;
+      &:first-child {
+        color: $app-color-primary;
+      }
     }
-    &--form {
-      margin-top: 15px;
-      flex-basis: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      .certificate-email {
-        flex-basis: 100%;
-        input {
-          text-align: center;
-          background-color: rgba($app-color-white, 0.7);
-          transition: all 0.3s ease-in-out;
-          &:hover,
-          &:focus {
-            background-color: $app-color-white;
-          }
-        }
-      }
-      .certificate-submit {
-        flex-basis: 100%;
-        font-size: $fontsize-normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        input {
-          display: inline-flex;
-        }
-      }
+    button {
+      text-align: center;
     }
   }
 
@@ -82,9 +75,10 @@
       text-decoration: none;
       background-color: $app-color-white;
       span {
-        margin-left: 15px;
-        padding-right: 15px;
-        font-size: $fontsize-h5;
+        margin-left: 10px;
+        padding-right: 10px;
+        line-height: 1.2;
+        font-size: 1.1em;
         strong {
           color: $app-color-primary;
         }

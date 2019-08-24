@@ -1023,7 +1023,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                             и номер телефона, мы сами оформим заказ и Вам перезвоним.
                         </p>
 
-                        <form class="font11" action="/2/mail3.php" method="post">
+                        <form class="font11" action="<?= SITE_DIR . 'include/mail/mail3.php' ?>" method="post">
                             <input type="text" name="name" value="" placeholder="Имя" required/>
                             <input type="text" name="phone" value="" placeholder="Телефон" required/>
                             <input type="hidden" name="tovar" value="https://kalinza.ru<? echo $arResult["ORIGINAL_PARAMETERS"]["CURRENT_BASE_PAGE"]; ?> "/>

@@ -511,7 +511,7 @@ $k++;
                                                 <div class="block_2" style="width: 325px; margin-top: 25px; margin-left: 10px;">
                                                     <p>Нужны очки?</p>
                                                     <p>Получи свой сертификат<br>на 500 рублей</p>
-														<form class="contact-form" action="/2/mail2.php" method="post">
+														<form class="contact-form" action="/include/mail/mail2.php" method="post">
                                                         <div class="form-group">
 <input type="email" required class="form-control" name="email" id="name" placeholder="Адрес электронной почты" style="margin: 0 auto !important;text-align:  center; color:#fff;">
                                                         </div>

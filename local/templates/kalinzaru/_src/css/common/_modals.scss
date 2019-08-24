@@ -1,28 +1,45 @@
 // MODAL WINDOWS
 
 .modal {
+  &-body {
+    .errortext {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .close {
+    margin: 0;
+    background-color: transparent;
+    color: $app-color-black !important;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 1.2rem;
+    &:hover {
+      background-color: transparent;
+      color: $app-color-error;
+    }
+  }
   &-dialog {
     @include shadow;
     background-color: $app-color-white;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-	align-content: flex-start;
-
-	@media (min-width: 768px) {
-		padding: 50px 70px;
-	}
-
-	@media (max-width: 767px) {
-		padding: 30px 20px;
-		min-width: 300px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    align-content: flex-start;
+    padding: 30px;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    @include br-small;
 
     &-centered {
       min-height: initial !important;
     }
+
   }
 
   &-title {
@@ -30,6 +47,9 @@
     color: $app-color-active;
     line-height: 1.2;
     text-align: center;
+    flex-basis: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   &-header {
@@ -38,6 +58,13 @@
     border: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    .modal-logo {
+      flex-basis: 100%;
+      img {
+        max-width: 80%;
+      }
+    }
     a {
       text-decoration: underline;
       &:hover {
@@ -95,6 +122,36 @@
       }
       textarea {
         max-width: 100%;
+      }
+    }
+    .form-field {
+      display: flex;
+      flex-wrap: wrap;
+      label {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      input {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      p {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      noindex {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+    .form-privacy {
+      text-align: left;
+      padding: 0 20px;
+      label {
+        color: $app-color-gray-light;
+        line-height: 1;
+        margin-top: 10px;
+        font-size: $fontsize-small;
       }
     }
   }

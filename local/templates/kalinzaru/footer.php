@@ -5,6 +5,7 @@
  */
 
 use Bitrix\Main\Page\Asset;
+use Bitrix\Main\Application;
 
 ?>
             <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
@@ -40,6 +41,15 @@ use Bitrix\Main\Page\Asset;
                 <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/seo_bottom.php'); ?>
                 <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/schemaorg.php'); ?>
             </div>
+
+            <?php
+            // Открытие окна авторизации
+            $application = Application::getInstance();
+            $request = $application->getContext()->getRequest();
+            $login = $request->getQuery('login');
+            if ($login === 'yes'): ?>
+                <script>openAuthModal();</script>
+            <?php endif; ?>
 
         </div>
     </body>

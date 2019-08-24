@@ -11,52 +11,52 @@ $APPLICATION->SetTitle("Kalinza в лицах");
 
 <div class="col-12 turrr">
 
-<a data-fancybox="gallery" href="/2/img/kalinza_photo/izh/1.jpeg">
-<img src="/2/img/kalinza_photo/izh/1.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/1.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/1.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/kalinza_photo/stav/1.jpeg">
-<img src="/2/img/kalinza_photo/stav/1.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/1.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/1.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/kalinza_photo/stav/4.jpeg">
-<img src="/2/img/kalinza_photo/stav/4.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/4.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/4.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/kalinza_photo/stav/14.jpeg">
-<img src="/2/img/kalinza_photo/stav/14.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/14.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/14.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/kalinza_photo/zhelez/6.jpeg">
-<img src="/2/img/kalinza_photo/zhelez/6.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/zhelez/6.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/zhelez/6.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/kalinza_photo/stav/12.jpeg">
-<img src="/2/img/kalinza_photo/stav/12.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/12.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/12.jpeg" width="50%">
 </a>
 
 
-<a data-fancybox="gallery" href="/2/img/lica/1.jpg">
-<img src="/2/img/lica/1.jpg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/1.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/1.jpg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/2.jpg">
-<img src="/2/img/lica/2.jpg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/2.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/2.jpg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/3.jpg">
-<img src="/2/img/lica/3.jpg" width="47%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/3.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/3.jpg" width="47%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/4.jpg">
-<img src="/2/img/lica/4.jpg" width="53%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/4.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/4.jpg" width="53%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/5.jpg">
-<img src="/2/img/lica/5.jpg" width="53%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/5.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/5.jpg" width="53%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/6.jpg">
-<img src="/2/img/lica/6.jpg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/6.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/6.jpg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/7.jpg">
-<img src="/2/img/lica/7.jpg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/7.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/7.jpg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/8.jpg">
-<img src="/2/img/lica/8.jpg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/8.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/8.jpg" width="50%">
 </a>
-<a data-fancybox="gallery" href="/2/img/lica/9.jpg">
-<img src="/2/img/lica/9.jpg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/9.jpg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/9.jpg" width="50%">
 </a>
 
 

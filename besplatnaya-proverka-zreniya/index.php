@@ -12,7 +12,7 @@ $APPLICATION->SetTitle("Title");
 			<h5>После проверки вам не обязательно ничего покупать. Мы проверим ваше зрение одинаково качественно, вне зависимости, купите вы у нас или нет.</h5>
 			<div style="height: 15px; width: 100%; clear: both;">
 			</div>
-			<form class="rf" action="/2/mail5.php" method="post">
+			<form class="rf" action="<?= SITE_DIR . 'include/mail/mail5.php' ?>" method="post">
 				<table class="fdgsfg dfdfdfdfdfdf" style="width: 600px;">
 				<tbody>
 				<tr>
@@ -367,13 +367,13 @@ if ($arData['CITY']['NAME']=='Ставрополь'){echo '
 						<div style="width: 310px;">
 							<div class="owl-carousel owl-theme" style="box-shadow: 0px 5px 10px #c3c3c3;border-radius: 15px;">
 								<div class="item">
- <img src="/2/img/kalinza_photo/krd/6/1.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/6/1.jpeg">
 								</div>
 								<div class="item">
- <img src="/2/img/kalinza_photo/krd/6/2.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/6/2.jpeg">
 								</div>
 								<div class="item">
- <img src="/2/img/kalinza_photo/krd/6/3.jpeg">
+ <img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/krd/6/3.jpeg">
 								</div>
 							</div>
 						</div>
@@ -406,7 +406,7 @@ if ($arData['CITY']['NAME']=='Ставрополь'){echo '
 					 Получи свой сертификат<br>
 					 на 500 рублей
 				</p>
-				<form class="contact-form" method="post" action="/2/mail2.php">
+				<form class="contact-form" method="post" action="<?= SITE_DIR . 'include/mail/mail2.php' ?>">
 					<div class="form-group">
  <input type="email" class="form-control" required="" name="email" placeholder="Адрес электронной почты" style="margin:0 auto !important; color:#fff;">
 					</div>
@@ -424,7 +424,7 @@ if ($arData['CITY']['NAME']=='Ставрополь'){echo '
 					<div class="flexslider">
 						<ul class="slides">
  <a href="/kalinza-v-litsakh/" style="color:#000;text-decoration:none;">
-							<li> <img src="/2/images/1/lica.png">
+							<li> <img src="<?= SITE_DIR . 'include/images/lica.png' ?>" alt="">
 							<div class="overlay">
 							</div>
 							<div class="container2">
@@ -440,7 +440,7 @@ if ($arData['CITY']['NAME']=='Ставрополь'){echo '
  </li>
  </a>
 							<!-- <li >
-														<img src="/2/images/1/lica.png"/>
+														<img src="<?= SITE_DIR . 'include/images/lica.png' ?>"/>
                                                         <div class="overlay"></div>
                                                         <div class="container2">
                                                             <div class="row">
