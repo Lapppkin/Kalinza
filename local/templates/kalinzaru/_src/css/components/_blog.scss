@@ -70,4 +70,23 @@
     }
   }
 
+  // BLOG DETAIL
+
+  &--element {
+    margin-bottom: 30px;
+    &--title {
+      margin-bottom: 30px;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      h1 {
+        color: $app-color-white;
+      }
+    }
+  }
+
 }

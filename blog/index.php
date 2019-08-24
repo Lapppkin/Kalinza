@@ -1,7 +1,20 @@
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
+use Bitrix\Main\Application,
+    Bitrix\Main\Web\Uri;
+
 $APPLICATION->SetTitle("Блог");
-?>
+
+//var_dump($_REQUEST);
+
+if (!empty($_REQUEST['ELEMENT_CODE'])) {
+    $res = CIBlockElement::GetList(array(), array('IBLOCK_ID' => $IBLOCK_ID, 'CODE' => $_REQUEST['ELEMENT_CODE']), false, array(), $arSelect);
+    while ($ob = $res->GetNextElement()) {
+        $ELEMENT = $ob->GetFields();
+    }
+}
+
+if (empty($ELEMENT)): ?>
 
 <div class="blog">
     <h2 class="blog--title col text-center">Наш блог</h2>
@@ -10,7 +23,7 @@ $APPLICATION->SetTitle("Блог");
             "blog",
             array(
                 "IBLOCK_TYPE" => "news",
-                "IBLOCK_ID" => "1",
+                "IBLOCK_ID" => 1,
                 "TEMPLATE_THEME" => "site",
                 "NEWS_COUNT" => "10",
                 "USE_SEARCH" => "N",
@@ -100,5 +113,25 @@ $APPLICATION->SetTitle("Блог");
         ); ?>
     </div>
 </div>
+
+<?php else: ?>
+
+    <?php
+    $APPLICATION->AddChainItem($ELEMENT['NAME']);
+    $APPLICATION->SetTitle($ELEMENT['NAME'] . ' | Блог');
+    $APPLICATION->SetPageProperty("description", $ELEMENT['PREVIEW_TEXT']);
+    ?>
+
+    <div class="blog--element">
+        <div class="blog--element--title"
+            style="background-image: url(<?= CFile::GetFileArray($ELEMENT['PREVIEW_PICTURE'])['SRC'] ?>)">
+            <h1><?= $ELEMENT['NAME'] ?></h1>
+        </div>
+        <?php if (!empty($ELEMENT['DETAIL_TEXT'])): ?>
+            <div class="blog--element--content"><?= $ELEMENT['DETAIL_TEXT'] ?></div>
+        <?php endif; ?>
+    </div>
+
+<?php endif; ?>
 
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
