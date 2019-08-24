@@ -107,6 +107,7 @@
         background-image: url("../images/svg/search.svg");
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 16px;
         display: flex;
         height: 34px;
         line-height: 34px;
@@ -116,6 +117,9 @@
         position: absolute;
         right: 0;
         top: 0;
+        &:hover {
+          background-size: 18px;
+        }
       }
     }
 

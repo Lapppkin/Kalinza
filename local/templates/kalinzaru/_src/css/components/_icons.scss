@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 4px;
+  @include br-small;
   .kalinza-icon {
     width: 65%;
     height: 65%;
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 4px;
+  @include br-small;
   .kalinza-icon {
     width: 65%;
     height: 65%;

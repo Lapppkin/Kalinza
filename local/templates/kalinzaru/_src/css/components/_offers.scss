@@ -65,7 +65,7 @@
     min-height: 120px;
     max-height: 120px;
     overflow: hidden;
-    border-radius: 4px;
+    @include br-small;
     transition: all 0.3s ease-in-out;
     &:hover {
       @include shadow-hover;

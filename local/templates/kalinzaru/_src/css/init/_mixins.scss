@@ -9,14 +9,14 @@
 @mixin br {
   border-radius: 10px;
 }
-@mixin br2 {
-  border-radius: 3px;
+@mixin br-small {
+  border-radius: 4px;
 }
 @mixin shadow {
   box-shadow: 0 2px 4px rgba(black, 0.1);
 }
 @mixin shadow-hover {
-  box-shadow: 0 4px 16px rgba(black, 0.125);
+  box-shadow: 0 4px 16px rgba(black, 0.15);
 }
 
 
