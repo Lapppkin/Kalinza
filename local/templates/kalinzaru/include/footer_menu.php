@@ -6,7 +6,7 @@ use Deadie\Helper;
 <div class="footer--menu">
     <div class="container">
         <div class="row">
-            <div class="footer--menu--wrapper">
+            <div class="footer--menu--wrapper col-12">
 
                 <div class="footer--menu--items">
                     <div class="footer--menu--title">О компании</div>
