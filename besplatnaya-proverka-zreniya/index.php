@@ -1,7 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "KALINZA.ru - проверь зрение в Краснодаре");
-$APPLICATION->SetPageProperty("keywords", "проверка зрения, бесплатная проверка зрения");
 $APPLICATION->SetPageProperty("title", "Бесплатная проверка зрения в Краснодаре");
 $APPLICATION->SetTitle("Title");
 ?><div style="height: 0px; width: 100%; clear: both;">
@@ -143,7 +142,7 @@ $APPLICATION->SetTitle("Title");
 				</tr>
 				<tr>
 					<td style="padding-right: 100px;">
-						 <? 
+						 <?
 if(CModule::IncludeModule("altasib.geobase")) {
 $arData = CAltasibGeoBase::GetDataKladr();
 
