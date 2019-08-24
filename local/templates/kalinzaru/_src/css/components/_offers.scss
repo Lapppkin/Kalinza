@@ -1,0 +1,99 @@
+// OFFERS
+
+.offers {
+  flex-basis: 32%;
+  margin-left: 30px;
+  &--wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &--certificate {
+    flex-basis: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 30px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    p {
+      flex-basis: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      line-height: 1.2;
+      @include mediumfont;
+    }
+    &--form {
+      margin-top: 20px;
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .certificate-email {
+        flex-basis: 100%;
+        input {
+          text-align: center;
+          background-color: rgba($app-color-white, 0.7);
+          transition: all 0.3s ease-in-out;
+          &:hover,
+          &:focus {
+            background-color: $app-color-white;
+          }
+        }
+      }
+      .certificate-submit {
+        flex-basis: 100%;
+        font-size: $fontsize-normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+
+  &--eye-test {
+    position: relative;
+    flex-basis: 100%;
+    @include shadow;
+    min-height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      @include shadow-hover;
+    }
+    a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      padding: 30px 15px;
+      color: $app-color-black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      background-color: $app-color-white;
+      span {
+        margin-left: 15px;
+        padding-right: 15px;
+        font-size: $fontsize-h5;
+        strong {
+          color: $app-color-primary;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,61 @@
+// SLIDER
+
+.slider {
+  flex-basis: 68%;
+  max-width: 68%;
+  overflow: hidden;
+  position: relative;
+
+  &--wrapper {}
+  &--nav {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    .owl-prev,
+    .owl-next {
+      user-select: none;
+      cursor: pointer;
+      color: $app-color-white;
+      font-size: 2.5rem;
+      padding: 5px 15px;
+      text-shadow: 0 0 24px $app-color-primary;
+      line-height: 0.6;
+      height: 40px;
+      max-height: 40px;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $app-color-primary;
+      }
+    }
+  }
+
+  &--item {
+    height: 360px;
+    min-height: 360px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &--title {
+      align-self: flex-end;
+      text-align: right;
+      color: $app-color-white;
+      text-shadow: 0 0 24px $app-color-primary;
+      font-size: $fontsize-h2;
+      margin-bottom: 20px;
+      @include headfont;
+      line-height: 1.2;
+    }
+    &--link {
+      align-self: flex-end;
+    }
+  }
+
+}

@@ -25,7 +25,7 @@ use Bitrix\Main\Page\Asset;
             <?php
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap.bundle.min.js');
-            Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.carousel.min.js');
+            Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/owl.carousel.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.fancybox.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.inputmask.bundle.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.malihu.PageScroll2id.js');

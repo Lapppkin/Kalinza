@@ -17,8 +17,15 @@ main {
     margin-bottom: 15px;
     #page-title {}
   }
-
-  &__content {}
+  &--content {
+    margin-bottom: 30px;
+    &--wrapper {
+      display: flex;
+      width: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 }
 
 body.inner {

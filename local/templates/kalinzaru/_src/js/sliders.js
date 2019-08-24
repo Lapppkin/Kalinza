@@ -132,18 +132,18 @@ $(document).ajaxComplete(function () {
 
 // Слайдер на главной
 
-let owlSlider = $('.slider .slide__wrapper');
+let owlSlider = $('.slider .slider--wrapper');
 if (owlSlider.length !== 0) {
     owlSlider.addClass('owl-carousel').owlCarousel({
         items: 1,
         loop: true,
         nav: true,
-        navContainer: '.slides__nav',
+        navContainer: '.slider--nav',
         navElement: 'div',
         dots: false,
         autoplay: true,
-        autoplaySpeed: 6000,
-        autoplayHoverPause: false,
+        //autoplaySpeed: 6000,
+        //autoplayHoverPause: false,
         lazyLoad: true,
         //lazyLoadEager: 2,
     }).
@@ -152,87 +152,5 @@ if (owlSlider.length !== 0) {
     }).
     on('mouseleave', function () {
         owlSlider.trigger('play.owl.autoplay');
-    });
-}
-
-// Слайдер филиалов
-
-let owlBranchesSlider = $('.company__branches-wrapper');
-if (owlBranchesSlider.length !== 0) {
-    owlBranchesSlider.addClass('owl-carousel').owlCarousel({
-        items: 6,
-        slideBy: 1,
-        margin: 36,
-        loop: true,
-        nav: false,
-        dots: true,
-        dotsEach: true,
-        responsive: {
-            1280: {
-                items: 5,
-            },
-            1024: {
-                items: 4,
-            },
-            768: {
-                items: 3,
-            },
-            576: {
-                items: 2,
-            },
-            0: {
-                items: 2,
-            }
-        }
-    });
-}
-
-// Слайдер партнеров
-
-let owlPartnersSlider = $('.company__partners-wrapper');
-if (owlPartnersSlider.length !== 0) {
-    owlPartnersSlider.addClass('owl-carousel').owlCarousel({
-        items: 6,
-        slideBy: 1,
-        margin: 36,
-        responsive: {
-            1280: {
-                items: 5,
-            },
-            1024: {
-                items: 4,
-            },
-            768: {
-                items: 3,
-            },
-            576: {
-                items: 2,
-            },
-            0: {
-                items: 2,
-            }
-        },
-        loop: true,
-        nav: false,
-        dots: true,
-        dotsEach: true
-    });
-}
-
-// Слайдер фото на странице "О компании"
-
-let owlOfficeSlider = $('.company-page__slider-wrapper');
-if (owlOfficeSlider.length !== 0) {
-    owlOfficeSlider.addClass('owl-carousel').owlCarousel({
-        items: 1,
-        slideBy: 1,
-        margin: 0,
-        loop: true,
-        nav: false,
-        dots: true,
-        dotsEach: true,
-        onChanged: function(el) {
-            $('.company-page__slider-counter').text(((el.page.index === -1) ? 1 : el.page.index + 1) + '/' + el.item.count);
-        }
     });
 }
