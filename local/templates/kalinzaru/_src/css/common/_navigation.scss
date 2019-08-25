@@ -114,7 +114,10 @@ $nav-height: 40px;
               text-decoration: underline;
             }
             &.active {
+              background-color: transparent;
               color: $app-color-active;
+              pointer-events: none;
+              cursor: default;
             }
           }
         }
