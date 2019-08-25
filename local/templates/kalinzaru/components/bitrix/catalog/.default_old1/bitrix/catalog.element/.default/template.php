@@ -1138,8 +1138,8 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                         </table>
                     </div>
                     <div class="col-md-2 provvvv">
-                        <a href="/besplatnaya-proverka-zreniya/index.php/">
-                            <img src="/2/images/shbmnk.jpg"/>
+                        <a href="/besplatnaya-proverka-zreniya/">
+                            <img src="<?= SITE_DIR . 'include/images/eye-test.png' ?>" alt="">
                         </a>
                     </div>
                 </div>
@@ -1306,7 +1306,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                                         <li>
                                             <a href="/kalinza-v-litsakh/" style="color:#000;text-decoration:none;">
                                         <li>
-                                            <img src="/2/images/1/lica.png"/>
+                                            <img src="<?= SITE_DIR . 'include/images/kalinza-faces.jpg' ?>" alt="">
                                             <div class="overlay"></div>
                                             <div class="container2">
                                                 <div class="row">

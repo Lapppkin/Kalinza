@@ -37,7 +37,7 @@ margin:0 auto !important; color: #fff;">
                                     <div class="block_3">
 <a href="/besplatnaya-proverka-zreniya/" style="color:#000;">
                                         <p>Бесплатная<br>проверка зрения</p>
-	</a>									<img src="/2/images/1/Bitmap3.png">
+	</a>									<img src="<?= SITE_DIR . 'include/images/eye-test.png' ?>">
                                     </div>
                                 </div>
 <div style="height: 45px; width: 100%; clear: both;"></div>

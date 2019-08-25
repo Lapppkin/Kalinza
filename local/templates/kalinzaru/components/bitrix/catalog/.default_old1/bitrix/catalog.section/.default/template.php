@@ -501,7 +501,9 @@ $k++;
 	    <? if ($k==4){
 			echo'
 				<div class="tovar33" style="margin: 5px 0px; float: left;">
-					<a href="/besplatnaya-proverka-zreniya/index.php/"><img src="/2/images/slice.png"></a>
+					<a href="/besplatnaya-proverka-zreniya/">
+					    <img src="/2/images/slice.png">
+					    </a>
 				</div>
 			';
 		}?>

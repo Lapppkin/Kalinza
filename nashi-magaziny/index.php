@@ -1,93 +1,80 @@
-<?
+<?php
+
+use Bitrix\Main\Page\Asset;
+
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Наши магазины");
-?><?php
-$APPLICATION->AddHeadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
-$APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jquery-2.2.0.min.js');
-?> <style>
-        /* .container-fix {
-             width: 1256px;
-         } */
-    </style> <style>
-        #cityShop {
-            margin-bottom: 10px;
-        }
 
-        #shops {
-            height: 50px;
-        }
+Asset::getInstance()->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+Asset::getInstance()->addJs('https://codd-wd.ru/wp-content/examples/ya-maps/jquery-2.2.0.min.js');
+?>
+<style>
+    #cityShop {
+        margin-bottom: 10px;
+    }
+    #shops {
+        height: 50px;
+    }
+    #shops li {
+        cursor: pointer;
+    }
+    #shops li:hover {
+        text-decoration: underline;
+    }
+    .accordion {}
+    .accordion li {
+        border-bottom: 1px solid #d9e5e8;
+        position: relative;
+        cursor: pointer;
+        clear: both;
+    }
+    .accordion li div.main {
+        display: none;
+    }
+    .accordion a.ttt333 {
+        width: 100%;
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none;
+        color: #333;
+    }
+    .accordion a {
+        cursor: pointer;
+    }
+    .accordion div.main {
+        padding: 0px;
+    }
+    .accordion a.ttt333:after {
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #333;
+        border-bottom: 2px solid #333;
+        position: absolute;
+        right: 20px;
+        content: " ";
+        top: 25px;
+        transform: rotate(45deg);
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    a.active.ttt333:after {
+        transform: rotate(-135deg);
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    .ymaps-2-1-68-map {
+        height: 100vh !important;
+    }
+    #map {
+        height: 100vh !important;
+    }
+</style>
 
-        #shops li {
-            cursor: pointer;
-        }
-
-        #shops li:hover {
-            text-decoration: underline;
-        }
-
-        .accordion {
-        }
-
-        .accordion li {
-            border-bottom: 1px solid #d9e5e8;
-            position:      relative;
-            cursor:        pointer;
-            clear:         both;
-        }
-
-        .accordion li div.main {
-            display: none;
-        }
-
-        .accordion a.ttt333 {
-            width:           100%;
-            display:         block;
-            padding:         20px;
-            cursor:          pointer;
-            user-select:     none;
-            text-decoration: none;
-            color:           #333;
-        }
-
-        .accordion a {
-            cursor: pointer;
-        }
-
-        .accordion div.main {
-            padding: 0px;
-        }
-
-        .accordion a.ttt333:after {
-            width:              8px;
-            height:             8px;
-            border-right:       2px solid #333;
-            border-bottom:      2px solid #333;
-            position:           absolute;
-            right:              20px;
-            content:            " ";
-            top:                25px;
-            transform:          rotate(45deg);
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition:    all 0.2s ease-in-out;
-            transition:         all 0.2s ease-in-out;
-        }
-
-        a.active.ttt333:after {
-            transform:          rotate(-135deg);
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition:    all 0.2s ease-in-out;
-            transition:         all 0.2s ease-in-out;
-        }
-
-        .ymaps-2-1-68-map {
-            height: 100vh !important;
-        }
-
-        #map {
-            height: 100vh !important;
-        }
-    </style>
-<div class=" ">
+<div>
 	<div class="container container-fix">
 		<div class="row">
 			<div class="col-md-6" style="height:100vh; overflow:scroll;">
@@ -645,123 +632,123 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
         var shopList = [
             {
                 'city_name': 'Краснодар',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [45.04518731810544, 38.979584830688395],
-                        'name':        'Красная 176, литер 5'
+                        'name': 'Красная 176, литер 5',
                     },
                     {
                         'coordinates': [45.06015357458218, 38.94239712698355],
-                        'name':        'Атарбекова, 1/1'
+                        'name': 'Атарбекова, 1/1',
                     },
                     {
                         'coordinates': [45.031744074585845, 38.91747949999999],
-                        'name':        'Чекистов, 36'
+                        'name': 'Чекистов, 36',
                     },
                     {
                         'coordinates': [45.034818412807994, 39.052792276071244],
-                        'name':        'Уральская  79/1'
+                        'name': 'Уральская  79/1',
                     },
                     {
                         'coordinates': [45.01316017700756, 38.9302619087371],
-                        'name':        'Тургеневское шоссе, 27'
+                        'name': 'Тургеневское шоссе, 27',
                     },
                     {
                         'coordinates': [45.0253121843544, 39.05790376099971],
-                        'name':        'Лизы Чайкиной 2/1'
+                        'name': 'Лизы Чайкиной 2/1',
                     },
                     {
                         'coordinates': [45.15817023620747, 39.00027528824022],
-                        'name':        'Ейское шоссе 40'
+                        'name': 'Ейское шоссе 40',
                     },
                     {
                         'coordinates': [45.08056757458355, 38.89375499999996],
-                        'name':        'Западный обход 29'
+                        'name': 'Западный обход 29',
                     },
                     {
                         'coordinates': [45.0112303, 39.12264189999996],
-                        'name':        'ул. Крылатая 2'
-                    }
-                ]
+                        'name': 'ул. Крылатая 2',
+                    },
+                ],
             },
 
             {
                 'city_name': 'Ижевск',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [56.8474685678539, 53.27726499999999],
-                        'name':        'ул. Ленина, 136'
-                    }
-                ]
+                        'name': 'ул. Ленина, 136',
+                    },
+                ],
             },
 
             {
                 'city_name': 'Новосибирск',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [54.96401833971174, 82.93559206679532],
-                        'name':        'ул. Ватутина, 107'
+                        'name': 'ул. Ватутина, 107',
                     },
-					{
-                        'coordinates': [54.96966913023103,83.09994980555724],
-                        'name':        'ул. Эйхе, 2'
-                    }
-                ]
+                    {
+                        'coordinates': [54.96966913023103, 83.09994980555724],
+                        'name': 'ул. Эйхе, 2',
+                    },
+                ],
             },
 
             {
                 'city_name': 'Ставрополь',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [44.999328410844385, 41.92680837235259],
-                        'name':        'ул. Доватерцев, 64'
-                    }
-                ]
+                        'name': 'ул. Доватерцев, 64',
+                    },
+                ],
             },
 
             {
                 'city_name': 'Железногорск',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [52.352134478346585, 35.366176381614636],
-                        'name':        'ул. Мира, 62'
-                    }
-                ]
+                        'name': 'ул. Мира, 62',
+                    },
+                ],
             },
 
             {
                 'city_name': 'Курск',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [51.69959184827574, 36.15715199153339],
-                        'name':        'ул. Энгельса, 115Д'
+                        'name': 'ул. Энгельса, 115Д',
                     },
-					{
+                    {
                         'coordinates': [51.740011478623344, 36.14607838954915],
-                        'name':        'ул. 50 лет Октября, 98'
-                    }
+                        'name': 'ул. 50 лет Октября, 98',
+                    },
 
-                ]
+                ],
             },
 
             {
                 'city_name': 'Нижний Новгород',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [56.224094, 44.07354929999997],
-                        'name':        'Кстовский район, с.Федяково'
-                    }
-                ]
+                        'name': 'Кстовский район, с.Федяково',
+                    },
+                ],
             },
 
             {
                 'city_name': 'Новороссийск',
-                'shops':     [
+                'shops': [
                     {
                         'coordinates': [44.727780706, 37.767314584],
-                        'name':        'ул. Мира, 1'
-                    }
-                ]
+                        'name': 'ул. Мира, 1',
+                    },
+                ],
             },
         ];
 
@@ -781,7 +768,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
                 placemarkList[cityId][c] = new ymaps.Placemark(
                     shopList[cityId].shops[c].coordinates,
                     {
-                        hintContent:    shopList[cityId].shops[c].name,
+                        hintContent: shopList[cityId].shops[c].name,
                         balloonContent: shopList[cityId].shops[c].name
                     }
                 );
@@ -797,9 +784,7 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
         // Переключение города
         $(document).on('click', 'a#city', function() {
             showShopListFromCity($(this).attr('data-city-id'));
-
-            console.log($(this).attr('data-city-id'));
-
+            //console.log($(this).attr('data-city-id'));
             placemarkList[cityId].events.fire('click');
         });
 
@@ -807,27 +792,24 @@ $APPLICATION->AddHeadScript('https://codd-wd.ru/wp-content/examples/ya-maps/jque
         $(document).on('click', 'a#adress', function() {
             var cityId = $(this).attr('data-city-id');
             var shopId = $(this).attr('data-shop-id');
-
-            console.log($(this).attr('data-city-id'));
-            console.log($(this).attr('data-shop-id'));
-
+            //console.log($(this).attr('data-city-id'));
+            //console.log($(this).attr('data-shop-id'));
             placemarkList[cityId][shopId].events.fire('click');
         });
 
         function init() {
-
             // Создаем карту
             map = new ymaps.Map('map', {
-                center:   [5.0288429539558, 38.97288419679491], // координаты центра карты, при загрузке
-                zoom:     15,
+                center: [5.0288429539558, 38.97288419679491], // координаты центра карты, при загрузке
+                zoom: 15,
                 controls: [
                     'zoomControl'
                 ]
             });
 
             placemarkCollection = new ymaps.GeoObjectCollection();
-
             showShopListFromCity(0);
             placemarkList[cityId].events.fire('click');
         }
-    </script> <script src="/2/js/index.js"></script><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+    </script>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

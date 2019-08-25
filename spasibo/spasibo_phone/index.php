@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Спасибо");
                                         <p>Получи свой сертификат<br>на 500 рублей</p>
                                         <form class="contact-form">
                                             <div class="form-group">
-												<input type="name" class="form-control" id="name" placeholder="Адрес электронной почты" style="text-align:center !important; 
+												<input type="name" class="form-control" id="name" placeholder="Адрес электронной почты" style="text-align:center !important;
 margin:0 auto !important; color: #fff;">
                                             </div>
                                             <div class="form-group">
@@ -36,7 +36,7 @@ margin:0 auto !important; color: #fff;">
                                     <div class="block_3">
 <a href="/besplatnaya-proverka-zreniya/" style="color:#000;">
                                         <p>Бесплатная<br>проверка зрения</p>
-	</a>						<img src="/2/images/1/Bitmap3.png">
+	</a>						<img src="<?= SITE_DIR . 'include/images/eye-test.png' ?>">
                                     </div>
                                 </div>
 <div style="height: 45px; width: 100%; clear: both;"></div>
