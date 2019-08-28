@@ -1013,3 +1013,39 @@ font.errortext {
     line-height: 1.2;
   }
 }
+
+// SOCIAL ICONS
+
+.social-icons {
+  margin-bottom: $size-padding-small;
+  &--label {
+    color: $app-color-white;
+    margin-bottom: 5px;
+    @include mediumfont;
+  }
+  &--items {
+    display: flex;
+    flex-wrap: wrap;
+    .social-icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+// MESSENGER ICONS
+
+.messenger-icons {
+  margin-bottom: $size-padding-small;
+  &--label {
+    color: $app-color-white;
+    margin-bottom: 5px;
+    @include mediumfont;
+  }
+  &--items {
+    display: flex;
+    flex-wrap: wrap;
+    .messenger-icon {
+      margin-right: 8px;
+    }
+  }
+}

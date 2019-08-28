@@ -13,17 +13,21 @@ use Bitrix\Main\Application;
                 </div>
             <?php endif; ?>
             </main>
+            <!--/main-->
 
+            <!--footer-->
             <footer id="footer">
                 <?php
                 $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/footer_menu.php');
                 $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/footer_bottom.php');
                 ?>
             </footer>
+            <!--/footer-->
 
             <?php $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/modals.php'); ?>
 
             <?php
+            // Скрипты
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap.bundle.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/owl.carousel.min.js');

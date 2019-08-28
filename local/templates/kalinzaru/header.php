@@ -1,10 +1,12 @@
-<?php if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php
 
 /**
  * @var \CMain $APPLICATION
  */
 
 use Bitrix\Main\Page\Asset;
+
+if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 CJSCore::Init(array("fx"));
 $curPage = $APPLICATION->GetCurPage(true);
@@ -36,8 +38,16 @@ CModule::IncludeModule('mcart.souvenirs');
         <div id="svg-container" hidden></div>
         <div class="wrapper">
 
-            <header id="header">
+            <?php // АнтиСоветник
+            $APPLICATION->IncludeComponent(
+                "abricos:antisovetnik",
+                "",
+                array(),
+                false
+            ); ?>
 
+            <!--header-->
+            <header id="header">
                 <div class="header--topbar">
                     <div class="container">
                         <div class="row">
@@ -47,7 +57,6 @@ CModule::IncludeModule('mcart.souvenirs');
                         </div>
                     </div>
                 </div>
-
                 <div class="header--header">
                     <div class="container">
                         <div class="row">
@@ -57,9 +66,10 @@ CModule::IncludeModule('mcart.souvenirs');
                         </div>
                     </div>
                 </div>
-
             </header>
+            <!--/header-->
 
+            <!--menu-->
             <nav id="navigation" class="navigation">
                 <div class="container">
                     <div class="row">
@@ -69,8 +79,10 @@ CModule::IncludeModule('mcart.souvenirs');
                     </div>
                 </div>
             </nav>
+            <!--menu-->
 
             <?php if (!$isIndex): ?>
+            <!--breadcrumb-->
             <div id="breadcrumb" class="breadcrumb">
                 <div class="container">
                     <div class="row">
@@ -94,8 +106,10 @@ CModule::IncludeModule('mcart.souvenirs');
                     </div>
                 </div>
             </div>
+            <!--/breadcrumb-->
             <?php endif; ?>
 
+            <!--main-->
             <main id="main">
                 <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
                 <div class="container">
