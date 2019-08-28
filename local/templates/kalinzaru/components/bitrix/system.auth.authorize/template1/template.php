@@ -21,7 +21,7 @@ ShowMessage($arResult['ERROR_MESSAGE']);
         </div>
         <div class="form-field">
             <label class="id10">Пароль:</label>
-            <input class="id3" type="text" name="USER_PASSWORD" placeholder="Введите пароль">
+            <input class="id3" type="password" name="USER_PASSWORD" placeholder="Введите пароль">
             <?php if($arResult["SECURE_AUTH"]): ?>
                 <span class="bx-auth-secure" id="bx_auth_secure" title="<?= GetMessage("AUTH_SECURE_NOTE")?>" style="display:none">
                     <div class="bx-auth-secure-icon"></div>
