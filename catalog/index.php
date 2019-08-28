@@ -4,8 +4,8 @@ $APPLICATION->SetPageProperty("keywords", "магнит от магазина ka
 $APPLICATION->SetPageProperty("title", "Магнитик KALINZA");
 $APPLICATION->SetTitle("");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	".default_old1", 
+	"bitrix:catalog",
+	".default_old1",
 	array(
 		"COMPONENT_TEMPLATE" => ".default_old1",
 		"IBLOCK_TYPE" => "catalog",
@@ -271,4 +271,6 @@ $APPLICATION->SetTitle("");
 		)
 	),
 	false
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);
+
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
