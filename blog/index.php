@@ -122,7 +122,7 @@ if (empty($ELEMENT)): ?>
     $APPLICATION->SetPageProperty("description", $ELEMENT['PREVIEW_TEXT']);
     ?>
 
-    <div class="blog--element">
+    <div class="blog--element col-12">
         <div class="blog--element--title"
             style="background-image: url(<?= CFile::GetFileArray($ELEMENT['PREVIEW_PICTURE'])['SRC'] ?>)">
             <h1><?= $ELEMENT['NAME'] ?></h1>
