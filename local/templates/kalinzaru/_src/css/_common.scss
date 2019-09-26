@@ -1049,3 +1049,38 @@ font.errortext {
     }
   }
 }
+
+// OWL CAROUSEL
+
+.owl-nav {
+  height: 0;
+  overflow: visible;
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 32px);
+  .owl-prev,
+  .owl-next {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    &:hover {
+      span {
+        color: $app-color-active-hover;
+      }
+    }
+    span {
+      color: $app-color-primary;
+      font-size: 3em;
+    }
+  }
+  .owl-prev {
+    left: -32px;
+  }
+  .owl-next {
+    right: -32px;
+  }
+}

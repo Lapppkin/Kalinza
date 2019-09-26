@@ -1,15 +1,17 @@
-<?
+<?php
+
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "магнит от магазина kalinza");
+
 $APPLICATION->SetPageProperty("title", "Магнитик KALINZA");
 $APPLICATION->SetTitle("");
-?><?$APPLICATION->IncludeComponent(
+
+$APPLICATION->IncludeComponent(
 	"bitrix:catalog",
-	".default_old1",
+	"kalinza",
 	array(
-		"COMPONENT_TEMPLATE" => ".default_old1",
+		"COMPONENT_TEMPLATE" => "kalinza",
 		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => 2,
 		"HIDE_NOT_AVAILABLE" => "N",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
 		"TEMPLATE_THEME" => "",
@@ -32,7 +34,7 @@ $APPLICATION->SetTitle("");
 		"USER_CONSENT_IS_CHECKED" => "N",
 		"USER_CONSENT_IS_LOADED" => "N",
 		"SEF_MODE" => "Y",
-		"AJAX_MODE" => "N",
+		"AJAX_MODE" => "Y",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -48,7 +50,7 @@ $APPLICATION->SetTitle("");
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"USE_SALE_BESTSELLERS" => "N",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"FILTER_VIEW_MODE" => "VERTICAL",
 		"FILTER_HIDE_ON_MOBILE" => "N",
 		"INSTANT_RELOAD" => "N",
@@ -185,7 +187,7 @@ $APPLICATION->SetTitle("");
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
 		"COMPATIBLE_MODE" => "N",
-		"USE_ELEMENT_COUNTER" => "N",
+		"USE_ELEMENT_COUNTER" => "Y",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
 		"DETAIL_SHOW_MAX_QUANTITY" => "N",

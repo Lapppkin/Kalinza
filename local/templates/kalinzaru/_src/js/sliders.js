@@ -132,9 +132,9 @@ $(document).ajaxComplete(function () {
 
 // Слайдер на главной
 
-let owlSlider = $('.slider .slider--wrapper');
-if (owlSlider.length !== 0) {
-    owlSlider.addClass('owl-carousel').owlCarousel({
+let owlFrontSlider = $('.slider .slider--wrapper');
+if (owlFrontSlider.length !== 0) {
+    owlFrontSlider.addClass('owl-carousel').owlCarousel({
         items: 1,
         loop: true,
         nav: true,
@@ -148,9 +148,37 @@ if (owlSlider.length !== 0) {
         //lazyLoadEager: 2,
     }).
     on('mouseover', function () {
-        owlSlider.trigger('stop.owl.autoplay');
+        owlFrontSlider.trigger('stop.owl.autoplay');
     }).
     on('mouseleave', function () {
-        owlSlider.trigger('play.owl.autoplay');
+        owlFrontSlider.trigger('play.owl.autoplay');
     });
+}
+
+// Слайдер популярных товаров на главной
+
+let owlPopularFrontSlider = $('.popular-products--wrapper > div');
+if (owlPopularFrontSlider.length !== 0) {
+    owlPopularFrontSlider.addClass('owl-carousel').owlCarousel({
+        items: 4,
+        loop: true,
+        nav: true,
+        //navContainer: '.slider--nav',
+        navElement: 'div',
+        dots: false,
+        autoplay: true,
+        //autoplaySpeed: 6000,
+        //autoplayHoverPause: false,
+        lazyLoad: true,
+        //lazyLoadEager: 2,
+        responsive: {
+
+        }
+    }).
+        on('mouseover', function () {
+            owlPopularFrontSlider.trigger('stop.owl.autoplay');
+        }).
+        on('mouseleave', function () {
+            owlPopularFrontSlider.trigger('play.owl.autoplay');
+        });
 }
