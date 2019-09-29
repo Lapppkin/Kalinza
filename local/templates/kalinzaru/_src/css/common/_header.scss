@@ -15,11 +15,12 @@
     &--left {
       display: flex;
       align-items: center;
+      flex-basis: 55%;
       .kalinza-icon {
         margin-right: 5px;
       }
       .altasib_geobase_link {
-        margin-right: 10px;
+        margin-right: 50px;
         &_city {
           color: $app-color-black;
         }
@@ -30,13 +31,17 @@
         list-style: none;
         display: flex;
         align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
         li {
           margin: 0 5px;
           padding: 0;
           a {
-            color: $app-color-gray;
+            color: $app-color-black;
+            text-decoration: none;
             &:hover,
             &:focus {
+              text-decoration: underline;
               color: $app-color-black;
             }
           }
@@ -46,10 +51,40 @@
     &--right {
       display: flex;
       justify-content: flex-end;
-      a.button_modal {
-        color: $app-color-black;
+      .kalinza-icon {
+        color: $app-color-gray;
+      }
+      a {
+        &:hover {
+          color: $app-color-black;
+        }
+        &.button_modal {
+          color: $app-color-black;
+        }
       }
     }
+
+    // FAVORITES
+
+    &--favorites {
+      margin-right: 50px;
+      position: relative;
+      &-counter {
+        background-color: $app-color-error;
+        color: $app-color-white;
+        position: absolute;
+        right: -12px;
+        top: 0;
+        border-radius: 50%;
+        font-size: 0.7em;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
   }
 
   // HEADER

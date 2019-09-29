@@ -44,7 +44,7 @@ h6, .h6 {
 // LINKS
 
 a {
-  color: $app-color-active;
+  color: $app-color-black;
   text-decoration: underline;
   &:focus,
   &:hover {
@@ -61,7 +61,7 @@ a {
     margin-top: 15px;
     margin-bottom: 15px;
     display: inline-block;
-    color: $app-color-active;
+    color: $app-color-gray;
     padding-left: 1.7em;
     text-decoration: underline;
     &:hover {
@@ -384,9 +384,9 @@ input {
 }
 
 .btn {
-  background-color: $app-color-active;
+  background-color: $app-color-error;
   border-style: solid;
-  border-color: $app-color-active;
+  border-color: $app-color-error;
   border-width: 0 !important;
   color: $app-color-white;
   padding: 0 15px;
@@ -406,8 +406,8 @@ input {
   }
   &:hover,
   &:focus {
-    background-color: $app-color-active-hover;
-    border-color: $app-color-active-hover;
+    background-color: $app-color-error-hover;
+    border-color: $app-color-error-hover;
     color: $app-color-white;
     text-decoration: none;
   }
@@ -423,22 +423,22 @@ input {
   }
 
   &-dark {
-    background-color: $app-color-active;
+    background-color: $app-color-secondary;
     color: $app-color-white;
     &:focus,
     &:hover {
-      background-color: $app-color-active-hover;
-      border-color: $app-color-active-hover;
+      background-color: $app-color-primary;
+      border-color: $app-color-primary;
     }
   }
   &-light {
     background-color: $app-color-white !important;
-    color: $app-color-active !important;
+    color: $app-color-secondary !important;
     &:focus,
     &:hover {
       background-color: $app-color-background !important;
-      color: $app-color-active;
-      border-color: $app-color-active;
+      color: $app-color-error;
+      border-color: $app-color-error;
     }
     &[disabled] {
       background-color: $app-color-white;

@@ -41,15 +41,15 @@ $nav-height: 40px;
         color: $app-color-white;
         text-decoration: none;
         &:hover {
-          background-color: $app-color-active-hover;
+          background-color: $app-color-secondary;
           text-decoration: none;
-          color: $app-color-black;
+          color: $app-color-white;
           .kalinza-icon {
             color: $app-color-black;
           }
         }
         &.active {
-          background-color: $app-color-active;
+          background-color: $app-color-secondary;
         }
       }
       &.has-dropdown {
@@ -110,12 +110,11 @@ $nav-height: 40px;
             padding: 0;
             &:hover {
               background-color: transparent;
-              color: $app-color-active-hover;
               text-decoration: underline;
             }
             &.active {
               background-color: transparent;
-              color: $app-color-active;
+              color: $app-color-secondary;
               pointer-events: none;
               cursor: default;
             }
@@ -151,10 +150,10 @@ $nav-height: 40px;
       padding-left: 10px;
       padding-right: 10px;
       &:hover {
-        background-color: $app-color-active-hover;
-        color: $app-color-black;
+        background-color: $app-color-secondary;
+        color: $app-color-white;
         .kalinza-icon {
-          color: $app-color-black;
+          color: $app-color-white;
         }
       }
     }

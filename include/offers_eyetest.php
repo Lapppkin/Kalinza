@@ -1,6 +1,5 @@
 <div class="offers--eye-test">
-    <a href="/besplatnaya-proverka-zreniya/">
-        <span>Пройти <strong>бесплатную проверку</strong> зрения</span>
-        <span><img src="<?= SITE_TEMPLATE_PATH . '/images/eye-test.png'?>" alt="eye test"></span>
+    <a href="/besplatnaya-proverka-zreniya/" style="background-image: url(<?= SITE_TEMPLATE_PATH . '/images/eye-check.jpg'?>)">
+        <p>&nbsp;Пройти <span>&nbsp;бесплатную&nbsp; &nbsp;проверку&nbsp;</span> &nbsp;зрения</p>
     </a>
 </div>

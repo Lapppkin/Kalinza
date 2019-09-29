@@ -6,7 +6,10 @@
   overflow: hidden;
   position: relative;
 
-  &--wrapper {}
+  &--wrapper {
+    @include br-small;
+    overflow: hidden;
+  }
   &--nav {
     position: absolute;
     bottom: 30px;

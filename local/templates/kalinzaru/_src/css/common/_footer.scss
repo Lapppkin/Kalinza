@@ -25,41 +25,106 @@
     &--wrapper {
       display: flex;
       flex-wrap: wrap;
+      color: $app-color-white;
     }
 
     &--regions {
       margin-bottom: $size-padding-small;
+      margin-right: $size-padding;
       display: flex;
       flex-wrap: wrap;
+      flex-basis: 300px;
       &-label {
+        flex-basis: 100%;
         color: $app-color-white;
         margin-bottom: 5px;
         margin-right: 10px;
         @include mediumfont;
       }
-      &-items {}
-    }
-    &--contacts {
-      margin-bottom: $size-padding-small;
-      &-label {
-        color: $app-color-white;
-        margin-bottom: 5px;
-        @include mediumfont;
-      }
-      &-content {
-        p {
-          margin: 0;
+      &-items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        a {
+          flex-basis: 50%;
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
         }
       }
     }
-    &--copyrights {
-      color: $app-color-notice;
+
+    &--contacts {
+      margin-bottom: $size-padding-small;
+      margin-right: $size-padding;
+      flex-basis: 260px;
+      &-content {
+        p {
+          margin: 0 0 10px;
+          a {
+            margin-bottom: 10px;
+            &[href^="tel:"] {
+              @include mediumfont;
+            }
+            &[href^="mailto:"] {
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
     }
+
     &--info {
-      padding-top: $size-padding;
-      color: $app-color-gray-lighter;
-      text-transform: uppercase;
-      font-size: $fontsize-h5;
+      margin-bottom: $size-padding-small;
+      margin-right: $size-padding;
+      flex-basis: 260px;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--socials {
+      margin-bottom: $size-padding-small;
+      display: flex;
+      flex-wrap: wrap;
+      &-icons {}
+      &-messengers {}
+    }
+
+    &--copyrights {
+      border-top: 1px solid rgba($app-color-delimiter, 0.3);
+      flex-basis: 100%;
+      color: $app-color-white;
+      background-color: $app-color-gray;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: $fontsize-small;
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: baseline;
+        a {
+          color: $app-color-white;
+        }
+      }
+      &-copy {}
+      &-policy {}
+      &-developer {
+        a {
+          display: flex;
+          align-items: center;
+        }
+        img {
+          margin-left: 10px;
+          max-width: 80px;
+        }
+      }
     }
 
   }

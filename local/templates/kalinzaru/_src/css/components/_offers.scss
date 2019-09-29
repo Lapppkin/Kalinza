@@ -14,49 +14,49 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px 30px;
-    align-items: center;
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: 20px;
     position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($app-color-black, 0.35);
-      z-index: 0;
-    }
     p {
-      position: relative;
-      z-index: 1;
-      flex-basis: 100%;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 0;
-      line-height: 1.1;
-      @include mediumfont;
-      color: $app-color-white;
-      &:first-child {
-        color: $app-color-primary;
+      flex-basis: 65%;
+      font-size: 1.1em;
+      &:last-child {
+        margin: 0;
+        font-size: 0.95em;
+        @include mediumfont;
       }
     }
-    button {
-      text-align: center;
+    a {
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      padding: 15px 20px;
+      @include br-small;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        text-decoration: none;
+        color: $app-color-black;
+        @include shadow-hover;
+      }
+    }
+    .kalinza-icon {
+      margin-right: 10px;
+      color: $app-color-error;
     }
   }
 
   &--eye-test {
     position: relative;
     flex-basis: 100%;
-    @include shadow;
-    min-height: 120px;
-    max-height: 120px;
     overflow: hidden;
     @include br-small;
     transition: all 0.3s ease-in-out;
@@ -67,24 +67,29 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      padding: 15px;
+      padding: 15px 20px;
       color: $app-color-black;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       text-decoration: none;
-      background-color: $app-color-white;
-      span {
-        margin-left: 10px;
-        padding-right: 10px;
-        line-height: 1.2;
-        font-size: 1.1em;
-        strong {
-          color: $app-color-primary;
-        }
-      }
+      display: flex;
       &:hover {
         text-decoration: none;
+      }
+      img {
+        position: absolute;
+      }
+    }
+    p {
+      flex-basis: 65%;
+      font-size: $fontsize-h4;
+      line-height: 1.2;
+      @include mediumfont;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      span {
+        background-color: $app-color-primary;
+        color: $app-color-white;
       }
     }
 

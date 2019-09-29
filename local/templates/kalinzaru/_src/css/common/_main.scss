@@ -1,8 +1,9 @@
 // MAIN
 
 main {
-  margin-top: $size-padding;
-  margin-bottom: $size-padding;
+  padding-top: $size-padding;
+  padding-bottom: $size-padding;
+  background-color: $app-color-background;
   h1, .h1 {
     text-align: center;
     @include headfont;

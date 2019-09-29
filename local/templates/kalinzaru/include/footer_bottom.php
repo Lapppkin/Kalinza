@@ -10,42 +10,66 @@ use Deadie\Helper;
 <div class="footer--bottom">
     <div class="container">
         <div class="row">
-            <div class="footer--bottom--wrapper">
+            <div class="footer--bottom--wrapper col-12">
 
-                <div class="footer--bottom--socials social-icons col-9">
-                    <?php $APPLICATION->IncludeFile('/include/social_icons.php'); ?>
-                </div>
-                <div class="footer--bottom--messengers messenger-icons col-3">
-                    <?php $APPLICATION->IncludeFile('/include/messenger_icons.php'); ?>
-                </div>
-
-                <div class="footer--bottom--regions col-12">
+                <div class="footer--bottom--regions">
                     <div class="footer--bottom--regions-label">Наши салоны оптики:</div>
                     <div class="footer--bottom--regions-items">
-                        <a href="#">Ижевск</a>,
-                        <a href="#">Нижний Новгород</a>,
-                        <a href="#">Новороссийск</a>,
-                        <a href="#">Новосибирск</a>,
-                        <a href="#">Ставрополь</a>,
+                        <a href="#">Ижевск</a>
+                        <a href="#">Нижний Новгород</a>
+                        <a href="#">Новороссийск</a>
+                        <a href="#">Новосибирск</a>
+                        <a href="#">Ставрополь</a>
                         <a href="#">Курск</a>
                     </div>
                 </div>
 
-                <div class="footer--bottom--contacts col-12">
-                    <div class="footer--bottom--contacts-label">Контакты:</div>
-                    <div class="footer--bottom--contacts-content">
-                        <p>Телефоны: <a href="tel:88001234567">8-800-123-45-67</a>, <a href="tel:+78612921640">+7 861 292-16-40</a></p>
-                        <p>E-mail: <a href="mailto:info@kalinza.ru">info@kalinza.ru</a></p>
-                        <p>350020, г.Краснодар, ул.Красная, 176, оф.68</p>
-                        <p>ИНН 2312932732106, ОГРН 309231117000055</p>
+                <div class="footer--bottom--info">
+                    <div class="footer--bottom--info-content">
+                        <p>ИНН 231293273210</p>
+                        <p>ОКТМО 03701000</p>
+                        <p>ОКПО 0166120758</p>
                     </div>
                 </div>
 
-                <div class="footer--bottom--copyrights col-12">
-                    © <?= Helper::autoCopyright(2009) ?> «Калинза». Все права защищены. <a href="/privacy">Политика конфиденциальности</a>
+                <div class="footer--bottom--contacts">
+                    <div class="footer--bottom--contacts-content">
+                        <p><a href="tel:88001234567">8-800-123-45-67</a></p>
+                        <p><a href="tel:+78612921640">+7 861 292-16-40</a></p>
+                        <p><a href="mailto:info@kalinza.ru">info@kalinza.ru</a></p>
+                    </div>
                 </div>
 
-                <div class="footer--bottom--info col-12">Есть противопоказания. Проконсультируйтесь с врачем.</div>
+                <div class="footer--bottom--soc">
+                    <div class="footer--bottom--socials-icons social-icons">
+                        <?php $APPLICATION->IncludeFile('/include/social_icons.php'); ?>
+                    </div>
+                    <div class="footer--bottom--socials-messengers messenger-icons">
+                        <?php $APPLICATION->IncludeFile('/include/messenger_icons.php'); ?>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer--bottom--copyrights">
+    <div class="container">
+        <div class="row">
+            <div class="footer--bottom--copyrights-wrapper col-12">
+
+                <div class="footer--bottom--copyrights-copy">
+                    © <?= Helper::autoCopyright(2009) ?> «Калинза». Все права защищены.
+                </div>
+                <div class="footer--bottom--copyrights-policy">
+                    <a href="/privacy">Политика конфиденциальности</a>
+                </div>
+                <div class="footer--bottom--copyrights-developer">
+                    <a href="https://lapkinlab.ru" target="_blank">Разработано
+                        <img src="<?= SITE_TEMPLATE_PATH . '/images/lapkinlab-logo.png' ?>" alt="LapkinLab">
+                    </a>
+                </div>
 
             </div>
         </div>

@@ -19,7 +19,7 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 				$name = substr($name, 0, 12).'...';
 			?>
 			<a href="<?=$arParams['PATH_TO_PROFILE']?>" style="color:#000;"><?=htmlspecialcharsbx($name)?></a>
-			&nbsp;<?= Helper::renderIcon('key') ?>
+			&nbsp;<?= Helper::renderIcon('user') ?>
 			<a href="?logout=yes"><?=GetMessage('TSB1_LOGOUT')?></a>
 		<?else:
 			$arParamsToDelete = array(

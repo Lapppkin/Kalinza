@@ -1,5 +1,11 @@
+<?php
+
+use Deadie\Helper;
+
+?>
 <div class="offers--certificate" style="background-image: url(<?= SITE_TEMPLATE_PATH . '/images/certificate.jpg' ?>)">
-    <p>Нужны очки?</p>
-    <p>Получи свой сертификат<br>на покупку</p>
-    <p><button type="button" class="btn btn-sm" data-toggle="modal" data-target="#modal--certificate">Получить 500 Р</button></p>
+    <a href="#" data-toggle="modal" data-target="#modal--certificate">
+        <p>Получи свой сертификат на покупку очков</p>
+        <p><?= Helper::renderIcon('arrow-right-line') ?>Получить 500 руб.</p>
+    </a>
 </div>

@@ -173,7 +173,8 @@ function svgBuild() {
                             dest: __dirname + '/../_src/css/init/_svg_sprites.scss',
                             template: path.src.svgTemplate
                         }
-                    }
+                    },
+                    example: true
                 }
             }
         })).

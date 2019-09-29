@@ -44,6 +44,12 @@ use Deadie\Helper;
 </div>
 
 <div class="header--topbar--right">
+
+    <div class="header--topbar--favorites">
+        <?= Helper::renderIcon('heart') ?>
+        <div class="header--topbar--favorites-counter">2</div>
+    </div>
+
     <? $APPLICATION->IncludeComponent(
         "bitrix:sale.basket.basket.line",
         "template1",

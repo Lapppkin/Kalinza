@@ -3,10 +3,10 @@
 // COLORS
 
 $app-color-white: #fff;
-$app-color-black: #221e1f;
+$app-color-black: #232122;
 
 $app-color-primary: #1fa4dc;
-$app-color-secondary: #4475c1;
+$app-color-secondary: #0084BC;
 
 $app-color-active: #93c44e;
 $app-color-active-hover: lighten($app-color-active, 10%);
@@ -19,7 +19,8 @@ $app-color-gray: #444;
 $app-color-gray-light: #666;
 $app-color-gray-lighter: #808080;
 
-$app-color-error: #c4044f;
+$app-color-error: #EB5757;
+$app-color-error-hover: lighten($app-color-error, 10%);
 
 $app-color-footer-bg: #ebebeb;
 $app-color-notice: #c4c4af;
