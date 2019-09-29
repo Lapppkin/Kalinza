@@ -10,6 +10,7 @@
     @include br-small;
     overflow: hidden;
   }
+
   &--nav {
     position: absolute;
     bottom: 30px;
@@ -29,7 +30,8 @@
       max-height: 40px;
       display: flex;
       align-items: center;
-      &:hover {
+      &:hover,
+      &:hover span {
         color: $app-color-primary;
       }
     }

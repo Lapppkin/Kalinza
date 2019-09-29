@@ -96,3 +96,35 @@
   }
 
 }
+
+.offers-add {
+
+  &--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--item {
+    flex-basis: calc(25% - 7px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $app-color-white;
+    @include br-small;
+    padding: 20px 40px;
+    &--icon {
+      .kalinza-icon {
+        width: 42px;
+        height: 42px;
+        max-width: 42px;
+        color: $app-color-primary;
+      }
+    }
+    &--text {
+      line-height: 1.2;
+      font-size: 1.1em;
+      margin-left: $size-padding-small;
+    }
+
+  }
+
+}

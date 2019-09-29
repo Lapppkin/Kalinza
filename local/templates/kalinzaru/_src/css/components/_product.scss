@@ -37,7 +37,7 @@
     .price_new {
       font-size: 1.3em;
       @include redularfont;
-      color: $app-color-secondary;
+      color: $app-color-black;
     }
   }
   .product-item-info-container {
@@ -47,6 +47,13 @@
     align-items: center;
     margin: 0;
     padding-left: 10px;
+    a.btn {
+      background-color: $app-color-primary;
+      &:hover,
+      &:focus {
+        background-color: $app-color-secondary;
+      }
+    }
   }
 
 }

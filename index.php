@@ -14,6 +14,8 @@ $APPLICATION->SetTitle('Купить контактные и цветные ли
         </div>
     </div>
 
+    <?php $APPLICATION->IncludeFile('/include/offers_add.php'); ?>
+
     <?php $APPLICATION->IncludeFile('/include/about.php'); ?>
     <?php $APPLICATION->IncludeFile('/include/popular_products.php'); ?>
     <?php $APPLICATION->IncludeFile('/include/blog.php'); ?>
