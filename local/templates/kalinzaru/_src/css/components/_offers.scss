@@ -20,6 +20,7 @@
     p {
       flex-basis: 65%;
       font-size: 1.1em;
+      line-height: 1.3;
       &:last-child {
         margin: 0;
         font-size: 0.95em;
@@ -97,6 +98,8 @@
 
 }
 
+// OFFERS ADD
+
 .offers-add {
 
   &--wrapper {
@@ -125,6 +128,62 @@
       margin-left: $size-padding-small;
     }
 
+  }
+
+}
+
+// OFFERS CATALOG
+
+.offers-catalog {
+  margin-top: $size-padding;
+  margin-bottom: $size-padding;
+  &--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--item {
+    flex-basis: calc(33.333% - 20px);
+    width: calc(33.333% - 20px);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    a {
+      color: $app-color-black;
+    }
+    &:hover {
+      @include shadow-hover;
+      .offers-catalog--item--text > * {
+        color: $app-color-black;
+      }
+    }
+    &--image {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &--text {
+      padding: 20px $size-padding-large;
+      position: absolute;
+      display: flex;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      &.align-right {
+        justify-content: flex-end;
+      }
+      > * {
+        flex-basis: 37%;
+        margin: 0;
+      }
+    }
   }
 
 }

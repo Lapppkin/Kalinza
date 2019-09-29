@@ -20,13 +20,17 @@
   &--item {
     flex-basis: calc(25% - 20px);
     background-color: $app-color-white;
-    @include shadow;
-    padding: 15px 20px;
     margin: 20px 10px;
     @include br-small;
     transition: box-shadow 0.3s ease-in-out;
+    padding-top: 15px;
+    padding-bottom: 15px;
     &:hover {
       @include shadow-hover;
+    }
+    .product > * {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 

@@ -13,7 +13,7 @@
                         array(
                             "IBLOCK_TYPE" => "news",
                             "IBLOCK_ID" => 1,
-                            "NEWS_COUNT" => 2,
+                            "NEWS_COUNT" => 3,
                             "SORT_BY1" => "ACTIVE_FROM",
                             "SORT_ORDER1" => "DESC",
                             "SORT_BY2" => "SORT",

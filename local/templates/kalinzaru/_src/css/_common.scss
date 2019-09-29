@@ -49,7 +49,7 @@ a {
   &:focus,
   &:hover {
     text-decoration: none;
-    color: $app-color-active-hover;
+    color: $app-color-primary;
   }
   .kalinza-icon {
     text-decoration: none;
@@ -66,7 +66,7 @@ a {
     text-decoration: underline;
     &:hover {
       text-decoration: underline;
-      color: $app-color-active-hover;
+      color: $app-color-primary;
     }
     span.size {
       margin-left: 5px;
@@ -399,7 +399,7 @@ input {
   font-weight: 400;
   font-size: $fontsize-normal;
   text-decoration: none;
-  border-radius: 6px;
+  @include br-small;
   cursor: pointer;
   &-block {
     width: 100%;
@@ -419,6 +419,18 @@ input {
     &:hover {
       border-color: $app-color-border;
       background-color: $app-color-border;
+    }
+  }
+
+  &-transparent {
+    background-color: transparent;
+    border: 1px solid $app-color-gray !important;
+    color: $app-color-gray;
+    &:hover,
+    &:focus {
+      background-color: $app-color-primary;
+      border-color: $app-color-primary !important;
+      color: $app-color-white;
     }
   }
 

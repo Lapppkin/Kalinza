@@ -4,6 +4,14 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  &-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $size-padding-large;
+    margin-bottom: $size-padding-small;
+  }
+
   &--title {
     text-align: center;
     margin-bottom: 40px;
@@ -18,12 +26,13 @@
   // BLOG ITEM
 
   &--item {
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(33.333% - 15px);
     display: flex;
     flex-wrap: wrap;
     &--image {
       flex-basis: 100%;
-      min-height: 320px;
+      min-height: 220px;
+      max-height: 220px;
       position: relative;
       a {
         position: absolute;
@@ -35,6 +44,7 @@
         left: 0;
         right: 0;
         img {
+          @include br-small;
           width: 100%;
           object-fit: cover;
           object-position: center;
@@ -45,6 +55,7 @@
       margin-top: 10px;
       flex-basis: 100%;
       color: $app-color-gray-lighter;
+      font-size: $fontsize-small;
     }
     &--title {
       margin-top: 10px;
@@ -53,7 +64,7 @@
         color: $app-color-black;
         text-decoration: none;
         &:hover {
-          color: $app-color-active;
+          color: $app-color-black;
           text-decoration: underline;
         }
       }
@@ -63,10 +74,22 @@
       flex-basis: 100%;
     }
     &--readmore {
-      margin-top: 15px;
+      margin-top: 5px;
       flex-basis: 100%;
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      a {
+        color: $app-color-primary;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .kalinza-icon {
+        margin-left: 5px;
+        color: $app-color-primary;
+        font-size: 0.9em;
+      }
     }
   }
 

@@ -39,26 +39,32 @@ $this->setFrameMode(true);
             </div>
 		<?php endif; ?>
 
+        <?php/*
 		<?php if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
 			<div class="blog--item--date"><?= $arItem["DISPLAY_ACTIVE_FROM"]?></div>
 		<?php endif; ?>
+	    */?>
 
         <?php if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
-            <div class="blog--item--title"><h3>
-                <?php if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-                    <a href="<?= $arItem["DETAIL_PAGE_URL"]?>"><?= $arItem["NAME"]?></a>
-                <?php else: ?>
-                    <?= $arItem["NAME"]?>
-                <?php endif;?>
-            </h3></div>
+            <div class="blog--item--title">
+                <h3 class="h5">
+                    <?php if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
+                        <a href="<?= $arItem["DETAIL_PAGE_URL"]?>"><?= $arItem["NAME"]?></a>
+                    <?php else: ?>
+                        <?= $arItem["NAME"]?>
+                    <?php endif;?>
+                </h3>
+            </div>
 		<?php endif;?>
 
+        <?php/*
 		<?php if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arItem["PREVIEW_TEXT"]):?>
             <div class="blog--item--summary"><?= $arItem["PREVIEW_TEXT"]; ?></div>
 		<?php endif;?>
+        */?>
 
         <div class="blog--item--readmore">
-            <a class="btn" href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Читать полностью</a>
+            <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Перейти к статье</a> <?= \Deadie\Helper::renderIcon('arrow-right-line') ?>
         </div>
 
 	</div>
@@ -66,4 +72,10 @@ $this->setFrameMode(true);
 
 <?php if($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
 	<br><?=$arResult["NAV_STRING"]?>
+<?php endif; ?>
+
+<?php if ($APPLICATION->GetCurDir() !== '/blog/'): ?>
+    <div class="blog-all col-12">
+        <a href="/blog/" class="btn btn-transparent">Читать все статьи</a>
+    </div>
 <?php endif; ?>

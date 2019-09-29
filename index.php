@@ -16,9 +16,13 @@ $APPLICATION->SetTitle('Купить контактные и цветные ли
 
     <?php $APPLICATION->IncludeFile('/include/offers_add.php'); ?>
 
-    <?php $APPLICATION->IncludeFile('/include/about.php'); ?>
     <?php $APPLICATION->IncludeFile('/include/popular_products.php'); ?>
+    <?php $APPLICATION->IncludeFile('/include/offers_catalog.php'); ?>
+    <?php $APPLICATION->IncludeFile('/include/recommended_products.php'); ?>
+    <?php $APPLICATION->IncludeFile('/include/about.php'); ?>
     <?php $APPLICATION->IncludeFile('/include/blog.php'); ?>
+
+    <?php $APPLICATION->IncludeFile('/include/about_us.php'); ?>
 <?php endif; ?>
 
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'; ?>
