@@ -1047,7 +1047,6 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                             <? echo $arResult["DETAIL_TEXT"]; ?><br><br>
                         </p>
 
-                        <!-- <img src="/2/images/brans.png"/> -->
                     </div>
                     <div class="col-md-4">
 
