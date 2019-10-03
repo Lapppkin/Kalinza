@@ -10,7 +10,7 @@ use Deadie\Helper;
         array()
     ); ?>
     <? $APPLICATION->IncludeComponent("altasib:geobase.select.city",
-        "",
+        "topbar",
         array(
             "LOADING_AJAX" => "Y",
             "RIGHT_ENABLE" => "N",
@@ -21,7 +21,7 @@ use Deadie\Helper;
 
     <? $APPLICATION->IncludeComponent(
         "bitrix:menu",
-        ".default",
+        "topbar",
         array(
             "ROOT_MENU_TYPE"        => "header_topbar",
             "MENU_CACHE_TYPE"       => "A",
@@ -52,7 +52,7 @@ use Deadie\Helper;
 
     <? $APPLICATION->IncludeComponent(
         "bitrix:sale.basket.basket.line",
-        "template1",
+        "topbar",
         array(
             "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
             "PATH_TO_PERSONAL" => SITE_DIR . "personal/",

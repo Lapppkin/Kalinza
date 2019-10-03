@@ -1,0 +1,27 @@
+a#altasib_geobase_btn.altasib_geobase_disabled,a#altasib_geobase_btn.altasib_geobase_disabled:hover,a#altasib_geobase_btn.altasib_geobase_disabled:active{
+	background-color:#0097f6 !important;
+}
+.altasib_geobase_city .altasib_geobase_cities ul li a:hover{
+	color:#0062C1 !important;
+}
+a#altasib_geobase_btn{
+	background-color:#0062C1 !important;
+}
+a#altasib_geobase_mb_btn,a#all_cities_button_mobile{
+	background-color:#0062C1 !important;
+}
+.altasib_geobase_sml_btn{
+	background-color:#0097f6;
+}
+a.altasib_geobase_sml_yes:hover{
+	background-color:#0062C1;
+}
+a.altasib_geobase_sml_btn:last-child{
+	color:#0097f6 !important;
+}
+a.altasib_geobase_sml_btn:last-child:hover{
+	color:#0062C1 !important;
+}
+.altasib_geobase_mb_city .altasib_geobase_mb_cities ul li.altasib_geobase_mb_act,.altasib_geobase_mb_city .altasib_geobase_mb_cities ul li.altasib_geobase_mb_act a{
+	background-color:#0062C1 !important;
+}
