@@ -1,41 +1,5 @@
 {
-    "authors":  [
-        {
-            "name":  "Vorobyev Andrey",
-            "email": "sakhalin@originalsystems.ru",
-            "role":  "Core developer"
-        },
-        {
-            "name":  "Nikolsky Kirill",
-            "email": "nk@originalsystems.ru",
-            "role":  "Core developer"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "core\\": "local/php_interface/core"
-        }
-    },
-    "config":   {
-        "process-timeout": 1800,
-        "fxp-asset":       {
-            "installer-paths": {
-                "npm-asset-library":   "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
-        }
-    },
-    "homepage": "https://bitbucket.org/lapkinlab/kalinza.ru",
-    "license":  "proprietary",
-    "name":     "lapkinlab/kalinza.ru",
-    "type":     "project",
-    "require":  {
-        "php":              ">=7.1",
-        "vlucas/phpdotenv": "^3.4"
-    },
-    "scripts":  {
-        "post-install-cmd": [
-            "cp -n .env.dist .env"
-        ]
+    "require-dev": {
+        "matiaspub/bx-api-docs": "^16.5"
     }
 }
