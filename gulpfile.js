@@ -87,7 +87,7 @@ var path = {
 // css
 function cssBuild() {
     return gulp.src(path.src.css).
-        pipe(sourcemaps.init()).
+        //pipe(sourcemaps.init()).
         pipe(sass({
             'compress': false,
             'include css': true
@@ -100,7 +100,7 @@ function cssBuild() {
             extname: '.css'
         })).
         pipe(minify()).
-        pipe(sourcemaps.write('.')).
+        //pipe(sourcemaps.write('.')).
         pipe(gulp.dest(path.build.css));
 }
 
