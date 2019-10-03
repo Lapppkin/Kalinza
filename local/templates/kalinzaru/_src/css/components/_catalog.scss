@@ -1,9 +1,7 @@
 // CATALOG
 
 .workarea {
-  &.catalog {
-
-  }
+  &.catalog {}
 }
 
 .catalog {
@@ -34,34 +32,138 @@
 
 }
 
+// SECTIONS
+
 .bx_catalog_text_ul {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0 0 0;
+  justify-content: center;
+  margin: 10px 0;
   padding: 0;
   li {
-    padding: 7px $size-padding-small;
-    margin: 0 10px 10px 0;
+    margin: 15px 10px 0;
     list-style: none;
     @include br-small;
-    background-color: $app-color-primary;
     h2 {
       font-size: $fontsize-small;
       margin: 0;
     }
     a {
-      color: $app-color-white;
-      text-decoration: none;
+      color: $app-color-primary;
+      text-decoration: underline;
+      text-transform: uppercase;
       &:hover {
-        text-decoration: underline;
-        color: $app-color-white;
+        text-decoration: none;
+        color: $app-color-black;
       }
     }
   }
 }
 
-// страница каталога
+// CATALOG SECTION
 
 .catalog-section {
+  margin-top: 20px;
   .product-item {}
+}
+
+// CATALOG ELEMENT
+
+.bx-catalog-element {
+  h1 {
+    margin-bottom: 40px !important;
+  }
+  > .row {
+    margin-top: 30px;
+  }
+}
+
+// IMAGES
+
+.product-item-detail-slider-container {
+  flex-basis: 600px;
+}
+
+.product-item-detail-slider-block {
+  .product-item-detail-slider-images-container {
+    .product-item-detail-slider-image {
+      @include br-small;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// PAY BLOCK
+
+.product-item-detail-pay-block {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  > * {
+    flex-basis: 100%;
+    margin-right: 20px;
+  }
+}
+
+// INFO
+
+.product-item-detail-info-container {
+  margin-bottom: 20px;
+}
+
+// PRICES
+
+.product-item-detail-price-current {
+  font-size: $fontsize-h3;
+}
+
+// TABS
+
+.product-item-detail-tabs-container {
+  margin-bottom: 4px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex-basis: auto;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a {
+        color: $app-color-white;
+        margin: 0 20px 20px 0;
+        padding: 10px 20px;
+        @include br-small;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: $app-color-active;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+          background-color: $app-color-active-hover;
+        }
+      }
+    }
+  }
+}
+
+.product-item-detail-tab-content {
+  background-color: $app-color-white;
+  padding: 20px;
+  @include br-small;
+  color: $app-color-gray;
+  p {
+    color: $app-color-gray;
+  }
+}
+
+.product-item-detail-tabs-container-fixed,
+.product-item-detail-short-card-fixed {
+  display: none !important;
 }

@@ -1,0 +1,76 @@
+// FILTER
+
+.bx-filter {
+
+  .bx-filter-title {
+    text-align: center;
+  }
+
+  .bx-filter-parameters-box {
+
+  }
+
+  .bx-filter-parameters-box-title {
+    font-size: $fontsize-normal;
+    @include mediumfont;
+  }
+
+  .bx-filter-block {}
+
+  .bx-filter-param-label {
+    padding: 0;
+  }
+
+  // CHECKBOX
+
+  .bx-filter-input-checkbox {
+    overflow: visible;
+    .bx-filter-param-text {
+      padding-left: 20px;
+      overflow: visible;
+      &:hover {
+        color: $app-color-primary;
+      }
+    }
+    input[type="checkbox"] {
+      + .bx-filter-param-text {
+        background-image: url("../images/svg/checkbox-unchecked.svg");
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 1em;
+      }
+      &:checked {
+        + .bx-filter-param-text {
+          background-image: url("../images/svg/checkbox-checked.svg");
+        }
+      }
+    }
+  }
+
+  // RADIO
+
+  .bx-filter-input-radio {
+    overflow: visible;
+    .bx-filter-param-text {
+      padding-left: 20px;
+      overflow: visible;
+      &:hover {
+        color: $app-color-primary;
+      }
+    }
+    input[type="checkbox"] {
+      + .bx-filter-param-text {
+        background-image: url("../images/svg/radio-unchecked.svg");
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 1em;
+      }
+      &:checked {
+        + .bx-filter-param-text {
+          background-image: url("../images/svg/radio-checked.svg");
+        }
+      }
+    }
+  }
+
+}

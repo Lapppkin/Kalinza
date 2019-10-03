@@ -34,7 +34,7 @@ use \Bitrix\Main\Localization\Loc;
 </style>
 
 <div class="product-item">
-    <a class="product-item-image-wrapper" href="/catalog<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>"
+    <a class="product-item-image-wrapper" href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>"
        data-entity="image-wrapper">
 		<span class="product-item-image-slider-slide-container slide" id="<?= $itemIds['PICT_SLIDER'] ?>"
 			<?= ($showSlider ? '' : 'style="display: none;"') ?>
@@ -67,9 +67,7 @@ use \Bitrix\Main\Localization\Loc;
                 $bgImage   = $resizeImg['src'];
             }
             ?>
-            <span class="product-item-image-alternative" id="<?= $itemIds['SECOND_PICT'] ?>"
-                  style="background-image: url('<?= $bgImage ?>'); <?= ($showSlider ? 'display: none;' : '') ?>">
-			</span>
+            <span class="product-item-image-alternative" id="<?= $itemIds['SECOND_PICT'] ?>" style="background-image: url('<?= $bgImage ?>'); <?= ($showSlider ? 'display: none;' : '') ?>"></span>
             <?
         }
 
@@ -123,7 +121,7 @@ use \Bitrix\Main\Localization\Loc;
         ?>
     </a>
     <div class="product-item-title">
-        <a href="/catalog<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $productTitle ?>"><?= $productTitle ?></a>
+        <a href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $productTitle ?>"><?= $productTitle ?></a>
     </div>
     <?
     if (!empty($arParams['PRODUCT_BLOCKS_ORDER'])) {
