@@ -210,7 +210,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 											$item = reset($rowItems);
 											$APPLICATION->IncludeComponent(
 												'bitrix:catalog.item',
-												'',
+												'popular_products',
 												array(
 													'RESULT' => array(
 														'ITEM' => $item,

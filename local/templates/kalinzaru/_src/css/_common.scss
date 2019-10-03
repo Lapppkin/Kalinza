@@ -384,9 +384,9 @@ input {
 }
 
 .btn {
-  background-color: $app-color-error;
+  background-color: $app-color-primary;
   border-style: solid;
-  border-color: $app-color-error;
+  border-color: $app-color-primary;
   border-width: 0 !important;
   color: $app-color-white;
   padding: 0 15px;
@@ -406,8 +406,8 @@ input {
   }
   &:hover,
   &:focus {
-    background-color: $app-color-error-hover;
-    border-color: $app-color-error-hover;
+    background-color: $app-color-secondary;
+    border-color: $app-color-secondary;
     color: $app-color-white;
     text-decoration: none;
   }

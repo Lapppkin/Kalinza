@@ -1,2 +1,67 @@
 // CATALOG
 
+.workarea {
+  &.catalog {
+
+  }
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  &-sidebar {
+    flex-basis: 30%;
+    padding-right: $size-padding;
+    .bx-filter {
+      font-family: inherit;
+      @include shadow;
+      &-section {
+        @include br-small;
+        background-color: $app-color-white !important;
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  &-content {
+    flex-basis: 70%;
+  }
+
+}
+
+.bx_catalog_text_ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
+  padding: 0;
+  li {
+    padding: 7px $size-padding-small;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    @include br-small;
+    background-color: $app-color-primary;
+    h2 {
+      font-size: $fontsize-small;
+      margin: 0;
+    }
+    a {
+      color: $app-color-white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: $app-color-white;
+      }
+    }
+  }
+}
+
+// страница каталога
+
+.catalog-section {
+  .product-item {}
+}

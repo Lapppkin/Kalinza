@@ -26,7 +26,7 @@ $arParams['USE_FILTER'] = (isset($arParams['USE_FILTER']) && $arParams['USE_FILT
 $verticalGrid = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"] == "VERTICAL");
 
 if ($verticalGrid) { ?>
-    <div class="workarea grid2x1">
+    <div class="workarea catalog col-12">
 <? }
 if ($arParams['USE_FILTER'] == 'Y') {
 	$arFilter = array(
@@ -68,7 +68,7 @@ if ($arParams['USE_FILTER'] == 'Y') {
 		$arCurSection = array();
 	}
 	if ($verticalGrid) { ?>
-        <div class="bx_sidebar"><? }
+        <div class="bx_sidebar catalog-sidebar"><? }
 	$APPLICATION->IncludeComponent(
         "bitrix:catalog.smart.filter",
         "",
@@ -101,13 +101,13 @@ if ($arParams['USE_FILTER'] == 'Y') {
 	if ($verticalGrid) { ?></div><?	}
 }
 if ($verticalGrid) {
-	?><div class="bx_content_section"><?
+	?><div class="bx_content_section catalog-content"><?
 }
 
 // Список разделов
 $APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
-	"",
+	"kalinza",
 	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],

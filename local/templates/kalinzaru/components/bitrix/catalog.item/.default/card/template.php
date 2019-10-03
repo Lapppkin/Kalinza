@@ -51,7 +51,7 @@ use \Bitrix\Main\Localization\Loc;
             }
             ?>
 		</span>
-        
+
         <?php $resizeImg = \CFile::ResizeImageGet($item['PREVIEW_PICTURE']['ID'], ['width' => 200, 'height' => 9999], BX_RESIZE_IMAGE_PROPORTIONAL_ALT); ?>
 
         <span class="product-item-image-original" id="<?= $itemIds['PICT'] ?>"
@@ -259,13 +259,13 @@ use \Bitrix\Main\Localization\Loc;
 
                 case 'buttons':
                     ?>
-                    <div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
+                    <div class="product-item-info-container" data-entity="buttons-block">
                         <?
                         if (!$haveOffers) {
                             if ($actualItem['CAN_BUY']) {
                                 ?>
                                 <div class="product-item-button-container" id="<?= $itemIds['BASKET_ACTIONS'] ?>">
-                                    <a class="btn btn-default <?= $buttonSizeClass ?>" id="<?= $itemIds['BUY_LINK'] ?>"
+                                    <a class="btn" id="<?= $itemIds['BUY_LINK'] ?>"
                                        href="javascript:void(0)" rel="nofollow">
                                         <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
                                     </a>
@@ -282,7 +282,7 @@ use \Bitrix\Main\Localization\Loc;
                                             array(
                                                 'PRODUCT_ID'         => $actualItem['ID'],
                                                 'BUTTON_ID'          => $itemIds['SUBSCRIBE_LINK'],
-                                                'BUTTON_CLASS'       => 'btn btn-default ' . $buttonSizeClass,
+                                                'BUTTON_CLASS'       => 'btn',
                                                 'DEFAULT_DISPLAY'    => true,
                                                 'MESS_BTN_SUBSCRIBE' => $arParams['~MESS_BTN_SUBSCRIBE'],
                                             ),
@@ -310,7 +310,7 @@ use \Bitrix\Main\Localization\Loc;
                                             array(
                                                 'PRODUCT_ID'         => $item['ID'],
                                                 'BUTTON_ID'          => $itemIds['SUBSCRIBE_LINK'],
-                                                'BUTTON_CLASS'       => 'btn btn-default ' . $buttonSizeClass,
+                                                'BUTTON_CLASS'       => 'btn',
                                                 'DEFAULT_DISPLAY'    => !$actualItem['CAN_BUY'],
                                                 'MESS_BTN_SUBSCRIBE' => $arParams['~MESS_BTN_SUBSCRIBE'],
                                             ),
@@ -325,7 +325,7 @@ use \Bitrix\Main\Localization\Loc;
                                         <?= $arParams['MESS_NOT_AVAILABLE'] ?>
                                     </a>
                                     <div id="<?= $itemIds['BASKET_ACTIONS'] ?>" <?= ($actualItem['CAN_BUY'] ? '' : 'style="display: none;"') ?>>
-                                        <a class="btn btn-default <?= $buttonSizeClass ?>" id="<?= $itemIds['BUY_LINK'] ?>"
+                                        <a class="btn" id="<?= $itemIds['BUY_LINK'] ?>"
                                            href="javascript:void(0)" rel="nofollow">
                                             <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
                                         </a>
@@ -335,7 +335,7 @@ use \Bitrix\Main\Localization\Loc;
                             } else {
                                 ?>
                                 <div class="product-item-button-container">
-                                    <a class="btn btn-default <?= $buttonSizeClass ?>" href="<?= $item['DETAIL_PAGE_URL'] ?>">
+                                    <a class="btn" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                                         <?= $arParams['MESS_BTN_DETAIL'] ?>
                                     </a>
                                 </div>

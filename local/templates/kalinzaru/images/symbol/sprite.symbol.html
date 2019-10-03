@@ -19,14 +19,14 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
-	.svg-arrow--left-dims { width: 16px; height: 14px; }
-	.svg-arrow--right-dims { width: 16px; height: 14px; }
 	.svg-arrow-down-dims { width: 9px; height: 6px; }
 	.svg-arrow-left-dims { width: 15px; height: 23px; }
 	.svg-arrow-left-b-dims { width: 8px; height: 12px; }
+	.svg-arrow-left-line-dims { width: 16px; height: 14px; }
 	.svg-arrow-left-w-dims { width: 15px; height: 23px; }
 	.svg-arrow-right-dims { width: 15px; height: 23px; }
 	.svg-arrow-right-b-dims { width: 8px; height: 12px; }
+	.svg-arrow-right-line-dims { width: 16px; height: 14px; }
 	.svg-arrow-right-w-dims { width: 15px; height: 23px; }
 	.svg-arrow-up-dims { width: 9px; height: 5px; }
 	.svg-cart-dims { width: 64px; height: 64px; }
@@ -94,14 +94,14 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
-		<symbol viewBox="0 0 16 14" id="arrow--left" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 8.004v-2H4.046l4.092-3.912L6.762.64 0 7.006l6.763 6.356 1.374-1.453-4.09-3.905H16z"/></symbol>
-		<symbol viewBox="0 0 16 14" id="arrow--right" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.998v2h11.954L7.862 11.91l1.376 1.451L16 6.997 9.237.64 7.863 2.093l4.09 3.905H0z"/></symbol>
 		<symbol viewBox="0 0 9 6" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M4.536 4.536l-.354.353.354.354.353-.354-.353-.353zM7.718.646L4.182 4.182l.707.707 3.536-3.535-.707-.708zM4.889 4.182L1.354.646l-.708.708 3.536 3.535.707-.707z"/></symbol>
 		<symbol viewBox="0 0 15 23" id="arrow-left" xmlns="http://www.w3.org/2000/svg"><path d="M3.1 11.9l-1.06 1.06L.98 11.9l1.06-1.061 1.06 1.06zm-1.06-1.061l9.9-9.9 2.12 2.122-9.899 9.9-2.121-2.122zm9.9 12.02l-9.9-9.899 2.12-2.12 9.9 9.9-2.122 2.12z"/></symbol>
 		<symbol viewBox="0 0 8 12" id="arrow-left-b" xmlns="http://www.w3.org/2000/svg"><path d="M2 6l-.707-.707L.586 6l.707.707L2 6zm-.707.707l5 5 1.414-1.414-5-5-1.414 1.414zm5-6.414l-5 5 1.414 1.414 5-5L6.293.293z"/></symbol>
+		<symbol viewBox="0 0 16 14" id="arrow-left-line" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 8.004v-2H4.046l4.092-3.912L6.762.64 0 7.006l6.763 6.356 1.374-1.453-4.09-3.905H16z"/></symbol>
 		<symbol viewBox="0 0 15 23" id="arrow-left-w" xmlns="http://www.w3.org/2000/svg"><path d="M3.1 11.9L2 13l-1-1.1 1-1.06zM2 10.84l9.9-9.9 2.12 2.12L4.16 13zm9.9 12L2 13l2.12-2.12 9.9 9.9z"/></symbol>
 		<symbol viewBox="0 0 15 23" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M11.9 11.9l1.06 1.06 1.06-1.06-1.06-1.061-1.06 1.06zm1.06-1.061l-9.9-9.9L.94 3.061l9.899 9.9 2.121-2.122zm-9.9 12.02l9.9-9.899-2.121-2.121-9.9 9.9 2.122 2.12z"/></symbol>
 		<symbol viewBox="0 0 8 12" id="arrow-right-b" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l.707.707L7.414 6l-.707-.707L6 6zm.707-.707l-5-5L.293 1.707l5 5 1.414-1.414zm-5 6.414l5-5-1.414-1.414-5 5 1.414 1.414z"/></symbol>
+		<symbol viewBox="0 0 16 14" id="arrow-right-line" xmlns="http://www.w3.org/2000/svg"><path class="ahst0" d="M0 6v2h12l-4.1 3.9 1.4 1.5L16 7 9.2.6 7.9 2.1 12 6H0z"/></symbol>
 		<symbol viewBox="0 0 15 23" id="arrow-right-w" xmlns="http://www.w3.org/2000/svg"><path d="M11.9 11.9L13 13l1-1.1-1-1.06zm1.1-1.06L3.06.94.94 3.06l9.9 9.9zm-9.9 12L13 13l-2.12-2.12-9.9 9.9z"/></symbol>
 		<symbol viewBox="0 0 9 5" id="arrow-up" xmlns="http://www.w3.org/2000/svg"><path d="M4.536 1L4.182.647l.354-.354.353.354L4.536 1zm3.182 3.89L4.182 1.353l.707-.707 3.536 3.535-.707.707zM4.889 1.353L1.354 4.889l-.708-.707L4.182.647l.707.707z"/></symbol>
 		<symbol viewBox="0 0 64 64" id="cart" xmlns="http://www.w3.org/2000/svg"><path d="M60 28a4 4 0 110 8h-.47l-3.59 20.68a3.91 3.91 0 01-1.38 2.38A3.86 3.86 0 0152 60H12a3.86 3.86 0 01-2.56-.94 3.91 3.91 0 01-1.38-2.38L4.47 36H4a3.87 3.87 0 01-2.83-1.17 4 4 0 010-5.66A3.87 3.87 0 014 28zM14.87 13.12L12 26H7.84L11 12.22a7.62 7.62 0 012.78-4.49 7.87 7.87 0 015-1.73H24a2 2 0 012-2h12a2 2 0 012 2h5.22a7.87 7.87 0 015 1.73A7.62 7.62 0 0153 12.22L56.16 26H52l-2.9-12.88a4.22 4.22 0 00-1.43-2.25 3.83 3.83 0 00-2.45-.87H40a2 2 0 01-2 2H26a2 2 0 01-2-2h-5.22a3.81 3.81 0 00-2.48.87 4.16 4.16 0 00-1.43 2.25zM15.16 53A2 2 0 0017 50.84l-1-13A2 2 0 0013.84 36 2 2 0 0012 38.15l1 13a1.93 1.93 0 00.64 1.31A2 2 0 0015 53zM28 51V38a2 2 0 00-.59-1.41 2 2 0 00-2.82 0A2 2 0 0024 38v13a2 2 0 004 0zm12 0V38a2 2 0 00-.59-1.41 2 2 0 00-2.82 0A2 2 0 0036 38v13a2 2 0 004 0zm11 .16l1-13A2 2 0 0050.16 36 2 2 0 0048 37.84l-1 13A2 2 0 0048.84 53H49a2 2 0 001.36-.53 1.93 1.93 0 00.64-1.31z"/></symbol>
@@ -176,28 +176,6 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
-				<li title="arrow--left">
-					<div class="icon-box">
-						
-						<!-- arrow--left -->
-						<svg class="svg-arrow--left-dims">
-							<use xlink:href="#arrow--left"></use>
-						</svg>
-						
-					</div>
-					<h2>arrow--left</h2>
-				</li>
-				<li title="arrow--right">
-					<div class="icon-box">
-						
-						<!-- arrow--right -->
-						<svg class="svg-arrow--right-dims">
-							<use xlink:href="#arrow--right"></use>
-						</svg>
-						
-					</div>
-					<h2>arrow--right</h2>
-				</li>
 				<li title="arrow-down">
 					<div class="icon-box">
 						
@@ -231,6 +209,17 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>arrow-left-b</h2>
 				</li>
+				<li title="arrow-left-line">
+					<div class="icon-box">
+						
+						<!-- arrow-left-line -->
+						<svg class="svg-arrow-left-line-dims">
+							<use xlink:href="#arrow-left-line"></use>
+						</svg>
+						
+					</div>
+					<h2>arrow-left-line</h2>
+				</li>
 				<li title="arrow-left-w">
 					<div class="icon-box">
 						
@@ -263,6 +252,17 @@ embedded above. They may be styled via CSS.
 						
 					</div>
 					<h2>arrow-right-b</h2>
+				</li>
+				<li title="arrow-right-line">
+					<div class="icon-box">
+						
+						<!-- arrow-right-line -->
+						<svg class="svg-arrow-right-line-dims">
+							<use xlink:href="#arrow-right-line"></use>
+						</svg>
+						
+					</div>
+					<h2>arrow-right-line</h2>
 				</li>
 				<li title="arrow-right-w">
 					<div class="icon-box">
@@ -780,28 +780,6 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 				
-				<li title="arrow--left">
-					<div class="icon-box">
-						
-						<!-- arrow--left -->
-						<svg class="svg-arrow--left-dims">
-							<use xlink:href="sprites.svg#arrow--left"></use>
-						</svg>
-						
-					</div>
-					<h2>arrow--left</h2>
-				</li>
-				<li title="arrow--right">
-					<div class="icon-box">
-						
-						<!-- arrow--right -->
-						<svg class="svg-arrow--right-dims">
-							<use xlink:href="sprites.svg#arrow--right"></use>
-						</svg>
-						
-					</div>
-					<h2>arrow--right</h2>
-				</li>
 				<li title="arrow-down">
 					<div class="icon-box">
 						
@@ -835,6 +813,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>arrow-left-b</h2>
 				</li>
+				<li title="arrow-left-line">
+					<div class="icon-box">
+						
+						<!-- arrow-left-line -->
+						<svg class="svg-arrow-left-line-dims">
+							<use xlink:href="sprites.svg#arrow-left-line"></use>
+						</svg>
+						
+					</div>
+					<h2>arrow-left-line</h2>
+				</li>
 				<li title="arrow-left-w">
 					<div class="icon-box">
 						
@@ -867,6 +856,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 						
 					</div>
 					<h2>arrow-right-b</h2>
+				</li>
+				<li title="arrow-right-line">
+					<div class="icon-box">
+						
+						<!-- arrow-right-line -->
+						<svg class="svg-arrow-right-line-dims">
+							<use xlink:href="sprites.svg#arrow-right-line"></use>
+						</svg>
+						
+					</div>
+					<h2>arrow-right-line</h2>
 				</li>
 				<li title="arrow-right-w">
 					<div class="icon-box">
@@ -1371,7 +1371,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Sun, 29 Sep 2019 06:37:04 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Thu, 03 Oct 2019 06:25:09 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

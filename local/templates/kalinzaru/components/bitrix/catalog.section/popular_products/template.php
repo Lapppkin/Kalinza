@@ -155,7 +155,7 @@ if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])) {
             <?
             $APPLICATION->IncludeComponent(
                 'bitrix:catalog.item',
-                'bootstrap_v5',
+                'popular_products',
                 array(
                     'RESULT' => array(
                         'ITEM' => $item,
