@@ -20,7 +20,7 @@
 
 $APPLICATION->IncludeComponent(
     "bitrix:sale.basket.basket.line",
-    "template2",
+    "kalinza",
     array(
         "PATH_TO_BASKET"       => "/personal/cart/",
         "PATH_TO_PERSONAL"     => SITE_DIR . "personal/",
