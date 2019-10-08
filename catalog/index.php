@@ -21,7 +21,7 @@ $APPLICATION->IncludeComponent(
 		"SHOW_OLD_PRICE" => "N",
 		"SHOW_MAX_QUANTITY" => "N",
 		"MESS_BTN_BUY" => "Купить",
-		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
+		"MESS_BTN_ADD_TO_BASKET" => "Купить",
 		"MESS_BTN_COMPARE" => "Сравнение",
 		"MESS_BTN_DETAIL" => "Подробнее",
 		"MESS_NOT_AVAILABLE" => "Нет в наличии",

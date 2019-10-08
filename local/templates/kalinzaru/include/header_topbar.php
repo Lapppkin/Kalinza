@@ -46,8 +46,10 @@ use Deadie\Helper;
 <div class="header--topbar--right">
 
     <div class="header--topbar--favorites">
-        <?= Helper::renderIcon('heart') ?>
-        <div class="header--topbar--favorites-counter">2</div>
+        <a href="/favorites">
+            <?= Helper::renderIcon('heart') ?>
+            <div class="header--topbar--favorites-counter">0</div>
+        </a>
     </div>
 
     <? $APPLICATION->IncludeComponent(

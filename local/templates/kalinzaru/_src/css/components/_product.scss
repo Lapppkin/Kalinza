@@ -65,12 +65,17 @@
 // PRODUCT ITEM
 
 .product-item {
-  padding: 15px 20px;
+  padding: 15px 0;
   display: flex;
   flex-wrap: wrap;
   background-color: $app-color-white;
   margin-bottom: 20px;
+  position: relative;
   @include br-small;
+  > * {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   &:hover {
     @include shadow-hover;
   }
@@ -83,6 +88,7 @@
     padding-bottom: 15px;
     border-bottom: 1px solid $app-color-delimiter;
     transition: filter 0.3s ease-in-out;
+    position: relative;
     &:hover {
       span {
         filter: brightness(1.1);
@@ -92,8 +98,9 @@
       width: 100%;
       height: 100%;
       display: block;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
       top: 0;
       left: 0;
       right: 0;
@@ -102,6 +109,19 @@
   }
   &-image-alternative {
     display: none !important;
+  }
+
+  &-label-text {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: $app-color-white;
+    background-color: $app-color-error;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include br-small;
+    font-size: $fontsize-small;
   }
 
   &-title {
@@ -121,14 +141,20 @@
     }
   }
 
+  &-hidden {
+    display: none;
+  }
+
   &-info-container {
     &[data-entity="price-block"] {
       flex-basis: 50%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      padding-right: 0;
     }
     &[data-entity="buttons-block"] {
+      padding-left: 0;
       flex-basis: 50%;
       display: flex;
       align-items: center;

@@ -3,27 +3,31 @@
 .breadcrumb {
   margin: 0;
   padding: 0;
+  background-color: $app-color-background;
   &--wrapper {
-    min-height: 40px;
+    min-height: 60px;
     .bx-breadcrumb {
       margin: 0;
-      padding: 0 10px;
+      padding: 0;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      min-height: 40px;
+      min-height: 60px;
     }
     .bx-breadcrumb-item {
-      font-size: $fontsize-small;
+      font-size: $fontsize-normal;
       display: inline-flex;
       margin: 0 10px 0 0 !important;
       a {
+        text-decoration: none;
         span {
           @include redularfont;
+          text-decoration: none;
         }
       }
       span {
         font-family: inherit !important;
+        text-decoration: none;
       }
     }
   }

@@ -14,12 +14,33 @@
   .bx-filter-parameters-box-title {
     font-size: $fontsize-normal;
     @include mediumfont;
+    span {
+      color: $app-color-black;
+      text-decoration: none;
+    }
+  }
+
+  .bx-filter-parameters-box-hint {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0;
+    color: $app-color-black;
+    &:hover {
+      border-bottom: 0;
+    }
   }
 
   .bx-filter-block {}
 
   .bx-filter-param-label {
     padding: 0;
+    input:checked + .bx-filter-params-text {
+      color: $app-color-black;
+    }
+    .bx-filter-param-text {
+      color: $app-color-border;
+    }
   }
 
   // CHECKBOX
@@ -27,7 +48,7 @@
   .bx-filter-input-checkbox {
     overflow: visible;
     .bx-filter-param-text {
-      padding-left: 20px;
+      padding-left: 25px;
       overflow: visible;
       &:hover {
         color: $app-color-primary;
@@ -42,6 +63,7 @@
       }
       &:checked {
         + .bx-filter-param-text {
+          color: $app-color-black;
           background-image: url("../images/svg/checkbox-checked.svg");
         }
       }
@@ -53,7 +75,7 @@
   .bx-filter-input-radio {
     overflow: visible;
     .bx-filter-param-text {
-      padding-left: 20px;
+      padding-left: 25px;
       overflow: visible;
       &:hover {
         color: $app-color-primary;

@@ -179,7 +179,7 @@ input {
   //~ .form-error {}
   &:hover,
   &:focus {
-    border-color: $app-color-active;
+    border-color: $app-color-primary;
     outline: 0;
   }
   &:focus {
@@ -235,8 +235,8 @@ input {
   &[type="button"],
   &[type="reset"],
   &[type="submit"] {
-    background-color: $app-color-active;
-    border: 1px solid $app-color-active;
+    background-color: $app-color-primary;
+    border: 1px solid $app-color-primary;
     color: $app-color-white;
     padding-left: 18px;
     padding-right: 18px;
@@ -250,16 +250,17 @@ input {
     border-radius: 2px;
     font-size: $fontsize-small;
     text-transform: initial;
+    @include mediumfont;
     &:hover {
-      background-color: $app-color-active-hover;
-      border-color: $app-color-active-hover;
+      background-color: $app-color-secondary;
+      border-color: $app-color-secondary;
     }
   }
   &[type="reset"] {
-    color: $app-color-secondary;
+    color: $app-color-gray-lighter;
     &:hover,
     &:focus {
-      color: $app-color-secondary;
+      color: $app-color-gray-light;
     }
   }
 
@@ -273,7 +274,7 @@ input {
     //display: none;
     ~ label {
       @include smallfont;
-      color: $app-color-primary;
+      color: $app-color-gray-light;
       margin-right: 10px;
       padding-left: 30px;
       background-size: 10px;
@@ -281,33 +282,35 @@ input {
       background-position: left 5px center;
       cursor: pointer;
       position: relative;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 1px;
-        border: 1px solid $app-color-delimiter;
-        transform: translateY(-45%);
-        width: 20px;
-        height: 20px;
-        border-radius: 3px;
-        margin-top: -1px;
-        background-color: transparent;
-      }
+      @include redularfont;
+      font-weight: 400;
+      //&:before {
+      //  content: "";
+      //  position: absolute;
+      //  top: 50%;
+      //  left: 1px;
+      //  border: 1px solid $app-color-delimiter;
+      //  transform: translateY(-45%);
+      //  width: 20px;
+      //  height: 20px;
+      //  border-radius: 3px;
+      //  margin-top: -1px;
+      //  background-color: transparent;
+      //}
     }
   }
   &[type="checkbox"] {
     display: none;
-    //~ label {
-      //background-image: url("../images/check.svg");
-    //}
+    ~ label {
+      background-size: 16px;
+      background-image: url("../images/svg/checkbox-unchecked.svg");
+    }
     //&[checked] ~ label,
     &:checked ~ label {
-      background-size: 12px;
       background-image: url("../images/svg/checkbox-checked.svg");
     }
     //&:disabled ~ label {
-      //background-image: url("/images/checkbox-disabled.svg");
+      //background-image: url("/images/svg/checkbox-disabled.svg");
     //}
   }
   &[type="radio"] {
@@ -316,9 +319,9 @@ input {
       &:before {
         display: none;
       }
-      background-size: 18px;
+      background-size: 16px;
       border: 0;
-      background-image: url("../images/svg/radio.svg");
+      background-image: url("../images/svg/radio-unchecked.svg");
     }
     //&[checked] + label,
     &:checked + label {
@@ -329,22 +332,6 @@ input {
       cursor: not-allowed;
       opacity: 0.5;
     }
-  }
-
-  // NEW SELECT
-
-  &[type="text"].select-field {
-    //background-image: url("/images/dropdown-down-primary.svg");
-    background-position: right 15px center;
-    background-size: 10px;
-    background-repeat: no-repeat;
-    padding-right: 40px;
-    min-width: 192px;
-    cursor: default;
-    user-select: none;
-    //&:focus {
-      //background-image: url("/images/dropdown-up-primary.svg");
-    //}
   }
 
 }
@@ -389,7 +376,7 @@ input {
   border-color: $app-color-primary;
   border-width: 0 !important;
   color: $app-color-white;
-  padding: 0 15px;
+  padding: 0 12px;
   height: $size-button;
   line-height: $size-button;
   white-space: nowrap;
@@ -422,6 +409,12 @@ input {
     }
   }
 
+  &-large {
+    padding: 0 25px;
+    height: $size-button-large;
+    line-height: $size-button-large;
+  }
+
   &-transparent {
     background-color: transparent;
     border: 1px solid $app-color-gray !important;
@@ -431,6 +424,10 @@ input {
       background-color: $app-color-primary;
       border-color: $app-color-primary !important;
       color: $app-color-white;
+    }
+    &-primary {
+      border: 1px solid $app-color-primary !important;
+      color: $app-color-primary;
     }
   }
 
@@ -455,6 +452,18 @@ input {
     &[disabled] {
       background-color: $app-color-white;
       color: $app-color-border;
+    }
+  }
+
+  &-primary {
+    background-color: $app-color-primary !important;
+    border-color: $app-color-primary !important;
+    color: $app-color-white !important;
+    &:hover,
+    &:focus {
+      background-color: $app-color-secondary !important;
+      border-color: $app-color-secondary !important;
+      color: $app-color-white !important;
     }
   }
 
@@ -1113,4 +1122,10 @@ font.errortext {
   &.active {
     background-color: $app-color-primary !important;
   }
+}
+
+// FAVORITES
+
+.js-toggle-favorite {
+  cursor: pointer;
 }

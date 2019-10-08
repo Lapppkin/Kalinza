@@ -5,11 +5,11 @@
 $app-color-white: #fff;
 $app-color-black: #232122;
 
-$app-color-primary: #1fa4dc;
-$app-color-primary-light: #b1e3f2;
-$app-color-secondary: #0084BC;
+$app-color-primary: #5d9dd7;
+$app-color-primary-light: #6eb9ff;
+$app-color-secondary: #477dbf;
 
-$app-color-active: #93c44e;
+$app-color-active: #94c351;
 $app-color-active-hover: lighten($app-color-active, 10%);
 
 $app-color-border: #ccc;
@@ -18,9 +18,9 @@ $app-color-background: #f7f7f7;
 
 $app-color-gray: #444;
 $app-color-gray-light: #666;
-$app-color-gray-lighter: #808080;
+$app-color-gray-lighter: #848484;
 
-$app-color-error: #EB5757;
+$app-color-error: #eb5757;
 $app-color-error-hover: lighten($app-color-error, 10%);
 
 $app-color-footer-bg: #ebebeb;
@@ -35,6 +35,7 @@ $size-footer-bottom: 80px;
 
 $size-input: 36px;
 $size-button: 36px;
+$size-button-large: 50px;
 $size-checkbox: 16px;
 $size-tab: 36px;
 

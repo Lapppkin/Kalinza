@@ -1,11 +1,9 @@
 // MAIN
 
 main {
-  padding-top: $size-padding;
   padding-bottom: $size-padding;
   background-color: $app-color-background;
   h1, .h1 {
-    text-align: center;
     @include headfont;
     color: $app-color-black;
   }
@@ -32,6 +30,12 @@ main {
 body.inner {
   main {
     margin-bottom: 0;
+  }
+}
+
+body.index {
+  main {
+    padding-top: $size-padding;
   }
 }
 

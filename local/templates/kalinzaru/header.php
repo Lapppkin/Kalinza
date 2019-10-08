@@ -5,12 +5,15 @@
  */
 
 use Bitrix\Main\Page\Asset;
+use Deadie\Helper;
 
 if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 CJSCore::Init(array("fx"));
+$bodyClass = Helper::setBodyClass($APPLICATION);
 $curPage = $APPLICATION->GetCurPage(true);
 $curDir = $APPLICATION->GetCurDir();
+
 
 $isIndex = $curDir === '/';
 $isCatalog = strpos($curDir, '/catalog/') === 0;
@@ -32,7 +35,7 @@ CModule::IncludeModule('mcart.souvenirs');
 
         <meta name="yandex-verification" content="a56dfc858ae0a85a">
     </head>
-    <body>
+    <body class="<?= $bodyClass ?>">
         <div id="panel"><?php $APPLICATION->ShowPanel() ?></div>
 
         <div id="svg-container" hidden></div>
