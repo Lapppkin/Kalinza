@@ -256,4 +256,24 @@ final class Helper
         );
     }
 
+    /**
+     * Установка класса для тега body для различных типов страниц.
+     *
+     * @param $APPLICATION
+     *
+     * @return string
+     */
+    public static function setBodyClass($APPLICATION) {
+        if (
+            $APPLICATION->GetCurPage(FALSE) === '/'
+            || $APPLICATION->GetCurPage(FALSE) === '/' . LANGUAGE_ID . '/'
+        ) return 'index';
+        elseif (
+            $APPLICATION->GetCurPage(FALSE) === '/catalog/'
+            || $APPLICATION->GetCurPage(FALSE) === '/' . LANGUAGE_ID . '/catalog/'
+        ) return 'catalog_index';
+        elseif (\CSite::InDir('/catalog/')) return 'catalog';
+        return 'inner';
+    }
+
 }
