@@ -398,3 +398,6 @@ if (ModuleManager::isModuleInstalled("sale")) {
 		}
 	}
 }
+
+// Форма консультации
+$APPLICATION->IncludeFile('/include/consult.php');

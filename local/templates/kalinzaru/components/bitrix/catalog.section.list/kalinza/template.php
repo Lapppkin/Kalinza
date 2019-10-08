@@ -44,23 +44,20 @@ $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
 $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELETE");
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 
-?><div class="<? echo $arCurView['CONT']; ?>"><?
-if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
-{
-	$this->AddEditAction($arResult['SECTION']['ID'], $arResult['SECTION']['EDIT_LINK'], $strSectionEdit);
-	$this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
-
-	?><h1 class="<? echo $arCurView['TITLE']; ?> h2" id="<? echo $this->GetEditAreaId($arResult['SECTION']['ID']); ?>">
-    <? echo (
-			isset($arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]) && $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"] != ""
-			? $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]
-			: $arResult['SECTION']['NAME']
-		); ?>
-    </h1><?
-}
-
-if (0 < $arResult["SECTIONS_COUNT"]) {
 ?>
+<div class="<? echo $arCurView['CONT']; ?>">
+    <? if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID']) {
+	    $this->AddEditAction($arResult['SECTION']['ID'], $arResult['SECTION']['EDIT_LINK'], $strSectionEdit);
+	    $this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
+	?>
+    <h1 class="<?= $arCurView['TITLE'] ?> h2" id="<?= $this->GetEditAreaId($arResult['SECTION']['ID']) ?>">
+    <?= isset($arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]) && $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"] != ""
+        ? $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]
+        : $arResult['SECTION']['NAME'] ?>
+    </h1><?
+    }
+
+if (0 < $arResult["SECTIONS_COUNT"]) { ?>
 <ul class="<? echo $arCurView['LIST']; ?>">
 <?
 	switch ($arParams['VIEW_MODE'])

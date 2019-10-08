@@ -151,7 +151,7 @@ if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])) {
         $rowItems = array_splice($arResult['ITEMS'], 0, $countt);
 
         foreach ($rowItems as $item) { ?>
-        <div class="popular-products--item">
+        <div class="popular-products--item" id="product-item-<?= $item['ID'] ?>">
             <?
             $APPLICATION->IncludeComponent(
                 'bitrix:catalog.item',

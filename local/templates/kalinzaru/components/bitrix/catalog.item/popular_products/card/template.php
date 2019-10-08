@@ -3,6 +3,7 @@
 }
 
 use \Bitrix\Main\Localization\Loc;
+use \Deadie\Helper;
 
 /**
  * @global CMain                $APPLICATION
@@ -23,7 +24,8 @@ use \Bitrix\Main\Localization\Loc;
  * @var CatalogSectionComponent $component
  */
 ?>
-<div class="product-item">
+<div class="product-item" id="product-item-<?= $item['ID'] ?>">
+    <div class="js-toggle-favorite" data-favorite-id="<?= $item['ID'] ?>" title="Добавить в избранное"><?= Helper::renderIcon('heart-filled') ?></div>
     <a class="product-item-image-wrapper" href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>" data-entity="image-wrapper">
 		<span class="product-item-image-slider-slide-container slide" id="<?= $itemIds['PICT_SLIDER'] ?>"
 			<?= ($showSlider ? '' : 'style="display: none;"') ?>

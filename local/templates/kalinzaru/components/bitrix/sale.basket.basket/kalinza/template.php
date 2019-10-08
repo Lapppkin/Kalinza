@@ -46,18 +46,15 @@ $arParams['SHOW_FILTER'] = isset($arParams['SHOW_FILTER']) && $arParams['SHOW_FI
 
 $arParams['PRICE_DISPLAY_MODE'] = isset($arParams['PRICE_DISPLAY_MODE']) && $arParams['PRICE_DISPLAY_MODE'] === 'N' ? 'N' : 'Y';
 
-if (!isset($arParams['TOTAL_BLOCK_DISPLAY']) || !is_array($arParams['TOTAL_BLOCK_DISPLAY']))
-{
+if (!isset($arParams['TOTAL_BLOCK_DISPLAY']) || !is_array($arParams['TOTAL_BLOCK_DISPLAY'])) {
 	$arParams['TOTAL_BLOCK_DISPLAY'] = array('top');
 }
 
-if (empty($arParams['PRODUCT_BLOCKS_ORDER']))
-{
+if (empty($arParams['PRODUCT_BLOCKS_ORDER'])) {
 	$arParams['PRODUCT_BLOCKS_ORDER'] = 'props,sku,columns';
 }
 
-if (is_string($arParams['PRODUCT_BLOCKS_ORDER']))
-{
+if (is_string($arParams['PRODUCT_BLOCKS_ORDER'])) {
 	$arParams['PRODUCT_BLOCKS_ORDER'] = explode(',', $arParams['PRODUCT_BLOCKS_ORDER']);
 }
 
@@ -66,8 +63,7 @@ $arParams['USE_ENHANCED_ECOMMERCE'] = isset($arParams['USE_ENHANCED_ECOMMERCE'])
 $arParams['DATA_LAYER_NAME'] = isset($arParams['DATA_LAYER_NAME']) ? trim($arParams['DATA_LAYER_NAME']) : 'dataLayer';
 $arParams['BRAND_PROPERTY'] = isset($arParams['BRAND_PROPERTY']) ? trim($arParams['BRAND_PROPERTY']) : '';
 
-if ($arParams['USE_GIFTS'] === 'Y')
-{
+if ($arParams['USE_GIFTS'] === 'Y') {
 	$giftParameters = array(
 		'SHOW_PRICE_COUNT' => 1,
 		'PRODUCT_SUBSCRIPTION' => 'N',
@@ -109,7 +105,7 @@ if ($arParams['USE_GIFTS'] === 'Y')
 \CJSCore::Init(array('fx', 'popup', 'ajax'));
 
 $this->addExternalCss('/bitrix/css/main/bootstrap.css');
-$this->addExternalCss($templateFolder.'/themes/'.$arParams['TEMPLATE_THEME'].'/style.css');
+$this->addExternalCss($templateFolder.'/themes/' . $arParams['TEMPLATE_THEME'] . '/style.css');
 
 $this->addExternalJs($templateFolder.'/js/mustache.js');
 $this->addExternalJs($templateFolder.'/js/action-pool.js');
@@ -121,51 +117,16 @@ $mobileColumns = isset($arParams['COLUMNS_LIST_MOBILE'])
 	: $arParams['COLUMNS_LIST'];
 $mobileColumns = array_fill_keys($mobileColumns, true);
 
-$jsTemplates = new Main\IO\Directory($documentRoot.$templateFolder.'/js-templates');
+$jsTemplates = new Main\IO\Directory($documentRoot.$templateFolder . '/js-templates');
 /** @var Main\IO\File $jsTemplate */
-foreach ($jsTemplates->getChildren() as $jsTemplate)
-{
-	include($jsTemplate->getPath());
+foreach ($jsTemplates->getChildren() as $jsTemplate) {
+	include $jsTemplate->getPath();
 }
-
 $displayModeClass = $arParams['DISPLAY_MODE'] === 'compact' ? ' basket-items-list-wrapper-compact' : '';
-
-echo "<h1>Корзина</h1>";
-
-if (empty($arResult['ERROR_MESSAGE']))
-{
-
-
-       // if ($USER->IsAuthorized()) //если пользователь авторизован, то делаем заказ от его имени
-       //     {
-       //     $arResult["USER_ID"] = $USER->GetID();
-       //     $USER->Update($arResult["USER"]["ID"], $arResult["USER_UPD"]);
-       //     }
-       // else //если не авторизован - авторизуем его под созданным "гостем"
-        //    {
-
-        //    $arResult["USER_ID"] = 6; // Пользователь "гость" имеет ID=10
-        //    $USER->Authorize(6);
-        //    }
-
-
 ?>
+<h1>Корзина</h1>
 
-<!-- Модальное Окно  
-<div id="overlay">
-    <div class="popup">
-        <h2>Не пропустите нашу супер акцию!</h2>
-         <p>
-            Текст супер акции!
-         </p>
-        <button class="close111" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
-    </div>
-</div>
-<script type="text/javascript">
-	var delay_popup = 5000000;
-	setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
-</script>  -->
-
+<? if (empty($arResult['ERROR_MESSAGE'])) { ?>
 
 	<div id="basket-root" class="bx-basket bx-<?=$arParams['TEMPLATE_THEME']?> bx-step-opacity" style="opacity: 0;">
 		<div class="row">
@@ -183,31 +144,19 @@ if (empty($arResult['ERROR_MESSAGE']))
 				</div>
 			</div>
 		</div>
-		<?
-		if (
-			$arParams['BASKET_WITH_ORDER_INTEGRATION'] !== 'Y'
-			&& in_array('bottom', $arParams['TOTAL_BLOCK_DISPLAY'])
-		)
-		{
-			?>
+		<? if ($arParams['BASKET_WITH_ORDER_INTEGRATION'] !== 'Y' && in_array('bottom', $arParams['TOTAL_BLOCK_DISPLAY']))	{ ?>
 			<div class="row">
 				<div class="col-xs-12" data-entity="basket-total-block"></div>
 			</div>
-			<?
-		}
-		?>
+        <? } ?>
 	</div>
-	<?
-	if (!empty($arResult['CURRENCIES']) && Main\Loader::includeModule('currency'))
-	{
+	<? if (!empty($arResult['CURRENCIES']) && Main\Loader::includeModule('currency')) {
 		CJSCore::Init('currency');
-
 		?>
 		<script>
 			BX.Currency.setCurrencies(<?=CUtil::PhpToJSObject($arResult['CURRENCIES'], false, true, true)?>);
 		</script>
-		<?
-	}
+    <? }
 
 	$signer = new \Bitrix\Main\Security\Sign\Signer;
 	$signedTemplate = $signer->sign($templateName, 'sale.basket.basket');
@@ -231,11 +180,9 @@ if (empty($arResult['ERROR_MESSAGE']))
 		'bitrix:sale.gift.basket',
 		'.default',
 		$giftParameters,
-			$component 
+			$component
 		);
 
-}
-else
-{
+} else {
 	ShowError($arResult['ERROR_MESSAGE']);
 }

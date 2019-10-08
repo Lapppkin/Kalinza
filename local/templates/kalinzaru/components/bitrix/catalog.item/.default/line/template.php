@@ -1,6 +1,7 @@
 <? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 use \Bitrix\Main\Localization\Loc;
+use Deadie\Helper;
 
 /**
  * @global CMain $APPLICATION
@@ -38,6 +39,7 @@ else
 ?>
 
 <div class="row product-item">
+    <div class="js-toggle-favorite" data-favorite-id="<?= $item['ID'] ?>" title="Добавить в избранное"><?= Helper::renderIcon('heart-filled') ?></div>
 	<div class="col-xs-12">
 		<div class="product-item-title">
 			<a href="<?=$item['DETAIL_PAGE_URL']?>" title="<?=$productTitle?>"><?=$productTitle?></a>

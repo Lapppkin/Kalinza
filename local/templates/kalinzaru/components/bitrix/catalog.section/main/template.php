@@ -181,8 +181,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 	{
 		$areaIds = array();
 
-		foreach ($arResult['ITEMS'] as $item)
-		{
+		foreach ($arResult['ITEMS'] as $item) {
 			$uniqueId = $item['ID'].'_'.md5($this->randString().$component->getAction());
 			$areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
 			$this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
@@ -249,7 +248,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 											<div class="col-md-12">
 												<?
 												$APPLICATION->IncludeComponent(
-													'bitrix:catalog.item',
+													'bitrix:bx-catalog-element.item',
 													'',
 													array(
 														'RESULT' => array(
@@ -501,39 +500,28 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 
 					case 6:
 						?>
-						<div class="col-xs-12 product-item-small-card">
-							<div class="row">
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="col-xs-6 col-sm-4 col-md-2">
-										<?
-										$APPLICATION->IncludeComponent(
-											'bitrix:catalog.item',
-											'',
-											array(
-												'RESULT' => array(
-													'ITEM' => $item,
-													'AREA_ID' => $areaIds[$item['ID']],
-													'TYPE' => $rowData['TYPE'],
-													'BIG_LABEL' => 'N',
-													'BIG_DISCOUNT_PERCENT' => 'N',
-													'BIG_BUTTONS' => 'N',
-													'SCALABLE' => 'N'
-												),
-												'PARAMS' => $generalParams
-													+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-											),
-											$component,
-											array('HIDE_ICONS' => 'Y')
-										);
-										?>
-									</div>
-									<?
-								}
-								?>
-							</div>
+						<div class="col-12 product-item-wrapper">
+                            <? foreach ($rowItems as $item) { ?>
+                                <? $APPLICATION->IncludeComponent(
+                                    'bitrix:catalog.item',
+                                    '',
+                                    array(
+                                        'RESULT' => array(
+                                            'ITEM' => $item,
+                                            'AREA_ID' => $areaIds[$item['ID']],
+                                            'TYPE' => $rowData['TYPE'],
+                                            'BIG_LABEL' => 'N',
+                                            'BIG_DISCOUNT_PERCENT' => 'N',
+                                            'BIG_BUTTONS' => 'N',
+                                            'SCALABLE' => 'N'
+                                        ),
+                                        'PARAMS' => $generalParams
+                                            + array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
+                                    ),
+                                    $component,
+                                    array('HIDE_ICONS' => 'Y')
+                                ); ?>
+                            <? } ?>
 						</div>
 						<?
 						break;
