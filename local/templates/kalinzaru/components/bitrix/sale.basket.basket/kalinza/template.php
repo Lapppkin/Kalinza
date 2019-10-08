@@ -132,8 +132,7 @@ $displayModeClass = $arParams['DISPLAY_MODE'] === 'compact' ? ' basket-items-lis
 		<div class="row">
 			<div class="col-xs-12">
 				<!--<div class="basket-items-list-wrapper basket-items-list-wrapper-height-fixed basket-items-list-wrapper-light<?=$displayModeClass?>"-->
-				<div class="text35"
-					id="basket-items-list-wrapper">
+				<div class="text35" id="basket-items-list-wrapper">
 
 					<div class="basket-items-list-container" id="basket-items-list-container">
 						<div class="basket-items-list-overlay" id="basket-items-list-overlay" style="display: none;"></div>

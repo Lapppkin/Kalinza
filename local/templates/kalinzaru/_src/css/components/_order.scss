@@ -1,0 +1,97 @@
+// order
+
+// basket
+
+.basket-items-list {
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: initial !important;
+}
+
+table.basket-items-list-table {
+  background-color: $app-color-white;
+  @include br-small;
+  overflow: hidden;
+  * {
+    @include redularfont;
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid $app-color-delimiter;
+      &:last-child {
+        border-bottom: none;
+      }
+      td {
+        padding: 15px 20px;
+      }
+      .basket-items-list-item-descriptions {
+        details {
+          display: none;
+        }
+        .basket-items-list-item-descriptions-inner {
+          .basket-item-block-image {
+            padding: 0;
+            display: flex;
+            img {
+              max-width: 100px;
+              object-fit: contain;
+              object-position: center;
+            }
+          }
+          .basket-item-block-info {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .basket-items-list-item-amount {
+        vertical-align: middle;
+        .basket-item-price-current {
+          display: none;
+          white-space: nowrap;
+          margin-left: 15px;
+        }
+        .basket-item-block-amount {
+          align-items: center;
+          justify-content: flex-start;
+        }
+      }
+      .basket-items-list-item-price {
+        .basket-item-block-price {
+          display: flex;
+          flex-wrap: wrap;
+          .basket-item-price-current {
+            flex-basis: 100%;
+            white-space: nowrap;
+          }
+          .basket-item-price-title {
+            flex-basis: 100%;
+          }
+        }
+      }
+      .basket-items-list-item-remove {
+
+      }
+    }
+  }
+
+}
+
+.basket-items-list-item-container > td {
+  border-bottom: none;
+}
+
+// order
+
+.order_makers {
+  .bx-soa-sidebar .bx-soa-cart-total,
+  .bx-soa-section {
+    background-color: $app-color-white;
+    @include br-small;
+  }
+  .bx-soa-section-title-container {
+    background-color: $app-color-white;
+    @include br-small;
+  }
+}
