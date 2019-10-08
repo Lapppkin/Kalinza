@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 13 13" style="enable-background:new 0 0 13 13;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#4F4F4F;}
-</style>
-<g>
-	<path class="st0" d="M13,13H0l0-0.7c0-2.7,1.6-5,4-6C3.3,5.6,2.9,4.6,2.9,3.6c0-2,1.6-3.6,3.6-3.6s3.6,1.6,3.6,3.6
-		c0,1-0.4,2-1.2,2.6c2.5,1,4,3.4,4,6L13,13z M1,12h11c-0.1-2.1-1.4-4-3.4-4.8L7.1,6.6l1.1-1.1C8.8,5,9.1,4.3,9.1,3.6
-		C9.1,2.2,7.9,1,6.5,1C5.1,1,3.9,2.2,3.9,3.6c0,0.7,0.3,1.4,0.8,1.9l1.1,1.1L4.4,7.2C2.4,8,1.1,9.9,1,12z"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M42.7326 29.3429L40.4363 31.475L43.3372 32.66C54.2888 37.1336 62 47.8909 62 60.4444C62 60.9663 61.9867 61.485 61.9604 62H2.03959C2.01331 61.485 2 60.9663 2 60.4444C2 47.8909 9.71117 37.1336 20.6628 32.66L23.5637 31.475L21.2674 29.3429C18.1614 26.4589 16.2222 22.3463 16.2222 17.7778C16.2222 9.06395 23.2862 2 32 2C40.7138 2 47.7778 9.06395 47.7778 17.7778C47.7778 22.3463 45.8386 26.4589 42.7326 29.3429Z" stroke="#4F4F4F" stroke-width="4"/>
 </g>
+<defs>
+<clipPath id="clip0">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
 </svg>

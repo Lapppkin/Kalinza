@@ -50,16 +50,16 @@
 	width:(64/64)*1em;
 }
 .kalinza-icon-checkbox-checked {
-	font-size:(64/10)*1rem;
-	width:(64/64)*1em;
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
 }
 .kalinza-icon-checkbox-unchecked {
-	font-size:(64/10)*1rem;
-	width:(64/64)*1em;
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
 }
 .kalinza-icon-close {
-	font-size:(13/10)*1rem;
-	width:(13/13)*1em;
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
 }
 .kalinza-icon-delivery-truck {
 	font-size:(42/10)*1rem;
@@ -102,10 +102,10 @@
 	width:(10/19)*1em;
 }
 .kalinza-icon-heart {
-	font-size:(64/10)*1rem;
-	width:(64/64)*1em;
+	font-size:(56/10)*1rem;
+	width:(64/56)*1em;
 }
-.kalinza-icon-heart-red {
+.kalinza-icon-heart-filled {
 	font-size:(64/10)*1rem;
 	width:(64/64)*1em;
 }
@@ -133,6 +133,10 @@
 	font-size:(64/10)*1rem;
 	width:(64/64)*1em;
 }
+.kalinza-icon-logo {
+	font-size:(42/10)*1rem;
+	width:(195/42)*1em;
+}
 .kalinza-icon-menu {
 	font-size:(11/10)*1rem;
 	width:(18/11)*1em;
@@ -158,12 +162,12 @@
 	width:(11/11)*1em;
 }
 .kalinza-icon-radio-checked {
-	font-size:(64/10)*1rem;
-	width:(64/64)*1em;
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
 }
 .kalinza-icon-radio-unchecked {
-	font-size:(64/10)*1rem;
-	width:(64/64)*1em;
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
 }
 .kalinza-icon-refresh {
 	font-size:(18/10)*1rem;
@@ -185,6 +189,14 @@
 	font-size:(64/10)*1rem;
 	width:(64/64)*1em;
 }
+.kalinza-icon-star {
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
+}
+.kalinza-icon-star-unactive {
+	font-size:(16/10)*1rem;
+	width:(16/16)*1em;
+}
 .kalinza-icon-telegram {
 	font-size:(64/10)*1rem;
 	width:(64/64)*1em;
@@ -202,8 +214,8 @@
 	width:(30/16)*1em;
 }
 .kalinza-icon-user {
-	font-size:(13/10)*1rem;
-	width:(13/13)*1em;
+	font-size:(64/10)*1rem;
+	width:(64/64)*1em;
 }
 .kalinza-icon-viber {
 	font-size:(64/10)*1rem;
