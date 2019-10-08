@@ -1,3 +1,1 @@
-<?php
-$sSectionName = "Избранное";
-$arDirProperties = Array();
+<? $sSectionName = 'Избранное';
