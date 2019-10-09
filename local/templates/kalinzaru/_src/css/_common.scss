@@ -400,12 +400,14 @@ input {
   }
   &[disabled] {
     background-color: $app-color-border;
-    border-color: $app-color-border;
+    border-color: $app-color-border !important;
+    color: $app-color-white;
     cursor: not-allowed;
     //pointer-events: none;
     &:hover {
-      border-color: $app-color-border;
+      border-color: $app-color-border !important;
       background-color: $app-color-border;
+      color: $app-color-white;
     }
   }
 

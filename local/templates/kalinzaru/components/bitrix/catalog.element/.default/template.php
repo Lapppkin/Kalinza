@@ -137,7 +137,7 @@ use Deadie\Helper; ?>
                     ? $arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"]
                     : $arResult["NAME"] ?></h1>
             <!--повтор заказа-->
-            <button class="catalog-element-repeat-order btn btn-transparent btn-transparent-primary btn-large">Повторит заказ</button>
+            <button class="catalog-element-repeat-order btn btn-transparent btn-transparent-primary btn-large" disabled>Повторить заказ</button>
         </div>
 
         <!--избранное-->
@@ -230,6 +230,17 @@ use Deadie\Helper; ?>
 
     </div>
 
+    <? if (
+        !empty($arResult["PROPERTIES"]["MANUFACTURER"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Srok"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Shtyk"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Vlago"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Pronic"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Rezh"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Mat"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["Diam"]["VALUE"])
+        || !empty($arResult["PROPERTIES"]["ob"]["VALUE"])
+    ): ?>
     <!--харастеристики-->
     <div class="catalog-element-options">
         <div class="catalog-element-options--title">
@@ -268,9 +279,8 @@ use Deadie\Helper; ?>
                 </tbody>
             </table>
         </div>
-
     </div>
-
+    <? endif; ?>
 
     <? if ('' != $arResult['DETAIL_TEXT']) { ?>
     <!--описание-->

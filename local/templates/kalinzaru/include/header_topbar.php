@@ -9,7 +9,8 @@ use Deadie\Helper;
         "topbar",
         array()
     ); ?>
-    <? $APPLICATION->IncludeComponent("altasib:geobase.select.city",
+    <? $APPLICATION->IncludeComponent(
+        "altasib:geobase.select.city",
         "topbar",
         array(
             "LOADING_AJAX" => "Y",
