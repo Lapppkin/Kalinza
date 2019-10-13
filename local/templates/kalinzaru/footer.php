@@ -34,12 +34,14 @@ use Bitrix\Main\Application;
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.fancybox.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.inputmask.bundle.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.malihu.PageScroll2id.js');
+            Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.mCustomScrollbar.min.js');
 
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/modals.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/sliders.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/svg_localstorage.min.js');
             Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/favorites.min.js');
+            Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/reviews.min.js');
             ?>
 
             <div style="display:none;">

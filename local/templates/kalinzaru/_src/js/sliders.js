@@ -183,3 +183,22 @@ if (owlPopularFrontSlider.length !== 0) {
             owlPopularFrontSlider.trigger('play.owl.autoplay');
         });
 }
+
+
+// Слайдеры в контактах
+
+let owlShopSlider = $('.city-shop--images');
+if (owlShopSlider.length !== 0) {
+    owlShopSlider.addClass('owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        navElement: 'div',
+        dots: true,
+        dotsEach: true,
+        autoplay: true,
+        lazyLoad: true,
+        margin: 15,
+        responsive: {},
+    });
+}

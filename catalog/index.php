@@ -11,7 +11,7 @@ $APPLICATION->IncludeComponent(
 	array(
 		"COMPONENT_TEMPLATE" => "kalinza",
 		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => 2,
+		"IBLOCK_ID" => CATALOG_DEFAULT_IBLOCK_ID,
 		"HIDE_NOT_AVAILABLE" => "N",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
 		"TEMPLATE_THEME" => "",

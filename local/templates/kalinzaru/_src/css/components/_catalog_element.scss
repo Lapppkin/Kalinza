@@ -152,6 +152,7 @@
     }
   }
 
+  &-reviews,
   &-options,
   &-description {
     flex-basis: 100%;
@@ -187,6 +188,12 @@
     }
   }
 
+  &-reviews {
+    &--add-button {
+      margin-top: 20px;
+    }
+  }
+
   &-recommend,
   &-viewed {
     max-width: 100%;
@@ -202,4 +209,42 @@
     &--content {}
   }
 
+}
+
+// REVIEWS LIST
+
+.reviews-list {
+
+}
+.reviews-item {
+  border: 1px solid $app-color-border;
+  padding: 20px;
+  @include br-small;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &--header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &--body {
+    font-size: $fontsize-small;
+  }
+
+  &--name {
+    margin-right: 15px;
+    @include mediumfont;
+  }
+  &--date {
+    margin-right: 15px;
+  }
+  &--rating {
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0 2px;
+    }
+  }
 }

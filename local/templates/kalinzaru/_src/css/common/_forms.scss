@@ -33,15 +33,17 @@
 
 // PRIVACY POLICY
 
+.form-privacy,
 .privacy {
   margin-top: $size-padding / 2;
   line-height: 1.2;
   font-size: $fontsize-smaller;
   a {
-    text-decoration: underline;
+    text-decoration: none;
     color: $app-color-primary;
     &:hover {
-      color: $app-color-active;
+      text-decoration: underline;
+      color: $app-color-black;
     }
   }
 }

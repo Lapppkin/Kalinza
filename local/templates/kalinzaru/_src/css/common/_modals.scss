@@ -7,6 +7,12 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+    &--stars {
+      .stars-inputs {
+        text-align: center;
+        justify-content: center;
+      }
+    }
   }
   .close {
     margin: 0;
@@ -130,6 +136,10 @@
       label {
         flex-basis: 100%;
         width: 100%;
+        text-align: left;
+        font-size: $fontsize-smaller;
+        margin-bottom: 0;
+        color: $app-color-gray;
       }
       input {
         flex-basis: 100%;
@@ -178,4 +188,43 @@
 
 .modal.show .modal-dialog {
   pointer-events: initial;
+}
+
+// SPECIFIC STYLES
+
+#modal--review {
+  .modal-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $app-color-black;
+  }
+  .modal-product-name {
+    color: $app-color-gray-lighter;
+  }
+  .modal-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .modal-body {
+    padding-top: 0;
+  }
+  .modal-errors {
+    text-align: center;
+    font-size: $fontsize-smaller;
+    color: $app-color-error;
+    width: 100%;
+    flex-basis: 100%;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    display: none;
+    &.error {
+      color: $app-color-error;
+    }
+    &.success {
+      color: $app-color-active;
+    }
+  }
+  #review-message {
+    width: 100%;
+  }
 }

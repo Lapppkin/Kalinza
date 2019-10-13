@@ -22,13 +22,15 @@
     // Старая функция вызова модальных окон
     $(document).on('click', '.js-button-modal', function () {
         var modal = $(this).data('modal');
-        $('#' + modal).addClass('active');
-        $('#' + modal).find('.modal').addClass('active');
+        $('#' + modal)
+            .addClass('active')
+            .find('.modal').addClass('active');
     });
 
     $(document).on('click', '.close-modal', function () {
-        $(this).parent().parent().removeClass('active');
-        $(this).parent().removeClass('active');
+        $(this)
+            .parent().removeClass('active')
+            .parent().removeClass('active');
     });
 
 })();

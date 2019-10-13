@@ -1,0 +1,186 @@
+// contacts
+
+#cityShop {
+  margin-bottom: 10px;
+}
+#shops {
+  height: 50px;
+  li {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.shops-citites {
+  padding: 0;
+  overflow: hidden;
+}
+
+.accordion {
+  background-color: $app-color-white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    div.main {
+      display: none;
+      padding: 0;
+    }
+
+    .city-wrapper {
+      .city {
+        padding: 20px;
+        background-color: $app-color-primary;
+        color: $app-color-white;
+        border-top: 1px solid $app-color-primary-light;
+        .city-name-icon {
+          transition: transform 0.3s ease-in-out;
+        }
+        &:hover {
+          background-color: $app-color-secondary;
+          color: $app-color-white;
+          .city-name-icon {
+            .kalinza-icon {
+              color: $app-color-white;
+            }
+          }
+        }
+        &-name {
+          position: relative;
+          text-transform: uppercase;
+          &-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+          }
+        }
+        &.active {
+          background-color: $app-color-active;
+          border-top: 1px solid $app-color-active-hover;
+          .city-name-icon {
+            transform: rotate(-180deg);
+          }
+        }
+
+        &-shops {}
+
+        &-shop {
+          padding: 15px 20px;
+          &:nth-child(even) {
+            background-color: rgba($app-color-primary-light, 0.15);
+          }
+          &--address {
+            font-size: $fontsize-h5;
+            @include mediumfont;
+          }
+          &--location {
+            color: $app-color-gray-lighter;
+            font-size: $fontsize-small;
+          }
+          &--worktime {}
+          &--phones {
+            margin-top: 5px;
+            a {
+              @include mediumfont;
+              color: $app-color-primary;
+              text-decoration: none;
+              &:hover {
+                color: $app-color-primary-light;
+                text-decoration: underline;
+              }
+            }
+          }
+          &--images {
+            max-height: 195px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            .owl-item {
+              img {
+                height: 180px;
+                max-height: 180px;
+              }
+            }
+          }
+          &--onmap {
+            margin-top: 5px;
+            text-align: left;
+            a {
+              color: $app-color-primary;
+              text-decoration: none;
+              &:hover {
+                color: $app-color-primary-light;
+                text-decoration: underline;
+              }
+              .kalinza-icon {
+                color: $app-color-primary;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+  a {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    &.ttt333 {
+      width: 100%;
+      display: block;
+      padding: 20px;
+      cursor: pointer;
+      user-select: none;
+      text-decoration: none;
+      color: #333;
+      &:after {
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid $app-color-black;
+        border-bottom: 2px solid $app-color-black;
+        position: absolute;
+        right: 20px;
+        content: " ";
+        top: 25px;
+        transform: rotate(45deg);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    &.active.ttt333:after {
+      transform: rotate(-135deg);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.shops {
+  &-citites {
+    height: 80vh;
+    overflow-y: scroll;
+    @include br-small;
+  }
+  &-map {
+    height: 80vh !important;
+    min-height: 100%;
+    &--wrapper {
+      @include br-small;
+      overflow: hidden;
+      @include shadow;
+      height: 100%;
+      > ymaps {
+        height: 80vh !important;
+      }
+    }
+  }
+
+}

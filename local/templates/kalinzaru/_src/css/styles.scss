@@ -12,7 +12,6 @@
 // Common
 
 @import "common";
-//@import "common/modals";
 
 @import "common/header";
 @import "common/navigation";
@@ -21,11 +20,7 @@
 @import "common/breadcrumb";
 @import "common/main";
 @import "common/modals";
-//@import "common/sidebar";
-//@import "common/messages";
-
-//@import "common/main";
-//@import "forms";
+@import "common/forms";
 
 // Components
 
@@ -42,13 +37,13 @@
 @import "components/favorites";
 @import "components/consult_form";
 @import "components/order";
+@import "components/contacts";
 
 // Vendors
 
 @import "vendor/owl.carousel";
-//@import "vendor/bootstrap_select";
-//@import "vendor/rangeslider";
 @import "vendor/jquery.fancybox";
+@import "vendor/jquery.mCustomScrollbar";
 //@import "vendor/animate";
 
 // Sprites

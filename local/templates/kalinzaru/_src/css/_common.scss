@@ -903,10 +903,11 @@ div[data-pagination-num] {
   position: absolute;
   top: 15px;
   right: 15px;
-  color: $app-color-active;
+  color: $app-color-primary;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
   &:hover {
     color: $app-color-error;
     cursor: pointer;
@@ -915,8 +916,8 @@ div[data-pagination-num] {
     }
   }
   .kalinza-icon {
-    font-size: 12px;
-    color: $app-color-active;
+    font-size: 15px;
+    color: $app-color-primary;
   }
 }
 
@@ -1130,4 +1131,36 @@ font.errortext {
 
 .js-toggle-favorite {
   cursor: pointer;
+}
+
+// STARS (RATING)
+
+.stars-inputs {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.stars-star {
+  text-indent: -9999em;
+  background-image: url("/include/images/star-empty.png") !important;
+  background-position: center !important;
+  background-size: 16px !important;
+  background-repeat: no-repeat !important;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 5px 3px !important;
+  cursor: pointer;
+  padding: 0 !important;
+  &:hover,
+  &:hover ~ .stars-star {
+    background-image: url("/include/images/star.png") !important;
+    transform: scale(1.125);
+  }
+}
+input[name="stars"] {
+  display: none;
+  &:checked ~ .stars-star {
+    background-image: url("/include/images/star.png") !important;
+  }
 }

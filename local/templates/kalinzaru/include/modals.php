@@ -68,10 +68,12 @@ use Deadie\Helper;
             <div class="modal-body">
                 <form method="post" action="<?= SITE_DIR . 'include/mail/mail.php' ?>" id="callback-form">
                     <div class="form-field">
-                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <label for="callback-form-name">* Ваше имя</label>
+                        <input type="text" name="name" id="callback-form-name" required>
                     </div>
                     <div class="form-field">
-                        <input type="text" name="phone" id="phone_mask" placeholder="Ваше телефон" required>
+                        <label for="phone-mask">* Ваше телефон</label>
+                        <input type="text" name="phone" id="phone_mask" required>
                     </div>
                     <div class="form-field form-privacy">
                         <input type="checkbox" id="box-2" class="box" required>
@@ -126,3 +128,66 @@ use Deadie\Helper;
     </div>
 </div>
 <!--/certificate modal-->
+
+<!--review modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal--review">
+    <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><?= Helper::renderIcon('close', 'color-primary') ?></span>
+        </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Оставьте отзыв о</h5>
+                <p class="modal-product-name"></p>
+            </div>
+            <div class="modal-body">
+                <form id="review-form">
+                    <?= bitrix_sessid_post() ?>
+                    <input type="hidden" name="product_id">
+                    <div class="modal-body--stars">
+                        <div class="stars-title">Ваша оценка</div>
+                        <div class="stars-inputs">
+                            <input type="radio" name="stars" id="stars-5" value="5">
+                            <label class="stars-star" for="stars-5" title="5"></label>
+                            <input type="radio" name="stars" id="stars-4" value="4" checked>
+                            <label class="stars-star" for="stars-4" title="4"></label>
+                            <input type="radio" name="stars" id="stars-3" value="3">
+                            <label class="stars-star" for="stars-3" title="3"></label>
+                            <input type="radio" name="stars" id="stars-2" value="2">
+                            <label class="stars-star" for="stars-2" title="2"></label>
+                            <input type="radio" name="stars" id="stars-1" value="1">
+                            <label class="stars-star" for="stars-1" title="1"></label>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="review-name">* Ваш отзыв</label>
+                        <textarea name="message" id="review-message" rows="3" required></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label for="review-name">* Ваше имя</label>
+                        <input type="email" name="name" id="review-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="review-email">* Ваш email</label>
+                        <input type="email" name="email" id="review-email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="review-phone">Ваш телефон</label>
+                        <input type="text" name="phone" id="review-phone">
+                    </div>
+                    <div class="form-field form-privacy">
+                        <input type="checkbox" name="privacy" id="review-privacy" class="box" required>
+                        <label for="review-privacy">Я согласен с <a href="/privacy/" rel="nofollow" target="_blank">политикой конфиденциальности и защиты информации</a></label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-errors"></div>
+                <div class="form-actions">
+                    <input type="submit" id="btn-submit" class="btn btn-default" value="Отправить" form="review-form">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/review modal-->
