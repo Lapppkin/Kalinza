@@ -165,7 +165,7 @@ use Deadie\Helper;
                     </div>
                     <div class="form-field">
                         <label for="review-name">* Ваше имя</label>
-                        <input type="email" name="name" id="review-name" required>
+                        <input type="text" name="name" id="review-name" required>
                     </div>
                     <div class="form-field">
                         <label for="review-email">* Ваш email</label>

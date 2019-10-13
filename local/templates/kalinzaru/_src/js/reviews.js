@@ -21,7 +21,7 @@ $(document).on('click', '.js-add-review', function () {
     });
 });
 
-// Добавление события
+// Добавление отзыва
 $(document).on('click', '#modal--review input[type="submit"]', function (e) {
     e.preventDefault();
     e.stopPropagation();

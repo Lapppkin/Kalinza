@@ -49,11 +49,11 @@
         /**
          * Phone mask on input text field.
          *
-         * @param ths
+         * @param _this
          */
-        phoneMask: function (ths) {
+        phoneMask: function (_this) {
             if ($.fn.inputmask) {
-                ths.inputmask({
+                _this.inputmask({
                     mask: '+7 999 999-99-99',
                     placeholder: '*'
                 });
@@ -63,11 +63,11 @@
         /**
          * Email mask for input text field.
          *
-         * @param ths
+         * @param _this
          */
-        emailMask: function (ths) {
+        emailMask: function (_this) {
             if ($.fn.inputmask) {
-                new Inputmask('email').mask(ths);
+                new Inputmask('email').mask(_this);
             }
         },
 
@@ -76,18 +76,18 @@
          *
          * @param ths
          */
-        indexMask: function (ths) {
+        indexMask: function (_this) {
             if ($.fn.inputmask) {
-                ths.inputmask({
+                _this.inputmask({
                     mask: '999999',
                     placeholder: '_'
                 })
             }
         },
 
-        innMask: function (ths) {
+        innMask: function (_this) {
             if ($.fn.inputmask) {
-                ths.inputmask({
+                _this.inputmask({
                     mask: '9999999999[99]',
                     placeholder: '_'
                 })

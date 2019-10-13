@@ -21,7 +21,7 @@ if (
 ) {
 
     $messages = [
-        0 => 'Отзыв успешно добавлен.',
+        0 => 'Спасибо! Ваш отзыв успешно добавлен.',
         1 => 'Товар не найден.',
         2 => 'Ошибка! Неверное количество звёзд.',
         3 => 'Неверное имя.',
@@ -60,7 +60,7 @@ if (
         $codes[] = $messages[3];
     }
     $email = trim(htmlspecialchars($request->getPost('email')));
-    if (empty($email)) {
+    if (empty($email) || !check_email($email)) {
         $error = true;
         $codes[] = $messages[4];
     }
