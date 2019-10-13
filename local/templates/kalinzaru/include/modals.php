@@ -149,7 +149,7 @@ use Deadie\Helper;
                         <div class="stars-inputs">
                             <input type="radio" name="stars" id="stars-5" value="5">
                             <label class="stars-star" for="stars-5" title="5"></label>
-                            <input type="radio" name="stars" id="stars-4" value="4" checked>
+                            <input type="radio" name="stars" id="stars-4" value="4">
                             <label class="stars-star" for="stars-4" title="4"></label>
                             <input type="radio" name="stars" id="stars-3" value="3">
                             <label class="stars-star" for="stars-3" title="3"></label>

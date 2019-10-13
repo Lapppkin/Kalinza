@@ -2,7 +2,6 @@
 
 .catalog-element {
   &-wrapper {
-    //margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -98,13 +97,25 @@
   }
 
   &-favorites {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 25px;
+    top: -3px;
+    position: relative;
     [data-favorite-id] {
       position: relative;
       top: initial;
       right: initial;
     }
   }
-  &-rating {}
+  &-rating {
+    display: inline-flex;
+    height: 16px;
+    align-items: center;
+    img {
+      margin-right: 5px;
+    }
+  }
 
   &-properties {
     display: flex;

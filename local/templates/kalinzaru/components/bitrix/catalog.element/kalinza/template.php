@@ -147,55 +147,34 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         </div>
 
         <!--рейтинг-->
-        <div class="catalog-element-rating">
-            <?
-            $useBrands = ('Y' == $arParams['BRAND_USE']);
-            $useVoteRating = ('Y' == $arParams['USE_VOTE_RATING']);
-            if ($useBrands || $useVoteRating) { ?>
-            <div class="bx_optionblock">
-                <? if ($useVoteRating) { ?>
-                    <? $APPLICATION->IncludeComponent(
-                        "bitrix:iblock.vote",
-                        "stars",
-                        [
-                            "IBLOCK_TYPE"       => $arParams['IBLOCK_TYPE'],
-                            "IBLOCK_ID"         => $arParams['IBLOCK_ID'],
-                            "ELEMENT_ID"        => $arResult['ID'],
-                            "ELEMENT_CODE"      => "",
-                            "MAX_VOTE"          => "5",
-                            "VOTE_NAMES"        => ["1", "2", "3", "4", "5"],
-                            "SET_STATUS_404"    => "N",
-                            "DISPLAY_AS_RATING" => $arParams['VOTE_DISPLAY_AS_RATING'],
-                            "CACHE_TYPE"        => $arParams['CACHE_TYPE'],
-                            "CACHE_TIME"        => $arParams['CACHE_TIME'],
-                        ],
-                        $component,
-                        ["HIDE_ICONS" => "Y"]
-                    ); ?>
-                <? } ?>
-                <? if ($useBrands) { ?>
-                    <? $APPLICATION->IncludeComponent(
-                        "bitrix:catalog.brandblock",
-                        ".default",
-                        [
-                            "IBLOCK_TYPE"  => $arParams['IBLOCK_TYPE'],
-                            "IBLOCK_ID"    => $arParams['IBLOCK_ID'],
-                            "ELEMENT_ID"   => $arResult['ID'],
-                            "ELEMENT_CODE" => "",
-                            "PROP_CODE"    => $arParams['BRAND_PROP_CODE'],
-                            "CACHE_TYPE"   => $arParams['CACHE_TYPE'],
-                            "CACHE_TIME"   => $arParams['CACHE_TIME'],
-                            "CACHE_GROUPS" => $arParams['CACHE_GROUPS'],
-                            "WIDTH"        => "",
-                            "HEIGHT"       => "",
-                        ],
-                        $component,
-                        ["HIDE_ICONS" => "Y"]
-                    ); ?>
-                    <? } ?>
-                    </div>
-                <? } ?>
-                <? unset($useVoteRating, $useBrands); ?>
+        <?
+        $rate = array();
+        $reviews = \CIBlockElement::GetList(
+            array('CREATED' => 'ASC'),
+            array(
+                'ACTIVE' => 'Y',
+                'IBLOCK_ID' => REVIEWS_IBLOCK_ID,
+                'PROPERTY_PRODUCT_ID' => $arResult['ID'],
+            ),
+            false,
+            false,
+            array('PROPERTY_STARS')
+        );
+        while ($review = $reviews->GetNextElement()) {
+            $fields = $review->GetFields();
+            $rate[] = (int) $fields['PROPERTY_STARS_VALUE'];
+        }
+        $rate = array_filter($rate);
+        $average_rate = ceil(array_sum($rate) / count($rate));
+        ?>
+        <div class="catalog-element-rating" title="Рейтинг: <?= (int) $average_rate > 0 ? (int) $average_rate : 'нет оценок' ?>">
+            <? for ($s = 1; $s <= 5; $s++): ?>
+                <? if ($s > (int) $average_rate): ?>
+                    <img src="<?= SITE_DIR . 'include/images/star-empty.png' ?>" alt="" height="16" width="16">
+                <? else: ?>
+                    <img src="<?= SITE_DIR . 'include/images/star.png' ?>" alt="" height="16" width="16">
+                <? endif; ?>
+            <? endfor; ?>
         </div>
 
         <!--выбор параметров-->
