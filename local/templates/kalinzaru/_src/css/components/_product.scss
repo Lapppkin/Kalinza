@@ -148,6 +148,7 @@
   &-info-container {
     &[data-entity="price-block"] {
       flex-basis: 50%;
+      max-width: 50%;
       display: flex;
       align-items: center;
       justify-content: flex-start;

@@ -1164,3 +1164,13 @@ input[name="stars"] {
     background-image: url("/include/images/star.png") !important;
   }
 }
+
+// PAGES
+
+.turrr {
+  img {
+    @include br-small;
+    float:left;
+    padding: 10px;
+  }
+}

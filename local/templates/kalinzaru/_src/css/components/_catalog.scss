@@ -114,9 +114,23 @@
 
 .product-item-detail-info-container {
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 // PRICES
+
+.product-item-price-old {
+  flex-basis: 100%;
+  font-size: $fontsize-small;
+  color: $app-color-gray-lighter;
+  white-space: nowrap;
+  text-decoration: line-through;
+}
+.product-item-price-current {
+  flex-basis: 100%;
+  white-space: nowrap;
+}
 
 .product-item-detail-price-current {
   font-size: $fontsize-h3;

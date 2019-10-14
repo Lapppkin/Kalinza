@@ -16,6 +16,7 @@ use Deadie\Helper;
                 </div>
             </div>
             <div class="modal-body">
+                <? if (!$USER->IsAuthorized()): ?>
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:system.auth.authorize",
                     "template1",
@@ -31,11 +32,11 @@ use Deadie\Helper;
                     ),
                     false
                 ); ?>
-                <p>Вход или регистрация через соцсети</p>
+                <? endif; ?>
                 <?php
                 $APPLICATION->IncludeComponent(
                     "ulogin:auth",
-                    "",
+                    "kalinza",
                     Array(
                         "SEND_MAIL"   => "N",
                         "SOCIAL_LINK" => "Y",

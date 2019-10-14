@@ -106,15 +106,19 @@
       font-size: $fontsize-small;
       &-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         align-content: baseline;
         a {
           color: $app-color-white;
         }
       }
-      &-copy {}
-      &-policy {}
+      &-copy {
+        margin-right: 40px;
+      }
+      &-policy {
+        margin-right: 40px;
+      }
       &-developer {
         a {
           display: flex;

@@ -5,7 +5,6 @@ $APPLICATION->SetTitle("Kalinza в лицах");
 
 <h1 class="col-12">Kalinza в лицах</h1>
 
-<style>.turrr img{float:left; padding: 10px;}</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 

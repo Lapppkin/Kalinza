@@ -16,10 +16,12 @@ use Deadie\Helper;
                     <div class="offers-add--item--icon"><?= Helper::renderIcon('eye-big') ?></div>
                     <div class="offers-add--item--text">Бесплатная проверка зрения</div>
                 </div>
+                <?/*
                 <div class="offers-add--item">
                     <div class="offers-add--item--icon"><?= Helper::renderIcon('eye-glasses') ?></div>
                     <div class="offers-add--item--text">Большой ассортимент</div>
                 </div>
+                */?>
                 <div class="offers-add--item">
                     <div class="offers-add--item--icon"><?= Helper::renderIcon('wallet') ?></div>
                     <div class="offers-add--item--text">Доступные цены</div>

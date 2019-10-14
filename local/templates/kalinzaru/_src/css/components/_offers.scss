@@ -2,7 +2,7 @@
 
 .offers {
   flex-basis: 27%;
-  margin-left: 30px;
+  margin-left: 20px;
   &--wrapper {
     display: flex;
     height: 100%;
@@ -107,7 +107,7 @@
     justify-content: space-between;
   }
   &--item {
-    flex-basis: calc(25% - 7px);
+    flex-basis: calc(33.333% - 15px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,8 +144,8 @@
   }
 
   &--item {
-    flex-basis: calc(33.333% - 20px);
-    width: calc(33.333% - 20px);
+    flex-basis: calc(33.333% - 15px);
+    width: calc(33.333% - 15px);
     display: flex;
     position: relative;
     overflow: hidden;
