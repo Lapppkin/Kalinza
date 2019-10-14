@@ -1,0 +1,47 @@
+// PAGES
+
+.turrr {
+  img {
+    @include br-small;
+    float:left;
+    padding: 10px;
+  }
+}
+
+// EYE CHECK
+
+.eyecheck {
+  &-form {
+    &--wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+
+        .form-item--label,
+        label {
+          flex-basis: 100%;
+          width: 100%;
+          font-size: $fontsize-small;
+          margin-bottom: 0;
+        }
+
+        .form-item--item {
+          flex-basis: 100%;
+          width: 100%;
+        }
+
+      }
+
+      .form-actions {
+        flex-basis: 100%;
+        width: 100%;
+      }
+
+    }
+  }
+}
