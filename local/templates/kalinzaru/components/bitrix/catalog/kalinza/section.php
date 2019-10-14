@@ -94,6 +94,7 @@ if ($arParams['USE_FILTER'] == 'Y') {
             "SEF_RULE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["smart_filter"],
             "SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
             "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+            "POPUP_POSITION" => 'right',
         ),
         $component,
         array('HIDE_ICONS' => 'Y')
