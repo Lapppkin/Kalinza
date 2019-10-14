@@ -5,8 +5,6 @@ use Bitrix\Main\Application,
 
 $APPLICATION->SetTitle("Блог");
 
-//var_dump($_REQUEST);
-
 if (!empty($_REQUEST['ELEMENT_CODE'])) {
     $res = CIBlockElement::GetList(array(), array('IBLOCK_ID' => $IBLOCK_ID, 'CODE' => $_REQUEST['ELEMENT_CODE']), false, array(), $arSelect);
     while ($ob = $res->GetNextElement()) {

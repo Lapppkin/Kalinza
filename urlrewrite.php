@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-    4 =>
+    10 =>
         array (
             'CONDITION' => '#^/bitrix/services/ymarket/#',
             'RULE' => '',
@@ -8,7 +8,15 @@ $arUrlRewrite=array (
             'PATH' => '/bitrix/services/ymarket/index.php',
             'SORT' => 100,
         ),
-    15 =>
+    20 =>
+        array(
+            "CONDITION" => "#^/blog/([^/]+?)/\\??(.*)#",
+            'RULE' => 'ELEMENT_CODE=$1&$2',
+            "ID" => "bitrix:news",
+            "PATH" => "/blog/index.php",
+            "SORT" => 100,
+        ),
+    30 =>
         array (
             'CONDITION' => '#^/personal/order/#',
             'RULE' => '',
@@ -16,7 +24,7 @@ $arUrlRewrite=array (
             'PATH' => '/personal/order/index.php',
             'SORT' => 100,
         ),
-    14 =>
+    40 =>
         array (
             'CONDITION' => '#^/personal/#',
             'RULE' => '',
@@ -24,7 +32,7 @@ $arUrlRewrite=array (
             'PATH' => '/personal/index.php',
             'SORT' => 100,
         ),
-    22 =>
+    50 =>
         array (
             'CONDITION' => '#^/catalog/#',
             'RULE' => '',
@@ -32,7 +40,7 @@ $arUrlRewrite=array (
             'PATH' => '/catalog/index.php',
             'SORT' => 100,
         ),
-    23 =>
+    60 =>
         array (
             'CONDITION' => '#^/\\??(.*)#',
             'RULE' => '&$1',
@@ -40,7 +48,7 @@ $arUrlRewrite=array (
             'PATH' => '/index.php',
             'SORT' => 100,
         ),
-    13 =>
+    70 =>
         array (
             'CONDITION' => '#^/store/#',
             'RULE' => '',
@@ -48,7 +56,7 @@ $arUrlRewrite=array (
             'PATH' => '/store/index.php',
             'SORT' => 100,
         ),
-    11 =>
+    80 =>
         array (
             'CONDITION' => '#^/tovar/#',
             'RULE' => '',
@@ -56,7 +64,7 @@ $arUrlRewrite=array (
             'PATH' => '/tovar/index.php',
             'SORT' => 100,
         ),
-    24 =>
+    90 =>
         array (
             'CONDITION' => '#^\\??(.*)#',
             'RULE' => '&$1',
@@ -64,7 +72,7 @@ $arUrlRewrite=array (
             'PATH' => '/besplatnaya-proverka-zreniya/index.php',
             'SORT' => 100,
         ),
-    5 =>
+    100 =>
         array (
             'CONDITION' => '#^/news/#',
             'RULE' => '',
@@ -72,7 +80,7 @@ $arUrlRewrite=array (
             'PATH' => '/news/index.php',
             'SORT' => 100,
         ),
-    3 =>
+    110 =>
         array (
             'CONDITION' => '#^/rest/#',
             'RULE' => '',
