@@ -15,7 +15,7 @@
 
   &-sidebar {
     flex-basis: 30%;
-    padding-right: $size-padding;
+    padding-right: 25px;
     .bx-filter {
       font-family: inherit;
       @include shadow;
@@ -181,4 +181,33 @@
 .product-item-detail-tabs-container-fixed,
 .product-item-detail-short-card-fixed {
   display: none !important;
+}
+
+// CATALOG ROOT
+
+.catalog-root {
+  &--wrapper {
+    padding: 20px 10px;
+    @include br-small;
+    background-color: $app-color-white;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &--section {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex-basis: 100%;
+      a {
+
+      }
+    }
+  }
+  &--title {
+
+  }
 }

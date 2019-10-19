@@ -41,6 +41,11 @@
     .bx-filter-param-text {
       color: $app-color-border;
     }
+    &.disabled {
+      opacity: 0.2;
+      pointer-events: none;
+      text-decoration: line-through;
+    }
   }
 
   // CHECKBOX

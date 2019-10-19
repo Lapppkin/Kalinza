@@ -102,7 +102,7 @@ var favourites = {
             this.headerFavoritesCounterSpan.text(this.items.length);
             this.headerFavoritesDiv.addClass('active');
         } else {
-            this.headerFavoritesCounterSpan.text('');
+            this.headerFavoritesCounterSpan.text(0);
             this.headerFavoritesDiv.removeClass('active');
         }
     }

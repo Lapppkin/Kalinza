@@ -213,7 +213,7 @@ $containerName = 'catalog-top-container';
 									?>
 									<div class="col-sm-4 product-item-big-card">
 										<div class="row">
-											<div class="col-md-12">
+											<div class="product-item-wrapper">
 												<?
 												$APPLICATION->IncludeComponent(
 													'bitrix:catalog.item',
