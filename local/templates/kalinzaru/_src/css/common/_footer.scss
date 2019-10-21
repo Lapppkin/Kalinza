@@ -94,6 +94,13 @@
       }
     }
 
+    &--prices-info {
+      font-size: $fontsize-smaller;
+      color: $app-color-gray-lighter;
+      margin-right: $size-padding;
+      line-height: 1.1;
+    }
+
     &--socials {
       margin-bottom: $size-padding-small;
       display: flex;

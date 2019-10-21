@@ -210,6 +210,8 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
         </div>
 
+        <div class="catalog-element-price-info">Цены на сайте и в салонах оптики могут отличаться.</div>
+
     </div>
 
     <? if (

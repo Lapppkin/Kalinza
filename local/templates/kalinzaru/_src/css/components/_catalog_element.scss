@@ -230,6 +230,13 @@
     &--content {}
   }
 
+  &-price-info {
+    font-size: $fontsize-smaller;
+    color: $app-color-gray-lighter;
+    line-height: 1.1;
+    margin-top: 15px;
+  }
+
 }
 
 // REVIEWS LIST

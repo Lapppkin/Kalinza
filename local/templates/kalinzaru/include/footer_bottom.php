@@ -62,6 +62,7 @@ use Deadie\Helper;
                 <div class="footer--bottom--copyrights-copy">
                     © <?= Helper::autoCopyright(2009) ?> «Калинза». Все права защищены.
                 </div>
+                <div class="footer--bottom--prices-info">Цены на сайте и в салонах оптики могут отличаться.</div>
                 <div class="footer--bottom--copyrights-policy">
                     <a href="/privacy">Политика конфиденциальности</a>
                 </div>
