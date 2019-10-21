@@ -62,3 +62,72 @@
   }
 
 }
+
+// popup
+
+.header--mobile--menu-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  &.active {
+    display: flex;
+  }
+  a {
+    color: $app-color-black;
+    &:hover {
+      color: $app-color-primary;
+    }
+  }
+}
+
+.mobile-menu {
+
+  &--header {
+    height: 42px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+  }
+  &--close {
+    .kalinza-icon {
+      color: $app-color-primary;
+      &:hover {
+        color: $app-color-error;
+      }
+    }
+  }
+  &--logo {}
+
+  &--location {
+    padding: 15px 25px;
+    &-icon {
+      margin-right: 10px;
+      .kalinza-icon {
+        color: $app-color-black;
+      }
+    }
+    &-city {}
+  }
+  &--auth {
+    padding: 15px 25px;
+  }
+  &--catalog {
+    padding: 15px 25px;
+  }
+  &--menu {
+    padding: 15px 25px;
+  }
+  &--footer {
+    padding: 15px 25px;
+    &--phone {}
+    &--callback {}
+    &--socials {}
+  }
+
+}

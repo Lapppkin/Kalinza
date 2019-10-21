@@ -52,34 +52,7 @@ CModule::IncludeModule('mcart.souvenirs');
             <!--header-->
             <header id="header">
 
-                <!--header mobile-->
-                <div class="header--mobile">
-                    <div class="container">
-                        <div class="row">
-                            <div class="header--mobile--wrapper col-12">
-                                <div class="header--mobile--menu">
-                                    <?= Helper::renderIcon('menu') ?>
-                                </div>
-                                <div class="header--mobile--search">
-                                    <a href="/search/">
-                                        <?= Helper::renderIcon('search') ?>
-                                    </a>
-                                </div>
-                                <div class="header--mobile--logo">
-                                    <a href="/" title="Главная">
-                                        <img src="<?= SITE_TEMPLATE_PATH . '/images/logo-mobile.svg' ?>" alt="KALINZA">
-                                    </a>
-                                </div>
-                                <div class="header--mobile--cart">
-                                    <div class="header-mobile--cart-icon">
-                                        <?= Helper::renderIcon('shopping-cart') ?>
-                                    </div>
-                                    <div class="header--mobile--cart-counter">0</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/header_mobile.php'); ?>
 
                 <!--topbar-->
                 <div class="header--topbar">

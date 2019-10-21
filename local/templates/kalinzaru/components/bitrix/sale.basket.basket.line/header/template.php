@@ -43,4 +43,5 @@ if ($arParams['POSITION_FIXED'] == 'Y') {
 	<?=$cartId?>.closeMessage = '<?=GetMessage('TSB1_COLLAPSE')?>';
 	<?=$cartId?>.openMessage  = '<?=GetMessage('TSB1_EXPAND')?>';
 	<?=$cartId?>.activate();
+    $('.header--mobile--cart-counter').text($('[data-basket-count]').data('basket-count'))
 </script>
