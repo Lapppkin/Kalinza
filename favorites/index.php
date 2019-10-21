@@ -4,7 +4,7 @@ $APPLICATION->SetPageProperty("description", "Раздел избранное - 
 $APPLICATION->SetPageProperty("title", "Избранное - отобранные товары");
 $APPLICATION->SetTitle("Избранное");
 
-$IBLOCK_ID = 2; // ID инфоблока каталога
+$IBLOCK_ID = CATALOG_DEFAULT_IBLOCK_ID; // ID инфоблока каталога
 
 CModule::IncludeModule('iblock');
 
@@ -44,7 +44,7 @@ CModule::IncludeModule('iblock');
             'COMPATIBLE_MODE'                 => 'N',
             'COMPONENT_TEMPLATE'              => 'bootstrap_v5',
             'CONVERT_CURRENCY'                => 'N',
-            'CUSTOM_FILTER'                   => '{"CLASS_ID":"CondGroup","DATA":{"All":"AND","True":"True"},"CHILDREN":[{"CLASS_ID":"CondIBSection","DATA":{"logic":"Equal","value":126}}]}',
+            //'CUSTOM_FILTER'                   => '{"CLASS_ID":"CondGroup","DATA":{"All":"AND","True":"True"},"CHILDREN":[{"CLASS_ID":"CondIBSection","DATA":{"logic":"Equal","value":126}}]}',
             'DETAIL_URL'                      => '/catalog/#SECTION_CODE#/#CODE#/',
             'DISABLE_INIT_JS_IN_COMPONENT'    => 'N',
             'DISPLAY_BOTTOM_PAGER'            => 'N',
@@ -144,7 +144,7 @@ CModule::IncludeModule('iblock');
     ); ?>
 </div>
 <? else: ?>
-    <div class="favorites__empty">У вас нет избранных товаров.</div>
+    <div class="favorites__empty col-12">У вас нет избранных товаров.</div>
 <? endif; ?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
