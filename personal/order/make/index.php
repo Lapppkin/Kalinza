@@ -3,8 +3,8 @@ define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Заказы");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:sale.order.ajax", 
-	".default", 
+	"bitrix:sale.order.ajax",
+	".default",
 	array(
 		"PAY_FROM_ACCOUNT" => "Y",
 		"COUNT_DELIVERY_TAX" => "N",
@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("Заказы");
 		"USE_PREPAYMENT" => "N",
 		"USE_PRELOAD" => "Y",
 		"ALLOW_USER_PROFILES" => "N",
-		"ALLOW_NEW_PROFILE" => "N",
+		"ALLOW_NEW_PROFILE" => "Y",
 		"TEMPLATE_THEME" => "site",
 		"SHOW_ORDER_BUTTON" => "final_step",
 		"SHOW_TOTAL_ORDER_BUTTON" => "N",

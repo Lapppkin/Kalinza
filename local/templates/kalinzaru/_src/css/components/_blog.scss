@@ -29,6 +29,10 @@
     flex-basis: calc(33.333% - 15px);
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
     &--image {
       flex-basis: 100%;
       min-height: 220px;

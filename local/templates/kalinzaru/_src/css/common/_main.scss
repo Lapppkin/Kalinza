@@ -23,6 +23,9 @@ main {
       width: 100%;
       flex-basis: 100%;
       max-width: 100%;
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        flex-wrap: wrap;
+      }
     }
   }
 }
@@ -35,7 +38,7 @@ body.inner {
 
 body.index {
   main {
-    padding-top: $size-padding;
+    padding-top: 20px;
   }
 }
 

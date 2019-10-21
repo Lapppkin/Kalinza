@@ -173,7 +173,22 @@ if (owlPopularFrontSlider.length !== 0) {
         lazyLoad: true,
         //lazyLoadEager: 2,
         responsive: {
-
+            0: {
+                items: 1,
+                nav: false,
+            },
+            512: {
+                items: 2,
+                nav: false,
+            },
+            768: {
+                items: 3,
+                nav: false,
+            },
+            1280: {
+                items: 4,
+                nav: true,
+            }
         }
     }).
         on('mouseover', function () {

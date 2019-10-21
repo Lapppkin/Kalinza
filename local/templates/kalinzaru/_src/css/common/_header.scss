@@ -8,6 +8,10 @@
     background-color: $app-color-background;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: block;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      display: none;
+    }
     &--wrapper {
       display: flex;
       justify-content: space-between;
@@ -93,6 +97,10 @@
   &--header {
     padding-top: $size-padding-small;
     padding-bottom: $size-padding-small;
+    display: block;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      display: none;
+    }
     &--wrapper {
       display: flex;
       justify-content: space-between;

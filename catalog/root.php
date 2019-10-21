@@ -50,7 +50,7 @@ while ($arSection = $rsSection->Fetch()) {
     <div class="catalog-root--wrapper">
 
         <? foreach ($arResult as $item): ?>
-            <ul class="col-4 catalog-root--section">
+            <ul class="col-lg-4 col-md-6 col-sm-12 catalog-root--section">
                 <h2 class="catalog-root--title"><?= $item['NAME'] ?></h2>
 
                 <? foreach ($item['ITEMS'] as $subItem): ?>

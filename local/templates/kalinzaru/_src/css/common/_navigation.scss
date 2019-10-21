@@ -5,6 +5,10 @@ $nav-height: 40px;
 .navigation {
   background-color: $app-color-primary;
   color: $app-color-white;
+  display: block;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    display: none;
+  }
   &--wrapper {
     display: flex;
     align-items: center;

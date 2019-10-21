@@ -3,6 +3,11 @@
 .offers {
   flex-basis: 35%;
   margin-left: 20px;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
   &--wrapper {
     display: flex;
     height: 100%;
@@ -17,6 +22,10 @@
     display: flex;
     margin-bottom: 20px;
     position: relative;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      height: 150px;
+      min-height: 150px;
+    }
     p {
       flex-basis: 65%;
       font-size: 1.1em;
@@ -61,6 +70,10 @@
     overflow: hidden;
     @include br-small;
     transition: all 0.3s ease-in-out;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      height: 150px;
+      min-height: 150px;
+    }
     &:hover {
       @include shadow-hover;
     }
@@ -107,6 +120,9 @@
   &--wrapper {
     display: flex;
     justify-content: space-between;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      flex-wrap: wrap;
+    }
   }
   &--item {
     flex-basis: calc(33.333% - 13px);
@@ -116,6 +132,10 @@
     background-color: $app-color-white;
     @include br-small;
     padding: 20px 40px;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+    }
     &--icon {
       .kalinza-icon {
         width: 42px;
@@ -152,6 +172,11 @@
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 10px;
+    }
     a {
       color: $app-color-black;
     }
@@ -162,9 +187,15 @@
       }
     }
     &--image {
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        flex-basis: 100%;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
     &--text {
       padding: 20px $size-padding-large;

@@ -17,6 +17,10 @@
   &--items {
     flex-basis: calc(16.666% - 20px);
     margin-right: $size-padding-small;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      flex-basis: calc(50% - 20px);
+      margin-bottom: 20px;
+    }
     ul {
       margin: 0;
       padding: 0;

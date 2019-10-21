@@ -5,6 +5,10 @@
   max-width: 73%;
   overflow: hidden;
   position: relative;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 
   &--wrapper {
     @include br-small;
@@ -49,6 +53,10 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      height: 200px;
+      min-height: 200px;
+    }
     &--title {
       align-self: flex-end;
       text-align: right;
