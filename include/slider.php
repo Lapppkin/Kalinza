@@ -80,3 +80,7 @@
     </div>
     <div class="slider--nav"></div>
 </div>
+
+<div class="slider--catalog-link">
+    <a href="/catalog/kontaktnye_linzy/">Каталог контактных линз</a>
+</div>

@@ -58,29 +58,8 @@ $aMenuLinks = Array(
 		""
 	),
 	Array(
-		"Статьи",
-		"/statii/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Обзоры",
-		"/obzory/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
 		"Сертификаты",
 		"/sertifikaty/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Карта сайта",
-		"/karta-saita/",
 		Array(),
 		Array(),
 		""

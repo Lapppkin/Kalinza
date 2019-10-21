@@ -286,7 +286,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 								foreach ($rowItems as $item)
 								{
 									?>
-									<div class="col-sm-4 product-item-big-card">
+									<div class="col-lg-4 col-md-6 col-sm-12 product-item-big-card">
 										<div class="row">
 											<div class="product-item-wrapper">
 												<?

@@ -95,4 +95,32 @@
     }
   }
 
+  &--catalog-link {
+    flex-basis: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    a {
+      @include br-small;
+      text-decoration: none;
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      width: 100%;
+      flex-basis: 100%;
+      background-color: $app-color-primary;
+      color: $app-color-white;
+      font-size: $fontsize-h5;
+      @include mediumfont;
+      padding: 10px 20px;
+      &:hover {
+        @include shadow-hover;
+      }
+    }
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      display: flex;
+    }
+  }
+
 }

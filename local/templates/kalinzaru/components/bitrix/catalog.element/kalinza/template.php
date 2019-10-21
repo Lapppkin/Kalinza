@@ -138,7 +138,9 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     ? $arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"]
                     : $arResult["NAME"] ?></h1>
             <!--повтор заказа-->
-            <button class="catalog-element-repeat-order btn btn-transparent btn-transparent-primary btn-large" disabled>Повторить заказ</button>
+            <?/*
+            <button class="catalog-element-repeat-order btn btn-transparent btn-transparent-primary btn-large">Повторить заказ</button>
+            */?>
         </div>
 
         <!--избранное-->

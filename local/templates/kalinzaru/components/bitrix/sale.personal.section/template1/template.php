@@ -114,32 +114,30 @@ else
 
 
 	?>
-<h1>Мой кабинет</h1>
-	<div class="row">
-		<div class="col-md-12 sale-personal-section-index">
-			<div class="row sale-personal-section-row-flex">
-				<?
-				foreach ($availablePages as $blockElement)
-				{
-					?>
-					<div class="col-lg-3 col-md-5 col-sm-12 col-xs-12">
-						<div class="sale-personal-section-index-block bx-theme-<?=$theme?>">
-							<a class="sale-personal-section-index-block-link" href="<?=htmlspecialcharsbx($blockElement['path'])?>">
-								<span class="sale-personal-section-index-block-ico">
-									<?=$blockElement['icon']?>
-								</span>
-								<h2 class="sale-personal-section-index-block-name" style="color:#fff;">
-									<?=htmlspecialcharsbx($blockElement['name'])?>
-								</h2>
-							</a>
-						</div>
-					</div>
-					<?
-				}
-				?>
-			</div>
-		</div>
-	</div>
+    <h1 class="col-md-12">Мой кабинет</h1>
+    <div class="col-md-12 sale-personal-section-index">
+        <div class="row sale-personal-section-row-flex">
+            <?
+            foreach ($availablePages as $blockElement)
+            {
+                ?>
+                <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12">
+                    <div class="sale-personal-section-index-block bx-theme-<?=$theme?>">
+                        <a class="sale-personal-section-index-block-link" href="<?=htmlspecialcharsbx($blockElement['path'])?>">
+                            <span class="sale-personal-section-index-block-ico">
+                                <?=$blockElement['icon']?>
+                            </span>
+                            <h2 class="sale-personal-section-index-block-name" style="color:#fff;">
+                                <?=htmlspecialcharsbx($blockElement['name'])?>
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+                <?
+            }
+            ?>
+        </div>
+    </div>
 	<?
 }
 ?>
