@@ -4,6 +4,13 @@
   display: none;
   height: 42px;
   background-color: $app-color-white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  @include shadow-hover;
   @media (max-width: map_get($grid-breakpoints, sm)) {
     display: flex;
   }
