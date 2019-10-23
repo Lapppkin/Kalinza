@@ -67,15 +67,25 @@
 
 .header--mobile--menu-popup {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  background-color: $app-color-white;
+  color: $app-color-black;
+  z-index: -99;
   &.active {
     display: flex;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  &--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
   a {
     color: $app-color-black;
@@ -88,15 +98,20 @@
 .mobile-menu {
 
   &--header {
+    flex-basis: 100%;
     height: 42px;
     padding-left: 25px;
     padding-right: 25px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid $app-color-delimiter;
   }
   &--close {
+    width: 35px;
     .kalinza-icon {
       color: $app-color-primary;
+      width: 20px;
+      height: 20px;
       &:hover {
         color: $app-color-error;
       }
@@ -105,7 +120,10 @@
   &--logo {}
 
   &--location {
+    flex-basis: 100%;
     padding: 15px 25px;
+    border-bottom: 1px solid $app-color-delimiter;
+    display: flex;
     &-icon {
       margin-right: 10px;
       .kalinza-icon {
@@ -115,19 +133,116 @@
     &-city {}
   }
   &--auth {
+    flex-basis: 100%;
     padding: 15px 25px;
+    border-bottom: 1px solid $app-color-delimiter;
+    .kalinza-icon {
+      margin-right: 10px;
+    }
   }
   &--catalog {
+    flex-basis: 100%;
     padding: 15px 25px;
+    border-bottom: 1px solid $app-color-delimiter;
+    background-color: $app-color-background;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 10px 0;
+        padding: 0;
+        list-style: none;
+        > ul {
+          display: none;
+        }
+        a {
+          @include mediumfont;
+          text-decoration: none;
+          &.active {
+            color: $app-color-primary;
+          }
+        }
+      }
+    }
+    &--favorites {
+      margin-top: 15px;
+      flex-basis: 100%;
+      a {
+        position: relative;
+      }
+    }
   }
   &--menu {
+    width: 100%;
+    flex-basis: 100%;
     padding: 15px 25px;
+    border-bottom: 1px solid $app-color-delimiter;
+    background-color: $app-color-background;
+    display: flex;
+    flex-wrap: wrap;
+    &--folder {
+      width: 100%;
+      flex-basis: 100%;
+      position: relative;
+      @include mediumfont;
+      margin-bottom: 10px;
+      .kalinza-icon {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 10px;
+        transition: transform 0.2s ease-in-out;
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    ul {
+      width: 100%;
+      flex-basis: 100%;
+      margin: 0 0 10px;
+      padding: 0;
+      display: none;
+      li {
+        margin: 10px 0;
+        padding: 0;
+        list-style: none;
+        > ul {
+          display: none;
+        }
+        a {
+          text-decoration: none;
+          color: $app-color-gray-light;
+          font-size: $fontsize-small;
+          &.active {
+            color: $app-color-primary;
+          }
+        }
+      }
+    }
   }
   &--footer {
+    flex-basis: 100%;
     padding: 15px 25px;
-    &--phone {}
-    &--callback {}
-    &--socials {}
+    &--phone {
+      a {
+        font-size: $fontsize-h5;
+        @include mediumfont;
+        text-decoration: none;
+      }
+    }
+    &--callback {
+      a {
+        color: $app-color-gray;
+      }
+    }
+    &--socials {
+      margin-top: 15px;
+      display: flex;
+      a {
+        margin-right: 5px;
+      }
+    }
   }
 
 }

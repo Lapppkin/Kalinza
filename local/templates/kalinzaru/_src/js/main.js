@@ -6,7 +6,7 @@
 
     let kalinza = {
 
-       isMobile: {
+        isMobile: {
             Android: function() {
                 return navigator.userAgent.match(/Android/i);
             },
@@ -54,7 +54,7 @@
         phoneMask: function (_this) {
             if ($.fn.inputmask) {
                 _this.inputmask({
-                    mask: '+7 999 999-99-99',
+                    mask: '+9 999 999-99-99',
                     placeholder: '*'
                 });
             }
@@ -100,6 +100,7 @@
         masks: function () {
             let phoneInputs = [
                 'input[name="phone"]',
+                'input[name="ORDER_PROP_3"]',
             ];
             let emailInputs = [
                 'input[name="email"]',
@@ -184,6 +185,26 @@
             }
         },
 
+        mobileMenu: function () {
+            let hamburger = '.header--mobile--menu';
+            let menu = '.header--mobile--menu-popup';
+            let menuClose = '.mobile-menu--close';
+            let menuFolder = '.mobile-menu--menu--folder';
+
+            $(document)
+            .on('click', hamburger, function () {
+                $(menu).addClass('active');
+            })
+            .on('click', menuClose, function () {
+                $(menu).removeClass('active');
+            })
+            .on('click', menuFolder, function () {
+                $(this).find('.kalinza-icon').toggleClass('active')
+                $(this).next('ul').slideToggle();
+            });
+
+        },
+
 	};
 
     // При изменении размера окна
@@ -194,6 +215,7 @@
     // После полной загрузки
     window.onload = function () {
         kalinza.masks();
+        kalinza.mobileMenu();
     };
 
     // После завершения
