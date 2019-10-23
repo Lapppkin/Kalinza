@@ -55,8 +55,9 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         ? $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]
         : $arResult['SECTION']['NAME'] ?>
     </h1><?
-    }
+    } ?>
 
+<?
 if (0 < $arResult["SECTIONS_COUNT"]) { ?>
 <ul class="<? echo $arCurView['LIST']; ?>">
 <?
@@ -223,3 +224,5 @@ if (0 < $arResult["SECTIONS_COUNT"]) { ?>
 	echo ('LINE' != $arParams['VIEW_MODE'] ? '<div style="clear: both;"></div>' : '');
 }
 ?></div>
+
+<div class="mobile-filter wrap"><?= \Deadie\Helper::renderIcon('filter') ?></div>

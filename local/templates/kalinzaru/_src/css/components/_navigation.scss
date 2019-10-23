@@ -1,0 +1,45 @@
+// NAVIGATION (PAGINATION)
+
+[data-pagination-num] {
+  .navigation {
+    background-color: transparent;
+    color: $app-color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.unselectable {
+
+    }
+
+    a {
+      color: $app-color-black;
+      padding: 5px 10px;
+      &:hover {
+        color: $app-color-primary;
+      }
+      &.prev,
+      &.next {
+        &:hover {
+          .kalinza-icon {
+            color: $app-color-primary;
+          }
+        }
+      }
+    }
+
+    .pages {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 5px 10px;
+      }
+      div {
+        padding: 5px 10px;
+        color: $app-color-primary;
+        @include mediumfont;
+        @include middelfont;
+      }
+    }
+
+  }
+}

@@ -105,7 +105,7 @@ if ($APPLICATION->GetCurDir() === '/catalog/') {
             "SECTION_TOP_DEPTH"                            => "2",
             "SECTIONS_VIEW_MODE"                           => "TEXT",
             "SECTIONS_SHOW_PARENT_NAME"                    => "Y",
-            "PAGE_ELEMENT_COUNT"                           => "100",
+            "PAGE_ELEMENT_COUNT"                           => "24",
             "LINE_ELEMENT_COUNT"                           => "3",
             "ELEMENT_SORT_FIELD"                           => "sort",
             "ELEMENT_SORT_ORDER"                           => "asc",
