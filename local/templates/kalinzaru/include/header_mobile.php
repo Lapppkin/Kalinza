@@ -1,6 +1,6 @@
 <?php
 
-use Deadie\Helper;
+use core\Helper;
 
 ?>
 <!--header mobile-->

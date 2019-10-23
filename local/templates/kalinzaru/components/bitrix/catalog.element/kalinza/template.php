@@ -13,7 +13,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 
-use Deadie\Helper;
+use core\Helper;
 
 $this->setFrameMode(true);
 $templateLibrary = ['popup'];

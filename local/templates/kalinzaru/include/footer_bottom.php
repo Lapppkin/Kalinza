@@ -4,7 +4,7 @@
  * @var $APPLICATION
  */
 
-use Deadie\Helper;
+use core\Helper;
 
 ?>
 <div class="footer--bottom">

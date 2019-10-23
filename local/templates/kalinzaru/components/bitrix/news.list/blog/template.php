@@ -64,7 +64,7 @@ $this->setFrameMode(true);
         */?>
 
         <div class="blog--item--readmore">
-            <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Перейти к статье</a> <?= \Deadie\Helper::renderIcon('arrow-right-line') ?>
+            <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Перейти к статье</a> <?= \core\Helper::renderIcon('arrow-right-line') ?>
         </div>
 
 	</div>

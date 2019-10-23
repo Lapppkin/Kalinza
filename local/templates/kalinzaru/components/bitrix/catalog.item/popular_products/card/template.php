@@ -2,8 +2,8 @@
     die();
 }
 
-use \Bitrix\Main\Localization\Loc;
-use \Deadie\Helper;
+use Bitrix\Main\Localization\Loc;
+use core\Helper;
 
 /**
  * @global CMain                $APPLICATION

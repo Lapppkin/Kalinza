@@ -1,6 +1,6 @@
 <?
 
-use Deadie\Helper;
+use core\Helper;
 
 ?>
 <div class="header--header--logo">

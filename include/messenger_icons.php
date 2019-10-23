@@ -1,6 +1,6 @@
 <?php
 
-use Deadie\Helper;
+use core\Helper;
 
 ?>
 <div class="messenger-icons--label">Мы на связи в мессенджерах:</div>

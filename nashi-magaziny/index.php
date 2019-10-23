@@ -1,7 +1,7 @@
 <?php
 
 use Bitrix\Main\Page\Asset;
-use Deadie\Helper;
+use core\Helper;
 
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Наши магазины");

@@ -1,10 +1,10 @@
 <?
 
-namespace Deadie;
+namespace core;
 
 /**
  * Class Helper
- * @package Kalinza
+ * @package core
  */
 final class Helper
 {

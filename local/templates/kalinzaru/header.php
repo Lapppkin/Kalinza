@@ -5,7 +5,7 @@
  */
 
 use Bitrix\Main\Page\Asset;
-use Deadie\Helper;
+use core\Helper;
 
 if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 

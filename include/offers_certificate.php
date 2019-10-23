@@ -1,6 +1,6 @@
 <?php
 
-use Deadie\Helper;
+use core\Helper;
 
 ?>
 <div class="offers--certificate" style="background-image: url(<?= SITE_DIR . 'include/images/certificate.jpg' ?>)">

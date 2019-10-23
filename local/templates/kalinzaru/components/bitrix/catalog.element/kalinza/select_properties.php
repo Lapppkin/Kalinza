@@ -1,6 +1,6 @@
 <?
 
-use Deadie\Helper;
+use core\Helper;
 
 if (!empty($arResult["PROPERTIES"]["b_k"]["VALUE"])) {
     echo '
@@ -702,9 +702,9 @@ if (!empty($arResult["PROPERTIES"]["b_k"]["VALUE"])) {
             <tr>
                 <td>Количество</td>
                 <td colspan=2>
-                    <span class="quan quan-minus"><?= \Deadie\Helper::renderIcon('minus') ?></span>
+                    <span class="quan quan-minus"><?= \core\Helper::renderIcon('minus') ?></span>
                     <input name="kolvo" id="koll" type="text" value="1">
-                    <span class="quan quan-plus"><?= \Deadie\Helper::renderIcon('plus') ?></span>
+                    <span class="quan quan-plus"><?= \core\Helper::renderIcon('plus') ?></span>
                     &nbsp;уп.
                 </td>
             </tr>

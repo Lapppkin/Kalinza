@@ -3,7 +3,7 @@
 }
 
 use \Bitrix\Main\Localization\Loc;
-use Deadie\Helper;
+use core\Helper;
 
 /**
  * @global CMain                $APPLICATION

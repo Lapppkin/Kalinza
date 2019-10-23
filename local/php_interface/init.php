@@ -1,7 +1,10 @@
 <?php
 
 use Bitrix\Main\EventManager;
-use Deadie\Helper;
+use core\Helper;
+use core\EventHandler;
+
+### CONSTANTS
 
 \define('BX_CUSTOM_TO_UPPER_FUNC', 'mb_strtoupper');
 \define('BX_CUSTOM_TO_LOWER_FUNC', 'mb_strtolower');
@@ -9,76 +12,21 @@ use Deadie\Helper;
 \define('CATALOG_DEFAULT_IBLOCK_ID', 2); // ID инфоблока каталога по умолчанию
 \define('REVIEWS_IBLOCK_ID', 14); // ID инфоблока отзывов
 
+### AUTOLOAD
+
 require \dirname(__DIR__, 2) . '/vendor/autoload.php';
-
 \Dotenv\Dotenv::create(\dirname(__DIR__, 2), '.env')->load();
-
 \CModule::IncludeModule('iblock');
 
-//\AddEventHandler('main', 'OnEpilog', [\core\EventHandler::class, 'Check404Error'], 1);
+### EVENT HANDLERS
 
-\define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-\define('ERROR_500', '500 Internal Server Error');
-\define('INCLUDE_DIR', ROOT . '/local/php_interface/include/');
-
-
-### CLASSES LOADER ###
-
-/**
- * @param $classes
- * @param bool $validators
- */
-function kalinzaAutoLoader($classes, $validators = false) {
-    foreach ($classes as $class) {
-        if (!$validators) {
-            // Подключение основного класса
-            try {
-                if (!file_exists(INCLUDE_DIR . "$class.php")) {
-                    throw new Exception();
-                }
-            } catch (Exception $e) {
-                ShowError('One of template classes not loaded! Please contact the site administrator to resolve the error.');
-                LocalRedirect('/', false, ERROR_500);
-            }
-            require_once(INCLUDE_DIR . "$class.php");
-        } else {
-            // Подключение валидатора
-            include_once(INCLUDE_DIR . "$class.php");
-            // Подключение событий валидатора
-            $namespace = str_replace(DIRECTORY_SEPARATOR, '\\', "/Deadie/$class");
-            EventManager::getInstance()->addEventHandlerCompatible(
-                'form',
-                'onFormValidatorBuildList',
-                array($namespace, 'getDescription')
-            );
-        }
-
-    }
-}
-
-// Основные классы
-$classes = array(
-    'Helper',
-    //'EventHandler',
-    // Интерфейсы
-    //'Interfaces/ValidatorInterface',
-    // Абстрактные классы
-    //'Validators/Validator',
-    // Трейты
+EventManager::getInstance()->addEventHandlerCompatible(
+    'main',
+    'OnElilog',
+    [EventHandler::class, 'Check404Error']
 );
-kalinzaAutoLoader($classes);
 
-// Валидаторы
-$validators = array(
-    //'Validators/StringEmpty',
-    //'Validators/Email',
-);
-kalinzaAutoLoader($validators, true);
-
-
-### FUNCTION WRAPPERS ###
-
-// Глобальные обертки для необходимых функций
+### GLOBAL WRAPPERS
 
 function dump($value, $public = false) {
     Helper::dump($value, $public);
