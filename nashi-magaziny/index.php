@@ -455,14 +455,15 @@ $shops = array(
 
     // Переключение города
     $(document).on('click', '.city-dropdown', function() {
-        showShopListFromCity($(this).attr('data-city-id'));
+        var cityId = $(this).data('city-id');
+        showShopListFromCity($(this).data('city-id'));
         placemarkList[cityId].events.fire('click');
     });
 
     // Клик на адресе
     $(document).on('click', '.show-on-map', function() {
-        var cityId = $(this).attr('data-city-id');
-        var shopId = $(this).attr('data-shop-id');
+        var cityId = $(this).data('city-id');
+        var shopId = $(this).data('shop-id');
         placemarkList[cityId][shopId].events.fire('click');
     });
 

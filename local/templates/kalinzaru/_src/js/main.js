@@ -30,7 +30,7 @@
         accordion: function() {
             $('.accordion > li:eq(0) a.city-dropdown').addClass('active').next().slideDown();
 
-            $('.accordion a.city-dropdown').click(function (e) {
+            $(document).on('click', '.accordion a.city-dropdown', function (e) {
                 var dropDown = $(this).closest('li').find('div.main');
 
                 $(this).closest('.accordion').find('div.main').not(dropDown).slideUp();
@@ -230,5 +230,7 @@
 
     // Плавный скролл
     $("[href='#top']").mPageScroll2id();
+
+    kalinza.accordion();
 
 })(jQuery);
