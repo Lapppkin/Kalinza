@@ -160,7 +160,7 @@ $APPLICATION->SetTitle("Корзина");
     <div class="order_makers">
          <?$APPLICATION->IncludeComponent(
         "bitrix:sale.order.ajax",
-        "template2",
+        "kalinzaru",
         array(
             "ACTION_VARIABLE" => "soa-action",
             "ADDITIONAL_PICT_PROP_2" => "-",
