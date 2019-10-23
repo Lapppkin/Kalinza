@@ -85,3 +85,11 @@ body.index {
     }
   }
 }
+
+.text-error {
+  color: $app-color-error;
+}
+
+.text-bold {
+  @include mediumfont;
+}
