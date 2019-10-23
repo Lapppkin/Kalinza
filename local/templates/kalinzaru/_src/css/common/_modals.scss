@@ -1,6 +1,9 @@
 // MODAL WINDOWS
 
 .modal {
+  &-open {
+    opacity: 1;
+  }
   &-body {
     .errortext {
       display: flex;

@@ -1,4 +1,8 @@
-<? if (!empty($arResult["PROPERTIES"]["b_k"]["VALUE"])) {
+<?
+
+use Deadie\Helper;
+
+if (!empty($arResult["PROPERTIES"]["b_k"]["VALUE"])) {
     echo '
         <input name="checkboxbox" type="checkbox" checked id="box-1" class="box" onClick="hideOrShowText()">
         <label for="box-1">одинаковые значения для обоих глаз</label>
@@ -698,7 +702,10 @@
             <tr>
                 <td>Количество</td>
                 <td colspan=2>
-                    <input name="kolvo" id="koll" type="text" value="1"> уп.
+                    <span class="quan quan-minus"><?= \Deadie\Helper::renderIcon('minus') ?></span>
+                    <input name="kolvo" id="koll" type="text" value="1">
+                    <span class="quan quan-plus"><?= \Deadie\Helper::renderIcon('plus') ?></span>
+                    &nbsp;уп.
                 </td>
             </tr>
         </form>

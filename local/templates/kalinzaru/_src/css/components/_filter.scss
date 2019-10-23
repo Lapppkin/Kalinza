@@ -2,6 +2,14 @@
 
 .bx-filter {
   margin-top: 60px;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    display: none;
+    margin-top: 10px;
+    &.wrap {
+      display: flex;
+      @include shadow-hover;
+    }
+  }
 
   .bx-filter-title {
     text-align: center;
@@ -101,4 +109,26 @@
     }
   }
 
+}
+
+// MOBILE FILTER
+
+.mobile-filter {
+  flex-basis: 100%;
+  width: 100%;
+  display: none;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    .kalinza-icon {
+      color: $app-color-black;
+    }
+  }
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    display: flex;
+  }
+  .kalinza-icon {
+    color: $app-color-primary;
+  }
 }

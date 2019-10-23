@@ -116,8 +116,11 @@
               color: $app-color-primary;
               text-decoration: none;
               &:hover {
-                color: $app-color-primary-light;
+                color: $app-color-black;
                 text-decoration: underline;
+                .kalinza-icon {
+                  color: $app-color-black;
+                }
               }
               .kalinza-icon {
                 color: $app-color-primary;

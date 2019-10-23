@@ -1,0 +1,26 @@
+// QUANTITY
+
+.quan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 36px;
+  margin: 5px;
+  .kalinza-icon {
+    color: $app-color-gray-lighter;
+    width: 16px;
+  }
+  &:hover {
+    .kalinza-icon {
+      color: $app-color-primary;
+    }
+  }
+  &-minus {
+    margin-right: 0;
+  }
+  &-plus {
+    margin-left: 0;
+  }
+}

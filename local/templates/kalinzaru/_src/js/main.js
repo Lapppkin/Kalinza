@@ -200,10 +200,35 @@
             })
             .on('click', menuFolder, function () {
                 $(this).find('.kalinza-icon').toggleClass('active')
-                $(this).next('ul').slideToggle();
+                $(this).next('ul').toggleClass('wrap');
             });
 
         },
+
+        mobileFilter: function () {
+            let mobileFilterClass = '.mobile-filter';
+            $(document).on('click', mobileFilterClass, function () {
+                $('.bx-filter').slideToggle();
+            });
+        },
+
+        quantity: function () {
+            $(document).on('click', '.quan', function () {
+                let input = $(this).siblings('input');
+                let value = parseInt(input.val());
+                if ($(this).hasClass('quan-plus')) {
+                    value++;
+                } else if ($(this).hasClass('quan-minus')) {
+                    value--;
+                    value = (value <= 0) ? 1 : value;
+                } else {
+                    return false;
+                }
+                input.val(value);
+            });
+
+        },
+
 
 	};
 
@@ -215,7 +240,6 @@
     // После полной загрузки
     window.onload = function () {
         kalinza.masks();
-        kalinza.mobileMenu();
     };
 
     // После завершения
@@ -232,5 +256,8 @@
     $("[href='#top']").mPageScroll2id();
 
     kalinza.accordion();
+    kalinza.quantity();
+    kalinza.mobileMenu();
+    kalinza.mobileFilter();
 
 })(jQuery);
