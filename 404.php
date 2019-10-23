@@ -7,7 +7,7 @@ $APPLICATION->SetTitle('Ошибка 404');
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 ?>
 
-<div class="col">
+<div class="col text-center">
     <h1 class="text-error text-uppercase text-bold">Ошибка 404</h1>
     <h2>Данная страница не найдена!</h2>
     <h4>Почему?</h4>
