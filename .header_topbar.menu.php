@@ -28,4 +28,11 @@ $aMenuLinks = array(
         array(),
         ""
     ),
+    array(
+        "Блог",
+        "/blog/",
+        array(),
+        array(),
+        ""
+    ),
 );
