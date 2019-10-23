@@ -16,7 +16,7 @@ if (empty($ELEMENT)): ?>
 
 <div class="blog">
     <h2 class="blog--title col text-center">Наш блог</h2>
-    <div class="blog--wrapper">
+    <div class="blog--wrapper col">
         <?php $APPLICATION->IncludeComponent("bitrix:news.list",
             "blog",
             array(
