@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="offers-catalog--wrapper col-12">
-                <a class="offers-catalog--item" href="#">
+                <a class="offers-catalog--item" href="/catalog/cvetnye_linzy/">
                     <div class="offers-catalog--item--image">
                         <img src="<?= SITE_DIR . 'include/images/color-lens.jpg' ?>" alt="Цветные линзы"></div>
                     <div class="offers-catalog--item--text">
@@ -16,7 +16,7 @@
                         <h4>Детские оправы</h4>
                     </div>
                 </a>
-                <a class="offers-catalog--item" href="#">
+                <a class="offers-catalog--item" href="/blog/chto-nuzhno-znat-o-kontaktnykh-linzakh/">
                     <div class="offers-catalog--item--image">
                         <img src="<?= SITE_DIR . 'include/images/choise.jpg' ?>" alt="Подобрать линзы"></div>
                     <div class="offers-catalog--item--text align-right">
