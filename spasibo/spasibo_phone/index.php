@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Спасибо");
-?>         <div class=" ">
+?>         <div class="col">
                     <div class="container container-fix">
                         <div class="row">
                             <div class="col-md-12 ddfdf" style="margin:0 auto; text-align: center;">
@@ -9,13 +9,13 @@ $APPLICATION->SetTitle("Спасибо");
                                 <h1>Спасибо!<br> </h1>
                                 <h4>Обратите внимание <br>на наши специальные предложения</h4>
 
-<?
-	if ($USER->GetID() == 6){
-		$USER->Logout();
-		header('Location: http://kalinza.ru/spasibo/');
-	}
+                                <?
+                                    if ($USER->GetID() == 6){
+                                        $USER->Logout();
+                                        header('Location: http://kalinza.ru/spasibo/');
+                                    }
 
-?>
+                                ?>
                                 <div class="block_0">
                                     <div class="block_2">
                                         <p>Нужны очки?</p>

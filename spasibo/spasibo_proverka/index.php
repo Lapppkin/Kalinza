@@ -10,13 +10,14 @@ $APPLICATION->SetTitle("Спасибо");
                                 <h1>Спасибо!<br>Ваша заявка принята в работу</h1>
                                 <h4>Обратите внимание <br>на наши специальные предложения</h4>
 
-<?
-	if ($USER->GetID() == 6){
-		$USER->Logout();
-		header('Location: http://kalinza.ru/spasibo/spasibo_proverka/');
-	}
+                                <?
+                                    if ($USER->GetID() == 6){
+                                        $USER->Logout();
+                                        header('Location: http://kalinza.ru/spasibo/spasibo_proverka/');
+                                    }
 
-?>
+                                ?>
+
                                 <div class="block_0">
                                     <div class="block_2">
                                         <p>Нужны очки?</p>

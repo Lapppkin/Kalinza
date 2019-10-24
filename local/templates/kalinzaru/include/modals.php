@@ -77,8 +77,8 @@ use core\Helper;
                         <input type="text" name="phone" id="phone_mask" required>
                     </div>
                     <div class="form-field form-privacy">
-                        <input type="checkbox" id="box-2" class="box" required>
-                        <label for="box-2">Я согласен с политикой конфиденциальности и защиты информации</label>
+                        <input type="checkbox" id="callback-privacy" class="box" required>
+                        <label for="callback-privacy">Я согласен с <a href="/policy/">политикой конфиденциальности и защиты информации</a></label>
                     </div>
                 </form>
             </div>
@@ -115,8 +115,8 @@ use core\Helper;
                         <input type="text" name="phone" id="phone_mask" placeholder="Ваше телефон" required>
                     </div>
                     <div class="form-field form-privacy">
-                        <input type="checkbox" id="box-2" class="box" required>
-                        <label for="box-2">Я согласен с политикой конфиденциальности и защиты информации</label>
+                        <input type="checkbox" id="cert-privacy" class="box" required>
+                        <label for="cert-privacy">Я согласен с <a href="/policy/">политикой конфиденциальности и защиты информации</a></label>
                     </div>
                 </form>
             </div>
