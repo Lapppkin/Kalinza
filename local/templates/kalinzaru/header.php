@@ -91,36 +91,37 @@ CModule::IncludeModule('mcart.souvenirs');
             </nav>
             <!--menu-->
 
-            <?php if (!$isIndex): ?>
-            <!--breadcrumb-->
-            <div id="breadcrumb" class="breadcrumb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 breadcrumb--wrapper">
-                            <?php
-                            $APPLICATION->IncludeComponent(
-                                "bitrix:breadcrumb",
-                                ".default",
-                                array(
-                                    "START_FROM" => "0",
-                                    "PATH" => "",
-                                    "SITE_ID" => "s1",
-                                    "COMPONENT_TEMPLATE" => ".default",
-                                ),
-                                false,
-                                array(
-                                    "HIDE_ICONS" => "N",
-                                )
-                            ); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/breadcrumb-->
-            <?php endif; ?>
-
             <!--main-->
             <main id="main">
+
+                <?php if (!$isIndex): ?>
+                    <!--breadcrumb-->
+                    <div id="breadcrumb" class="breadcrumb">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 breadcrumb--wrapper">
+                                    <?php
+                                    $APPLICATION->IncludeComponent(
+                                        "bitrix:breadcrumb",
+                                        ".default",
+                                        array(
+                                            "START_FROM" => "0",
+                                            "PATH" => "",
+                                            "SITE_ID" => "s1",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                        ),
+                                        false,
+                                        array(
+                                            "HIDE_ICONS" => "N",
+                                        )
+                                    ); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/breadcrumb-->
+                <?php endif; ?>
+
                 <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
                 <div class="container">
                     <div class="row">
