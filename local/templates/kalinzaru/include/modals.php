@@ -12,7 +12,7 @@ use core\Helper;
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-logo">
-                    <img src="<?= SITE_TEMPLATE_PATH . '/images/logo.png' ?>" alt="kalinza">
+                    <img src="<?= SITE_TEMPLATE_PATH . '/images/svg/logo.svg' ?>" alt="kalinza">
                 </div>
             </div>
             <div class="modal-body">
@@ -61,7 +61,7 @@ use core\Helper;
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-logo">
-                    <img src="<?= SITE_TEMPLATE_PATH . '/images/logo.png' ?>" alt="kalinza">
+                    <img src="<?= SITE_TEMPLATE_PATH . '/images/svg/logo.svg' ?>" alt="kalinza">
                 </div>
                 <h5 class="modal-title">Закажите звонок</h5>
                 <p>И наши менеджеры перезвонят в течение 10 минут!</p>
@@ -101,7 +101,7 @@ use core\Helper;
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-logo">
-                    <img src="<?= SITE_TEMPLATE_PATH . '/images/logo.png' ?>" alt="kalinza">
+                    <img src="<?= SITE_TEMPLATE_PATH . '/images/svg/logo.svg' ?>" alt="kalinza">
                 </div>
                 <h5 class="modal-title">Нужны очки?</h5>
                 <p>Получи свой сертификат на <strong>500 рублей</strong></p>
