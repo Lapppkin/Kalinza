@@ -72,6 +72,10 @@
   margin-bottom: 20px;
   position: relative;
   @include br-small;
+  &-container {
+    width: 100%;
+  }
+
   &-wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -168,6 +172,9 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        display: none;
+      }
     }
   }
 
