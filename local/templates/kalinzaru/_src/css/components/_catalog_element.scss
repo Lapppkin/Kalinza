@@ -19,7 +19,9 @@
       border-bottom: 1px solid $app-color-border;
       display: flex;
       justify-content: center;
-      a {
+      min-height: 386px;
+      > a {
+        cursor: pointer;
         display: flex;
         &:hover {
           img {
@@ -27,9 +29,9 @@
           }
         }
         img {
-          transition: filter 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           width: 100%;
-          object-fit: cover;
+          object-fit: contain;
           object-position: center;
         }
       }
@@ -47,7 +49,8 @@
           list-style: none;
           margin: 0 20px 10px 0;
           padding: 0;
-          a {
+          > div {
+            cursor: pointer;
             border: 1px solid $app-color-delimiter;
             padding: 10px;
             width: 75px;
@@ -60,7 +63,7 @@
               }
             }
             img {
-              transition: filter 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
               width: 100%;
               object-fit: cover;
               object-position: center;

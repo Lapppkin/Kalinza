@@ -225,4 +225,4 @@ if (0 < $arResult["SECTIONS_COUNT"]) { ?>
 }
 ?></div>
 
-<div class="mobile-filter wrap"><?= \core\Helper::renderIcon('filter') ?></div>
+<div class="mobile-filter wrap"><?= \core\Helper::renderIcon('filter') ?>Фильтр</div>

@@ -7,6 +7,11 @@ main {
     @include headfont;
     color: $app-color-black;
   }
+
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    padding-top: 52px;
+  }
+
 }
 
 .main {
