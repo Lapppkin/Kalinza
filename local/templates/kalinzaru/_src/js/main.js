@@ -200,7 +200,7 @@
             })
             .on('click', menuFolder, function () {
                 $(this).find('.kalinza-icon').toggleClass('active')
-                $(this).next('ul').toggleClass('wrap');
+                $(this).next('ul').toggleClass('active');
             });
 
         },
@@ -208,7 +208,7 @@
         mobileFilter: function () {
             let mobileFilterClass = '.mobile-filter';
             $(document).on('click', mobileFilterClass, function () {
-                $('.bx-filter').slideToggle();
+                $('.bx-filter').toggleClass('wrap');
             });
         },
 

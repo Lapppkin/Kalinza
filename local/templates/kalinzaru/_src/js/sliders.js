@@ -174,7 +174,7 @@ if (owlPopularFrontSlider.length !== 0) {
         //lazyLoadEager: 2,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: false,
             },
             512: {
