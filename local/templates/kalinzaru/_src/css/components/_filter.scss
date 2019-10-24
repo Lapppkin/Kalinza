@@ -1,6 +1,7 @@
 // FILTER
 
 .bx-filter {
+  position: relative;
   margin-top: 60px;
   @media (max-width: map_get($grid-breakpoints, sm)) {
     display: none;
@@ -8,34 +9,78 @@
     &.wrap {
       display: flex;
       @include shadow-hover;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      margin: 0;
+    }
+    .bx-filter-section {
+      overflow-y: auto;
     }
   }
 
-  .bx-filter-title {
-    text-align: center;
+  &-close {
+    display: none;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      .kalinza-icon {
+        width: 20px;
+        height: 20px;
+        color: $app-color-primary;
+      }
+    }
+    &:hover {
+      .kalinza-icon {
+        color: $app-color-error;
+      }
+    }
+  }
+
+  &-popup-result {
+    font-size: $fontsize-small !important;
+    #modef_num {
+      @include mediumfont;
+    }
+  }
+
+  &-title {
+    text-align: left;
+    line-height: 1.1;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .bx-filter-parameters-box {
-
-  }
-
-  .bx-filter-parameters-box-title {
-    font-size: $fontsize-normal;
-    @include mediumfont;
-    span {
-      color: $app-color-black;
-      text-decoration: none;
+    &-title {
+      font-size: $fontsize-normal;
+      @include mediumfont;
+      span {
+        color: $app-color-black;
+        text-decoration: none;
+      }
     }
-  }
-
-  .bx-filter-parameters-box-hint {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 0;
-    color: $app-color-black;
-    &:hover {
+    &-hint {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
       border-bottom: 0;
+      color: $app-color-black;
+      &:hover {
+        border-bottom: 0;
+      }
     }
   }
 

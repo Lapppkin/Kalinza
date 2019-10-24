@@ -71,7 +71,7 @@ if ($arParams['USE_FILTER'] == 'Y') {
         <div class="bx_sidebar catalog-sidebar"><? }
 	$APPLICATION->IncludeComponent(
         "bitrix:catalog.smart.filter",
-        "",
+        "kalinza",
         array(
             "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
             "IBLOCK_ID" => $arParams["IBLOCK_ID"],

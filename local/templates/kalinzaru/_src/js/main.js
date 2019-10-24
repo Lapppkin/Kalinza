@@ -185,6 +185,9 @@
             }
         },
 
+        /**
+         * Mobile menu.
+         */
         mobileMenu: function () {
             let hamburger = '.header--mobile--menu';
             let menu = '.header--mobile--menu-popup';
@@ -199,19 +202,28 @@
                 $(menu).removeClass('active');
             })
             .on('click', menuFolder, function () {
-                $(this).find('.kalinza-icon').toggleClass('active')
-                $(this).next('ul').toggleClass('active');
+                $(this).find('.kalinza-icon').toggleClass('active');
+                $(this).next('ul').slideToggle();
             });
 
         },
 
+        /**
+         * Mobile smart filter.
+         */
         mobileFilter: function () {
-            let mobileFilterClass = '.mobile-filter';
-            $(document).on('click', mobileFilterClass, function () {
-                $('.bx-filter').toggleClass('wrap');
+            $(document)
+            .on('click', '.mobile-filter', function () {
+                $('.bx-filter').addClass('wrap');
+            })
+            .on('click', '.bx-filter-close', function () {
+                $('.bx-filter').removeClass('wrap');
             });
         },
 
+        /**
+         * Quantity handler.
+         */
         quantity: function () {
             $(document).on('click', '.quan', function () {
                 let input = $(this).siblings('input');

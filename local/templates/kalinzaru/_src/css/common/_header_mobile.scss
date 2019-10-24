@@ -188,12 +188,13 @@
       position: relative;
       @include mediumfont;
       margin-bottom: 10px;
+      cursor: pointer;
       .kalinza-icon {
         position: absolute;
         right: 0;
         top: 5px;
         width: 10px;
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.3s ease-in-out;
         &.active {
           transform: rotate(180deg);
         }
