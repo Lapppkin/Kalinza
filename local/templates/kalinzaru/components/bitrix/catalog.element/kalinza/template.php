@@ -107,9 +107,9 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                 <? foreach ($arResult['MORE_PHOTO'] as &$arOnePhoto): ?>
                     <? $resizeImg = \CFile::ResizeImageGet($arOnePhoto['ID'], ['width' => 366, 'height' => 9999],BX_RESIZE_IMAGE_PROPORTIONAL_ALT); ?>
                     <li>
-                        <a data-fancybox="gallery" href="<? echo $arOnePhoto['SRC']; ?>">
+                        <div data-img="<?= $resizeImg['src'] ?>" data-img-full="<? echo $arOnePhoto['SRC']; ?>">
                             <img src="<?= $resizeImg['src'] ?>" width="55" alt="<?= $arOnePhoto['ID'] ?>">
-                        </a>
+                        </div>
                     </li>
                 <? endforeach; ?>
                 <? unset($arOnePhoto); ?>
@@ -120,7 +120,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     $URL = \CFile::GetPath($ID_PICTYRE);
                     if (!empty($URL)) {
                         $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE, ['width' => 366, 'height' => 9999], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
-                        echo '<li><a data-fancybox="gallery" id="f' . $i . '" href="' . $URL . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL . '"></a></li>';
+                        echo '<li><div id="f' . $i . '" data-img="' . $resizeImg['src'] . '" data-img-full="' . $URL . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL . '"></div></li>';
                     }
                 }
                 ?>

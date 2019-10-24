@@ -238,9 +238,19 @@
                 }
                 input.val(value);
             });
-
         },
 
+        /**
+         * Image changer.
+         */
+        imageChanger: function () {
+            $(document).on('click', '.catalog-element-images-more ul li > div', function () {
+                let img = $(this).data('img');
+                let imgFull = $(this).data('img-full');
+                $('.catalog-element-images-main a').attr('href', imgFull);
+                $('.catalog-element-images-main a img').attr('src', img);
+            });
+        },
 
 	};
 
@@ -271,5 +281,6 @@
     kalinza.quantity();
     kalinza.mobileMenu();
     kalinza.mobileFilter();
+    kalinza.imageChanger();
 
 })(jQuery);
