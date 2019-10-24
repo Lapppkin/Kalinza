@@ -13,12 +13,14 @@ $cities = array(
     1 => 'Ижевск',
     2 => 'Новосибирск',
     3 => 'Ставрополь',
+    4 => 'Железногорск',
     5 => 'Курск',
     6 => 'Нижний Новгород',
     7 => 'Новороссийск',
 );
 
 $shops = array(
+    //Краснодар
     0 => array(
         'shop_id' => 0,
         'city_id' => 0,
@@ -158,6 +160,7 @@ $shops = array(
         'lon' => 39.12264189999996,
     ),
 
+    // Ижевск
     8 => array(
         'shop_id' => 0,
         'city_id' => 1,
@@ -178,6 +181,7 @@ $shops = array(
         'lon' => 53.27726499999999,
     ),
 
+    // Нижний Новгород
     9 => array(
         'shop_id' => 0,
         'city_id' => 6,
@@ -198,6 +202,7 @@ $shops = array(
         'lon' => 44.07354929999997,
     ),
 
+    // Новороссийск
     10 => array(
         'shop_id' => 0,
         'city_id' => 7,
@@ -216,6 +221,7 @@ $shops = array(
         'lon' => 37.767314584,
     ),
 
+    // Новосибирск
     11 => array(
         'shop_id' => 0,
         'city_id' => 2,
@@ -256,6 +262,7 @@ $shops = array(
         'lon' => 83.09994980555724,
     ),
 
+    // Ставрополь
     13 => array(
         'shop_id' => 0,
         'city_id' => 3,
@@ -277,6 +284,7 @@ $shops = array(
         'lon' => 41.92680837235259,
     ),
 
+    // Курск
     14 => array(
         'shop_id' => 0,
         'city_id' => 5,
@@ -294,7 +302,6 @@ $shops = array(
         'lat' => 51.69959184827574,
         'lon' => 36.15715199153339,
     ),
-
     15 => array(
         'shop_id' => 1,
         'city_id' => 5,
@@ -312,6 +319,21 @@ $shops = array(
         'lat' => 51.740011478623344,
         'lon' => 36.14607838954915,
     ),
+
+    // Железногорск
+    16 => array(
+        'shop_id' => 0,
+        'city_id' => 4,
+        'address' => 'ул. Мира, 62',
+        'location' => '',
+        'worktime' => '',
+        'phones' => array(
+            '',
+        ),
+        'images' => array(),
+        'lat' => 52.352134478346585,
+        'lon' => 35.366176381614636,
+    )
 
 );
 
@@ -392,6 +414,7 @@ $shops = array(
     var map;
     var placemarkCollection;
     var placemarkList = {};
+    var cityId;
 
     // Список городов и магазинов в них
     var shopList = [
@@ -450,14 +473,14 @@ $shops = array(
         });
         placemarkCollection = new ymaps.GeoObjectCollection();
         showShopListFromCity(0);
-        placemarkList[cityId].events.fire('click');
+        placemarkList[cityId][0].events.fire('click');
     }
 
     // Переключение города
     $(document).on('click', '.city-dropdown', function() {
         var cityId = $(this).data('city-id');
-        showShopListFromCity($(this).data('city-id'));
-        placemarkList[cityId].events.fire('click');
+        showShopListFromCity(cityId);
+        placemarkList[cityId][0].events.fire('click');
     });
 
     // Клик на адресе
