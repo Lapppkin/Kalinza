@@ -6,7 +6,7 @@
 
     'use strict';
     let file = location.origin + '/local/templates/kalinzaru/images/symbol/sprites.svg',
-        revision = 1.82;
+        revision = 1.83;
 
     if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
         return true;
