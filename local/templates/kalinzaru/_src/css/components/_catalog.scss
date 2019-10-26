@@ -56,6 +56,10 @@
     margin: 15px 20px 0 0;
     list-style: none;
     @include br-small;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      margin-top: 5px;
+      margin-right: 10px;
+    }
     h2 {
       font-size: $fontsize-smaller;
       margin: 0;

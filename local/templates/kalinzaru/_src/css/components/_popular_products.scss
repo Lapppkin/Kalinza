@@ -27,3 +27,12 @@
   }
 
 }
+
+.owl-item .popular-products--item {
+  display: flex;
+  height: 100%;
+  max-height: 335px;
+  .product-item {
+    min-height: 100%;
+  }
+}

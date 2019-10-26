@@ -75,6 +75,9 @@
   height: calc(100% - 20px);
   @media (max-width: map_get($grid-breakpoints, sm)) {
     padding: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
   }
   [data-favorite-id] {
     right: 10px;
@@ -156,12 +159,16 @@
     padding-top: 10px;
     padding-bottom: 20px;
     align-self: flex-start;
+    line-height: 1.2;
     //overflow: hidden;
     //white-space: nowrap;
     //text-overflow: ellipsis;
     @media (max-width: map_get($grid-breakpoints, sm)) {
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 10px;
+      width: 100%;
+      text-align: center;
     }
     a {
       color: $app-color-black;
@@ -188,6 +195,13 @@
       justify-content: flex-start;
       padding-right: 0;
       align-self: flex-end;
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-left: 0;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+      }
     }
     &[data-entity="buttons-block"] {
       padding-left: 0;
@@ -203,6 +217,9 @@
 
   &-price-current {
     font-size: $fontsize-normal !important;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      font-size: $fontsize-h5 !important;
+    }
   }
 
 }

@@ -21,6 +21,10 @@
     left: 20px;
     z-index: 1;
     display: flex;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      bottom: 15px;
+      left: 10px;
+    }
     .owl-prev,
     .owl-next {
       user-select: none;
@@ -53,9 +57,14 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    @media (max-width: map_get($grid-breakpoints, sm)) {
+    @media (max-width: map_get($grid-breakpoints, md)) {
       height: 200px;
       min-height: 200px;
+      background-size: contain;
+    }
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      height: 160px;
+      min-height: 160px;
     }
     &--title {
       align-self: flex-end;
