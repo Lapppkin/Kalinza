@@ -3,7 +3,7 @@
 /**
  * Добавление отзыва (из формы в карточке товара)
  *
- * @author deadie/webest
+ * @author deadie
  *
  * @var $DB
  */

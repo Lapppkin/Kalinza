@@ -112,6 +112,7 @@
       background-size: cover;
       padding-left: 20px;
       padding-right: 20px;
+      @include br-small;
       h1 {
         color: $app-color-white;
       }

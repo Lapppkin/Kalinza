@@ -256,10 +256,9 @@ use core\Helper;
                             if ($actualItem['CAN_BUY']) {
                                 ?>
                                 <div class="product-item-button-container" id="<?= $itemIds['BASKET_ACTIONS'] ?>">
-                                    <a class="btn" id="<?= $itemIds['BUY_LINK'] ?>"
-                                       href="<?= $item['DETAIL_PAGE_URL'] ?>" rel="nofollow">
+                                    <button class="btn" onclick="openPreviewModal(<?= $item['ID'] ?>);">
                                         <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
-                                    </a>
+                                    </button>
                                 </div>
                                 <?
                             } else {

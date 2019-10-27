@@ -283,3 +283,86 @@
     }
   }
 }
+
+// preview modal
+
+.modal {
+  .catalog-element {
+    &-wrapper {
+      flex-wrap: nowrap;
+    }
+    &-title {
+      h1 {
+        margin-bottom: 10px;
+        font-size: $fontsize-h3;
+      }
+    }
+    &-images {
+      flex-basis: 220px;
+      min-width: 220px;
+      margin-right: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      &-main {
+        border-bottom: 0;
+        min-height: initial;
+      }
+    }
+    &-info {
+      border-radius: 0;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    &-properties {
+      margin-top: 20px;
+      button, input, select {
+        height: 32px !important;
+        line-height: 30px !important;
+      }
+      &--content {
+        select.seleee {
+          max-width: 110px;
+          min-width: 110px;
+          background-position: right 10px center;
+          padding-right: 30px;
+          padding-left: 10px;
+        }
+      }
+    }
+    &-buy-block {
+      margin-top: 10px;
+    }
+    &-price {
+      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 10px;
+      .price_new {
+        font-size: $fontsize-h2;
+      }
+    }
+    &-addtocart {
+      margin-left: 0;
+      margin-right: 20px;
+      input {
+        margin: 0;
+      }
+    }
+    &-return {
+      button {
+        margin: 0;
+      }
+    }
+    &-more {
+      margin-top: 10px;
+    }
+  }
+}
+
+#modal--preview {
+  .modal-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

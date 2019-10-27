@@ -226,12 +226,19 @@
          */
         quantity: function () {
             $(document).on('click', '.quan', function () {
+                let step = $('input#box-1').is(':checked') ? 1 : 2;
                 let input = $(this).siblings('input');
                 let value = parseInt(input.val());
                 if ($(this).hasClass('quan-plus')) {
-                    value++;
+                    while (step) {
+                        value++;
+                        step--;
+                    }
                 } else if ($(this).hasClass('quan-minus')) {
-                    value--;
+                    while (step) {
+                        value--;
+                        step--;
+                    }
                     value = (value <= 0) ? 1 : value;
                 } else {
                     return false;

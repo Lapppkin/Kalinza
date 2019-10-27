@@ -192,3 +192,16 @@ use core\Helper;
     </div>
 </div>
 <!--/review modal-->
+
+<!--preview modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal--preview">
+    <div class="modal-dialog modal-lg" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><?= Helper::renderIcon('close', 'color-primary') ?></span>
+        </button>
+        <div class="modal-content">
+            <div class="modal-body" id="preview-body"></div>
+        </div>
+    </div>
+</div>
+<!--/preview modal-->

@@ -35,7 +35,30 @@
 
 })();
 
-// Ручное окрытие окна авторизации
+/**
+ * Ручное окрытие окна авторизации.
+ */
 function openAuthModal() {
     $('#modal--auth').modal('show');
+}
+
+/**
+ * Предпросмотр товара в модальном окне.
+ *
+ * @param product_id
+ */
+function openPreviewModal (product_id) {
+    $.ajax({
+        url: '/ajax/preview.php',
+        method: 'post',
+        data: {
+            product_id: product_id
+        },
+        dataType: 'html'
+    }).done(function (response) {
+        $('#preview-body').html(response);
+        $('#modal--preview').modal('show');
+    }).fail(function (response) {
+        console.log(response);
+    });
 }
