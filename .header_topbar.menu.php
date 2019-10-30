@@ -2,7 +2,7 @@
 $aMenuLinks = array(
     array(
         "Салоны оптики",
-        "/salony-optiki/",
+        "/nashi-magaziny/",
         array(),
         array(),
         ""

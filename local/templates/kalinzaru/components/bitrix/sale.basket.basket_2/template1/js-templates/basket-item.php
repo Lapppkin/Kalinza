@@ -76,7 +76,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 						?>
 						<div class="basket-item-block-image<?=(!isset($mobileColumns['PREVIEW_PICTURE']) ? ' hidden-xs' : '')?>">
 							{{#DETAIL_PAGE_URL}}
-								<a href="{{DETAIL_PAGE_URL}}" class="basket-item-image-link">
+								<a href="/catalog{{DETAIL_PAGE_URL}}" class="basket-item-image-link">
 							{{/DETAIL_PAGE_URL}}
 
 							<img class="basket-item-image" alt="{{NAME}}"
@@ -125,7 +125,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 							{{#DETAIL_PAGE_URL}}
 							 <a href="/catalog{{DETAIL_PAGE_URL}}" class="basket-item-info-name-link">
 							{{/DETAIL_PAGE_URL}}
-	
+
 							<span data-entity="basket-item-name">{{NAME}}</span>
 
 							{{#DETAIL_PAGE_URL}}
@@ -303,7 +303,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 			<td class="basket-items-list-item-amount">
 				<div class="basket-item-block-amount{{#NOT_AVAILABLE}} disabled{{/NOT_AVAILABLE}}"
 					data-entity="basket-item-quantity-block">
-					Количество: 
+					Количество:
 					<span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>
 					<div class="basket-item-amount-filed-block">
 						<input type="text" class="ttt basket-item-amount-filed" value="{{QUANTITY}}"

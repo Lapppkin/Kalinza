@@ -119,8 +119,8 @@
     transition: filter 0.3s ease-in-out;
     position: relative;
     @media (max-width: map_get($grid-breakpoints, sm)) {
-      min-height: 150px;
-      max-height: 150px;
+      min-height: 130px;
+      max-height: 130px;
     }
     &:hover {
       span {
@@ -178,6 +178,9 @@
       text-decoration: none;
       font-size: $fontsize-small;
       line-height: 1.2;
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: $fontsize-smaller;
+      }
       &:hover {
         color: $app-color-black;
         text-decoration: underline;
@@ -204,6 +207,7 @@
         width: 100%;
         max-width: 100%;
         text-align: center;
+        flex-wrap: wrap;
       }
     }
     &[data-entity="buttons-block"] {

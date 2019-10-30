@@ -3,6 +3,10 @@
 .blog {
   padding-top: 30px;
   padding-bottom: 30px;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
   &-all {
     display: flex;
@@ -10,11 +14,18 @@
     justify-content: center;
     margin-top: $size-padding-large;
     margin-bottom: $size-padding-small;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
   }
 
   &--title {
     text-align: center;
     margin-bottom: 40px;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      font-size: $fontsize-h4;
+    }
   }
   &--wrapper {
     margin-top: 15px;

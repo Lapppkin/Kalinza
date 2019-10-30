@@ -22,7 +22,7 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     @media (max-width: map_get($grid-breakpoints, sm)) {
-      min-height: 160px;
+      min-height: 130px;
     }
     &:hover {
       @include shadow-hover;
@@ -33,7 +33,7 @@
       height: 290px;
       position: relative;
       @media (max-width: map_get($grid-breakpoints, sm)) {
-        height: 160px;
+        height: 130px;
       }
       img {
         max-width: 100%;
@@ -63,6 +63,7 @@
         @media (max-width: map_get($grid-breakpoints, sm)) {
           font-size: $fontsize-h3;
           flex-basis: 50%;
+          line-height: 1.1;
         }
         span {
           flex-basis: 100%;

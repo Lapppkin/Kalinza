@@ -345,7 +345,7 @@ $shops = array(
     <div class="container container-fix">
 		<div class="row">
             <!--города-->
-            <div class="col-4 shops-citites">
+            <div class="col-md-4 col-sm-12 shops-citites">
 
                 <? reset($cities); foreach ($cities as $city_id => $city): ?>
                 <!--город <?= $city ?>-->
@@ -402,7 +402,7 @@ $shops = array(
             </div>
 
             <!--карта-->
-            <div class="col-8 shops-map">
+            <div class="col-md-8 col-sm-12 shops-map">
                 <div class="shops-map--wrapper" id="map"></div>
             </div>
 

@@ -272,6 +272,10 @@ final class Helper
             $APPLICATION->GetCurPage(FALSE) === '/catalog/'
             || $APPLICATION->GetCurPage(FALSE) === '/' . LANGUAGE_ID . '/catalog/'
         ) return 'catalog_index';
+        elseif (
+            $APPLICATION->GetCurPage(FALSE) === '/favorites/'
+            || $APPLICATION->GetCurPage(FALSE) === '/' . LANGUAGE_ID . '/favorites/'
+        ) return 'favorites';
         elseif (\CSite::InDir('/catalog/')) return 'catalog';
         return 'inner';
     }

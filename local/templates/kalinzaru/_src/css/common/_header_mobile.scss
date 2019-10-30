@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 101;
   @include shadow-hover;
   @media (max-width: map_get($grid-breakpoints, sm)) {
     display: flex;
@@ -35,6 +35,8 @@
   &--logo {
     margin-left: 15px;
     margin-right: 15px;
+    flex-grow: 1;
+    text-align: center;
     a {
       img {
         max-width: 115px;
@@ -42,7 +44,7 @@
     }
   }
   &--cart {
-    margin-left: auto;
+    margin-left: 40px;
     margin-right: 10px;
     position: relative;
     &-counter {
@@ -102,11 +104,12 @@
   &--header {
     flex-basis: 100%;
     height: 42px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid $app-color-delimiter;
+
   }
   &--close {
     width: 35px;

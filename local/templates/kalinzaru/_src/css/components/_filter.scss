@@ -111,7 +111,7 @@
       color: $app-color-black;
     }
     .bx-filter-param-text {
-      color: $app-color-border;
+      color: $app-color-gray-light;
     }
     &.disabled {
       opacity: 0.2;
@@ -197,4 +197,11 @@
     margin-right: 5px;
     color: $app-color-primary;
   }
+}
+
+.bx-touch .bx-filter .bx-filter-popup-result {
+  background-color: $app-color-active;
+  color: $app-color-white;
+  font-size: 17px !important;
+  border-color: $app-color-active;
 }

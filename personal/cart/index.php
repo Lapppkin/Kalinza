@@ -149,7 +149,7 @@ $APPLICATION->SetTitle("Корзина");
             "PAGE_ELEMENT_COUNT" => "5",
             "LINE_ELEMENT_COUNT" => "3",
             "TEMPLATE_THEME" => "site",
-            "DETAIL_URL" => "#SITE_DIR#",
+            "DETAIL_URL" => "/catalog/#SITE_DIR#",
             "CACHE_TYPE" => "N",
             "CACHE_TIME" => "36000000",
             "CACHE_GROUPS" => "N",
@@ -189,8 +189,8 @@ $APPLICATION->SetTitle("Корзина");
     <h2>Оформление заказа</h2>
     <div class="order_makers">
          <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.order.ajax", 
-	"kalinzaru", 
+	"bitrix:sale.order.ajax",
+	"kalinzaru",
 	array(
 		"ACTION_VARIABLE" => "soa-action",
 		"ADDITIONAL_PICT_PROP_2" => "-",
@@ -201,7 +201,7 @@ $APPLICATION->SetTitle("Корзина");
 		"ADDITIONAL_PICT_PROP_7" => "-",
 		"ADDITIONAL_PICT_PROP_8" => "-",
 		"ALLOW_APPEND_ORDER" => "N",
-		"ALLOW_AUTO_REGISTER" => "N",
+		"ALLOW_AUTO_REGISTER" => "Y",
 		"ALLOW_NEW_PROFILE" => "N",
 		"ALLOW_USER_PROFILES" => "N",
 		"BASKET_IMAGES_SCALING" => "no_scale",
@@ -215,7 +215,7 @@ $APPLICATION->SetTitle("Корзина");
 		"DELIVERIES_PER_PAGE" => "10",
 		"DELIVERY_FADE_EXTRA_SERVICES" => "N",
 		"DELIVERY_NO_AJAX" => "N",
-		"DELIVERY_NO_SESSION" => "N",
+		"DELIVERY_NO_SESSION" => "Y",
 		"DELIVERY_TO_PAYSYSTEM" => "d2p",
 		"DISABLE_BASKET_REDIRECT" => "Y",
 		"DISPLAY_IMG_HEIGHT" => "90",

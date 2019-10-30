@@ -76,7 +76,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 						?>
 						<div class="basket-item-block-image<?=(!isset($mobileColumns['PREVIEW_PICTURE']) ? ' hidden-xs' : '')?>">
 							{{#DETAIL_PAGE_URL}}
-								<a href="{{DETAIL_PAGE_URL}}" class="basket-item-image-link">
+								<a href="/catalog{{DETAIL_PAGE_URL}}" class="basket-item-image-link">
 							{{/DETAIL_PAGE_URL}}
 
 							<img class="basket-item-image" alt="{{NAME}}"

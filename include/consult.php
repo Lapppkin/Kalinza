@@ -14,7 +14,7 @@
                             </div>
                             <div class="form-item">
                                 <label for="consult-phone" hidden></label>
-                                <input type="text" name="phone" id="consult-phone" required placeholder="Ваш телефон/email *">
+                                <input type="text" name="phone" id="consult-phone" required placeholder="Ваш телефон *">
                             </div>
                             <div class="form-item">
                                 <button type="submit" class="btn">Отправить</button>

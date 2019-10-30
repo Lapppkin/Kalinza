@@ -44,6 +44,13 @@ $nav-height: 40px;
         align-items: center;
         color: $app-color-white;
         text-decoration: none;
+        &[href="/catalog/skidki/"] {
+          background-color: $app-color-active;
+          text-transform: uppercase;
+          &:hover {
+            background-color: $app-color-active-hover;
+          }
+        }
         &:hover {
           background-color: $app-color-secondary;
           text-decoration: none;

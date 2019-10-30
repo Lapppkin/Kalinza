@@ -32,6 +32,9 @@
       align-items: center;
       a {
         padding: 5px 10px;
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+          font-size: $fontsize-h5;
+        }
       }
       div {
         padding: 5px 10px;

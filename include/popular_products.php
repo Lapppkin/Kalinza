@@ -6,7 +6,10 @@
                 <h2 class="popular-products--title col text-center">Популярные контактные линзы</h2>
                 <div class="popular-products--wrapper">
                     <?php
-                    $trendFilter = array();
+                    $trendFilter = array(
+                        'SECTION_ID' => 18,
+                        'PROPERTY_TREND' => 'Y',
+                    );
                     $APPLICATION->IncludeComponent(
                         'bitrix:catalog.section',
                         'popular_products',
@@ -31,7 +34,7 @@
                             'COMPATIBLE_MODE'                 => 'N',
                             'COMPONENT_TEMPLATE'              => 'bootstrap_v5',
                             'CONVERT_CURRENCY'                => 'N',
-                            'CUSTOM_FILTER'                   => '{"CLASS_ID":"CondGroup","DATA":{"All":"AND","True":"True"},"CHILDREN":[{"CLASS_ID":"CondIBSection","DATA":{"logic":"Equal","value":126}}]}',
+                            //'CUSTOM_FILTER'                   => '{"CLASS_ID":"CondGroup","DATA":{"All":"AND","True":"True"},"CHILDREN":[{"CLASS_ID":"CondIBSection","DATA":{"logic":"Equal","value":126}}]}',
                             'DETAIL_URL'                      => '/catalog/#SECTION_CODE#/#CODE#/',
                             'DISABLE_INIT_JS_IN_COMPONENT'    => 'N',
                             'DISPLAY_BOTTOM_PAGER'            => 'N',
@@ -87,7 +90,7 @@
                             'PRODUCT_BLOCKS_ORDER'            => 'price,props,sku,quantityLimit,quantity,buttons',
                             'PRODUCT_DISPLAY_MODE'            => 'N',
                             'PRODUCT_ID_VARIABLE'             => 'id',
-                            'PRODUCT_PROPERTIES'              => [],
+                            'PRODUCT_PROPERTIES'              => [0 => 'TRENDS'],
                             'PRODUCT_PROPS_VARIABLE'          => 'prop',
                             'PRODUCT_QUANTITY_VARIABLE'       => '',
                             'PRODUCT_ROW_VARIANTS'            => "[{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false},{'VARIANT':'6','BIG_DATA':false}]",

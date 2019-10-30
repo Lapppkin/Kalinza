@@ -95,6 +95,22 @@
   }
 }
 
+body.favorites .catalog-section {
+  justify-content: flex-start;
+  .product-item-container {
+    flex-basis: calc(25% - 20px);
+    width: calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    margin-right: 20px;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      flex-basis: calc(50% - 15px);
+      width: calc(50% - 15px);
+      max-width: calc(50% - 15px);
+      margin-right: 15px;
+    }
+  }
+}
+
 // CATALOG ELEMENT
 
 .bx-catalog-element {

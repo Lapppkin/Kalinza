@@ -54,7 +54,7 @@
         phoneMask: function (_this) {
             if ($.fn.inputmask) {
                 _this.inputmask({
-                    mask: '+9 999 999-99-99',
+                    mask: '+7 999 999-99-99',
                     placeholder: '*'
                 });
             }

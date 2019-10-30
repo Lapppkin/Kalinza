@@ -83,6 +83,7 @@ table.basket-items-list-table {
         vertical-align: middle;
         @media (max-width: map_get($grid-breakpoints, sm)) {
           padding-bottom: 0;
+          padding-top: 0;
         }
         .basket-item-price-current {
           display: none;

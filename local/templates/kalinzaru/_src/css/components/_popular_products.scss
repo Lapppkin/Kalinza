@@ -3,9 +3,17 @@
 .popular-products {
   margin-top: $size-padding-large;
   margin-bottom: $size-padding-large;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    margin-top: $size-padding;
+    margin-bottom: $size-padding;
+  }
 
   &--title {
     margin-bottom: $size-padding;
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      margin-bottom: 10px;
+      font-size: $fontsize-h5;
+    }
   }
 
   &--wrapper {
@@ -32,6 +40,11 @@
   display: flex;
   height: 100%;
   max-height: 335px;
+  min-height: 335px;
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    max-height: 270px;
+    min-height: 270px;
+  }
   .product-item {
     min-height: 100%;
   }

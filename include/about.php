@@ -10,7 +10,7 @@ use core\Helper;
             <div class="about-us--wrapper col-12">
 
                 <div class="find-yours about-us--item">
-                    <a href="/catalog/">
+                    <a href="/nashi-magaziny/">
                         <div class="about-us--item--image">
                             <img src="<?= SITE_DIR . 'include/images/find-optics.jpg' ?>" alt="Найди свою оптику">
                         </div>
