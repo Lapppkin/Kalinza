@@ -48,20 +48,12 @@ use core\Helper;
 
 <div class="header--header--contacts">
     <div class="header--header--contacts-phone">
-        <a href="tel:88001234567">8-800-123-45-67</a>
+        <?php $APPLICATION->IncludeFile('/include/company_phone.php'); ?>
     </div>
     <div class="header--header--contacts-callback">
         <a href="#" data-toggle="modal" data-target="#modal--callback">Заказать звонок</a>
     </div>
     <div class="header--header--contacts-messengers">
-        <a href="http://t-do.ru/kalinza" class="messenger-icon messenger-icon-telegram" rel="nofollow" target="_blank">
-            <?= Helper::renderIcon('telegram') ?>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=79182447228" class="messenger-icon messenger-icon-whatsapp" rel="nofollow" target="_blank">
-            <?= Helper::renderIcon('whatsapp') ?>
-        </a>
-        <a href="viber://chat?number=79182447228" class="messenger-icon messenger-icon-viber" rel="nofollow" target="_blank">
-            <?= Helper::renderIcon('viber') ?>
-        </a>
+        <? $APPLICATION->IncludeFile('/include/messenger_icons_short.php') ?>
     </div>
 </div>

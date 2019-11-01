@@ -10,6 +10,7 @@
   left: 0;
   right: 0;
   z-index: 101;
+  user-select: none;
   @include shadow-hover;
   @media (max-width: map_get($grid-breakpoints, sm)) {
     display: flex;
@@ -79,6 +80,7 @@
   background-color: $app-color-white;
   color: $app-color-black;
   z-index: -99;
+  user-select: none;
   &.active {
     display: flex;
     z-index: 1000;

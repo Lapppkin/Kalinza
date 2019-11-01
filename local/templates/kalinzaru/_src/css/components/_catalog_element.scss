@@ -24,8 +24,10 @@
       display: flex;
       justify-content: center;
       min-height: 386px;
+      max-width: 364px;
       @media (max-width: map_get($grid-breakpoints, sm)) {
         min-height: 280px;
+        max-width: 100%;
       }
       > a {
         cursor: pointer;

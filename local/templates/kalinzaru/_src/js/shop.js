@@ -58,8 +58,9 @@ var shop = {
                 quantity: quantity
             },
         }).done(function (response) {
-            var title = !response ? 'Корзина' : 'Ошибка';
-            var body = !response ? 'Товар добавлен в корзину.' : 'Ошибка при добавлении товара в корзину.';
+            var result = parseInt(JSON.parse(response));
+            var title = result > 0 ? 'Корзина' : 'Ошибка';
+            var body = result > 0 ? 'Товар добавлен в корзину.' : 'Ошибка при добавлении товара в корзину.';
             openInfoModal(title, body);
         }).fail(function (error) {
             console.error(error);

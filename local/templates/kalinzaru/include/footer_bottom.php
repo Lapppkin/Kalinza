@@ -26,17 +26,14 @@ use core\Helper;
 
                 <div class="footer--bottom--info">
                     <div class="footer--bottom--info-content">
-                        <p>ИНН 231293273210</p>
-                        <p>ОКТМО 03701000</p>
-                        <p>ОКПО 0166120758</p>
+                        <p>ОГРНИП 309231117000055</p>
                     </div>
                 </div>
 
                 <div class="footer--bottom--contacts">
                     <div class="footer--bottom--contacts-content">
-                        <p><a href="tel:88001234567">8-800-123-45-67</a></p>
-                        <p><a href="tel:+78612921640">+7 861 292-16-40</a></p>
-                        <p><a href="mailto:info@kalinza.ru">info@kalinza.ru</a></p>
+                        <p><?php $APPLICATION->IncludeFile('/include/company_phone.php'); ?></p>
+                        <p><?php $APPLICATION->IncludeFile('/include/company_email.php'); ?></p>
                     </div>
                 </div>
 
