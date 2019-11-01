@@ -192,20 +192,23 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
             <!--цена-->
             <div class="catalog-element-price">
-                <? if (!empty($arResult["PROPERTIES"]["skidka"]["VALUE"])): ?>
-                    <div class="price_old"><?= $arResult["PROPERTIES"]["skidka"]["VALUE"] ?> ₽</div>
+                <? if ($arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] < $arResult['PRICES']["BASE"]["VALUE"]): ?>
+                    <div class="price_old"><?= $arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] ?> ₽</div>
                 <? endif; ?>
                 <div class="price_new"><?= $arResult['PRICES']["BASE"]["VALUE"] ?> ₽</div>
             </div>
 
             <!--добавить в корзину-->
             <div class="catalog-element-addtocart">
-                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart" name="nazvanie_knopki" value="Добавить в корзину" form="select-properties">
+                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart" name="nazvanie_knopki" value="Добавить в корзину" form="select-properties"
+                    data-product-id="<?= $arResult['ID'] ?>"
+                    data-quantity="1"
+                >
             </div>
 
             <!--купить в один клик-->
             <div class="catalog-element-buyoneclick">
-                <a href="javascript:void()">Купить в 1 клик</a>
+                <a href="javascript:void(0)">Купить в 1 клик</a>
             </div>
 
         </div>

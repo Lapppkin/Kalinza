@@ -180,5 +180,7 @@ $displayModeClass = $arParams['DISPLAY_MODE'] === 'compact' ? ' basket-items-lis
 		);
 
 } else {
-	ShowError($arResult['ERROR_MESSAGE']);
+	ShowError($arResult['ERROR_MESSAGE']); ?>
+    <p style="font-size:1.1em;">Добавьте товары в корзину и подарок появится в списке.</p>
+<?
 }

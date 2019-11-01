@@ -15,4 +15,5 @@ use Bitrix\Main\Localization\Loc;
 				'#A2#' => '</a>'
 			))?>
 	</div>
+    <div class="bx-soa-empty-cart-desc-add">Добавьте товары в корзину и подарок появится в списке.</div>
 </div>

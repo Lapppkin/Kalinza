@@ -16,7 +16,7 @@
                         <h4>Детские оправы</h4>
                     </div>
                 </a>
-                <a class="offers-catalog--item" href="/blog/chto-nuzhno-znat-o-kontaktnykh-linzakh/">
+                <a class="offers-catalog--item" href="/besplatnaya-proverka-zreniya/">
                     <div class="offers-catalog--item--image">
                         <img src="<?= SITE_DIR . 'include/images/choise.jpg' ?>" alt="Подобрать линзы"></div>
                     <div class="offers-catalog--item--text align-right">

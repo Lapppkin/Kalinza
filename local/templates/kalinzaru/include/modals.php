@@ -205,3 +205,22 @@ use core\Helper;
     </div>
 </div>
 <!--/preview modal-->
+
+<!--info modal-->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal--info">
+    <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><?= Helper::renderIcon('close', 'color-primary') ?></span>
+        </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <img src="<?= SITE_TEMPLATE_PATH . '/images/svg/logo.svg' ?>" alt="kalinza">
+                </div>
+                <h5 class="modal-title" id="modal--info-title"></h5>
+            </div>
+            <div class="modal-body" id="modal--info-body"></div>
+        </div>
+    </div>
+</div>
+<!--/info modal-->

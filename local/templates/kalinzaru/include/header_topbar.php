@@ -31,7 +31,7 @@ use core\Helper;
             "MENU_THEME"            => "",
             "CACHE_SELECTED_ITEMS"  => "N",
             "MENU_CACHE_GET_VARS"   => array(),
-            "MAX_LEVEL"             => "4",
+            "MAX_LEVEL"             => "2",
             "CHILD_MENU_TYPE"       => "",
             "USE_EXT"               => "Y",
             "DELAY"                 => "N",

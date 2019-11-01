@@ -134,14 +134,14 @@ use core\Helper;
                         <?
                         if ($arParams['SHOW_OLD_PRICE'] === 'Y') {
                             ?>
-                            <span class="product-item-price-old" id="<?= $itemIds['PRICE_OLD'] ?>"
+                            <div class="product-item-price-old" id="<?= $itemIds['PRICE_OLD'] ?>"
 								<?= ($price['RATIO_PRICE'] >= $price['RATIO_BASE_PRICE'] ? 'style="display: none;"' : '') ?>>
 								<?= $price['PRINT_RATIO_BASE_PRICE'] ?>
-							</span>&nbsp;
+							</div>
                             <?
                         }
                         ?>
-                        <span class="product-item-price-current" id="<?= $itemIds['PRICE'] ?>">
+                        <div class="product-item-price-current" id="<?= $itemIds['PRICE'] ?>">
 							<?
                             if (!empty($price)) {
                                 if ($arParams['PRODUCT_DISPLAY_MODE'] === 'N' && $haveOffers) {
@@ -158,7 +158,7 @@ use core\Helper;
                                 }
                             }
                             ?>
-						</span>
+						</div>
                     </div>
                     <?
                     break;

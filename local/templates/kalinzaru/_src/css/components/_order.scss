@@ -99,6 +99,10 @@ table.basket-items-list-table {
             justify-content: center;
           }
         }
+        &[data-id="8174"] {
+          opacity: 0;
+          pointer-events: none;
+        }
       }
       .basket-items-list-item-price {
         @media (max-width: map_get($grid-breakpoints, sm)) {
@@ -119,6 +123,9 @@ table.basket-items-list-table {
       }
       .basket-items-list-item-remove {
 
+      }
+      .basket-item-block-actions {
+        opacity: 1;
       }
     }
   }

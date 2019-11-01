@@ -1,6 +1,9 @@
 // FOOTER MENU
 
 .footer--menu {
+  @media (max-width: map_get($grid-breakpoints, sm)) {
+    display: none;
+  }
 
   &--wrapper {
     display: flex;

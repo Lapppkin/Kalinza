@@ -14,11 +14,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.
 
 global $DB;
 
-if (
-    \CModule::IncludeModule("sale")
-    && \CModule::IncludeModule("catalog")
-    && \CModule::IncludeModule("iblock")
-) {
+if (\CModule::IncludeModule("sale") && \CModule::IncludeModule("catalog") && \CModule::IncludeModule("iblock")) {
 
     $messages = [
         0 => 'Спасибо! Ваш отзыв успешно добавлен.',

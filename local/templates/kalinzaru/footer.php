@@ -43,6 +43,7 @@ use Bitrix\Main\Application;
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/svg_localstorage.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/favorites.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/reviews.min.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/shop.min.js');
         ?>
 
         <div style="display:none;">

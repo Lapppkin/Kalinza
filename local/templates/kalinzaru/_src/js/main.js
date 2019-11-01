@@ -285,7 +285,6 @@
     $("[href='#top']").mPageScroll2id();
 
     kalinza.accordion();
-    kalinza.quantity();
     kalinza.mobileMenu();
     kalinza.mobileFilter();
     kalinza.imageChanger();

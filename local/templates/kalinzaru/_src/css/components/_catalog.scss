@@ -163,12 +163,17 @@ body.favorites .catalog-section {
 
 // PRICES
 
+.product-item-price-container {
+  //flex-wrap: wrap;
+}
+
 .product-item-price-old {
   flex-basis: 100%;
-  font-size: $fontsize-small;
+  font-size: $fontsize-smaller;
   color: $app-color-gray-lighter;
   white-space: nowrap;
   text-decoration: line-through;
+  margin-left: 5px;
 }
 .product-item-price-current {
   flex-basis: 100%;
@@ -177,6 +182,10 @@ body.favorites .catalog-section {
 
 .product-item-detail-price-current {
   font-size: $fontsize-h3;
+}
+
+.product-item-info-container[data-entity="price-block"] {
+  flex-wrap: wrap;
 }
 
 // TABS

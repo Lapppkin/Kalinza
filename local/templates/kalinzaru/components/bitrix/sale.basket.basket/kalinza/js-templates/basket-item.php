@@ -293,7 +293,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 					{{/SHOW_LOADING}}
 				</div>
 			</td>
-			<td class="basket-items-list-item-amount">
+			<td class="basket-items-list-item-amount" data-id="{{ID}}">
 				<div class="basket-item-block-amount{{#NOT_AVAILABLE}} disabled{{/NOT_AVAILABLE}}"
 					data-entity="basket-item-quantity-block">
 					<span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>

@@ -22,7 +22,7 @@ if ($APPLICATION->GetCurDir() === '/catalog/') {
             "COMMON_SHOW_CLOSE_POPUP"                      => "N",
             "PRODUCT_SUBSCRIPTION"                         => "Y",
             "SHOW_DISCOUNT_PERCENT"                        => "N",
-            "SHOW_OLD_PRICE"                               => "N",
+            "SHOW_OLD_PRICE"                               => "Y",
             "SHOW_MAX_QUANTITY"                            => "N",
             "MESS_BTN_BUY"                                 => "Купить",
             "MESS_BTN_ADD_TO_BASKET"                       => "Купить",

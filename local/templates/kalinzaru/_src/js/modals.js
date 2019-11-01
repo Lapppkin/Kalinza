@@ -43,6 +43,21 @@ function openAuthModal() {
 }
 
 /**
+ * Информационное окно.
+ *
+ * @param title
+ * @param body
+ */
+function openInfoModal (title, body) {
+    $('#modal--info-title').text(title);
+    $('#modal--info-body').html(body);
+    $('#modal--info').modal('show').on('hidden.bs.modal', function (e) {
+        $('#modal--info-title').empty();
+        $('#modal--info-body').empty();
+    });
+}
+
+/**
  * Предпросмотр товара в модальном окне.
  *
  * @param product_id
@@ -58,7 +73,7 @@ function openPreviewModal (product_id) {
     }).done(function (response) {
         $('#preview-body').html(response);
         $('#modal--preview').modal('show');
-    }).fail(function (response) {
-        console.log(response);
+    }).fail(function (error) {
+        console.log(error);
     });
 }

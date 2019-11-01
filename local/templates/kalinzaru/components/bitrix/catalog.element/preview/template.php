@@ -165,15 +165,18 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
             <!--цена-->
             <div class="catalog-element-price">
-                <? if (!empty($arResult["PROPERTIES"]["skidka"]["VALUE"])): ?>
-                    <div class="price_old"><?= $arResult["PROPERTIES"]["skidka"]["VALUE"] ?> ₽</div>
+                <? if ($arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] < $arResult['PRICES']["BASE"]["VALUE"]): ?>
+                    <div class="price_old"><?= $arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] ?> ₽</div>
                 <? endif; ?>
                 <div class="price_new"><?= $arResult['PRICES']["BASE"]["VALUE"] ?> ₽</div>
             </div>
 
             <!--добавить в корзину-->
             <div class="catalog-element-addtocart">
-                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart" name="nazvanie_knopki" value="Добавить в корзину" form="select-properties-<?= $arResult['ID'] ?>">
+                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart" name="nazvanie_knopki" value="Добавить в корзину" form="select-properties-<?= $arResult['ID'] ?>"
+                    data-product-id="<?= $arResult['ID'] ?>"
+                    data-quantity="1"
+                >
             </div>
 
             <!--вернуться к покупкам-->
@@ -185,7 +188,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
         <div class="catalog-element-price-info">Цены на сайте и в салонах оптики могут отличаться.</div>
 
-        <div class="catalog-element-more"><a href="<?= $arResult['DETAIL_PAGE_URL'] ?>">Подробнее о товаре...</a></div>
+        <div class="catalog-element-more"><a href="/catalog<?= $arResult['DETAIL_PAGE_URL'] ?>">Подробнее о товаре...</a></div>
 
     </div>
 
