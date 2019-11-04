@@ -220,6 +220,7 @@ use core\Helper;
                 <h5 class="modal-title" id="modal--info-title"></h5>
             </div>
             <div class="modal-body" id="modal--info-body"></div>
+            <div class="modal-footer" id="modal--info-footer"></div>
         </div>
     </div>
 </div>

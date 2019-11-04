@@ -47,13 +47,14 @@ function openAuthModal() {
  *
  * @param title
  * @param body
+ * @param footer
  */
-function openInfoModal (title, body) {
+function openInfoModal (title, body, footer) {
     $('#modal--info-title').text(title);
     $('#modal--info-body').html(body);
+    $('#modal--info-footer').html(footer);
     $('#modal--info').modal('show').on('hidden.bs.modal', function (e) {
-        $('#modal--info-title').empty();
-        $('#modal--info-body').empty();
+        $('#modal--info-title, #modal--info-body, #modal--info-footer').empty();
     });
 }
 
