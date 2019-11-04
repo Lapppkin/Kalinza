@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "matiaspub/bx-api-docs": "^16.5"
+    },
+    "require": {
+        "ext-json": "*"
     }
 }
