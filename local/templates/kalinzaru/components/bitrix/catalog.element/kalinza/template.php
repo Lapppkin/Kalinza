@@ -216,10 +216,12 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     data-quantity="1">
             </div>
 
+            <? /*
             <!--купить в один клик-->
             <div class="catalog-element-buyoneclick">
                 <a href="javascript:void(0)">Купить в 1 клик</a>
             </div>
+            */ ?>
 
         </div>
 
