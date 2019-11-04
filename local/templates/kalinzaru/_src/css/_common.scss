@@ -284,6 +284,7 @@ input {
       position: relative;
       @include redularfont;
       font-weight: 400;
+      line-height: 1.1;
       //&:before {
       //  content: "";
       //  position: absolute;
@@ -357,7 +358,6 @@ input {
   user-select: none;
   &:hover {
     text-decoration: none;
-    //background-color: $app-fill2;
     color: $app-color-white;
   }
   &[disabled] {
@@ -484,7 +484,7 @@ select {
   background-size: 10px;
   background-repeat: no-repeat;
   padding-right: 40px;
-  min-width: 192px;
+  min-width: 110px;
   &:focus {
     background-image: url("../images/svg/wrap.svg");
     outline: none;
@@ -545,10 +545,8 @@ select {
     border-color: $app-color-delimiter !important;
   }
   thead {
-    //background-color: $app-fill-light;
     th {
       border-width: 1px;
-      //@include condensedfont;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1.05em;
@@ -556,15 +554,12 @@ select {
   }
   tbody {
     th {
-      //@include condensedfont;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1.05em;
     }
     tr {
-      //&:nth-of-type(2n) {
-        //background-color: rgba($app-fill-light, 0.3);
-      //}
+      &:nth-of-type(2n) {}
       &:nth-of-type(2n+1) {
         background-color: $app-color-white;
       }

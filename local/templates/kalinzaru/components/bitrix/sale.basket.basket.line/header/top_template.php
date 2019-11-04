@@ -15,10 +15,14 @@ if (!$arResult["DISABLE_USE_BASKET"]  && $arResult['NUM_PRODUCTS'] == 0) {?>
     </p>
 <? }
 if (!$compositeStub) {
-    if ($arParams['SHOW_NUM_PRODUCTS'] == 'Y' && ($arResult['NUM_PRODUCTS'] > 0 || $arParams['SHOW_EMPTY_VALUES'] == 'Y')) {
-        echo '<p class="btn-cta" data-basket-count="'.$arResult['NUM_PRODUCTS'].'"><a href="'.$arParams['PATH_TO_BASKET'].'">' . Helper::renderIcon('cart') . 'В корзине - '.$arResult['NUM_PRODUCTS'].' '.$arResult['PRODUCT(S)'].'</a></p>';
-    }
-if ($arParams['SHOW_TOTAL_PRICE'] == 'Y'):?>
+    if ($arParams['SHOW_NUM_PRODUCTS'] == 'Y' && ($arResult['NUM_PRODUCTS'] > 0 || $arParams['SHOW_EMPTY_VALUES'] == 'Y')) { ?>
+        <p class="btn-cta" data-basket-count="<?= $arResult['NUM_PRODUCTS'] ?>">
+            <a href="<?= $arParams['PATH_TO_BASKET'] ?>">
+                <?= Helper::renderIcon('cart') ?> В корзине - <?= $arResult['NUM_PRODUCTS'] ?> <?= $arResult['PRODUCT(S)'] ?>
+            </a>
+        </p>
+    <? } ?>
+<? if ($arParams['SHOW_TOTAL_PRICE'] == 'Y'):?>
     <br <? if ($arParams['POSITION_FIXED'] == 'Y'): ?>class="hidden-xs"<?endif ?>>
         <span>
         <?= GetMessage('TSB1_TOTAL_PRICE') ?>

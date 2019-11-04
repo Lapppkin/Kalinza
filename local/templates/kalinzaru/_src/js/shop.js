@@ -10,17 +10,9 @@ var shop = {
      */
     eventListeners: function () {
 
-        // Add to cart
-        $(document).on('click', '.modal .catalog-element-addtocart input', function (e) {
-            e.preventDefault();
-            var product_id = $(this).data('product-id');
-            var quantity = $(this).data('quantity');
-            shop.addtocart(product_id, quantity);
-        });
-
         // Quantity
         $(document).on('click', '.quan', function () {
-            let step = $('input#box-1').is(':checked') ? 1 : 2;
+            let step = $('input#same-eyes') === 'undefined' ? 1 : $('input#same-eyes').is(':checked') ? 2 : 1;
             let input = $(this).siblings('input');
             let value = parseInt(input.val());
             if ($(this).hasClass('quan-plus')) {
@@ -41,30 +33,51 @@ var shop = {
             $(this).closest('.catalog-element-wrapper').find('.catalog-element-addtocart input').attr('data-quantity', value);
         });
 
+        // Add to cart
+        $(document).on('click', '[name="catalog-element-addtocart"]', function (e) {
+            e.preventDefault();
+            var form = $(this.form);
+            shop.addToCart(form);
+        });
+
+        // Change #MySelect
+        $(document).on('change', '#myselect', function () {
+            var value = $(this).val();
+            $('#mydiv').html(value);
+            $('#price_t').val(value);
+            $('#ob22').val($(this).find('option:selected').text());
+        });
+
     },
 
     /**
      * Добавление товара в корзину.
      *
-     * @param product_id
-     * @param quantity
+     * @param form
      */
-    addtocart: function (product_id, quantity) {
+    addToCart: function (form) {
         $.ajax({
             url: '/ajax/add_to_cart.php',
             method: 'post',
-            data: {
-                product_id: product_id,
-                quantity: quantity
-            },
+            data: form.serialize(),
+            dataType: 'json',
         }).done(function (response) {
-            var result = parseInt(JSON.parse(response));
-            var title = result > 0 ? 'Корзина' : 'Ошибка';
-            var body = result > 0 ? 'Товар добавлен в корзину.' : 'Ошибка при добавлении товара в корзину.';
+            var title = response.error ? 'Ошибка' : 'Корзина';
+            var body = response.product
+                ? '<div class="product"><div class="product-image"><a href="'+ response.product['url'] +'"><img src="'+ response.product['image'] +'" alt="'+ response.product['name'] +'"></a></div><div class="product-name">'+ response.product['name'] +'</div><div class="product-message">'+ response.message +'</div></div>'
+                : response.message;
             openInfoModal(title, body);
+            // Обновление корзины в навигации
+            $('.navigation .bx-basket').load(window.location.href + ' .navigation .bx-basket');
         }).fail(function (error) {
             console.error(error);
         });
+
+        // Обновление моб.корзины
+        var counter = $('.navigation .bx-basket a').text();
+        var res = counter.match(/(\d+)/g);
+        $('.header--mobile--cart-counter').html(res[0]);
+
     },
 
 };

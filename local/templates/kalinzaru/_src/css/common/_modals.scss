@@ -235,3 +235,30 @@
     width: 100%;
   }
 }
+
+#modal--info {
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-image {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 160px;
+      }
+    }
+    &-name {
+      flex-basis: 100%;
+      font-weight: 600;
+      @include middelfont;
+      margin-bottom: 10px;
+      color: $app-color-primary;
+    }
+    &-message {
+      flex-basis: 100%;
+    }
+  }
+}

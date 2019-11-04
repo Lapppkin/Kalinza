@@ -8,6 +8,10 @@
   cursor: pointer;
   height: 36px;
   margin: 5px;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
   .kalinza-icon {
     color: $app-color-gray-lighter;
     width: 16px;
@@ -22,5 +26,14 @@
   }
   &-plus {
     margin-left: 0;
+    &:hover {
+      .kalinza-icon {
+        color: $app-color-error;
+      }
+    }
+  }
+  input {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

@@ -119,7 +119,9 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
         <!--избранное-->
         <div class="catalog-element-favorites">
-            <div class="js-toggle-favorite" data-favorite-id="<?= $arResult['ID'] ?>" title="Добавить в избранное"><?= Helper::renderIcon('heart-filled') ?></div>
+            <div class="js-toggle-favorite" data-favorite-id="<?= $arResult['ID'] ?>" title="Добавить в избранное">
+                <?= Helper::renderIcon('heart-filled') ?>
+            </div>
         </div>
 
         <!--рейтинг-->
@@ -155,6 +157,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
         <!--выбор параметров-->
         <div class="catalog-element-properties">
+            <?/*<div class="catalog-element-properties--title">Выберите параметры</div>*/?>
             <div class="catalog-element-properties--content">
                 <? require_once __DIR__ . '/select_properties.php'; ?>
             </div>
@@ -173,10 +176,12 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
             <!--добавить в корзину-->
             <div class="catalog-element-addtocart">
-                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart" name="nazvanie_knopki" value="Добавить в корзину" form="select-properties-<?= $arResult['ID'] ?>"
+                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart"
+                    value="Добавить в корзину"
+                    form="select-properties-<?= $arResult['ID'] ?>"
+                    name="catalog-element-addtocart"
                     data-product-id="<?= $arResult['ID'] ?>"
-                    data-quantity="1"
-                >
+                    data-quantity="1">
             </div>
 
             <!--вернуться к покупкам-->

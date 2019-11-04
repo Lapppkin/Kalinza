@@ -119,9 +119,13 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     $ID_PICTYRE = $arResult['PROPERTIES']['dopf' . $i]['VALUE'];
                     $URL = \CFile::GetPath($ID_PICTYRE);
                     if (!empty($URL)) {
-                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE, ['width' => 366, 'height' => 9999], BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
-                        echo '<li><div id="f' . $i . '" data-img="' . $resizeImg['src'] . '" data-img-full="' . $URL . '"><img src="' . $resizeImg['src'] . '" width="55" alt="' . $URL . '"></div></li>';
-                    }
+                        $resizeImg = \CFile::ResizeImageGet($ID_PICTYRE, ['width' => 366, 'height' => 9999], BX_RESIZE_IMAGE_PROPORTIONAL_ALT); ?>
+                        <li>
+                            <div id="f<?= $i ?>" data-img="<?= $resizeImg['src'] ?>" data-img-full="<?= $URL ?>">
+                                <img src="<?= $resizeImg['src'] ?>" width="55" alt="<?= $URL ?>">
+                            </div>
+                        </li>
+                    <? }
                 }
                 ?>
             </ul>
@@ -145,7 +149,9 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
         <!--избранное-->
         <div class="catalog-element-favorites">
-            <div class="js-toggle-favorite" data-favorite-id="<?= $arResult['ID'] ?>" title="Добавить в избранное"><?= Helper::renderIcon('heart-filled') ?></div>
+            <div class="js-toggle-favorite" data-favorite-id="<?= $arResult['ID'] ?>" title="Добавить в избранное">
+                <?= Helper::renderIcon('heart-filled') ?>
+            </div>
         </div>
 
         <!--рейтинг-->
@@ -200,10 +206,12 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
             <!--добавить в корзину-->
             <div class="catalog-element-addtocart">
-                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart" name="nazvanie_knopki" value="Добавить в корзину" form="select-properties"
+                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart"
+                    value="Добавить в корзину"
+                    form="select-properties"
+                    name="catalog-element-addtocart"
                     data-product-id="<?= $arResult['ID'] ?>"
-                    data-quantity="1"
-                >
+                    data-quantity="1">
             </div>
 
             <!--купить в один клик-->
@@ -228,6 +236,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         || !empty($arResult["PROPERTIES"]["Diam"]["VALUE"])
         || !empty($arResult["PROPERTIES"]["ob"]["VALUE"])
     ): ?>
+
     <!--харастеристики-->
     <div class="catalog-element-options">
         <div class="catalog-element-options--title">
@@ -236,40 +245,40 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         <div class="catalog-element-options--content">
             <table>
                 <tbody>
-                    <? if (!empty($arResult["PROPERTIES"]["MANUFACTURER"]["VALUE"])) {
-                        echo '<tr><td>Производитель</td><td>' . $arResult["PROPERTIES"]["MANUFACTURER"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Srok"]["VALUE"])) {
-                        echo '<tr><td>Срок ношения</td><td>' . $arResult["PROPERTIES"]["Srok"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Shtyk"]["VALUE"])) {
-                        echo '<tr><td>Штук в упаковке</td><td>' . $arResult["PROPERTIES"]["Shtyk"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Vlago"]["VALUE"])) {
-                        echo '<tr><td>Влагосодержание</td><td>' . $arResult["PROPERTIES"]["Vlago"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Pronic"]["VALUE"])) {
-                        echo '<tr><td>Проницаемость</td><td>' . $arResult["PROPERTIES"]["Pronic"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Rezh"]["VALUE"])) {
-                        echo '<tr><td>Режим ношения</td><td>' . $arResult["PROPERTIES"]["Rezh"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Mat"]["VALUE"])) {
-                        echo '<tr><td>Материал</td><td>' . $arResult["PROPERTIES"]["Mat"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["Diam"]["VALUE"])) {
-                        echo '<tr><td>Диаметр</td><td>' . $arResult["PROPERTIES"]["Diam"]["VALUE"] . '</td></tr>';
-                    } ?>
-                    <? if (!empty($arResult["PROPERTIES"]["ob"]["VALUE"])) {
-                        echo '<tr><td>Объем</td><td>' . $arResult["PROPERTIES"]["ob"]["VALUE"] . '</td></tr>';
-                    } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["MANUFACTURER"]["VALUE"])) { ?>
+                        <tr><td>Производитель</td><td><?= $arResult["PROPERTIES"]["MANUFACTURER"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Srok"]["VALUE"])) { ?>
+                        <tr><td>Срок ношения</td><td><?= $arResult["PROPERTIES"]["Srok"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Shtyk"]["VALUE"])) { ?>
+                        <tr><td>Штук в упаковке</td><td><?= $arResult["PROPERTIES"]["Shtyk"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Vlago"]["VALUE"])) { ?>
+                        <tr><td>Влагосодержание</td><td><?= $arResult["PROPERTIES"]["Vlago"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Pronic"]["VALUE"])) { ?>
+                        <tr><td>Проницаемость</td><td><?= $arResult["PROPERTIES"]["Pronic"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Rezh"]["VALUE"])) { ?>
+                        <tr><td>Режим ношения</td><td><?= $arResult["PROPERTIES"]["Rezh"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Mat"]["VALUE"])) { ?>
+                        <tr><td>Материал</td><td><?= $arResult["PROPERTIES"]["Mat"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["Diam"]["VALUE"])) { ?>
+                        <tr><td>Диаметр</td><td><?= $arResult["PROPERTIES"]["Diam"]["VALUE"] ?></td></tr>
+                    <? } ?>
+                    <? if (!empty($arResult["PROPERTIES"]["ob"]["VALUE"])) { ?>
+                        <tr><td>Объем</td><td><?= $arResult["PROPERTIES"]["ob"]["VALUE"] ?></td></tr>
+                    <? } ?>
                 </tbody>
             </table>
         </div>
     </div>
     <? endif; ?>
 
-    <? if ('' != $arResult['DETAIL_TEXT']) { ?>
+    <? if ($arResult['DETAIL_TEXT'] != '') { ?>
     <!--описание-->
     <div class="catalog-element-description">
         <div class="catalog-element-description--title">
