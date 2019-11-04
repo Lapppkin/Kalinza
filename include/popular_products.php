@@ -6,9 +6,10 @@
                 <h2 class="popular-products--title col text-center">Популярные контактные линзы</h2>
                 <div class="popular-products--wrapper">
                     <?php
+                    global $trendFilter;
                     $trendFilter = array(
-                        'SECTION_ID' => 18,
-                        'PROPERTY_TREND' => 'Y',
+                        //'SECTION_ID' => 18,
+                        '=PROPERTY_SALELEADER_VALUE' => 'Да',
                     );
                     $APPLICATION->IncludeComponent(
                         'bitrix:catalog.section',
