@@ -4,6 +4,27 @@
 /** @var array $arResult */
 use Bitrix\Main;
 
+$props = array(
+    'COLOR',
+    'Diam',
+    'b_k',
+    'o_s',
+    'a_d',
+    'sf',
+    'ci',
+    'os',
+);
+foreach ($arResult['ITEMS']['AnDelCanBuy'] as $key => $ITEM) {
+    foreach ($props as $prop) {
+        if ($ITEM['PROPERTY_' . $prop . '_VALUE'] == false) {
+            unset($arResult['ITEMS']['AnDelCanBuy'][$key]['PROPERTY_' . $prop . '_VALUE']);
+            unset($arResult['ITEMS']['AnDelCanBuy'][$key]['~PROPERTY_' . $prop . '_VALUE']);
+            unset($arResult['ITEMS']['AnDelCanBuy'][$key]['PROPERTY_' . $prop . '_VALUE_ID']);
+            unset($arResult['ITEMS']['AnDelCanBuy'][$key]['~PROPERTY_' . $prop . '_VALUE_ID']);
+        }
+    }
+}
+
 $defaultParams = array(
 	'TEMPLATE_THEME' => 'blue'
 );

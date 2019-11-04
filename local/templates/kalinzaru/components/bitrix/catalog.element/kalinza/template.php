@@ -199,9 +199,11 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
             <!--цена-->
             <div class="catalog-element-price">
                 <? if ($arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] < $arResult['PRICES']["BASE"]["VALUE"]): ?>
-                    <div class="price_old"><?= $arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] ?> ₽</div>
+                    <div class="price_old"><?= $arResult['PRICES']["BASE"]["VALUE"] ?> ₽</div>
+                    <div class="price_new"><?= $arResult["PRICES"]["BASE"]["DISCOUNT_VALUE"] ?> ₽</div>
+                <? else: ?>
+                    <div class="price_new"><?= $arResult['PRICES']["BASE"]["VALUE"] ?> ₽</div>
                 <? endif; ?>
-                <div class="price_new"><?= $arResult['PRICES']["BASE"]["VALUE"] ?> ₽</div>
             </div>
 
             <!--добавить в корзину-->

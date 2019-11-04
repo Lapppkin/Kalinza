@@ -48,6 +48,11 @@ var shop = {
             $('#ob22').val($(this).find('option:selected').text());
         });
 
+        // Отключение ссылки на подарке
+        $(document).on('click', '.basket-items-list-item-container[data-product-id="577"] .basket-item-image-link, .basket-items-list-item-container[data-product-id="577"] .basket-item-info-name-link', function () {
+            return false;
+        });
+
     },
 
     /**

@@ -46,7 +46,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 
 <script id="basket-item-template" type="text/html">
 	<tr class="basket-items-list-item-container{{#SHOW_RESTORE}} basket-items-list-item-container-expend{{/SHOW_RESTORE}}"
-		id="basket-item-{{ID}}" data-entity="basket-item" data-id="{{ID}}">
+		id="basket-item-{{ID}}" data-entity="basket-item" data-id="{{ID}}" data-product-id="{{PRODUCT_ID}}">
 		{{#SHOW_RESTORE}}
 			<td class="basket-items-list-item-notification" colspan="<?=$restoreColSpan?>">
 				<div class="basket-items-list-item-notification-inner basket-items-list-item-notification-removed" id="basket-item-height-aligner-{{ID}}">
@@ -172,7 +172,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 											{
 												?>
 												{{#PROPS}}
-													<div class="basket-item-property<?=(!isset($mobileColumns['PROPS']) ? ' hidden-xs' : '')?>">
+													<div class="basket-item-property<?=(!isset($mobileColumns['PROPS']) ? ' hidden-xs' : '')?>" data-value="{{{VALUE}}}">
 														<div class="basket-item-property-name">
 															{{{NAME}}}
 														</div>
@@ -237,6 +237,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 												{{/IS_IMAGE}}
 											{{/SKU_BLOCK_LIST}}
 
+                                            <?/*
 											{{#HAS_SIMILAR_ITEMS}}
 												<div class="basket-items-list-item-double" data-entity="basket-item-sku-notification">
 													<div class="alert alert-info alert-dismissable text-center">
@@ -257,6 +258,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 													</div>
 												</div>
 											{{/HAS_SIMILAR_ITEMS}}
+                                            */?>
 											<?
 											break;
 										case 'columns':
@@ -293,7 +295,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 					{{/SHOW_LOADING}}
 				</div>
 			</td>
-			<td class="basket-items-list-item-amount" data-id="{{ID}}">
+			<td class="basket-items-list-item-amount" data-id="{{ID}}" data-product-id="{{PRODUCT_ID}}">
 				<div class="basket-item-block-amount{{#NOT_AVAILABLE}} disabled{{/NOT_AVAILABLE}}"
 					data-entity="basket-item-quantity-block">
 					<span class="basket-item-amount-btn-minus" data-entity="basket-item-quantity-minus"></span>
@@ -387,7 +389,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 			if ($useActionColumn)
 			{
 				?>
-				<td class="basket-items-list-item-remove hidden-xs">
+				<td class="basket-items-list-item-remove hidden-xs" data-id="{{ID}}" data-product-id="{{PRODUCT_ID}}">
 					<div class="basket-item-block-actions">
 						<span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
 						{{#SHOW_LOADING}}

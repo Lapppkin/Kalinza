@@ -19,6 +19,10 @@ table.basket-items-list-table {
   tbody {
     tr {
       border-bottom: 1px solid $app-color-delimiter;
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        display: flex !important;
+        flex-wrap: wrap;
+      }
       &:last-child {
         border-bottom: none;
       }
@@ -28,6 +32,8 @@ table.basket-items-list-table {
       .basket-items-list-item-descriptions {
         @media (max-width: map_get($grid-breakpoints, sm)) {
           padding-bottom: 0;
+          flex-basis: 100%;
+          margin-bottom: 10px;
         }
         details {
           display: none;
@@ -55,11 +61,14 @@ table.basket-items-list-table {
             }
             .basket-item-info-name {
               font-size: $fontsize-h5;
+              max-width: 200px;
+              min-width: 200px;
               &-link {
                 padding: 0;
               }
               @media (max-width: map_get($grid-breakpoints, sm)) {
                 flex-basis: 100%;
+                max-width: 100%;
                 text-align: center;
                 padding: 0;
               }
@@ -74,6 +83,9 @@ table.basket-items-list-table {
                   display: flex;
                   justify-content: center;
                 }
+                &[data-value=""] {
+                  display: none;
+                }
               }
             }
           }
@@ -82,8 +94,9 @@ table.basket-items-list-table {
       .basket-items-list-item-amount {
         vertical-align: middle;
         @media (max-width: map_get($grid-breakpoints, sm)) {
-          padding-bottom: 0;
-          padding-top: 0;
+          padding: 0;
+          flex-basis: 50%;
+          min-width: initial;
         }
         .basket-item-price-current {
           display: none;
@@ -99,19 +112,22 @@ table.basket-items-list-table {
             justify-content: center;
           }
         }
-        &[data-id="8174"] {
+        &[data-product-id="577"] {
           opacity: 0;
           pointer-events: none;
         }
       }
       .basket-items-list-item-price {
         @media (max-width: map_get($grid-breakpoints, sm)) {
-          padding-bottom: 0;
-          padding-top: 0;
+          padding: 0;
+          flex-basis: 50%;
         }
         .basket-item-block-price {
           display: flex;
           flex-wrap: wrap;
+          @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding: 0 20px;
+          }
           .basket-item-price-current {
             flex-basis: 100%;
             white-space: nowrap;
@@ -122,10 +138,13 @@ table.basket-items-list-table {
         }
       }
       .basket-items-list-item-remove {
-
+        &[data-product-id="577"] {
+          opacity: 0;
+          pointer-events: none;
+        }
       }
       .basket-item-block-actions {
-        opacity: 1;
+        opacity: 0.35;
       }
     }
   }
