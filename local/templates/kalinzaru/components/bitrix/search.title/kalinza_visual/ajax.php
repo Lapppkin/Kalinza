@@ -23,11 +23,11 @@ if (empty($arResult["CATEGORIES"]))
 			<div class="bx_item_block">
 				<?if (is_array($arElement["PICTURE"])):?>
 				<div class="bx_img_element">
-					<div class="bx_image" style="background-image: url('<?echo $arElement["PICTURE"]["src"]?>')"></div>
+					<div class="bx_image" style="background-image: url('<?= $arElement["PICTURE"]["src"]?>')"></div>
 				</div>
 				<?endif;?>
 				<div class="bx_item_element">
-					<a href="/catalog<?echo $arItem["URL"]?>"><?echo $arItem["NAME"]?></a>
+					<a href="/catalog<?echo $arItem["URL"]?>"><?= $arItem["NAME"]?></a>
 					<?
 					foreach($arElement["PRICES"] as $code=>$arPrice)
 					{

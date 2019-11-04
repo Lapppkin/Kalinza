@@ -204,6 +204,11 @@
             .on('click', menuFolder, function () {
                 $(this).find('.kalinza-icon').toggleClass('active');
                 $(this).next('ul').slideToggle();
+            })
+            // Открытие панели поиска
+            .on('click', '.header--mobile--search a', function (e) {
+                e.preventDefault();
+                $('.header--mobile--search-bar').slideToggle(200);
             });
 
         },

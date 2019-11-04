@@ -15,10 +15,6 @@ use core\Helper;
                     <a href="/search/">
                         <?= Helper::renderIcon('search') ?>
                     </a>
-
-                    <!--search bar-->
-                    <div class="header--mobile--search-bar"></div>
-
                 </div>
                 <div class="header--mobile--logo">
                     <a href="/" title="Главная">
@@ -31,6 +27,46 @@ use core\Helper;
                     </a>
                     <div class="header--mobile--cart-counter">0</div>
                 </div>
+
+                <!--search bar-->
+                <div class="header--mobile--search-bar">
+                    <? $APPLICATION->IncludeComponent(
+                        'bitrix:search.title',
+                        'kalinza_visual',
+                        array(
+                            'NUM_CATEGORIES'            => '1',
+                            'TOP_COUNT'                 => '0',
+                            'CHECK_DATES'               => 'N',
+                            'SHOW_OTHERS'               => 'Y',
+                            'PAGE'                      => SITE_DIR . 'search/',
+                            'CATEGORY_0_TITLE'          => GetMessage('SEARCH_GOODS'),
+                            'CATEGORY_0'                => array(
+                                0 => 'no',
+                            ),
+                            'CATEGORY_0_iblock_catalog' => '',
+                            'CATEGORY_OTHERS_TITLE'     => GetMessage('SEARCH_OTHER'),
+                            'SHOW_INPUT'                => 'Y',
+                            'INPUT_ID'                  => 'title-search-input-mobile',
+                            'CONTAINER_ID'              => 'title-search-result-mobile',
+                            'PRICE_CODE'                => array(
+                                0 => 'BASE',
+                            ),
+                            'SHOW_PREVIEW'              => 'Y',
+                            'PREVIEW_WIDTH'             => '75',
+                            'PREVIEW_HEIGHT'            => '75',
+                            'CONVERT_CURRENCY'          => 'Y',
+                            'COMPONENT_TEMPLATE'        => 'kalinza_visual',
+                            'ORDER'                     => 'date',
+                            'USE_LANGUAGE_GUESS'        => 'Y',
+                            'PRICE_VAT_INCLUDE'         => 'Y',
+                            'PREVIEW_TRUNCATE_LEN'      => '',
+                            'CURRENCY_ID'               => 'RUB',
+                        ),
+                        false
+                    ); ?>
+                    <div id="search-title-result-mobile"></div>
+                </div>
+
             </div>
         </div>
     </div>

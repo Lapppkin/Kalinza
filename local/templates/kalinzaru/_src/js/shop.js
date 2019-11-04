@@ -71,7 +71,8 @@ var shop = {
             var body = response.product
                 ? '<div class="product"><div class="product-image"><a href="'+ response.product['url'] +'"><img src="'+ response.product['image'] +'" alt="'+ response.product['name'] +'"></a></div><div class="product-name">'+ response.product['name'] +'</div><div class="product-message">'+ response.message +'</div></div>'
                 : response.message;
-            openInfoModal(title, body);
+            var footer = '<a href="/personal/cart/" class="btn btn-primary">Перейти в корзину</a> &nbsp;&nbsp; <button class="btn-transparent" data-dismiss="modal">Вернуться к покупкам</button>'
+            openInfoModal(title, body, footer);
             // Обновление корзины в навигации
             $('.navigation .bx-basket').load(window.location.href + ' .navigation .bx-basket');
         }).fail(function (error) {

@@ -91,6 +91,19 @@ body.index {
   }
 }
 
+.bx_searche {
+  .bx_item_block {}
+  .bx_img_element {
+    background: transparent !important;
+  }
+  .bx_item_element {
+    a {
+      font-size: $fontsize-normal !important;
+      line-height: initial;
+    }
+  }
+}
+
 .text-error {
   color: $app-color-error;
 }
