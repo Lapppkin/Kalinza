@@ -14,9 +14,11 @@
     @include br-small;
     padding: 30px 20px 20px;
     max-width: 100%;
+    min-width: 420px;
     @media (max-width: map_get($grid-breakpoints, sm)) {
       margin-right: 0;
       padding: 15px 20px;
+      min-width: 100%;
     }
 
     &-main {
@@ -25,7 +27,7 @@
       display: flex;
       justify-content: center;
       min-height: 386px;
-      max-width: 364px;
+      max-width: 100%;
       @media (max-width: map_get($grid-breakpoints, sm)) {
         min-height: 280px;
         max-width: 100%;
@@ -61,7 +63,7 @@
         }
         li {
           list-style: none;
-          margin: 0 20px 10px 0;
+          margin: 0 10px 10px 0;
           padding: 0;
           > div {
             cursor: pointer;
