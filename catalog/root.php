@@ -55,7 +55,8 @@ while ($arSection = $rsSection->Fetch()) {
 
                 <? foreach ($item['ITEMS'] as $subItem): ?>
                     <li <?= ($APPLICATION->GetCurPage() === '/' . implode('/', array($item['IBLOCK_TYPE_ID'], $item['CODE']))) ? ' class="active"' : '' ?>>
-                        <a href="/<?= implode('/', array($item['IBLOCK_TYPE_ID'], $item['CODE'], $subItem['CODE'])) ?>/">
+                        <a href="/<?= implode('/', array($item['IBLOCK_TYPE_ID'], $subItem['CODE'])) ?>/">
+                        <?/*<a href="/<?= implode('/', array($item['IBLOCK_TYPE_ID'], $item['CODE'], $subItem['CODE'])) ?>/">*/?>
                             <?= $subItem['NAME'] ?>
                         </a>
                     </li>
