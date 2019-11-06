@@ -51,7 +51,9 @@ while ($arSection = $rsSection->Fetch()) {
 
         <? foreach ($arResult as $item): ?>
             <ul class="col-lg-4 col-md-6 col-sm-12 catalog-root--section">
-                <h2 class="catalog-root--title"><?= $item['NAME'] ?></h2>
+                <h2 class="catalog-root--title">
+                    <a href="<?= $item['CODE'] ?>"><?= $item['NAME'] ?></a>
+                </h2>
 
                 <? foreach ($item['ITEMS'] as $subItem): ?>
                     <li <?= ($APPLICATION->GetCurPage() === '/' . implode('/', array($item['IBLOCK_TYPE_ID'], $item['CODE']))) ? ' class="active"' : '' ?>>

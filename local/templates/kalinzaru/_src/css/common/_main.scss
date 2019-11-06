@@ -57,53 +57,6 @@ body.index {
   display: none;
 }
 
-// SEARCH RESULTS
-
-.title-search-result {
-  display: none;
-  z-index: 2;
-  background-color: $app-color-white;
-  @include shadow;
-  padding: 20px;
-  &--wrapper {
-    &:last-child {
-      margin-top: 10px;
-      padding-top: 15px;
-      border-top: 1px solid $app-color-border;
-      font-size: $fontsize-smaller;
-      text-align: center;
-    }
-  }
-  .search-result {
-    &--item {
-      &:last-child a[href*="/search/"] {
-        padding: 10px 0;
-        font-size: $fontsize-smaller;
-        color: $app-color-secondary;
-        &:hover {
-          color: $app-color-primary;
-        }
-      }
-      a {
-
-      }
-    }
-  }
-}
-
-.bx_searche {
-  .bx_item_block {}
-  .bx_img_element {
-    background: transparent !important;
-  }
-  .bx_item_element {
-    a {
-      font-size: $fontsize-normal !important;
-      line-height: initial;
-    }
-  }
-}
-
 .text-error {
   color: $app-color-error;
 }

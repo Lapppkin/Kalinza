@@ -243,6 +243,15 @@ body.favorites .catalog-section {
     display: flex;
     flex-wrap: wrap;
   }
+  &--title {
+    a {
+      color: $app-color-primary;
+      text-decoration: none;
+      &:hover {
+        color: $app-color-black;
+      }
+    }
+  }
   &--section {
     display: flex;
     flex-wrap: wrap;

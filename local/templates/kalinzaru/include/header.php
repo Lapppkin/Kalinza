@@ -23,7 +23,7 @@ use core\Helper;
             'CATEGORY_0'                => array(
                 0 => 'no',
             ),
-            'CATEGORY_0_iblock_catalog' => '',
+            'CATEGORY_0_iblock_catalog' => CATALOG_DEFAULT_IBLOCK_ID,
             'CATEGORY_OTHERS_TITLE'     => GetMessage('SEARCH_OTHER'),
             'SHOW_INPUT'                => 'Y',
             'INPUT_ID'                  => 'title-search-input',

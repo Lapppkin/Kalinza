@@ -1,6 +1,7 @@
 // NAVIGATION (PAGINATION)
 
-[data-pagination-num] {
+[data-pagination-num],
+.search-page {
   .navigation {
     background-color: transparent;
     color: $app-color-black;
@@ -27,6 +28,7 @@
       }
     }
 
+    .navigation-pages,
     .pages {
       display: flex;
       align-items: center;
