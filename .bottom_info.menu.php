@@ -2,35 +2,35 @@
 $aMenuLinks = Array(
 	Array(
 		"Как заказать",
-		"/kak-zakazat/",
+		"/informaciya/kak-zakazat/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Информация о доставке",
-		"/dostavka-i-oplata/",
+		"/informaciya/dostavka-i-oplata/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Линзы почтой",
-		"/linzy-pochtoy/",
+		"/informaciya/linzy-pochtoy/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Оплата",
-		"/kak-oplatit",
+		"/informaciya/kak-oplatit/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Гарантии",
-		"/garantii-24-5/",
+		"/informaciya/garantii-24-5/",
 		Array(),
 		Array(),
 		""
@@ -38,30 +38,30 @@ $aMenuLinks = Array(
 
 	Array(
 		"Обмен/Возврат",
-		"/obmen-i-vozvrat/",
+		"/informaciya/obmen-i-vozvrat/",
 		Array(),
 		Array(),
 		""
 	),
-	Array(
-		"Вопрос - Ответ",
-		"/faq/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Блог",
-		"/blog/",
-		Array(),
-		Array(),
-		""
-	),
+//	Array(
+//		"Вопрос - Ответ",
+//		"/faq/",
+//		Array(),
+//		Array(),
+//		""
+//	),
 	Array(
 		"Сертификаты",
-		"/sertifikaty/",
+		"/informaciya/sertifikaty/",
 		Array(),
 		Array(),
 		""
 	),
+    Array(
+        "Блог",
+        "/blog/",
+        Array(),
+        Array(),
+        ""
+    ),
 );
