@@ -28,7 +28,7 @@ $APPLICATION->SetTitle("Поиск");
                 0 => "all",
             ),
             "arrFILTER_iblock_catalog" => array(
-                0 => "2",
+                0 => CATALOG_DEFAULT_IBLOCK_ID,
             ),
             "SHOW_WHERE" => "N",
             "SHOW_WHEN" => "N",

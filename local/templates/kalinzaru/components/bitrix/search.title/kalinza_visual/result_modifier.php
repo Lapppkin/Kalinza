@@ -37,9 +37,9 @@ foreach($arResult["CATEGORIES"] as $category_id => $arCategory)
 						while ($ar = $rsCatalog->Fetch())
 						{
 							if ($ar["PRODUCT_IBLOCK_ID"])
-								$arCatalogs[$ar["PRODUCT_IBLOCK_ID"]] = 1;
+								$arCatalogs[$ar["PRODUCT_IBLOCK_ID"]] = CATALOG_DEFAULT_IBLOCK_ID;
 							else
-								$arCatalogs[$ar["IBLOCK_ID"]] = 1;
+								$arCatalogs[$ar["IBLOCK_ID"]] = CATALOG_DEFAULT_IBLOCK_ID;
 						}
 					}
 				}
@@ -49,6 +49,9 @@ foreach($arResult["CATEGORIES"] as $category_id => $arCategory)
 					$arResult["ELEMENTS"][$arItem["ITEM_ID"]] = $arItem["ITEM_ID"];
 				}
 			}
+			if ($arItem['PARAM1'] !== 'catalog') {
+			    unset($arResult['CATEGORIES'][$category_id]['ITEMS'][$i]);
+            }
 		}
 	}
 }
