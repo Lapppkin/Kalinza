@@ -211,4 +211,7 @@ table.basket-items-list-table {
   .bx-soa-cart-total-line {
     font-size: 1em !important;
   }
+  &.bx-soa-cart-total-fixed {
+    padding-top: 20px !important;
+  }
 }
