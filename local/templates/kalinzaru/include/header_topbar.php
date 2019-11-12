@@ -22,9 +22,9 @@ use core\Helper;
 
     <? $APPLICATION->IncludeComponent(
         "bitrix:menu",
-        "topbar",
+        "topbar_kalinza",
         array(
-            "ROOT_MENU_TYPE"        => "header_topbar",
+            "ROOT_MENU_TYPE"        => "topbar",
             "MENU_CACHE_TYPE"       => "A",
             "MENU_CACHE_TIME"       => "36000000",
             "MENU_CACHE_USE_GROUPS" => "N",

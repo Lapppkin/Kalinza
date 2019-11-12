@@ -238,6 +238,18 @@
             });
         },
 
+        topbarMenu: function () {
+
+            $(document).on('click mouseover', '.header--topbar--left > ul.menu a', function (e) {
+                e.preventDefault();
+                $(this).siblings('ul.menu').toggleClass('active');
+            });
+
+            $(document).on('mouseleave', '.header--topbar--left > ul.menu a + ul.menu', function (e) {
+                $(this).removeClass('active');
+            });
+        },
+
 	};
 
     // При изменении размера окна
@@ -267,5 +279,6 @@
     kalinza.mobileMenu();
     kalinza.mobileFilter();
     kalinza.imageChanger();
+    kalinza.topbarMenu();
 
 })(jQuery);
