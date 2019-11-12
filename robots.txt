@@ -1,4 +1,6 @@
 User-Agent: *
+Disallow: /
+
 Disallow: /1
 Disallow: /*?*
 Disallow: /*index.php$

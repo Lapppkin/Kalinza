@@ -120,7 +120,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         <!--избранное-->
         <div class="catalog-element-favorites">
             <div class="js-toggle-favorite" data-favorite-id="<?= $arResult['ID'] ?>" title="Добавить в избранное">
-                <?= Helper::renderIcon('heart-filled') ?>
+                <?= Helper::renderIcon('heart-filled') ?> <span class="hidden-xs">&nbsp;Избранное</span>
             </div>
         </div>
 

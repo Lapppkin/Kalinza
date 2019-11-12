@@ -10,7 +10,7 @@
  */
 
 ?>
-<div class="catalog-element-reviews" data-product-id="<?= $PRODUCT_ID ?>">
+<div class="catalog-element-reviews" id="catalog-element-reviews" data-product-id="<?= $PRODUCT_ID ?>">
     <div class="catalog-element-reviews--title">
         <h4>Отзывы о товаре</h4>
     </div>
