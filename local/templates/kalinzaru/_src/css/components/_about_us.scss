@@ -131,6 +131,9 @@
         &:last-child {
           margin-bottom: 0;
         }
+        &.more {
+          display: none;
+        }
       }
       a {
         color: $app-color-primary;
@@ -138,6 +141,7 @@
         &:hover {
           text-decoration: underline;
         }
+        &.readmore {}
       }
     }
     &--image {

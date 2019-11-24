@@ -52,7 +52,7 @@ while ($arSection = $rsSection->Fetch()) {
         <? foreach ($arResult as $item): ?>
             <ul class="col-lg-4 col-md-6 col-sm-12 catalog-root--section">
                 <h2 class="catalog-root--title">
-                    <a href="<?= $item['CODE'] ?>"><?= $item['NAME'] ?></a>
+                    <a href="<?= $item['CODE'] ?>/"><?= $item['NAME'] ?></a>
                 </h2>
 
                 <? foreach ($item['ITEMS'] as $subItem): ?>

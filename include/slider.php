@@ -8,7 +8,7 @@
             "slider",
             array(
                 "IBLOCK_TYPE" => "content",
-                "IBLOCK_ID" => 12,
+                "IBLOCK_ID" => SLIDERS_IBLOCK_ID,
                 "NEWS_COUNT" => 999,
                 "SORT_BY1" => "SORT",
                 "SORT_ORDER1" => "ASC",

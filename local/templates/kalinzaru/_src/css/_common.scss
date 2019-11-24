@@ -959,6 +959,10 @@ font.errortext {
   }
 }
 
+.bx-session-message {
+  animation: none;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0);

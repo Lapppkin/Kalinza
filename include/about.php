@@ -21,9 +21,9 @@ use core\Helper;
                 </div>
 
                 <div class="kalinza-faces about-us--item">
-                    <a href="/kalinza-v-litsakh/">
+                    <a href="/company/kalinza-v-litsakh/">
                         <div class="about-us--item--image">
-                            <img src="<?= SITE_DIR . 'include/images/faces.png' ?>" alt="KALINZA в лицах">
+                            <img src="<?= SITE_DIR . 'include/images/kalinza-faces.jpg' ?>" alt="KALINZA в лицах">
                         </div>
                         <div class="about-us--item--title">
                             <h3><span>Kalinza</span> в лицах</h3>

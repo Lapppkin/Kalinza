@@ -92,10 +92,10 @@ if (\CModule::IncludeModule("sale") && \CModule::IncludeModule("catalog") && \CM
     $el = new \CIBlockElement;
     // Формируем поля элемента инфоблока отзыва
     $prop = [];
-    $prop[105] = $stars;
-    $prop[102] = $email;
-    $prop[103] = $phone;
-    $prop[104] = $PRODUCT_ID;
+    $prop[152] = $stars;
+    $prop[149] = $email;
+    $prop[150] = $phone;
+    $prop[151] = $PRODUCT_ID;
     $IBLOCK_ID = REVIEWS_IBLOCK_ID;
 
     $arLoadProductArray = [
@@ -116,7 +116,7 @@ if (\CModule::IncludeModule("sale") && \CModule::IncludeModule("catalog") && \CM
         $arEventFields = array(
             'URL' => "/bitrix/admin/iblock_element_edit.php?IBLOCK_ID=$iblock_id&type=site&ID=$id&lang=ru",
         );
-        //$error = CEvent::SendImmediate('USER_ADD_REVIEW', SITE_ID, $arEventFields, 'N', 86);
+        $error = \CEvent::SendImmediate('ADD_REVIEW', SITE_ID, $arEventFields, 'N', 88);
 
         print json_encode(array(
             'error' => 'N',

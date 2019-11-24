@@ -64,3 +64,32 @@ body.index {
 .text-bold {
   @include mediumfont;
 }
+
+// SPASIBO
+
+.spasibo {
+  justify-content: center;
+  &-container {
+    width: 100%;
+  }
+  &-block {
+    h4 {
+      padding-top: 10px;
+      font-weight: 300;
+    }
+    .block_0 {
+      margin: 0 auto;
+      width: 100%;
+    }
+    .block_2 {
+      margin: 0 auto;
+    }
+    .block_3 {
+      margin: 0 auto;
+      float: none;
+    }
+    .block_0 .form-control {
+      color: $app-color-white;
+    }
+  }
+}

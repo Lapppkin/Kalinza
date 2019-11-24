@@ -3,10 +3,10 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Спасибо");
 ?>
- <div class=" ">
-    <div class="container container-fix">
-        <div class="row">
-            <div class="col-md-12 ddfdf" style="margin:0 auto; text-align: center;">
+ <div class="col">
+    <div class="container container-fix spasibo-container">
+        <div class="row spasibo">
+            <div class="col-md-12 spasibo-block" style="margin:0 auto; text-align: center;">
 
                 <h1>Спасибо за покупку!<br>Ваш заказ принят в доставку</h1>
                 <h4>Обратите внимание <br>на наши специальные предложения</h4>

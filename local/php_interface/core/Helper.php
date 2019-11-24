@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace core;
 
@@ -88,10 +88,10 @@ final class Helper
      *
      * @return bool|int
      */
-    public static function getPluralForm(int $n, $returnFalseForUnknown = FALSE) {
+    public static function getPluralForm(int $n, $returnFalseForUnknown = false) {
         $n = abs($n);
         if ( ! defined('LANGUAGE_ID')) {
-            return (FALSE);
+            return (false);
         }
         // info at http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html?id=l10n/pluralforms
         switch (LANGUAGE_ID) {
@@ -107,7 +107,7 @@ final class Helper
                 break;
             default:
                 if ($returnFalseForUnknown) {
-                    $plural = FALSE;
+                    $plural = false;
                 } else {
                     $plural = (int)($n !== 1);
                 }
@@ -204,7 +204,7 @@ final class Helper
      */
     public static function resizeProductImage($image, $noimage = true, int $width = 333, int $height = 348, $method = BX_RESIZE_IMAGE_EXACT, int $quality = 90) {
         global $config;
-        return ($image) ?? $image['SRC'] ? CFile::ResizeImageGet($image['ID'], ['width' => $width, 'height' => $height], $method, true, false, false, $quality) : (($noimage) ? array('src' => SITE_TEMPLATE_PATH . '/images/noimage_preview.jpg', 'alt' => $config->site()->site_name, 'noimage' => true) : false);
+        return ($image) ?? $image['SRC'] ? \CFile::ResizeImageGet($image['ID'], ['width' => $width, 'height' => $height], $method, true, false, false, $quality) : (($noimage) ? array('src' => SITE_TEMPLATE_PATH . '/images/noimage_preview.jpg', 'alt' => $config->site()->site_name, 'noimage' => true) : false);
     }
 
     /**

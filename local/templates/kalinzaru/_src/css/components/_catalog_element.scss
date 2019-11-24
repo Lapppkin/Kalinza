@@ -139,6 +139,14 @@
     display: inline-flex;
     height: 16px;
     align-items: center;
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     img {
       margin-right: 5px;
     }

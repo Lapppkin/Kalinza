@@ -9,11 +9,11 @@
                         <h4>Цветные линзы</h4>
                     </div>
                 </a>
-                <a class="offers-catalog--item" href="#">
+                <a class="offers-catalog--item" href="/catalog/ochki/">
                     <div class="offers-catalog--item--image">
-                        <img src="<?= SITE_DIR . 'include/images/child.jpg' ?>" alt="Детские оправы"></div>
+                        <img src="<?= SITE_DIR . 'include/images/child.jpg' ?>" alt="Оправы"></div>
                     <div class="offers-catalog--item--text align-right">
-                        <h4>Детские оправы</h4>
+                        <h4>Оправы</h4>
                     </div>
                 </a>
                 <a class="offers-catalog--item" href="/besplatnaya-proverka-zreniya/">

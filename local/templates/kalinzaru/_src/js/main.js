@@ -238,15 +238,29 @@
             });
         },
 
+        /**
+         * Topbar menu handler.
+         */
         topbarMenu: function () {
-
             $(document).on('click mouseover', '.header--topbar--left > ul.menu a', function (e) {
-                e.preventDefault();
-                $(this).siblings('ul.menu').toggleClass('active');
+                if ($(this).siblings('ul.menu').length > 0) {
+                    e.preventDefault();
+                    $(this).siblings('ul.menu').toggleClass('active');
+                }
             });
-
             $(document).on('mouseleave', '.header--topbar--left > ul.menu a + ul.menu', function (e) {
                 $(this).removeClass('active');
+            });
+        },
+
+        /**
+         * Read more link.
+         */
+        readmore: function () {
+            $(document).on('click', '.about-us--info a.readmore', function (e) {
+                e.preventDefault();
+                $(this).slideUp(200);
+                $(this).closest('.about-us--info--text').find('.more').slideDown(200);
             });
         },
 
@@ -280,5 +294,6 @@
     kalinza.mobileFilter();
     kalinza.imageChanger();
     kalinza.topbarMenu();
+    kalinza.readmore();
 
 })(jQuery);

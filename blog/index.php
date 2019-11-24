@@ -15,7 +15,7 @@ if (!empty($_REQUEST['ELEMENT_CODE'])) {
 if (empty($ELEMENT)): ?>
 
 <div class="blog">
-    <h2 class="blog--title col text-center">Наш блог</h2>
+    <h1 class="blog--title col text-center h2">Наш блог</h1>
     <div class="blog--wrapper col">
         <?php $APPLICATION->IncludeComponent("bitrix:news.list",
             "blog",

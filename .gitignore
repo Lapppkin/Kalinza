@@ -2,6 +2,7 @@
 /.env
 *.local.php
 /vendor
+/local/vendor
 /node_modules
 /cgi-bin
 

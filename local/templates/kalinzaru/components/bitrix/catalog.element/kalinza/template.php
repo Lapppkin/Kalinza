@@ -176,6 +176,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         $average_rate = ceil(array_sum($rate) / count($rate));
         ?>
         <div class="catalog-element-rating" title="Рейтинг: <?= (int) $average_rate > 0 ? (int) $average_rate : 'нет оценок' ?>">
+            <a href="#catalog-element-reviews">
             <? for ($s = 1; $s <= 5; $s++): ?>
                 <? if ($s > (int) $average_rate): ?>
                     <img src="<?= SITE_DIR . 'include/images/star-empty.png' ?>" alt="" height="16" width="16">
@@ -183,6 +184,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     <img src="<?= SITE_DIR . 'include/images/star.png' ?>" alt="" height="16" width="16">
                 <? endif; ?>
             <? endfor; ?>
+            </a>
         </div>
 
         <!--выбор параметров-->

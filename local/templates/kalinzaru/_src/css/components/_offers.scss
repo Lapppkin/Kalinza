@@ -133,6 +133,13 @@
     background-color: $app-color-white;
     @include br-small;
     padding: 20px 40px;
+    color: $app-color-black;
+    text-decoration: none;
+    &:hover {
+      color: $app-color-black;
+      text-decoration: none;
+      @include shadow-hover;
+    }
     @media (max-width: map_get($grid-breakpoints, sm)) {
       flex-basis: 100%;
       margin-bottom: 10px;

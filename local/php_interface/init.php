@@ -1,6 +1,7 @@
 <?php
 
 use Bitrix\Main\EventManager;
+use Bitrix\Main\Config\Configuration;
 use core\Helper;
 use core\EventHandler;
 
@@ -9,13 +10,16 @@ use core\EventHandler;
 \define('BX_CUSTOM_TO_UPPER_FUNC', 'mb_strtoupper');
 \define('BX_CUSTOM_TO_LOWER_FUNC', 'mb_strtolower');
 
-\define('CATALOG_DEFAULT_IBLOCK_ID', 2); // ID инфоблока каталога по умолчанию
-\define('REVIEWS_IBLOCK_ID', 14); // ID инфоблока отзывов
+$config = Configuration::getInstance()->get('siteconfig');
+
+\define('CATALOG_DEFAULT_IBLOCK_ID', $config['catalog']); // ID инфоблока каталога по умолчанию
+\define('SLIDERS_IBLOCK_ID', $config['sliders']); // ID инфоблока слайдера
+\define('REVIEWS_IBLOCK_ID', $config['reviews']); // ID инфоблока отзывов
 
 ### AUTOLOAD
 
-require \dirname(__DIR__, 2) . '/vendor/autoload.php';
-\Dotenv\Dotenv::create(\dirname(__DIR__, 2), '.env')->load();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/local/vendor/autoload.php';
+\Dotenv\Dotenv::create($_SERVER['DOCUMENT_ROOT'], '.env')->load();
 \CModule::IncludeModule('iblock');
 
 ### EVENT HANDLERS
@@ -23,7 +27,7 @@ require \dirname(__DIR__, 2) . '/vendor/autoload.php';
 EventManager::getInstance()->addEventHandlerCompatible(
     'main',
     'OnElilog',
-    [EventHandler::class, 'Check404Error']
+    array(EventHandler::class, 'Check404Error')
 );
 
 ### GLOBAL WRAPPERS
