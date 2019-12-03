@@ -101,15 +101,15 @@ $APPLICATION->SetTitle("Корзина");
 
     // Делаем выборку товаров из корзины
     $arBasketItems = array();
-    $dbBasketItems = CSaleBasket::GetList(
+    $dbBasketItems = \CSaleBasket::GetList(
             array(
                     "NAME" => "ASC",
                     "ID" => "ASC"
                 ),
             array(
-                    "FUSER_ID" => CSaleBasket::GetBasketUserID(),
+                    "FUSER_ID" => \CSaleBasket::GetBasketUserID(),
                     "LID" => SITE_ID,
-                    "ORDER_ID" => "NULL"
+                    "ORDER_ID" => NULL
                 ),
             false,
             false,
