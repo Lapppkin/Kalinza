@@ -13,7 +13,8 @@ $time = trim($_POST["time"]);
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $contact = trim($_POST["contact"]);
-
+$shop = trim($_POST["shop"]);
+$region = trim($_POST["region"]);
 
 $subject = "Бесплатная проверка зрения - \"$sitename\"";
 $message = '
@@ -48,7 +49,7 @@ $message = '
         <title>Бесплатная проверка зрения - '.$sitename.'</title>
     </head>
     <body>
-        <p>День: '.$day.' <br> Месяц: '.$mes.' <br> Год: '.$god.' <br> Время: '.$time.' <br> Имя: '.$name.' <br> Телефон: '.$phone.' <br> Адрес: '.$contact.' <br> &nbsp;</p>
+        <p>День: '.$day.' <br> Месяц: '.$mes.' <br> Год: '.$god.' <br> Время: '.$time.' <br> Имя: '.$name.' <br> Телефон: '.$phone.' <br> Адрес: '.$contact.' <br> Регион: '.$region.' <br> Магазин: '.$shop.'</p>
         <p>IP: '.$ip.'</p>
     </body>
 </html>';

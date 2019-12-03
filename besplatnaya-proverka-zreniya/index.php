@@ -1,8 +1,13 @@
 <?
+
+use Sotbit\Regions\Region;
+
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "KALINZA.ru - проверь зрение в Краснодаре");
 $APPLICATION->SetPageProperty("title", "Бесплатная проверка зрения в Краснодаре");
 $APPLICATION->SetTitle("Title");
+
+$region = (new Region())->findRegion(REGION_ID);
 ?>
 
 <div class="container container-fix">
@@ -14,6 +19,7 @@ $APPLICATION->SetTitle("Title");
             <div class="clearfix"></div>
 
             <form class="eyecheck-form" action="<?= SITE_DIR . 'include/mail/mail5.php' ?>" method="post">
+                <input type="hidden" value="<?= $region['NAME'] ?>" name="region">
                 <div class="eyecheck-form--wrapper">
                     <div class="form-item">
                         <div class="form-item--label">* Дата</div>
@@ -84,6 +90,26 @@ $APPLICATION->SetTitle("Title");
                             <option value="18:00">18:00</option>
                             <option value="19:00">19:00</option>
                             <option value="20:00">20:00</option>
+                        </select>
+                    </div>
+
+                    <?
+                    $arOrder = array('SORT' => 'ASC');
+                    $arFilter =array(
+                        'IBLOCK_ID' => SHOPS_IBLOCK_ID,
+                        'PROPERTY_SHOP_REGION' => $region['ID'],
+                        'ACTIVE' => 'Y',
+                    );
+                    $arShops = \CIBlockElement::GetList($arOrder, $arFilter); ?>
+
+                    <div class="form-item">
+                        <label for="eyecheck-shop">* Магазин (выберите ближайший к вам)</label>
+                        <select name="shop" id="eyecheck-shop" required>
+                            <option value="" selected>не выбран</option>
+                            <? while($shop = $arShops->GetNextElement()): ?>
+                                <? $fields = $shop->GetFields(); ?>
+                                <option value="<?= $fields['NAME'] ?>" data-shop-id="<?= $fields['ID'] ?>"><?= $fields['NAME'] ?></option>
+                            <? endwhile; ?>
                         </select>
                     </div>
 
