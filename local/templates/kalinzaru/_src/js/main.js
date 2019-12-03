@@ -27,9 +27,11 @@
             }
         },
 
+        /**
+         * Аккордеон в контактах
+         */
         accordion: function() {
-            $('.accordion > li:eq(0) a.city-dropdown').addClass('active').next().slideDown();
-
+            //$('.accordion > li:eq(0) a.city-dropdown').addClass('active').next().slideDown();
             $(document).on('click', '.accordion a.city-dropdown', function (e) {
                 var dropDown = $(this).closest('li').find('div.main');
 
