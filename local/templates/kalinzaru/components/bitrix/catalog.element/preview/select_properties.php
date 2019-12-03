@@ -306,7 +306,8 @@ $_SESSION['arElementResult'] = $arResult;
                         <span class="quan quan-minus"><?= Helper::renderIcon('minus') ?></span>
                         <input type="text" name="product_quantity"
                             id="product-quantity"
-                            value="<?= empty($arResult["PROPERTIES"]["b_k"]["VALUE"]) ? 1 : 2 ?>">
+                            <?/*value="<?= empty($arResult["PROPERTIES"]["b_k"]["VALUE"]) ? 1 : 2 ?>">*/?>
+                            value="1">
                         <span class="quan quan-plus"><?= Helper::renderIcon('plus') ?></span>
                         &nbsp;уп.
                     </div>
@@ -347,7 +348,7 @@ $_SESSION['arElementResult'] = $arResult;
 
             } else {
 
-                $('#product-quantity').val(2);
+                $('#product-quantity').val(1);
                 $('#ckeeeeee').val(1);
 
                 props.forEach(function (item) {

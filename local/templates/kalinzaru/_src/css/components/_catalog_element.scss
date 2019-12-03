@@ -221,6 +221,7 @@
   }
 
   &-price {
+    white-space: nowrap;
     //margin-right: auto;
     @media (max-width: map_get($grid-breakpoints, sm)) {
       margin-right: initial;
@@ -237,6 +238,10 @@
       color: $app-color-gray-light;
       line-height: 1;
       text-decoration: line-through;
+    }
+    span.value {}
+    span.rouble {
+      margin-left: 5px;
     }
   }
   &-addtocart {

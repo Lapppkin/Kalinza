@@ -38,6 +38,7 @@ use Bitrix\Main\Application;
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.mCustomScrollbar.min.js');
 
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.min.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/regions.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/modals.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/sliders.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/svg_localstorage.min.js');
@@ -59,6 +60,14 @@ use Bitrix\Main\Application;
         if ($login === 'yes'): ?>
             <script>openAuthModal();</script>
         <?php endif; ?>
+
+        <?php // АнтиСоветник
+        $APPLICATION->IncludeComponent(
+            "abricos:antisovetnik",
+            "",
+            array(),
+            false
+        ); ?>
 
     </body>
 </html>

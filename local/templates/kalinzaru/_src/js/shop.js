@@ -8,11 +8,11 @@ var shop = {
     /**
      * Add event listeners.
      */
-    eventListeners: function () {
+    bindEvents: function () {
 
         // Quantity
         $(document).on('click', '.quan', function () {
-            let step = $('input#same-eyes') === 'undefined' ? 1 : $('input#same-eyes').is(':checked') ? 2 : 1;
+            let step = 1; //$('input#same-eyes') === 'undefined' ? 1 : $('input#same-eyes').is(':checked') ? 2 : 1;
             let input = $(this).siblings('input');
             let value = parseInt(input.val());
             if ($(this).hasClass('quan-plus')) {
@@ -43,8 +43,9 @@ var shop = {
         // Change #MySelect
         $(document).on('change', '#myselect', function () {
             var value = $(this).val();
-            $('#mydiv').html(value);
+            //$('#mydiv').html(value);
             $('#price_t').val(value);
+            $('.catalog-element-price .price_new span.value').text(value);
             $('#ob22').val($(this).find('option:selected').text());
         });
 
@@ -88,4 +89,4 @@ var shop = {
 
 };
 
-shop.eventListeners();
+shop.bindEvents();

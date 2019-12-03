@@ -5,11 +5,16 @@ use core\Helper;
 ?>
 <div class="header--topbar--left">
     <?= Helper::renderIcon('location') ?>
-    <? $APPLICATION->IncludeComponent("altasib:geobase",
+
+    <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/choose_region.php'); ?>
+
+    <?
+    /*
+    $APPLICATION->IncludeComponent("altasib:geobase",
         "topbar",
         array()
-    ); ?>
-    <? $APPLICATION->IncludeComponent(
+    );
+    $APPLICATION->IncludeComponent(
         "altasib:geobase.select.city",
         "topbar",
         array(
@@ -18,7 +23,9 @@ use core\Helper;
             "SMALL_ENABLE" => "N",
             "SPAN_LEFT" => "",
             "SPAN_RIGHT" => "Выберите город",
-    )); ?>
+    ));
+    */
+    ?>
 
     <? $APPLICATION->IncludeComponent(
         "bitrix:menu",

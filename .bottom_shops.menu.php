@@ -1,45 +1,24 @@
 <?php
-$aMenuLinks = Array(
-	Array(
-		"ул.Тургеневское шоссе 27, ТРЦ «МЕГА АДЫГЕЯ»",
-		"/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"ул.Уральская 79/1, ТЦ «АШАН СБС Мегамолл",
-		"/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"ул.Лизы Чайкиной 2/1, ТЦ «Магнит»",
-		"/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"ул.Ейское шоссе 40, ТЦ «Магнит»",
-		"/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"ул.Западный обход 29, ТЦ «Гипермаркет Лента»",
-		"/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"ул.Крылатая 2, ТЦ «Oz Молл»",
-		"/",
-		Array(),
-		Array(),
-		""
-	),
+
+$aMenuLinks = array();
+
+$arOrder = array('SORT' => 'ASC');
+$arFilter =array(
+    'IBLOCK_ID' => SHOPS_IBLOCK_ID,
+    'PROPERTY_SHOP_REGION' => REGION_ID,
+    'ACTIVE' => 'Y',
 );
+
+$arShops = \CIBlockElement::GetList($arOrder, $arFilter);
+while($shop = $arShops->GetNextElement()) {
+
+    $fields = $shop->GetFields();
+
+    $aMenuLinks[] = array(
+        $fields['NAME'],
+        $fields['DETAIL_PAGE_URL'],
+        array(),
+        array(),
+        ''
+    );
+}

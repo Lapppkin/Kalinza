@@ -11,7 +11,8 @@ body img:hover,
   color: $app-color-white;
   background-color: $app-color-secondary;
 }
-img, a {
+//a,
+img {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;

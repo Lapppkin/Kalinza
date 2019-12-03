@@ -16,6 +16,22 @@ $arUrlRewrite=array (
             "PATH" => "/blog/index.php",
             "SORT" => 100,
         ),
+    25 =>
+        array(
+            "CONDITION" => "#^/nashi-magaziny/([^/]+?)/([^/]+?)/\\??(.*)#",
+            'RULE' => 'REGION_CODE=$1&ELEMENT_CODE=$2&$3',
+            "ID" => "bitrix:news",
+            "PATH" => "/nashi-magaziny/index.php",
+            "SORT" => 100,
+        ),
+    26 =>
+        array(
+            "CONDITION" => "#^/nashi-magaziny/([^/]+?)/\\??(.*)#",
+            'RULE' => 'REGION_CODE=$1&$2',
+            "ID" => "bitrix:news",
+            "PATH" => "/nashi-magaziny/index.php",
+            "SORT" => 100,
+        ),
     30 =>
         array (
             'CONDITION' => '#^/personal/order/#',

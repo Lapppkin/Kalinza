@@ -487,8 +487,7 @@ function updateBasketTable(basketItemId, res)
 								<a href="javascript:void(0);" class="minus" onclick="setQuantity(' + arItem['ID'] + ', ' + ratio + ', \'down\', ' + bUseFloatQuantity + ');"></a>\
 							</div>\
 										<div class="current_price" id="current_price_' + arItem['ID'] + '">' + arItem['PRICE_FORMATED'] + '</div>' +
-							'<div class="old_price" id="old_price_' + arItem['ID'] + '">' + fullPrice + '</div>
-						</td>';
+							'<div class="old_price" id="old_price_' + arItem['ID'] + '">' + fullPrice + '</div></td>';
 						}
 
 						if (arItem.hasOwnProperty('MEASURE_TEXT') && arItem['MEASURE_TEXT'].length > 0)

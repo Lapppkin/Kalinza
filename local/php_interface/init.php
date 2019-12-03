@@ -4,6 +4,9 @@ use Bitrix\Main\EventManager;
 use Bitrix\Main\Config\Configuration;
 use core\Helper;
 use core\EventHandler;
+use core\Regionality;
+
+session_start();
 
 ### CONSTANTS
 
@@ -12,9 +15,13 @@ use core\EventHandler;
 
 $config = Configuration::getInstance()->get('siteconfig');
 
+$region = Regionality::getRegionFromCookie();
+
 \define('CATALOG_DEFAULT_IBLOCK_ID', $config['catalog']); // ID инфоблока каталога по умолчанию
 \define('SLIDERS_IBLOCK_ID', $config['sliders']); // ID инфоблока слайдера
 \define('REVIEWS_IBLOCK_ID', $config['reviews']); // ID инфоблока отзывов
+\define('SHOPS_IBLOCK_ID', $config['shops']); // ID инфоблока магазинов
+\define('REGION_ID', $region); // ID региона
 
 ### AUTOLOAD
 

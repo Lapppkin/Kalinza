@@ -16,6 +16,26 @@
       display: flex;
       justify-content: space-between;
     }
+
+    .choose-region {
+      margin-right: 20px;
+      form {}
+      select {
+        width: auto;
+        padding: 0 20px 0 0;
+        height: 1.4em;
+        line-height: 1.4;
+        background-position: right 5px center;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          border: 0;
+        }
+      }
+    }
+
     &--left {
       display: flex;
       align-items: center;
@@ -104,6 +124,7 @@
     &--right {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       .kalinza-icon {
         color: $app-color-gray;
       }

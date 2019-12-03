@@ -7,13 +7,13 @@
 use Bitrix\Main\Page\Asset;
 use core\Helper;
 
-if ( !defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-CJSCore::Init(array("fx"));
+\CJSCore::Init(array('ajax', 'json', 'ls', 'session', 'jquery', 'popup', 'pull', 'core', 'fx'));
+
 $bodyClass = Helper::setBodyClass($APPLICATION);
 $curPage = $APPLICATION->GetCurPage(true);
 $curDir = $APPLICATION->GetCurDir();
-
 
 $isIndex = $curDir === '/';
 $isCatalog = strpos($curDir, '/catalog/') === 0;
@@ -25,13 +25,11 @@ CModule::IncludeModule('mcart.souvenirs');
     <head>
         <title><?php $APPLICATION->ShowTitle(); ?></title>
         <meta charset="UTF-8">
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <?php $APPLICATION->ShowHead(); ?>
         <?php Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/styles.css'); ?>
-        <?php //Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Oranienbaum&display=swap&subset=cyrillic,cyrillic-ext'); ?>
 
         <meta name="yandex-verification" content="a56dfc858ae0a85a">
     </head>
@@ -40,14 +38,6 @@ CModule::IncludeModule('mcart.souvenirs');
 
         <div id="svg-container" hidden></div>
         <div class="wrapper">
-
-            <?php // АнтиСоветник
-            $APPLICATION->IncludeComponent(
-                "abricos:antisovetnik",
-                "",
-                array(),
-                false
-            ); ?>
 
             <!--header-->
             <header id="header">

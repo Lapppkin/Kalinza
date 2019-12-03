@@ -15,12 +15,7 @@ use core\Helper;
                 <div class="footer--bottom--regions">
                     <div class="footer--bottom--regions-label">Наши салоны оптики:</div>
                     <div class="footer--bottom--regions-items">
-                        <a href="#">Ижевск</a>
-                        <a href="#">Нижний Новгород</a>
-                        <a href="#">Новороссийск</a>
-                        <a href="#">Новосибирск</a>
-                        <a href="#">Ставрополь</a>
-                        <a href="#">Курск</a>
+                        <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . '/include/footer_regions.php') ?>
                     </div>
                 </div>
 
@@ -32,17 +27,17 @@ use core\Helper;
 
                 <div class="footer--bottom--contacts">
                     <div class="footer--bottom--contacts-content">
-                        <p><?php $APPLICATION->IncludeFile('/include/company_phone.php'); ?></p>
-                        <p><?php $APPLICATION->IncludeFile('/include/company_email.php'); ?></p>
+                        <p><?php $APPLICATION->IncludeFile(SITE_DIR . '/include/company_phones.php'); ?></p>
+                        <p><?php $APPLICATION->IncludeFile(SITE_DIR . '/include/company_email.php'); ?></p>
                     </div>
                 </div>
 
                 <div class="footer--bottom--soc">
                     <div class="footer--bottom--socials-icons social-icons">
-                        <?php $APPLICATION->IncludeFile('/include/social_icons.php'); ?>
+                        <?php $APPLICATION->IncludeFile(SITE_DIR . '/include/social_icons.php'); ?>
                     </div>
                     <div class="footer--bottom--socials-messengers messenger-icons">
-                        <?php $APPLICATION->IncludeFile('/include/messenger_icons.php'); ?>
+                        <?php $APPLICATION->IncludeFile(SITE_DIR . '/include/messenger_icons.php'); ?>
                     </div>
                 </div>
 
@@ -64,7 +59,7 @@ use core\Helper;
                     <a href="/privacy">Политика конфиденциальности</a>
                 </div>
                 <div class="footer--bottom--copyrights-developer">
-                    <a href="https://lapkinlab.ru" target="_blank">Разработано
+                    <a href="https://msk.lapkinlab.ru" target="_blank">Разработано
                         <img src="<?= SITE_TEMPLATE_PATH . '/images/lapkinlab-logo.png' ?>" alt="LapkinLab">
                     </a>
                 </div>

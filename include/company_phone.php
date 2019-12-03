@@ -1,1 +1,8 @@
-<a href="tel:88003012101">8-800-301-21-01</a>
+<?php
+
+use core\Helper;
+use core\Regionality;
+
+$phone = Regionality::getCurrentRegionPhoneMain();
+
+print Helper::parsePhone($phone, 'link');
