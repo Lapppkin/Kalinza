@@ -152,9 +152,9 @@ final class Helper
         $number = trim($number);
         $result = explode(' ', $number, 3);
 
-        $full = str_replace(['-', '(', ')', ' ', '&nbsp;'], '', $result[0] . $result[1] . $result[2]);
-        $left_bracket = ((int) $result[1] === 800) ? '' : '(';
-        $right_bracket = ((int) $result[1] === 800) ? '' : ')';
+        $full = str_replace(['-', '(', ')', ' ', '&nbsp;'], '', $number);
+        $left_bracket = ((int) $result[1] === 800 || !strpos($result[1], '(')) ? '' : '(';
+        $right_bracket = ((int) $result[1] === 800 || strpos($result[1], ')')) ? '' : ')';
 
         $html = "<span class='country'>{$result[0]}</span>&nbsp;<span class='code'>{$left_bracket}{$result[1]}{$right_bracket}</span>&nbsp;<span class='number'>{$result[2]}</span>";
 
