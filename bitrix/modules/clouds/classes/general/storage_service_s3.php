@@ -810,6 +810,140 @@ class CCloudStorageService_AmazonS3 extends CCloudStorageService
 		{
 			return $this->GetFileSRC($arBucket, $filePath);
 		}
+		elseif (
+			$this->status == 400
+			&& ($e = $APPLICATION->GetException())
+			&& is_object($e)
+			&& preg_match("/The specified copy source is larger than the maximum allowable size for a copy source: ([0-9]+)/i", $e->GetString(), $match)
+		)
+		{
+			$sizeLimit = $match[1];
+			$this->SendRequest(
+				$arBucket["SETTINGS"],
+				'HEAD',
+				$arBucket["BUCKET"],
+				CCloudUtil::URLEncode("/".($arBucket["PREFIX"]? $arBucket["PREFIX"]."/": "").($arFile["SUBDIR"]? $arFile["SUBDIR"]."/": "").$arFile["FILE_NAME"], "UTF-8")
+			);
+
+			$fileSize = false;
+			if($this->status == 200)
+			{
+				if (isset($this->headers["Content-Length"]) && $this->headers["Content-Length"] > 0)
+					$fileSize = $this->headers["Content-Length"];
+			}
+			if (!$fileSize)
+			{
+				$APPLICATION->ResetException();
+				return false;
+			}
+
+			//Multipart copy goes here
+			$additional_headers = array();
+			if($this->_public)
+				$additional_headers["x-amz-acl"] = "public-read";
+			$additional_headers["Content-Type"] = $arFile["CONTENT_TYPE"];
+
+			$response = $this->SendRequest(
+				$arBucket["SETTINGS"],
+				'POST',
+				$arBucket["BUCKET"],
+				CCloudUtil::URLEncode($filePath, "UTF-8"),
+				'?uploads=',
+				'',
+				$additional_headers
+			);
+
+			if(
+				$this->status == 200
+				&& is_array($response)
+				&& isset($response["InitiateMultipartUploadResult"])
+				&& is_array($response["InitiateMultipartUploadResult"])
+				&& isset($response["InitiateMultipartUploadResult"]["#"])
+				&& is_array($response["InitiateMultipartUploadResult"]["#"])
+				&& isset($response["InitiateMultipartUploadResult"]["#"]["UploadId"])
+				&& is_array($response["InitiateMultipartUploadResult"]["#"]["UploadId"])
+				&& isset($response["InitiateMultipartUploadResult"]["#"]["UploadId"][0])
+				&& is_array($response["InitiateMultipartUploadResult"]["#"]["UploadId"][0])
+				&& isset($response["InitiateMultipartUploadResult"]["#"]["UploadId"][0]["#"])
+				&& is_string($response["InitiateMultipartUploadResult"]["#"]["UploadId"][0]["#"])
+			)
+			{
+				$uploadId = $response["InitiateMultipartUploadResult"]["#"]["UploadId"][0]["#"];
+				$parts = array();
+			}
+			else
+			{
+				$APPLICATION->ResetException();
+				return false;
+			}
+
+			$pos = 0;
+			$part_no = 0;
+			while ($pos < $fileSize)
+			{
+				$additional_headers = array();
+				$additional_headers["x-amz-copy-source"] = CCloudUtil::URLEncode("/".$arBucket["BUCKET"]."/".($arBucket["PREFIX"]? $arBucket["PREFIX"]."/": "").($arFile["SUBDIR"]? $arFile["SUBDIR"]."/": "").$arFile["FILE_NAME"], "UTF-8");
+				$additional_headers["x-amz-copy-source-range"] = "bytes=".$pos."-".(min($fileSize, $pos + $sizeLimit) - 1);
+
+				$response = $this->SendRequest(
+					$arBucket["SETTINGS"],
+					'PUT',
+					$arBucket["BUCKET"],
+					CCloudUtil::URLEncode($filePath, "UTF-8"),
+					'?partNumber='.($part_no + 1).'&uploadId='.urlencode($uploadId),
+					'',
+					$additional_headers
+				);
+
+				if(
+					$this->status == 200
+					&& is_array($response)
+					&& isset($response["CopyPartResult"])
+					&& is_array($response["CopyPartResult"])
+					&& isset($response["CopyPartResult"]["#"])
+					&& is_array($response["CopyPartResult"]["#"])
+					&& isset($response["CopyPartResult"]["#"]["ETag"])
+					&& is_array($response["CopyPartResult"]["#"]["ETag"])
+					&& isset($response["CopyPartResult"]["#"]["ETag"][0])
+					&& is_array($response["CopyPartResult"]["#"]["ETag"][0])
+					&& isset($response["CopyPartResult"]["#"]["ETag"][0]["#"])
+					&& is_string($response["CopyPartResult"]["#"]["ETag"][0]["#"])
+				)
+				{
+					$parts[$part_no] = trim($response["CopyPartResult"]["#"]["ETag"][0]["#"], '"');
+				}
+				else
+				{
+					$APPLICATION->ResetException();
+					return false;
+				}
+				$part_no++;
+				$pos += $sizeLimit;
+			}
+
+			ksort($parts);
+			$data = "";
+			foreach($parts as $PartNumber => $ETag)
+			{
+				$data .= "<Part><PartNumber>".($PartNumber+1)."</PartNumber><ETag>".$ETag."</ETag></Part>\n";
+			}
+
+			$this->SendRequest(
+				$arBucket["SETTINGS"],
+				'POST',
+				$arBucket["BUCKET"],
+				CCloudUtil::URLEncode($filePath, "UTF-8"),
+				'?uploadId='.urlencode($uploadId),
+				"<CompleteMultipartUpload>".$data."</CompleteMultipartUpload>"
+			);
+
+			if($this->status == 200)
+			{
+				return $this->GetFileSRC($arBucket, $filePath);
+			}
+			$APPLICATION->ResetException();
+			return false;
+		}
 		else//if($this->status == 404)
 		{
 			$APPLICATION->ResetException();

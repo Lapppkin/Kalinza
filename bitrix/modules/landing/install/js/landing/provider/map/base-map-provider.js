@@ -11,12 +11,13 @@
 	{
 		if (!isPlainObject(options))
 		{
+			var point = getPointByLanguage();
 			return {
-				center: {lat: 54.71916849999999, lng: 20.48854240000003},
+				center: point,
 				zoom: 17,
 				markers: [
 					{
-						latLng: {lat: 54.71916849999999, lng: 20.48854240000003},
+						latLng: point,
 						title: "Bitrix24",
 						description: "Bitrix24 - Your company. United."
 					}
@@ -25,6 +26,35 @@
 		}
 
 		return options;
+	}
+
+	function getPointByLanguage()
+	{
+		var point = {lat: 0, lng: 0,};
+		switch (BX.message('LANGUAGE_ID'))
+		{
+			case 'ru':
+				point = {
+					lat: 54.71916849999999,
+					lng: 20.48854240000003
+				};
+				break;
+			case 'ua':
+				point = {
+					lat: 50.440333,
+					lng: 30.526835
+				};
+				break;
+			default:
+				//default - en
+				point = {
+					lat: 38.814089,
+					lng: -77.042356,
+				};
+				break;
+		}
+
+		return point;
 	}
 
 	/**

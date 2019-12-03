@@ -684,10 +684,15 @@ class LandingSiteDemoComponent extends LandingBaseComponent
 					{
 						$partnerId = 0;
 					}
+					// chats can be exist not always
+					$chatsEnabled = (Manager::isB24() && ModuleManager::isModuleInstalled('salescenter'));
+					
 					$res = Json::decode($http->get(
-						$restSrc . 'landing_cloud.cloud.getUrlPreview?user_lang=' . LANGUAGE_ID .
-						'&code=' . $code . '&type=' . $this->arParams['TYPE'] .
-						(isset($partnerId) ? '&pv=2&partner_id=' . $partnerId : '')//tmp
+						$restSrc . 'landing_cloud.cloud.getUrlPreview?user_lang=' . LANGUAGE_ID
+						. '&code=' . $code
+						. '&type=' . $this->arParams['TYPE']
+						. (isset($partnerId) ? '&pv=2&partner_id=' . $partnerId : '')//tmp
+						. ($chatsEnabled ? '&chats=1' : '')
 					));
 				}
 				catch (\Exception $e) {}

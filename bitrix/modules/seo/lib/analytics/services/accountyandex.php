@@ -155,15 +155,19 @@ class AccountYandex extends \Bitrix\Seo\Analytics\Account
 	protected function getCurrency()
 	{
 		// currency is global for an account, so we get it from the first campaign.
+		$cacheString = 'analytics_yandex_currency_'.CurrentUser::get()->getId();
+		$cachePath = '/seo/analytics/yandex/';
+		$cacheTime = 3600;
 		$cache = Cache::createInstance();
-		if($cache->initCache(3600, 'analytics_yandex_currency_'.CurrentUser::get()->getId(), '/seo/analytics/yandex/'))
+		$currency = null;
+		if($cache->initCache($cacheTime, $cacheString, $cachePath))
 		{
 			$currency = $cache->getVars()['currency'];
 		}
-		else
+		if(!$currency)
 		{
-			$cache->startDataCache(3600);
-			$currency = null;
+			$cache->clean($cacheString, $cachePath);
+			$cache->startDataCache($cacheTime);
 
 			$response = $this->getClient()->post(
 				$this->getYandexServerAdress() . 'campaigns',
@@ -190,7 +194,11 @@ class AccountYandex extends \Bitrix\Seo\Analytics\Account
 					}
 				}
 			}
-			$cache->endDataCache(['currency' => $currency]);
+
+			if($currency)
+			{
+				$cache->endDataCache(['currency' => $currency]);
+			}
 		}
 
 		return $currency ?: 'RUB';

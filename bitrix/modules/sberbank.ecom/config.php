@@ -11,17 +11,20 @@ define('API_PROD_URL', 'https://securepayments.sberbank.ru/payment/rest/');
 define('API_TEST_URL', 'https://3dsec.sberbank.ru/payment/rest/');
 define('API_RETURN_PAGE', '/sale/payment/result.php');
 define('API_GATE_TRY',30);
-define('RBS_VERSION','3.1.5');
+
+define('RBS_VERSION','3.2.4');
 
 $status = COption::GetOptionString("sberbank.ecom", "result_order_status", "P");
 if (!defined('RESULT_ORDER_STATUS'))
     define('RESULT_ORDER_STATUS', $status);
+
 
 $arDefaultIso = array(
     'USD' => 840,
     'EUR' => 978,
     'RUB' => 643,
     'RUR' => 643,
+    'BYN' => 933
 );
 
 if (!defined('DEFAULT_ISO'))

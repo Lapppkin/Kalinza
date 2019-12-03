@@ -4,7 +4,7 @@
  * Developer: adumnov
  * Site: http://www.altasib.ru
  * E-mail: dev@altasib.ru
- * @copyright (c) 2006-2017 ALTASIB
+ * @copyright (c) 2006-2018 ALTASIB
  */
 
 IncludeModuleLangFile(__FILE__);
@@ -189,6 +189,7 @@ $arAllOptions = array(
 		Array("popup_back", GetMessage("ALTASIB_GEOBASE_POPUP_BACK"), "Y", Array("checkbox")),
 		Array("region_disable", GetMessage("ALTASIB_GEOBASE_REGION_DISABLE"), "N", Array("checkbox")),
 		Array("only_select_cities", GetMessage("ALTASIB_GEOBASE_ONLY_SELECT_CITIES"), "N", Array("checkbox")),
+		Array("show_nearest_select_city", GetMessage("ALTASIB_GEOBASE_SHOW_NEAREST_SC"), "N", Array("checkbox")),
 		Array("cities_only_large", GetMessage("ALTASIB_GEOBASE_CITIES_ONLY_LARGE"), "N", Array("checkbox")),
 		Array("autodetect_enable", GetMessage("ALTASIB_GEOBASE_AUTODETECT_EN"), "Y", Array("checkbox")),
 		Array("cities_world_enable", GetMessage("ALTASIB_GEOBASE_CITIES_WORLD_ENABLE"), "Y", Array("checkbox")),

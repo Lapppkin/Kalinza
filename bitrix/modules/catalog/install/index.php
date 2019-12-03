@@ -167,6 +167,11 @@ class catalog extends CModule
 		{
 			Main\Config\Option::set('catalog', 'default_quantity_trace', 'Y', '');
 			Main\Config\Option::set('catalog', 'default_can_buy_zero', 'Y', '');
+			/**
+			 * B24 rest compatibility.
+			 * Remove this code after migration rest catalog events to d7 events.
+			 */
+			Main\Config\Option::set('catalog', 'enable_processing_deprecated_events', 'Y', '');
 		}
 
 		$this->InstallTasks();

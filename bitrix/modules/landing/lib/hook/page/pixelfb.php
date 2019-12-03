@@ -15,13 +15,19 @@ class PixelFb extends \Bitrix\Landing\Hook\Page
 	 */
 	protected function getMap()
 	{
+		$helpUrl = \Bitrix\Landing\Help::getHelpUrl('PIXEL');
 		return array(
 			'USE' => new Field\Checkbox('USE', array(
 				'title' => Loc::getMessage('LANDING_HOOK_PIXEL_FB_USE')
 			)),
 			'COUNTER' => new Field\Text('COUNTER', array(
 				'title' => Loc::getMessage('LANDING_HOOK_PIXEL_FB_COUNTER'),
-				'placeholder' => Loc::getMessage('LANDING_HOOK_PIXEL_FB_PLACEHOLDER2')
+				'placeholder' => Loc::getMessage('LANDING_HOOK_PIXEL_FB_PLACEHOLDER2'),
+				'help' => $helpUrl
+					? '<a href="' . $helpUrl . '" target="_blank">' .
+					  		Loc::getMessage('LANDING_HOOK_PIXEL_FB_HELP') .
+				  		'</a>'
+					: ''
 			))
 		);
 	}
@@ -61,7 +67,7 @@ class PixelFb extends \Bitrix\Landing\Hook\Page
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';n.agent=\'plbitrix\';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,\'script\',

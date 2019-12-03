@@ -51,6 +51,11 @@ class Auth
 					);
 
 					self::setLastActivityDate($USER->GetID(), $query);
+
+					if ($query['BX_SESSION_LOCK'] !== 'Y')
+					{
+						session_write_close();
+					}
 				}
 				else
 				{

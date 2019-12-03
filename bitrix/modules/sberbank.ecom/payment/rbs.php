@@ -3,7 +3,7 @@
 
 require_once(realpath(dirname(dirname(__FILE__))) ."/config.php");
 
-define('LOG_FILENAME', realpath(dirname(dirname(__FILE__))) . "/rbspayment.log");
+define('LOG_FILE', realpath(dirname(dirname(__FILE__))) . "/rbspayment.log");
 
 class RBS
 {
@@ -20,13 +20,15 @@ class RBS
      *
      * @var integer
      * 0 = Без НДС
-     * 10 = НДС чека по ставке 10%
-     * 18 = НДС чека по ставке 10%
+     * 2 = НДС чека по ставке 10%
+     * 3 = НДС чека по ставке 18%
+     * 6 = НДС чека по ставке 20%
      */
     private static $arr_tax = [
         0 => 0,
         2 => 10, 
         3 => 18,
+        6 => 20,
     ];
 
     private $user_name;
@@ -68,13 +70,13 @@ class RBS
         $data['password'] = $this->password;
         $data['CMS'] = 'Bitrix ' . SM_VERSION;
         $data['jsonParams'] = json_encode( array('CMS' => $data['CMS'],'Module-Version' => RBS_VERSION) );
-        $dataEncoded = http_build_query($data);
-
         if (SITE_CHARSET != 'UTF-8') {
             global $APPLICATION;
-            $dataEncoded = $APPLICATION->ConvertCharset($dataEncoded, 'windows-1251', 'UTF-8');
             $data = $APPLICATION->ConvertCharsetArray($data, 'windows-1251', 'UTF-8');
         }
+        $dataEncoded = http_build_query($data);
+
+
 
 
         if ($this->test_mode) {
@@ -114,22 +116,42 @@ class RBS
         } else {
             if (SITE_CHARSET != 'UTF-8') {
                 global $APPLICATION;
-                $APPLICATION->ConvertCharset($response, 'windows-1251', 'UTF-8');
+                $APPLICATION->ConvertCharset($response, 'UTF-8', 'windows-1251');
             }
             $response = \Bitrix\Main\Web\Json::decode($response);
  
             if ($this->logging) {
-                $this->logger($url, $method, $data, $response);
+                if(isset($response['errorCode']) && $response['errorCode'] != 1) {
+                    $this->logger($url, $method, $data, $dataEncoded, $response);
+                } else if(isset($response['orderId'])) {
+                    $this->logger($url, $method, $data, $dataEncoded, $response);
+                }
             }
         }
         return $response;
     }
 
 
-    private function logger($url, $method, $data, $response)
+    private function logger($url, $method, $data, $dataEncoded, $response)
     {
-        return AddMessage2Log('RBS PAYMENT ' . $url . $method . ' REQUEST: ' . json_encode($data) . ' RESPONSE: ' . json_encode($response), 'sberbank.ecom');
+        $objDateTime = new DateTime();
+        $file = self::log_file;
+        $logContent = '';
+        
+        if(file_exists($file)) {
+            $logSize = filesize($file) / 1000;
+            if($logSize < 4000) {
+                $logContent = file_get_contents($file);
+            }
+        }
 
+        $logContent .= "DATE: " . $objDateTime->format("Y-m-d H:i:s") . "\n";
+        $logContent .= 'RBS PAYMENT ' . $url . $method . "\n";
+        $logContent .= "DATA: \n" . print_r($data,true) . "\n";
+        $logContent .= "REQUEST: \n" . print_r($dataEncoded,true) . "\n";
+        $logContent .= "RESPONSE: \n" . print_r($response,true) . "\n";
+        $logContent .= "\n\n";
+        file_put_contents($file, $logContent);
     }
 
 
@@ -153,11 +175,7 @@ class RBS
             $data['currency'] = $arCurrency[$currency];
 
         if ($arCheck) {
-
-
             $data = array_merge($data, $arCheck);
-//            print_r($data['orderBundle']);die;
-
             $data['orderBundle'] = \Bitrix\Main\Web\Json::encode($data['orderBundle']);
         }
 

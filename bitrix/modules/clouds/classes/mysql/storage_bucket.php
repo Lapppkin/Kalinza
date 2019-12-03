@@ -68,11 +68,11 @@ class CAllCloudStorageBucket
 	{
 		if (
 			$this->isFailoverEnabled() && CCloudFailover::IsEnabled()
-			&& $this->arBucket["FAILOVER_ACTIVE"] === 'Y'
-			&& $this->arBucket["FAILOVER_BUCKET_ID"] > 0
+			&& $this->FAILOVER_ACTIVE === 'Y'
+			&& $this->FAILOVER_BUCKET_ID > 0
 		)
-			return $this->arBucket["FAILOVER_BUCKET_ID"];
+			return $this->FAILOVER_BUCKET_ID;
 		else
-			return $this->arBucket["ID"];
+			return $this->ID;
 	}
 }

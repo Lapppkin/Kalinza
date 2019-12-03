@@ -16,6 +16,8 @@ foreach ($requiredModules as $requiredModule)
 	}
 }
 
+$isIframe = $_REQUEST['IFRAME'] && $_REQUEST['IFRAME']==='Y';
+
 if (!isset($arParams['REPORT_HELPER_CLASS'])
 	|| strlen($arParams['REPORT_HELPER_CLASS']) < 1
 	|| !class_exists($arParams['REPORT_HELPER_CLASS'])
@@ -581,7 +583,7 @@ try
 		$url = CComponentEngine::MakePathFromTemplate(
 			$arParams["PATH_TO_REPORT_VIEW"],
 			array('report_id' => $ID)
-		);
+		).($isIframe ? '?IFRAME=Y':'');
 
 		LocalRedirect($url);
 		exit;

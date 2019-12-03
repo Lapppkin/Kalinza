@@ -1,4 +1,5 @@
 <?php
+
 use Bitrix\Landing\Manager;
 
 $pathJS = '/bitrix/js/landing';
@@ -245,7 +246,7 @@ $jsConfig = array(
 			$pathCSS . '/mediaservice/base_mediaservice.css',
 			$pathCSS . '/ui/tool/suggests.css',
 			$pathCSS . '/ui/tool/popup.css',
-			$pathCSS . '/ui/tool/menu.css'
+			$pathCSS . '/ui/tool/menu.css',
 		),
 		'rel' => array(
 			'polyfill',
@@ -258,28 +259,28 @@ $jsConfig = array(
 			'loader',
 			'mediaplayer',
 			'date',
-			'main.imageeditor'
+			'main.imageeditor',
 		),
 		'lang' => $pathLang . '/js/landing_master.php',
 		'bundle_js' => 'landing_master',
 	),
-
+	
 	'mediaplayer' => array(
 		'js' => array(
 			'https://www.youtube.com/iframe_api',
 			$pathJS . '/utils.js',
 			$pathJS . '/mediaplayer/base_mediaplayer.js',
 			$pathJS . '/mediaplayer/youtube_mediaplayer.js',
-			$pathJS . '/mediaplayer/mediaplayer_factory.js'
-		)
+			$pathJS . '/mediaplayer/mediaplayer_factory.js',
+		),
 	),
-
+	
 	'landing_inline_video' => array(
 		'js' => array(
 			$pathTemplate24 . '/assets/js/helpers/inline-video.js',
-		)
+		),
 	),
-
+	
 	'map_provider' => array(
 		'js' => array(
 			$pathJS . '/utils.js',
@@ -290,53 +291,53 @@ $jsConfig = array(
 			$pathJS . '/provider/map/google-map/theme/retro.theme.js',
 			$pathJS . '/provider/map/google-map/theme/dark.theme.js',
 			$pathJS . '/provider/map/google-map/theme/night.theme.js',
-			$pathJS . '/provider/map/google-map/theme/aubergine.theme.js'
+			$pathJS . '/provider/map/google-map/theme/aubergine.theme.js',
 		),
 		'css' => array(
 			$pathCSS . '/provider/map/google-map.css',
-		)
+		),
 	),
-
+	
 	'polyfill' => array(
 		'js' => array(
 			$pathJS . '/polyfill.js',
-		)
+		),
 	),
-
+	
 	'action_dialog' => array(
 		'js' => array(
-			$pathJS . '/ui/tool/action_dialog.js'
+			$pathJS . '/ui/tool/action_dialog.js',
 		),
 		'css' => array(
 			$pathCSS . '/ui/tool/action_dialog.css',
 		),
 		'rel' => array(
 			'polyfill',
-			'popup'
+			'popup',
 		),
-		'lang' => $pathLang . '/js/action_dialog.php'
+		'lang' => $pathLang . '/js/action_dialog.php',
 	),
-
+	
 	'landing_public' => array(
 		'js' => array(
 			$pathJS . '/utils.js',
 			$pathJS . '/ui/tool/auto-font-scale.js',
 			$pathJS . '/ui/tool/auto-font-scale-entry.js',
 			$pathJS . '/events/block_event.js',
-			$pathJS . '/public.js'
+			$pathJS . '/public.js',
 		),
-		'rel' => array('landing_event_tracker', 'mediaplayer', 'polyfill')
+		'rel' => array('landing_event_tracker', 'mediaplayer', 'polyfill'),
 	),
-
+	
 	'landing_event_tracker' => array(
 		'js' => array(
 			$pathJS . '/utils.js',
 			$pathJS . '/event-tracker/event-tracker.js',
 			$pathJS . '/event-tracker/services/base-service.js',
-			$pathJS . '/event-tracker/services/google-analytics-service.js'
-		)
+			$pathJS . '/event-tracker/services/google-analytics-service.js',
+		),
 	),
-
+	
 	// vendors scripts for ALL blocks, included always
 	'landing_core' => array(
 		'js' => array(
@@ -373,14 +374,14 @@ $jsConfig = array(
 		),
 		'lang' => $pathLang . '/js/webform_alerts.php',
 	),
-
+	
 	'landing_gallery_cards' => array(
 		'js' => array(
 			$pathTemplate24 . '/assets/js/helpers/gallery_cards_init.js',
 		),
 		'rel' => array('landing_core'),
 	),
-
+	
 	'landing_carousel' => array(
 		'js' => array(
 			$pathTemplate24 . '/assets/vendor/slick-carousel/slick/slick.js',
@@ -402,7 +403,7 @@ $jsConfig = array(
 		),
 		'rel' => array('landing_core'),
 	),
-
+	
 	'landing_chart' => array(
 		'js' => array(
 			$pathTemplate24 . '/assets/vendor/circles/circles.js',
@@ -422,15 +423,21 @@ $jsConfig = array(
 	
 	'landing_google_maps_new' => array(
 		'js' => array(
-			$pathTemplate24 . '/assets/js/helpers/google_maps_new.js'
+			$pathTemplate24 . '/assets/js/helpers/google_maps_new.js',
 		),
 		'rel' => array(
-			'map_provider'
-		)
-	)
+			'map_provider',
+		),
+	),
+	'landing_theme_dark' => [
+		'css' => [
+			$pathTemplate24 . '/themes/themes_dark.css',
+		],
+	],
 );
 
 foreach ($jsConfig as $code => $ext)
 {
+	/** @noinspection PhpUnnecessaryFullyQualifiedNameInspection */
 	\CJSCore::registerExt($code, $ext);
 }

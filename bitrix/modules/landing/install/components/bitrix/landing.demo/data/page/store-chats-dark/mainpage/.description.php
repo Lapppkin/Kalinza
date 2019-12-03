@@ -8,8 +8,8 @@ use \Bitrix\Main\Localization\Loc;
 
 return array(
 	'code' => 'store-chats-dark/mainpage',
-	'name' => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-MAIN-RICH_NAME'),
-	'description' => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-MAIN-RICH_DESC'),
+	'name' => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-MAIN-NAME'),
+	'description' => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-MAIN-DESC_NEW'),
 	'type' => 'store',
 	'version' => 3,
 	'fields' => array(
@@ -47,7 +47,7 @@ return array(
 					),
 				),
 				'.landing-block-node-text' => array(
-					0 => 'Slogan of store goes here',
+					0 => Loc::getMessage("LANDING_DEMO_STORE_CHATS_DARK-MAIN-TEXT5"),
 				),
 			),
 			'style' => array(
@@ -103,12 +103,12 @@ return array(
 						'target' => '_self',
 					),
 				),
-				'.landing-block-node-link-text' => array(
-					0 => 'About us',
-					1 => 'Contacts',
-					2 => 'Payment Information',
-					3 => 'Webform',
-				),
+				'.landing-block-node-link-text' => [
+					0 => Loc::getMessage("LANDING_DEMO_STORE_CHATS_DARK-MAIN-TEXT1"),
+					1 => Loc::getMessage("LANDING_DEMO_STORE_CHATS_DARK-MAIN-TEXT2"),
+					2 => Loc::getMessage("LANDING_DEMO_STORE_CHATS_DARK-MAIN-TEXT3"),
+					3 => Loc::getMessage("LANDING_DEMO_STORE_CHATS_DARK-MAIN-TEXT4"),
+				],
 			),
 			'style' => array(
 				'.landing-block-node-list-container' => array(

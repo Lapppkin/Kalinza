@@ -154,6 +154,7 @@ if ($folderId)
 									deletePage: '#',
 									publicPage: '#',
 									editPage: '<?= \CUtil::jsEscape($urlEdit);?>',
+									folderIndex: false,
 							 		isFolder: <?= ($item['FOLDER'] == 'Y') ? 'true' : 'false';?>,
 							 		isActive: <?= ($item['ACTIVE'] == 'Y') ? 'true' : 'false';?>,
 							 		isDeleted: <?= ($item['DELETED'] == 'Y') ? 'true' : 'false';?>,
@@ -188,6 +189,7 @@ if ($folderId)
 									deletePage: '#',
 							 		publicPage: '#',
 									editPage: '<?= \CUtil::jsEscape($urlEdit);?>',
+							 		folderIndex: <?= ($item['FOLDER'] == 'Y') ? 'true' : 'false';?>,
 							 		isFolder: <?= ($item['FOLDER'] == 'Y') ? 'true' : 'false';?>,
 							 		isActive: <?= ($item['ACTIVE'] == 'Y') ? 'true' : 'false';?>,
 							 		isDeleted: <?= ($item['DELETED'] == 'Y') ? 'true' : 'false';?>,
@@ -466,7 +468,7 @@ if ($folderId)
 						: '<?= \CUtil::jsEscape(Loc::getMessage('LANDING_TPL_ACTION_DELETE'));?>'
 					),
 				href: params.deletePage,
-				disabled: params.isFolder || params.isDeleteDisabled,
+				disabled: params.folderIndex || params.isDeleteDisabled,
 				onclick: function(event)
 				{
 					event.preventDefault();

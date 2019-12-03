@@ -5,10 +5,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 }
 
 use \Bitrix\Main\Localization\Loc;
-Loc::loadMessages(dirname(__FILE__).'/.description.php');	//messages can not be loaded from lang/block.php
 
+Loc::loadMessages(
+	\Bitrix\Main\Application::getDocumentRoot() . '/bitrix/blocks/bitrix/store.salescenter.order.details/.description.php'
+);
 /**
- * @var StoreSalescenterOrderDetails $classBlock
+ * @var StoreSalesCenterOrderDetails $classBlock
  */
 ?>
 <section class="landing-block g-pt-10 g-pb-10">
@@ -19,7 +21,7 @@ Loc::loadMessages(dirname(__FILE__).'/.description.php');	//messages can not be 
 			echo '
 			<div class="g-min-height-200 g-flex-centered">
 				<div class="g-pa-10 g-brd-html-dashed g-bg-white-opacity-0_8">
-					'. Loc::getMessage('LANDING_BLOCK_STORE_SALESCENTER_ORDER_DETAIL-ALERT') .'
+					' . Loc::getMessage('LANDING_BLOCK_STORE_SALESCENTER_ORDER_DETAIL-ALERT') . '
 				</div>
 			</div>
 			';

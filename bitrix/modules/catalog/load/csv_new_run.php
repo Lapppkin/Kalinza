@@ -49,9 +49,8 @@ if (!CCatalog::IsUserExists())
 
 if (!function_exists('__CSVArrayMultiply'))
 {
-	function __CSVArrayMultiply(&$arResult, $arTuple, $arTemp = array())
+	function __CSVArrayMultiply($arTuple, $arTemp, &$csvFile, $currentFile)
 	{
-		global $csvFile, $currentFile;
 		if (empty($arTuple))
 		{
 			/** @var CCSVData $csvFile */
@@ -66,14 +65,14 @@ if (!function_exists('__CSVArrayMultiply'))
 				if (empty($head))
 				{
 					$arTemp[count($arTemp)-1] = "";
-					__CSVArrayMultiply($arResult, $arTuple, $arTemp);
+					__CSVArrayMultiply($arTuple, $arTemp, $csvFile, $currentFile);
 				}
 				else
 				{
 					foreach ($head as &$value)
 					{
 						$arTemp[count($arTemp)-1] = $value;
-						__CSVArrayMultiply($arResult, $arTuple, $arTemp);
+						__CSVArrayMultiply($arTuple, $arTemp, $csvFile, $currentFile);
 					}
 					if (isset($value))
 						unset($value);
@@ -82,7 +81,7 @@ if (!function_exists('__CSVArrayMultiply'))
 			else
 			{
 				$arTemp[count($arTemp)-1] = $head;
-				__CSVArrayMultiply($arResult, $arTuple, $arTemp);
+				__CSVArrayMultiply($arTuple, $arTemp, $csvFile, $currentFile);
 			}
 		}
 	}
@@ -846,7 +845,6 @@ if (empty($arRunErrors))
 					}
 				}
 
-				$arResFields = array();
 				foreach ($arResSections as $arPath)
 				{
 					foreach ($arResPrices as $arPrice)
@@ -873,7 +871,7 @@ if (empty($arRunErrors))
 								$arTuple[] = (!empty($arResProducts) ? $arResProducts[substr($field_name, 3)] : '');
 							}
 						}
-						__CSVArrayMultiply($arResFields, $arTuple);
+						__CSVArrayMultiply($arTuple, [], $csvFile, $currentFile);
 					}
 				}
 

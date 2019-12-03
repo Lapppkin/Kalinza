@@ -13,6 +13,7 @@ session_start();
 require_once(realpath(dirname(dirname(__FILE__))) . "/config.php");
 
 require_once("rbs.php");
+require_once('rbs-discount.php');
 
 $module_id = RBS_MODULE_ID;
 
@@ -41,7 +42,13 @@ if (CSalePaySystemAction::GetParamValue("AUTO_OPEN_FORM") == 'Y') {
 } else {
     $auto_open_form = false;
 }
+global $APPLICATION;
 $curUrl = $APPLICATION->GetCurDir();
+
+$ffd_format = CSalePaySystemAction::GetParamValue("FFD_FORMAT");
+$ffd_paymentMethod = CSalePaySystemAction::GetParamValue("FFD_PAYMENT_METHOD");
+$ffd_paymentObject = CSalePaySystemAction::GetParamValue("FFD_PAYMENT_OBJECT");
+
 $params['user_name'] = CSalePaySystemAction::GetParamValue("USER_NAME");
 $params['password'] = CSalePaySystemAction::GetParamValue("PASSWORD");
 $params['two_stage'] = $two_stage;
@@ -51,6 +58,7 @@ $params['logging'] = $logging;
 $params['language'] = LANGUAGE_ID;
 
 $rbs = new RBS($params);
+
 $rbsArrTax = $rbs->get_tax_list();
 
 $app = \Bitrix\Main\Application::getInstance();
@@ -81,6 +89,12 @@ $currency = $arOrder['CURRENCY'];
 
 $amount = CSalePaySystemAction::GetParamValue("AMOUNT") * 100;
 
+
+$rbs_discount = new rbsDiscount([
+    'order_id' => $arOrder['ID'],
+    'amount' =>  CSalePaySystemAction::GetParamValue("AMOUNT"),
+]);
+
 if (is_float($amount)) {
     $amount = round($amount);
 }
@@ -89,7 +103,6 @@ $return_url = $protocol . $_SERVER['SERVER_NAME'] . $MODULE_PARAMS['RETURN_PAGE'
 
 $FISCALIZATION = COption::GetOptionString($module_id, "FISCALIZATION", serialize(array()));
 $FISCALIZATION = unserialize($FISCALIZATION);
-
 
 if ($FISCALIZATION['ENABLE'] == 'Y') {
 
@@ -137,7 +150,9 @@ if ($FISCALIZATION['ENABLE'] == 'Y') {
     $arCheck = null;
 
     $dbRes = CSaleBasket::GetList(array(), array('ORDER_ID' => $orderId));
+    $priceSumm = 0;
     while ($arRes = $dbRes->Fetch()) {
+        $itemsCnt++;
 
         $arProduct = CCatalogProduct::GetByID($arRes['PRODUCT_ID']);
 
@@ -154,26 +169,54 @@ if ($FISCALIZATION['ENABLE'] == 'Y') {
         if(is_float($itemAmount)) {
             $itemAmount = round($itemAmount);
         }
-        $arFiscal['orderBundle']['cartItems']['items'][] = array(
-            'positionId' => $itemsCnt++,
+        $arrSetProduct = [
+            'id' => $arRes['PRODUCT_ID'], 
             'name' => $arRes['NAME'],
-            'quantity' => array(
-                'value' => $arRes['QUANTITY'],
-                'measure' => $measureList[$arProduct['MEASURE']] ? $measureList[$arProduct['MEASURE']] : GetMessage('RBS_PAYMENT_MEASURE_DEFAULT'),
-            ),
-            'itemAmount' => $itemAmount * $arRes['QUANTITY'],
-            'itemCode' => $arRes['PRODUCT_ID'],
-            'itemPrice' => $itemAmount,
-            'tax' => array(
-                'taxType' => $productVatValue,
-            ),
-        );
+            'priceBase' => $arRes['PRICE'],
+            'count' => $arRes['QUANTITY'],
+            'arrGate' => [
+                'quantity' => array(
+                    'measure' => $measureList[$arProduct['MEASURE']] ? $measureList[$arProduct['MEASURE']] : GetMessage('RBS_PAYMENT_MEASURE_DEFAULT'),
+                ),
+                'tax' => array(
+                    'taxType' => $productVatValue,
+                ),
+            ]
+        ];
+        if($ffd_format == 'v2') {
+            $arrSetProduct['itemAttributes'] = [
+                'attributes' => [
+                    [
+                        'name' => 'paymentMethod',
+                        'value' => $ffd_paymentMethod
+                    ],
+                    [
+                        'name' => 'paymentObject',
+                        'value' => $ffd_paymentObject
+                    ],
+                ]
+            ];
+        }
+        $rbs_discount->addProduct($arrSetProduct);
+        $priceSumm += round($arRes['PRICE'] * $arRes['QUANTITY'],2);
     }
+    $checkSumm = round($priceSumm-($arOrder['PRICE'] - $arOrder['PRICE_DELIVERY']),2);
+    if($checkSumm == 0 ) {
+        $needSetDiscount = 0;
+    } else if($checkSumm > 0 ) {
+        $needSetDiscount = $checkSumm;
+    } else if($checkSumm < 0) {
+        echo "<b>ERROR: checkSumm < 0</b>";
+        die;
+    }
+    $rbs_discount->setOrderDiscount($needSetDiscount);
+    $rbs_discount->updateOrder();
+    $arFiscal['orderBundle']['cartItems']['items'] = $rbs_discount->getBasketResult();
 
     if ($arOrder['PRICE_DELIVERY'] > 0) {
 
         if (!$arDelivery = CSaleDelivery::GetByID($arOrder['DELIVERY_ID'])) {
-            $filter = is_numeric($arOrder['DELIVERY_ID']) ? ['ID' => $arOrder['DELIVERY_ID']] : [];
+            $filter = is_numeric($arOrder['DELIVERY_ID']) ? ['ID' => $arOrder['DELIVERY_ID']] : ['CODE' => $arOrder['DELIVERY_ID']];
             $arDelivery = \Bitrix\Sale\Delivery\Services\Table::getList(array(
                 'order' => array('SORT' => 'ASC', 'NAME' => 'ASC'),
                 'filter' => $filter
@@ -188,7 +231,7 @@ if ($FISCALIZATION['ENABLE'] == 'Y') {
             }
         }
 
-        $arFiscal['orderBundle']['cartItems']['items'][] = array(
+        $arrSetDelivery = array(
             'positionId' => $itemsCnt++,
             'name' => GetMessage('RBS_PAYMENT_DELIVERY_TITLE'),
             'quantity' => array(
@@ -202,6 +245,23 @@ if ($FISCALIZATION['ENABLE'] == 'Y') {
                 'taxType' => $deliveryVatValue,
             ),
         );
+
+        if($ffd_format == 'v2') {
+            $arrSetDelivery['itemAttributes'] = [
+                'attributes' => [
+                    [
+                        'name' => 'paymentMethod',
+                        'value' => '4'
+                    ],
+                    [
+                        'name' => 'paymentObject',
+                        'value' => '4'
+                    ],
+                ]
+            ];
+        }
+        $arFiscal['orderBundle']['cartItems']['items'][] = $arrSetDelivery;
+
     }
 }
 

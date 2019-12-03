@@ -22,6 +22,7 @@ function reportViewShowTopButtons(&$component, &$arParams, &$arResult)
 {
 	/** @global CMain $APPLICATION */
 	global $APPLICATION;
+    $isSlider = $_REQUEST['IFRAME'] && $_REQUEST['IFRAME']=='Y';
 
 	$isStExport = is_array($arResult['STEXPORT_PARAMS']);
 	$stExportManagerId = '';
@@ -44,6 +45,7 @@ function reportViewShowTopButtons(&$component, &$arParams, &$arResult)
 				'click',
 				function ()
 				{
+
 					var isStExport = <? echo $isStExport ? 'true' : 'false'; ?>;
 					BX.PopupMenu.show(
 						element.getAttribute('data-role'),
@@ -62,13 +64,13 @@ function reportViewShowTopButtons(&$component, &$arParams, &$arResult)
 							},
 							{
 								text: '<?=GetMessage('REPORT_COPY')?>',
-								href: '<?=CUtil::JSEscape(CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_CONSTRUCT"], array("report_id" => $arParams['REPORT_ID'], 'action' => 'copy')));?>',
+								href: '<?=CUtil::JSEscape(CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_CONSTRUCT"], array("report_id" => $arParams['REPORT_ID'], 'action' => 'copy')).($isSlider ? '?IFRAME=Y':''));?>',
 								className: 'reports-title-copy-icon'
 							}
 							<? if ($arResult['MARK_DEFAULT'] <= 0 && $arResult['AUTHOR']) : ?>
 							,{
 								text: '<?=GetMessage('REPORT_EDIT')?>',
-								href: '<?=CUtil::JSEscape(CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_CONSTRUCT"], array("report_id" => $arParams['REPORT_ID'], 'action' => 'edit')));?>',
+								href: '<?=CUtil::JSEscape(CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_CONSTRUCT"], array("report_id" => $arParams['REPORT_ID'], 'action' => 'edit')).($isSlider ? '?IFRAME=Y':''));?>',
 								className: 'reports-title-edit-icon'
 							}
 							<? endif; ?>
@@ -88,8 +90,10 @@ function reportViewShowTopButtons(&$component, &$arParams, &$arResult)
 </script>
 
 <button class="ui-btn ui-btn-light-border ui-btn-icon-setting ui-btn-themes" data-role="action-report"></button>
-<a class="ui-btn ui-btn-primary ui-btn-icon-back" href="<?=CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_LIST"], array());?>">
+    <?php if($_REQUEST['IFRAME'] && $_REQUEST['IFRAME']!='Y'):?>
+    <a class="ui-btn ui-btn-primary ui-btn-icon-back" href="<?=CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_LIST"], array());?>">
 	<?=GetMessage('REPORT_RETURN_TO_LIST')?></a>
+<? endif; ?>
 
 <?php
 	$component->EndViewTarget();

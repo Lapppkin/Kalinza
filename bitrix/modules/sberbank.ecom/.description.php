@@ -25,6 +25,8 @@ $shipment_set_payed_desc = GetMessage('RBS_PAYMENT_SET_PAYED_DESC'); //"Устанавл
 $check_description = GetMessage('RBS_PAYMENT_CHECK_DESC'); //"Устанавливать ли в статус оплачено";
 $auto_open_form = GetMessage('RBS_PAYMENT_AUTO_OPEN_FORM'); // "Автоматическое открытие палатежной формы после оформления заказа";
 $auto_open_form_desc = GetMessage('RBS_PAYMENT_AUTO_OPEN_FORM_DESC'); // "Автоматическое открытие палатежной формы после оформления заказа";
+$ffd_format = GetMessage('RBS_PAYMENT_FFD_FORMAT'); 
+$ffd_format_desc = GetMessage('RBS_PAYMENT_FFD_FORMAT_DESC'); 
 
 $arPSCorrespondence = array(
 
@@ -120,5 +122,72 @@ $arPSCorrespondence = array(
             "PROVIDER_KEY" => "INPUT"
         )
     ),
+    "FFD_FORMAT" => array(
+        "NAME" => $ffd_format,
+        "DESCR" => $ffd_format_desc,
+        'SORT' => 300,
+        "INPUT" => array(
+            'TYPE' => 'ENUM',
+            'OPTIONS' => array(
+                "v1" => '1.0',
+                "v2" => '1.05'
+            )
+        ),
+        'DEFAULT' => array(
+            "PROVIDER_VALUE" => "v1",
+            "PROVIDER_KEY" => "INPUT"
+        )
+    ),
+    "FFD_PAYMENT_METHOD" => array(
+        "NAME" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_NAME'),
+        "DESCR" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_DESCR'),
+        'SORT' => 310,
+        "INPUT" => array(
+            'TYPE' => 'ENUM',
+            'OPTIONS' => array(
+                "1" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_1'),
+                "2" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_2'),
+                "3" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_3'),
+                "4" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_4'),
+                "5" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_5'),
+                "6" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_6'),
+                "7" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_METHOD_7'),
+            )
+        ),
+        'DEFAULT' => array(
+            "PROVIDER_VALUE" => "4",
+            "PROVIDER_KEY" => "INPUT"
+        )
+    ),
+    "FFD_PAYMENT_OBJECT" => array(
+        "NAME" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_NAME'),
+        "DESCR" => GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_DESCR'),
+        'SORT' => 320,
+        "INPUT" => array(
+            'TYPE' => 'ENUM',
+            'OPTIONS' => array(
+                "1"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_1'),
+                "2"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_2'),
+                "3"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_3'),
+                "4"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_4'),
+                "5"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_5'),
+                "6"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_6'),
+                "7"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_7'),
+                "8"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_8'),
+                "9"  =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_9'),
+                "10" =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_10'),
+                "11" =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_11'),
+                "12" =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_12'),
+                "13" =>  GetMessage('RBS_PAYMENT_FFD_PAYMENT_OBJECT_13'),
+            )
+        ),
+        'DEFAULT' => array(
+            "PROVIDER_VALUE" => "1",
+            "PROVIDER_KEY" => "INPUT"
+        )
+    ),
+
+
+
 
 );

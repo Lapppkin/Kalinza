@@ -1,0 +1,1 @@
+<?define("sotbit_regions_TEMPORARY_CACHE", "cDcHDnA3UgZqAy1jBjEGe1gm");?>

@@ -28,14 +28,11 @@ return array(
 	
 	'items' => array(
 		'0' => array(
-			'code' => '27.one_col_fix_title_and_text_2',
+			'code' => '27.3.one_col_fix_title',
 			'access' => 'X',
 			'nodes' => array(
 				'.landing-block-node-title' => array(
-					0 => 'Order information',
-				),
-				'.landing-block-node-text' => array(
-					0 => 'Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor.',
+					0 => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-ORDER-TEXT5'),
 				),
 			),
 			'style' => array(
@@ -44,9 +41,6 @@ return array(
 				),
 				'.landing-block-node-title' => array(
 					0 => 'landing-block-node-title h2 g-color-white text-left g-font-size-27',
-				),
-				'.landing-block-node-text' => array(
-					0 => 'landing-block-node-text g-pb-1 g-color-white g-font-size-16 text-left',
 				),
 			),
 		),
@@ -57,18 +51,26 @@ return array(
 					'TEMPLATE_MODE' => 'darkmode',
 				)
 			),
+			'style' => array(
+				'#wrapper' => array(
+					0 => 'landing-block g-pt-10 g-pb-10 u-block-border u-block-border-margin-md',
+				),
+			),
 		),
 		'2' => array(
 			'code' => '52.3.mini_text_titile_with_btn_right',
 			'access' => 'X',
 			'nodes' => array(
+				'.landing-block-node-title' => array(
+					0 => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-ORDER-TEXT4'),
+				),
 				'.landing-block-node-text' => array(
 					0 => '<a href="tel:+469548521" target="_self">+469 548 521</a>',
 				),
 				'.landing-block-node-button' => array(
 					0 => array(
 						'href' => 'tel:+469548521',
-						'text' => 'Call now',
+						'text' => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-ORDER-TEXT3'),
 					),
 				),
 			),
@@ -101,10 +103,10 @@ return array(
 			'access' => 'X',
 			'nodes' => array(
 				'.landing-block-node-title' => array(
-					0 => 'Address',
+					0 => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-ORDER-TEXT1'),
 				),
 				'.landing-block-node-text' => array(
-					0 => '61 Oxford str., London, 3DG',
+					0 => Loc::getMessage('LANDING_DEMO_STORE_CHATS_DARK-ORDER-TEXT2'),
 				),
 			),
 			'style' => array(
@@ -125,67 +127,6 @@ return array(
 			'style' => array(
 				'#wrapper' => array(
 					0 => 'landing_block g-height-1 g-min-height-70vh u-block-border u-block-border-margin-md g-rounded-6 u-block-border-end g-theme-bitrix-bg-dark-v1 g-pt-10 g-pb-10 g-pl-10 g-pr-10',
-				),
-			),
-		),
-		'5' => array(
-			'code' => '55.1.list_of_links',
-			'access' => 'X',
-			'cards' => array(
-				'.landing-block-node-list-item' => array(
-					'source' => array(
-						0 => array(
-							'value' => 0,
-							'type' => 'card',
-						),
-						1 => array(
-							'value' => 0,
-							'type' => 'card',
-						),
-						2 => array(
-							'value' => 0,
-							'type' => 'card',
-						),
-					),
-				),
-			),
-			'nodes' => array(
-				'.landing-block-node-link' => array(
-					0 => array(
-						'href' => '#landing@landing[store-chats-dark/about]',
-						'target' => '_self',
-					),
-					1 => array(
-						'href' => '#landing@landing[store-chats-dark/contacts]',
-						'target' => '_self',
-					),
-					2 => array(
-						'href' => '#landing@landing[store-chats-dark/webform]',
-						'target' => '_self',
-					),
-				),
-				'.landing-block-node-link-text' => array(
-					0 => 'About us',
-					1 => 'Contacts',
-					2 => 'Webform',
-				),
-			),
-			'style' => array(
-				'.landing-block-node-list-container' => array(
-					0 => 'landing-block-node-list-container row no-gutters justify-content-center',
-				),
-				'.landing-block-node-list-item' => array(
-					0 => 'landing-block-node-list-item g-brd-bottom g-brd-1 g-py-12 js-animation animation-none landing-card g-brd-white-opacity-0_2 g-font-size-18',
-					1 => 'landing-block-node-list-item g-brd-bottom g-brd-1 g-py-12 js-animation animation-none landing-card g-brd-white-opacity-0_2 g-font-size-18',
-					2 => 'landing-block-node-list-item g-brd-bottom g-brd-1 g-py-12 js-animation animation-none landing-card g-brd-white-opacity-0_2 g-font-size-18',
-				),
-				'.landing-block-node-link' => array(
-					0 => 'landing-block-node-link row no-gutters justify-content-between align-items-center g-text-decoration-none--hover g-color-primary--hover g-font-size-18 g-color-white',
-					1 => 'landing-block-node-link row no-gutters justify-content-between align-items-center g-text-decoration-none--hover g-color-primary--hover g-font-size-18 g-color-white',
-					2 => 'landing-block-node-link row no-gutters justify-content-between align-items-center g-text-decoration-none--hover g-color-primary--hover g-font-size-18 g-color-white',
-				),
-				'#wrapper' => array(
-					0 => 'landing-block g-pt-10 g-pb-10 g-pl-15 g-pr-15 u-block-border u-block-border-margin-md g-rounded-6 g-theme-bitrix-bg-dark-v1',
 				),
 			),
 		),

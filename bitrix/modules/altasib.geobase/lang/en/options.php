@@ -186,7 +186,8 @@ $MESS["ALTASIB_GEOBASE_STATISTIC"] = "Use Web analytics Bitrix";
 $MESS["ALTASIB_GEOBASE_UPDATE"] = "Update";
 $MESS["ALTASIB_GEOBASE_CHECK_UPDATE"] = "Check for updates";
 $MESS["ALTASIB_GEOBASE_WIN_YOUR_CITY_ENABLE"] = "Enable <b>automatic show</b> a popup window \"Your city\":";
-$MESS["ALTASIB_GEOBASE_ONLY_SELECT_CITIES"] = 'Use only city from <a title="Favorites Cities" onclick="tabControl.SelectTab(\'edit3\'); return false;"> list of favorites cities</a>, without a field Search:';
+$MESS["ALTASIB_GEOBASE_ONLY_SELECT_CITIES"] = 'Use only city from <a title="Favorites Cities" onclick="tabControl.SelectTab(\'edit3\'); return false;">list of favorites cities</a>, without a field Search:';
+$MESS["ALTASIB_GEOBASE_SHOW_NEAREST_SC"] = 'Show instead of automatically determined city the nearest city from <a title="Favorites Cities" onclick="tabControl.SelectTab(\'edit3\'); return false;">list of favorites cities</a>:';
 
 $MESS['ALTASIB_TITLE_CITIES_LIST'] = "List of cities (regions)";
 $MESS['ALTASIB_TABLE_CITY_DELETE'] = "Delete";

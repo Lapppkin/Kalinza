@@ -306,7 +306,10 @@ if (
 			'CONDITION' => $condition
 		));
 		Manager::getCacheManager()->clean('b_site_template');
-		\localRedirect(Manager::getApplication()->getCurPage());
+		if ($componentPage == 'landing_view')
+		{
+			\localRedirect(Manager::getApplication()->getCurPage());
+		}
 	}
 }
 

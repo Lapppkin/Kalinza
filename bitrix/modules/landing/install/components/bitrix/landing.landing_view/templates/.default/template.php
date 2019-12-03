@@ -107,6 +107,7 @@ if (!$request->offsetExists('landing_mode')):
 		'action' => 'publication',
 		'param' => $arResult['LANDING']->getId(),
 		'code' => $arResult['LANDING']->getXmlId(),
+		'site_code' => $site['XML_ID'],
 		'sessid' => bitrix_sessid()
 	));
 	$uriPubAll = new \Bitrix\Main\Web\Uri($curUrl);
@@ -115,6 +116,7 @@ if (!$request->offsetExists('landing_mode')):
 		'param' => $arResult['LANDING']->getId(),
 		'site_id' => $arResult['LANDING']->getSiteId(),
 		'code' => $arResult['LANDING']->getXmlId(),
+		'site_code' => $site['XML_ID'],
 		'sessid' => bitrix_sessid()
 	));
 	$uriUnPub = new \Bitrix\Main\Web\Uri($curUrl);
@@ -122,6 +124,7 @@ if (!$request->offsetExists('landing_mode')):
 		'action' => 'unpublic',
 		'param' => $arResult['LANDING']->getId(),
 		'code' => $arResult['LANDING']->getXmlId(),
+		'site_code' => $site['XML_ID'],
 		'sessid' => bitrix_sessid()
 	));
 	$uriPreview = new \Bitrix\Main\Web\Uri($curUrl);
@@ -130,6 +133,7 @@ if (!$request->offsetExists('landing_mode')):
 		'landing_mode' => 'preview',
 		'param' => $arResult['LANDING']->getId(),
 		'code' => $arResult['LANDING']->getXmlId(),
+		'site_code' => $site['XML_ID'],
 		'sessid' => bitrix_sessid()
 	));
 	// b24 title

@@ -91,7 +91,15 @@ initReportControls();
 
 <div class="reports-constructor">
 
-
+<?
+$isIframe = $_REQUEST['IFRAME'] && $_REQUEST['IFRAME']==='Y';
+if($isIframe)
+{
+    ?>
+    <input type="hidden" value="Y" name="IFRAME" />
+    <?
+}
+?>
 
 <!-- period -->
 <div class="webform-main-fields">
@@ -1093,9 +1101,12 @@ $name = $APPLICATION->IncludeComponent(
 	</a>
 	&nbsp;
 	<? endif ?>
+
+    <?php if($_REQUEST['IFRAME'] && $_REQUEST['IFRAME']!='Y'):?>
 	<a class="webform-small-button webform-small-button-blue webform-small-button-back"
 		href="<?=CComponentEngine::MakePathFromTemplate($arParams["PATH_TO_REPORT_LIST"], array());?>">
 		<span class="webform-small-button-icon"></span>
 		<span class="webform-small-button-text"><?=GetMessage('REPORT_RETURN_TO_LIST')?></span>
 	</a>
+    <?php endif ?>
 <?php $this->EndViewTarget();?>

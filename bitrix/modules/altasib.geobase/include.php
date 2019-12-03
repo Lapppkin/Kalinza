@@ -493,7 +493,7 @@ Class CAltasibGeoBase
 		if(!CAltasibGeoBaseIP::CheckServiceAccess($protocol.LOAD_HOST.LOAD_PATH.LOAD_FILE))
 			return "CAltasibGeoBase::SetUpdateAgent();";
 
-		$strFile = $_SERVER["DOCUMENT_ROOT"]."/upload/altasib/geoip/".basename($protocol.LOAD_HOST.LOAD_PATH.LOAD_FILE);
+		$strFile = $_SERVER["DOCUMENT_ROOT"]."/upload/altasib/geobase/".basename($protocol.LOAD_HOST.LOAD_PATH.LOAD_FILE);
 
 		if(CAltasibGeoBase::GetIsUpdateDataFile(LOAD_HOST, LOAD_PATH, LOAD_FILE, $strFile)){
 			include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/admin_notify.php");
@@ -948,6 +948,8 @@ Class CAltasibGeoBase
 					$rezData = CAltasibGeoBase::GetDataFromKLADR($city, true, 7, $bOnlyLarge);
 				elseif($citylen == 3)
 					$rezData = CAltasibGeoBase::GetDataFromKLADR($city, false, 20, $bOnlyLarge);
+				elseif($citylen > 6)
+					$rezData = CAltasibGeoBase::GetDataFromKLADR($city, false, false, $bOnlyLarge, true);
 				elseif($citylen > 3)
 					$rezData = CAltasibGeoBase::GetDataFromKLADR($city, false, false, $bOnlyLarge);
 
@@ -1229,7 +1231,7 @@ Class CAltasibGeoBase
 			return false;
 	}
 
-	function GetDataFromKLADR($city, $strict=false, $limit=false, $onlyLarge=false)
+	function GetDataFromKLADR($city, $strict=false, $limit=false, $onlyLarge=false, $bPrefix=false)
 	{
 		global $DB;
 		$city = $DB->ForSql($city);
@@ -1253,9 +1255,9 @@ Class CAltasibGeoBase
 			LEFT JOIN altasib_geobase_kladr_region AS t2
 				ON SUBSTRING(t1.ID_DISTRICT,1,2) = t2.CODE
 			WHERE LOWER(t1.NAME) LIKE '
-				.($strict != false ? '"'.strtolower($city).'" ' : '"'.strtolower($city).'%" ')
+				.($strict != false ? '"'.strtolower($city).'" ' : '"'. ($bPrefix ? '%':'') .strtolower($city).'%" ')
 				.($onlyLarge != false ? 'AND (t1.STATUS > 0 OR t1.SOCR="'.$g.'" OR t1.SOCR="'.$pgt.'" OR t1.SOCR="'.$rp.'" OR t1.SOCR="'.$town.'") ' : '')
-				.'AND t1.ACTIVE = "Y" ORDER BY t1.SORTINDEX, t2.CODE, t1.NAME '
+				.'AND t1.ACTIVE = "Y" ORDER BY t1.SORTINDEX DESC, t1.STATUS DESC, t2.CODE, t1.NAME '
 				.($limit != false ? 'LIMIT '.$limit : '')
 		);
 		return $rsKLADR;
@@ -1456,42 +1458,54 @@ Class CAltasibGeoBase
 			}
 			if($arRegion)
 			{
-				$arInfo["REGION"] = array(
-					"CODE" => $arRegion["CODE"],
+				$arInfo = self::GetFormatKladrData($arRegion, $arGeo["CITY_NAME"]);
+			}
+		}
+		return $arInfo;
+	}
+
+	function GetFormatKladrData($arRegion, $cityName)
+	{
+		$arInfo = array();
+		if($arRegion)
+		{
+			$arInfo["REGION"] = array(
+				"CODE" => $arRegion["CODE"],
+				"NAME" => $arRegion["NAME"],
+				"FULL_NAME" => $arRegion["FULL_NAME"],
+				"SOCR" => $arRegion["SOCR"]
+			);
+			$arInfo["DISTRICT"] = array( //default
+				"CODE" => $arRegion["CODE"].'000',
+				"NAME" => '',
+				"SOCR" => ''
+			);
+			if($arRegion["CODE"] == 77 || $arRegion["CODE"] == 78
+				|| $arRegion["CODE"] == 92 || $arRegion["CODE"] == 99 //Mosqow SPb, Sevastopol, Baykonur
+			)
+			{
+				$arInfo["CITY"] = array(
+					"ID" => $arRegion["CODE"].'000000000',
 					"NAME" => $arRegion["NAME"],
-					"FULL_NAME" => $arRegion["FULL_NAME"],
-					"SOCR" => $arRegion["SOCR"]
+					"SOCR" => $arRegion["SOCR"],
+					"POSTINDEX" => $arRegion["POSTINDEX"],
+					"ID_DISTRICT" => $arRegion["CODE"].'000'
 				);
-				$arInfo["DISTRICT"] = array( //default
-					"CODE" => $arRegion["CODE"].'000',
-					"NAME" => '',
-					"SOCR" => ''
-				);
-				if($arRegion["CODE"] == 77 || $arRegion["CODE"] == 78
-					|| $arRegion["CODE"] == 92 || $arRegion["CODE"] == 99 //Mosqow SPb, Sevastopol, Baykonur
-				)
-				{
+				$arInfo["CODE"] = $arRegion["CODE"].'000000000';
+
+				$rsCity = CAltasibGeoBase::GetCityByNameReg(trim(htmlspecialcharsEx($cityName)),
+					array('ID', 'NAME', 'SOCR', 'POSTINDEX', 'ID_DISTRICT', 'CODE'), $arRegion["CODE"], false, false);
+				if($arCity = $rsCity->Fetch()){
 					$arInfo["CITY"] = array(
-						"ID" => $arRegion["CODE"].'000000000',
-						"NAME" => $arRegion["NAME"],
-						"SOCR" => $arRegion["SOCR"],
-						"POSTINDEX" => $arRegion["POSTINDEX"],
-						"ID_DISTRICT" => $arRegion["CODE"].'000'
+						"ID" => $arCity["ID"],
+						"NAME" => $arCity["NAME"],
+						"SOCR" => $arCity["SOCR"],
+						"POSTINDEX" => $arCity["POSTINDEX"],
+						"ID_DISTRICT" => $arCity["ID_DISTRICT"]
 					);
-					$arInfo["CODE"] = $arRegion["CODE"].'000000000';
+					$arInfo["CODE"] = $arCity["CODE"];
 
-					$rsCity = CAltasibGeoBase::GetCityByNameReg(trim(htmlspecialcharsEx($arGeo["CITY_NAME"])),
-						array('ID', 'NAME', 'SOCR', 'POSTINDEX', 'ID_DISTRICT', 'CODE'), $arRegion["CODE"], false, false);
-					if($arCity = $rsCity->Fetch()){
-						$arInfo["CITY"] = array(
-							"ID" => $arCity["ID"],
-							"NAME" => $arCity["NAME"],
-							"SOCR" => $arCity["SOCR"],
-							"POSTINDEX" => $arCity["POSTINDEX"],
-							"ID_DISTRICT" => $arCity["ID_DISTRICT"]
-						);
-						$arInfo["CODE"] = $arCity["CODE"];
-
+					if(!empty($arCity["ID_DISTRICT"])){
 						$rsDistr = CAltasibGeoBase::GetDistrictByName($arCity["ID_DISTRICT"],
 							array('NAME', 'SOCR', 'CODE'), false, false);
 						if($arDistr = $rsDistr->Fetch()){
@@ -1503,41 +1517,43 @@ Class CAltasibGeoBase
 						}
 					}
 				}
-				else //others cities
+			}
+			else //others cities
+			{
+				if(COption::GetOptionString(self::MID, "mode_location", "cities") != "regions")
 				{
-					if(COption::GetOptionString(self::MID, "mode_location", "cities") != "regions")
+					$cName = trim(htmlspecialcharsEx($cityName));
+					$arSlct = array('ID', 'NAME', 'SOCR', 'POSTINDEX', 'ID_DISTRICT', 'CODE');
+					$rsCity = CAltasibGeoBase::GetCityByNameReg($cName, $arSlct, $arRegion["CODE"], false, false);
+					$arCity = $rsCity->Fetch();
+					if(!$arCity)
 					{
-						$cName = trim(htmlspecialcharsEx($arGeo["CITY_NAME"]));
-						$arSlct = array('ID', 'NAME', 'SOCR', 'POSTINDEX', 'ID_DISTRICT', 'CODE');
+						$posCName = strpos($cName, "-");
+						if($posCName !== FALSE)
+							$cName = trim(substr($cName, 0, $posCName));
 						$rsCity = CAltasibGeoBase::GetCityByNameReg($cName, $arSlct, $arRegion["CODE"], false, false);
 						$arCity = $rsCity->Fetch();
-						if(!$arCity)
-						{
-							$posCName = strpos($cName, "-");
-							if($posCName !== FALSE)
-								$cName = trim(substr($cName, 0, $posCName));
-							$rsCity = CAltasibGeoBase::GetCityByNameReg($cName, $arSlct, $arRegion["CODE"], false, false);
-							$arCity = $rsCity->Fetch();
-						}
-						if(!$arCity)
-						{
-							$posComa = strpos($cName, ".");
-							if($posComa !== FALSE)
-								$cName = trim(substr($cName, $posComa+1));
-							$rsCity = CAltasibGeoBase::GetCityByNameReg($cName, $arSlct, $arRegion["CODE"], false, false);
-							$arCity = $rsCity->Fetch();
-						}
-						if($arCity)
-						{
-							$arInfo["CITY"] = array(
-								"ID" => $arCity["ID"],
-								"NAME" => $arCity["NAME"],
-								"SOCR" => $arCity["SOCR"],
-								"POSTINDEX" => $arCity["POSTINDEX"],
-								"ID_DISTRICT" => $arCity["ID_DISTRICT"]
-							);
-							$arInfo["CODE"] = $arCity["CODE"];
+					}
+					if(!$arCity)
+					{
+						$posComa = strpos($cName, ".");
+						if($posComa !== FALSE)
+							$cName = trim(substr($cName, $posComa+1));
+						$rsCity = CAltasibGeoBase::GetCityByNameReg($cName, $arSlct, $arRegion["CODE"], false, false);
+						$arCity = $rsCity->Fetch();
+					}
+					if($arCity)
+					{
+						$arInfo["CITY"] = array(
+							"ID" => $arCity["ID"],
+							"NAME" => $arCity["NAME"],
+							"SOCR" => $arCity["SOCR"],
+							"POSTINDEX" => $arCity["POSTINDEX"],
+							"ID_DISTRICT" => $arCity["ID_DISTRICT"]
+						);
+						$arInfo["CODE"] = $arCity["CODE"];
 
+						if(!empty($arCity["ID_DISTRICT"])){
 							$rsDistr = CAltasibGeoBase::GetDistrictByName($arCity["ID_DISTRICT"],
 								array('NAME', 'SOCR', 'CODE'), false, false);
 							if($arDistr = $rsDistr->Fetch())
@@ -2814,7 +2830,7 @@ Class CAltasibGeoBaseAllSelected extends CAltasibGeoBase
 		if(COption::GetOptionString(self::MID, "set_sql", "Y") == "Y")
 			$DB->Query("SET SQL_BIG_SELECTS=1");
 		$strSql = 'SELECT t1.ID, t1.ACTIVE, t1.SORT, t1.NAME AS C_NAME, t1.NAME_EN AS C_NAME_EN, t1.CODE AS C_CODE, t1.ID_DISTRICT, t1.SOCR AS C_SOCR,
-			t2.FULL_NAME AS R_FNAME, t2.NAME AS R_NAME, t3.NAME AS D_NAME, t3.SOCR AS D_SOCR, t1.COUNTRY_CODE AS CTR_CODE, '
+			t2.FULL_NAME AS R_FNAME, t2.NAME AS R_NAME, t2.SOCR AS R_SOCR, t3.NAME AS D_NAME, t3.SOCR AS D_SOCR, t1.COUNTRY_CODE AS CTR_CODE, '
 			.($mm_exsts ? ' t4.name_ru AS CTR_NAME_RU,' : ''). ' t1.ID_REGION AS R_ID
 			FROM altasib_geobase_selected AS t1
 			LEFT JOIN altasib_geobase_kladr_districts AS t3

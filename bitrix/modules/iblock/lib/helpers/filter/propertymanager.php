@@ -216,55 +216,106 @@ class PropertyManager
 		}
 	}
 
+	/**
+	 * @param string $filterId
+	 * @param array $filter
+	 * @return void
+	 */
 	public function AddFilter($filterId, array &$filter)
 	{
-		$listProperty = $this->getListProperty();
-		if (!empty($listProperty))
+		if (empty($filter))
 		{
-			$filterKeys = (!empty($filter) ? array_fill_keys(array_keys($filter), true) : []);
-			foreach ($listProperty as $property)
-			{
-				if (isset($property["PROPERTY_USER_TYPE"]["AddFilterFields"]))
-				{
-					$filtered = false;
-					call_user_func_array($property["PROPERTY_USER_TYPE"]["AddFilterFields"], array(
-						$property,
-						array("VALUE" => $property["FIELD_ID"], "FILTER_ID" => $filterId),
-						&$filter,
-						&$filtered,
-					));
-				}
-				else
-				{
-					if (isset($filterKeys[$property["FIELD_ID"]]))
-					{
-						if ($filter[$property["FIELD_ID"]] === "NOT_REF")
-						{
-							unset($filter[$property["FIELD_ID"]]);
-							$filter["?".$property["FIELD_ID"]] = false;
-						}
-					}
-				}
-			}
-			unset($filterKeys);
+			return;
+		}
 
-			foreach($this->getFilterFields() as $filterField)
+		$listProperty = $this->getListProperty();
+		if (empty($listProperty))
+		{
+			return;
+		}
+
+		$filterFields = [];
+		foreach($this->getFilterFields() as $row)
+		{
+			$filterFields[$row['id']] = $row;
+		}
+
+		foreach (array_keys($filter) as $index)
+		{
+			if (!isset($listProperty[$index]))
 			{
-				if (isset($filterField["customFilter"]))
-				{
-					$filtered = false;
-					call_user_func_array($filterField["customFilter"], array(
-						$filterField["property"],
-						array(
-							"VALUE" => $filterField["id"],
+				continue;
+			}
+			if (isset($filterFields[$index]['customFilter']))
+			{
+				$row = $filterFields[$index];
+				$filtered = false;
+				call_user_func_array(
+					$row['customFilter'],
+					[
+						$row['property'],
+						[
+							"VALUE" => $row["id"],
 							"FILTER_ID" => $filterId,
-						),
+						],
 						&$filter,
-						&$filtered,
-					));
+						&$filtered
+					]
+				);
+				unset($filtered);
+				unset($row);
+			}
+			elseif (isset($listProperty[$index]['PROPERTY_USER_TYPE']['AddFilterFields']))
+			{
+				$filtered = false;
+				$row = $listProperty[$index];
+				call_user_func_array($row['PROPERTY_USER_TYPE']['AddFilterFields'], array(
+					$row,
+					array('VALUE' => $row['FIELD_ID'], 'FILTER_ID' => $filterId),
+					&$filter,
+					&$filtered,
+				));
+				unset($filtered);
+				unset($row);
+			}
+			else
+			{
+				switch ($listProperty[$index]['PROPERTY_TYPE'])
+				{
+					case Iblock\PropertyTable::TYPE_STRING:
+						$filter['?'.$index] = $filter[$index];
+						unset($filter[$index]);
+						break;
+					case Iblock\PropertyTable::TYPE_NUMBER:
+						$filter['='.$index] = $filter[$index];
+						unset($filter[$index]);
+						break;
+					case Iblock\PropertyTable::TYPE_LIST:
+					case Iblock\PropertyTable::TYPE_ELEMENT:
+					case IBlock\PropertyTable::TYPE_SECTION:
+						if (is_array($filter[$index]))
+						{
+							$newValues = [];
+							foreach ($filter[$index] as $value)
+							{
+								$newValues[] = ($value === 'NOT_REF' ? false : $value);
+							}
+							unset($filter[$index]);
+							if (!empty($newValues))
+								$filter['='.$index] = $newValues;
+						}
+						else
+						{
+							if ($filter[$index] === 'NOT_REF')
+								$filter[$index] = false;
+							$filter['='.$index] = $filter[$index];
+							unset($filter[$index]);
+						}
+						break;
 				}
 			}
 		}
+		unset($filterFields);
 		unset($listProperty);
 	}
 
@@ -288,7 +339,7 @@ class PropertyManager
 				unset($property['USER_TYPE_SETTINGS_LIST']);
 				$property['PROPERTY_USER_TYPE'] = (!empty($property['USER_TYPE']) ?
 					\CIBlockProperty::GetUserType($property['USER_TYPE']) : []);
-				$this->listProperty[$property['ID']] = $property;
+				$this->listProperty[$property['FIELD_ID']] = $property;
 			}
 			unset($property, $iterator);
 		}

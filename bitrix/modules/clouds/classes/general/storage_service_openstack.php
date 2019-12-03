@@ -696,6 +696,8 @@ class CCloudStorageService_OpenStackStorage extends CCloudStorageService
 
 		if(is_object($obRequest) && $this->status == 201)
 		{
+			$fileSource = CCloudUtil::URLEncode("/".$arBucket["BUCKET"].$NS["fileTemp"], "UTF-8");
+
 			$obRequest = $this->SendRequest(
 				$arBucket["SETTINGS"],
 				"PUT",
@@ -705,7 +707,7 @@ class CCloudStorageService_OpenStackStorage extends CCloudStorageService
 				false,
 				array(
 					"Content-Type" => $NS["Content-Type"],
-					"X-Copy-From" => "/".$arBucket["BUCKET"].$filePath,
+					"X-Copy-From" => $fileSource,
 				)
 			);
 

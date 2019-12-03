@@ -16,6 +16,9 @@ class sberbank_ecom extends CModule
 
     function __construct() {
 
+        require(realpath(dirname(dirname(__FILE__))) . "/config.php");
+
+        global $mess;
 
         $path = realpath(dirname(dirname(__FILE__)));
         require($path . "/config.php");
@@ -81,15 +84,12 @@ class sberbank_ecom extends CModule
     function DoUninstall()
     {
         COption::SetOptionInt($this->MODULE_ID, "delete", true);
-        UnRegisterModule($this->MODULE_ID);
-        $this->UnInstallFiles();
-    }
-
-
-    function UnInstallFiles()
-    {
         DeleteDirFilesEx("/bitrix/php_interface/include/sale_payment/payment");
         DeleteDirFilesEx("/sale/payment/");
         DeleteDirFilesEx($this->MODULE_ID);
+
+        UnRegisterModule($this->MODULE_ID);
+        return true;
     }
+
 }
