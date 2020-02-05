@@ -24,7 +24,7 @@ $message = '
         <title>Бесплатная проверка зрения - '.$sitename.'</title>
     </head>
     <body>
-        <p>День: '.$day.' <br> Месяц: '.$mes.' <br> Год: '.$god.' <br> Время: '.$time.' <br> Имя: '.$name.' <br> Телефон: '.$phone.' <br> Адрес: '.$contact.'</p>
+        <p>День: '.$day.' <br> Месяц: '.$mes.' <br> Год: '.$god.' <br> Время: '.$time.' <br> Имя: '.$name.' <br> Телефон: '.$phone.' <br> Адрес: '.$contact.'<br> Регион: '.$region.'<br> Магазин: '.$shop.'</p>
     </body>
 </html>';
 $headers  = 'MIME-Version: 1.0' . "\r\n";
