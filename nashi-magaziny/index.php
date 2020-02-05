@@ -12,7 +12,7 @@ $application = Application::getInstance();
 $context = $application->getContext();
 $request = $context->getRequest();
 
-Asset::getInstance()->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+Asset::getInstance()->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f2640983-d6a7-4d20-9240-1688a548c07e');
 
 $regions = Regionality::getAllRegions();
 
@@ -136,113 +136,168 @@ $cities = array(REGION_ID => $cities[REGION_ID]) + $cities; // перемеще�
 
             <!--карта-->
             <div class="col-md-8 col-sm-12 shops-map">
-                <div class="shops-map--wrapper" id="map"></div>
+                <div class="shops-map--wrapper" id="js-contact-map"></div>
             </div>
 
 		</div>
 	</div>
 </div>
 
+<?php
+
+$points = array();
+foreach ($shops as $shop) {
+    $points[] = array(
+        'lat' => $shop['lat'],
+        'lon' => $shop['lon']
+    );
+}
+
+//dump($points);
+
+?>
+
 <script>
+    ymaps.ready(function () {
+        var coords,
+            myMap,
+            points = [
+                <? foreach ($points as $point): ?>
+                [<?= $point['lat'] ?>, <?= $point['lon'] ?>],
+                <? endforeach; ?>
+            ];
+        geoObjects = [];
+        geoObjects__search = [];
 
-    var contactsMaps = {
-
-        cityId: 0,
-        placemarkList: {},
-        placemarkCollection: null,
-        map: null,
-
-        shopList: [
-            <? reset($cities); foreach ($cities as $city_id => $city): ?>
-            {
-                'city_name': '<?= $city ?>',
-                'shops': [
-                    <? reset($shops); foreach ($shops as $shop): ?>
-                    <? if ($shop['city_id'] === $city_id): ?>
-                    {
-                        'coordinates': [<?= $shop['lat'] ?>, <?= $shop['lon'] ?>],
-                        'name': '<?= $shop['address'] ?>',
-                    },
-                    <? endif; ?>
-                    <? endforeach; ?>
-                ],
-            },
-            <? endforeach; ?>
-        ],
-
-        bindEvents: function () {
-            $(document)
-
-            // Переключение города
-                .on('click', '.city-dropdown', function() {
-                    var cityId = $(this).data('city-id');
-                    contactsMaps.showShopListFromCity(cityId);
-                    contactsMaps.placemarkList[cityId][0].events.fire('click');
-                })
-
-                // Клик на адресе
-                .on('click', '.show-on-map', function() {
-                    var cityId = $(this).data('city-id');
-                    var shopId = $(this).data('shop-id');
-                    contactsMaps.placemarkList[cityId][shopId].events.fire('click');
-                })
-
-                // Кастомный скроллбар
-                .ready(function () {
-                    $('.shops-citites').mCustomScrollbar({
-                        axis: 'y',
-                        theme: 'minimal-dark',
-                        scrollInertia: 160
-                    });
-                });
-
-        },
-
-        /**
-         * Вывод меток магазинов из указанного города на карте.
-         *
-         * @param cityId
-         */
-        showShopListFromCity: function (cityId) {
-            contactsMaps.placemarkCollection.removeAll();
-            for (var c in contactsMaps.shopList) {
-                if (contactsMaps.placemarkList[cityId] === undefined) contactsMaps.placemarkList[cityId] = {};
-
-                if (contactsMaps.shopList[cityId] === undefined) {
-                    contactsMaps.placemarkList[cityId][c] = new ymaps.Placemark(
-                        contactsMaps.shopList[cityId].shops[c].coordinates,
-                        {
-                            hintContent: contactsMaps.shopList[cityId].shops[c].name,
-                            balloonContent: contactsMaps.shopList[cityId].shops[c].name
-                        }
-                    );
-                    contactsMaps.placemarkCollection.add(contactsMaps.placemarkList[cityId][c]);
-                }
-
-            }
-            contactsMaps.map.geoObjects.add(contactsMaps.placemarkCollection);
-            contactsMaps.map.setBounds(contactsMaps.placemarkCollection.getBounds(), {checkZoomRange: true});
-        },
-
-        init: function () {
-            contactsMaps.bindEvents();
-
-            contactsMaps.map = new ymaps.Map('map', {
-                center: [5.0288429539558, 38.97288419679491], // координаты центра карты, при загрузке
-                zoom: 15,
-                controls: [
-                    'zoomControl'
-                ]
+        ymaps.geocode('<?= $cities[REGION_ID]['NAME'] ?>', {results: 1}).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0);
+            coords = firstGeoObject.geometry.getCoordinates();
+            myMap = new ymaps.Map('js-contact-map', {
+                center: coords,
+                zoom: 9,
+                behaviors: ['default', 'scrollZoom']
+            }, {
+                searchControlProvider: 'yandex#search'
             });
 
-            contactsMaps.placemarkCollection = new ymaps.GeoObjectCollection();
-            contactsMaps.showShopListFromCity(0);
-            contactsMaps.placemarkList[contactsMaps.cityId][0].events.fire('click');
-        },
+            myMap.behaviors.disable('scrollZoom');
 
-    };
+            /**
+             * Данные передаются вторым параметром в конструктор метки, опции - третьим.
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark.xml#constructor-summary
+             */
+            for (var i = 0, len = points.length; i < len; i++) {
+                geoObjects[i] = new ymaps.Placemark(points[i], getPointData(infoClients[i]), getPointOptions());
+                geoObjects__search[infoClients[i].id_city] = i;
 
-    ymaps.ready(contactsMaps.init);
+            }
+
+            /**
+             * Можно менять опции кластеризатора после создания.
+             */
+            clusterer.options.set({
+                minClusterSize: 2,
+                gridSize: 80,
+                clusterDisableClickZoom: false
+            });
+
+            /**
+             * В кластеризатор можно добавить javascript-массив меток (не геоколлекцию) или одну метку.
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Clusterer.xml#add
+             */
+            clusterer.add(geoObjects);
+            myMap.geoObjects.add(clusterer);
+
+            /**
+             * Спозиционируем карту так, чтобы на ней были видны все объекты.
+             */
+
+            myMap.setBounds(clusterer.getBounds(), {
+                checkZoomRange: true
+            });
+
+        });
+
+        /**
+         * Создадим кластеризатор, вызвав функцию-конструктор.
+         * Список всех опций доступен в документации.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Clusterer.xml#constructor-summary
+         */
+        clusterer = new ymaps.Clusterer({
+            /**
+             * Через кластеризатор можно указать только стили кластеров,
+             * стили для меток нужно назначать каждой метке отдельно.
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/option.presetStorage.xml
+             */
+            preset: 'islands#blueClusterIcons',
+            clusterIcons: [
+                {
+                    href: '<?= SITE_TEMPLATE_PATH ?>/images/map-cluster.png',
+                    size: [40, 40],
+                    offset: [-20, -20]
+                }],
+            //clusterIconContentLayout: null,
+            /**
+             * Ставим true, если хотим кластеризовать только точки с одинаковыми координатами.
+             */
+            groupByCoordinates: false,
+            /**
+             * Опции кластеров указываем в кластеризаторе с префиксом "cluster".
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ClusterPlacemark.xml
+             */
+            clusterDisableClickZoom: true,
+            clusterHideIconOnBalloonOpen: false,
+            geoObjectHideIconOnBalloonOpen: false
+        });
+
+        /**
+         * Функция возвращает объект, содержащий данные метки.
+         * Поле данных clusterCaption будет отображено в списке геообъектов в балуне кластера.
+         * Поле balloonContentBody - источник данных для контента балуна.
+         * Оба поля поддерживают HTML-разметку.
+         * Список полей данных, которые используют стандартные макеты содержимого иконки метки
+         * и балуна геообъектов, можно посмотреть в документации.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/GeoObject.xml
+         */
+        getPointData = function (infoClient) {
+            return {
+                balloonContentHeader: '<font size=3><b>г. ' + infoClient.city.name + '</b></font>',
+                balloonContentBody: '<p>' + infoClient.name + '</p>',
+                balloonContentFooter: '<div class="span-block"><a href="tel:' + infoClient.phone + '">' + infoClient.phone + '</a><br>' + infoClient.worktime + '</div>',
+            };
+        };
+
+        /**
+         * Функция возвращает объект, содержащий опции метки.
+         * Все опции, которые поддерживают геообъекты, можно посмотреть в документации.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/GeoObject.xml
+         */
+        getPointOptions = function () {
+            return {
+                preset: 'islands#darkBlueClusterIcons',
+                iconLayout: 'default#image',
+                iconImageHref: '<?= SITE_TEMPLATE_PATH ?>/images/placemark-icon.png',
+                iconImageSize: [23, 31]
+            };
+        };
+
+        infoClients = [
+            <? foreach($shops as $shop): ?>
+            {
+                name: '<?= $shop['address'] ?>',
+                phone: '<?= $shop['phones'][0] ?>',
+                city: {
+                    id: <?= $cities[$shop['city_id']]['ID'] ?>,
+                    name: '<?= $cities[$shop['city_id']]['NAME'] ?>'
+                },
+                worktime: '<?= $shop['worktime'] ?>',
+            },
+            <? endforeach; ?>
+        ];
+
+    });
+
+    $(document).on('click', '.js')
 
 </script>
 
