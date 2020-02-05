@@ -10,23 +10,23 @@ $APPLICATION->SetTitle("Kalinza в лицах");
 
 <div class="col-12 turrr">
 
-<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/1.jpeg">
-<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/izh/1.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/izh1.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/izh1.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/1.jpeg">
-<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/1.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/stav1.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/stav1.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/4.jpeg">
-<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/4.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/stav2.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/stav2.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/14.jpeg">
-<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/14.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/stav3.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/stav3.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/zhelez/6.jpeg">
-<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/zhelez/6.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/kras1.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/kras1.jpeg" width="50%">
 </a>
-<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/12.jpeg">
-<img src="<?= SITE_DIR . 'include/images/' ?>kalinza_photo/stav/12.jpeg" width="50%">
+<a data-fancybox="gallery" href="<?= SITE_DIR . 'include/images/' ?>lica/kras2.jpeg">
+<img src="<?= SITE_DIR . 'include/images/' ?>lica/kras2.jpeg" width="50%">
 </a>
 
 
