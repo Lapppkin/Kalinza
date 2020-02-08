@@ -9,7 +9,7 @@
                         <h4>Цветные линзы</h4>
                     </div>
                 </a>
-                <a class="offers-catalog--item" href="/catalog/ochki/">
+                <a class="offers-catalog--item" href="/catalog/">
                     <div class="offers-catalog--item--image">
                         <img src="<?= SITE_DIR . 'include/images/child.jpg' ?>" alt="Оправы"></div>
                     <div class="offers-catalog--item--text align-right">
