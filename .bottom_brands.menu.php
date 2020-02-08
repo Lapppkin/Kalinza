@@ -1,13 +1,6 @@
 <?php
 $aMenuLinks = Array(
 	Array(
-		"Adria",
-		"/catalog/adria/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
 		"Baush&Lomb",
 		"/catalog/baush_lomb/",
 		Array(),

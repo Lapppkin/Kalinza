@@ -54,7 +54,7 @@ use core\Helper;
 <div class="header--topbar--right">
 
     <div class="header--topbar--favorites">
-        <a href="/favorites">
+        <a href="/favorites/">
             <?= Helper::renderIcon('heart') ?>
             <div class="header--topbar--favorites-counter">0</div>
         </a>

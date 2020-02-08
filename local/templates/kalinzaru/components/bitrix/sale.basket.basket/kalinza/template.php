@@ -184,3 +184,21 @@ $displayModeClass = $arParams['DISPLAY_MODE'] === 'compact' ? ' basket-items-lis
     <p style="font-size:1.1em;">Добавьте товары в корзину и подарок появится в списке.</p>
 <?
 }
+
+$arBasketJSParams = array(
+    'SALE_DELETE' => GetMessage("SALE_DELETE"),
+    'SALE_DELAY' => GetMessage("SALE_DELAY"),
+    'SALE_TYPE' => GetMessage("SALE_TYPE"),
+    'TEMPLATE_FOLDER' => $templateFolder,
+    'DELETE_URL' => $arUrls["delete"],
+    'DELAY_URL' => $arUrls["delay"],
+    'ADD_URL' => $arUrls["add"],
+    'EVENT_ONCHANGE_ON_START' => (!empty($arResult['EVENT_ONCHANGE_ON_START']) && $arResult['EVENT_ONCHANGE_ON_START'] === 'Y') ? 'Y' : 'N',
+    'USE_ENHANCED_ECOMMERCE' => $arParams['USE_ENHANCED_ECOMMERCE'],
+    'DATA_LAYER_NAME' => $arParams['DATA_LAYER_NAME'],
+    'BRAND_PROPERTY' => $arParams['BRAND_PROPERTY']
+);
+?>
+<script>
+    var basketJSParams = <?=CUtil::PhpToJSObject($arBasketJSParams);?>;
+</script>

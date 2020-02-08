@@ -21,7 +21,7 @@
 
             <?if ($arItem["PERMISSION"] > "D"):?>
                     <li>
-                            <? if ($arItem['LINK'] == '/informаciya/'): ?>
+                            <? if ($arItem['LINK'] == '/informaciya/'): ?>
                                 <a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
                                 <? $APPLICATION->IncludeComponent(
                                     "bitrix:menu",

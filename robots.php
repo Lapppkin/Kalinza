@@ -1,3 +1,15 @@
+<?php
+
+use Bitrix\Main\Loader;
+require_once ($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
+
+//if (!Loader::includeModule("sotbit.regions")) return false;
+
+//$domain = new \Sotbit\Regions\Location\Domain();
+//$domainCode = $domain->getProp("CODE");
+$domainCode = $_SERVER['SERVER_NAME'];
+?>
+
 User-Agent: *
 Disallow: /
 
@@ -83,4 +95,7 @@ Disallow: /*print_course=Y
 Disallow: /*COURSE_ID=
 Disallow: /*SHOWALL
 Disallow: /*show_all=
-Sitemap: https://kalinza.ru/sitemap.xml
+
+Host: <?= $domainCode ?>
+
+Sitemap: https://<?= $domainCode ?>/sitemap.xml

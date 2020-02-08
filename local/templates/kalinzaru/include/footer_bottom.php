@@ -56,7 +56,7 @@ use core\Helper;
                 </div>
                 <div class="footer--bottom--prices-info">Цены на сайте и в салонах оптики могут отличаться.</div>
                 <div class="footer--bottom--copyrights-policy">
-                    <a href="/privacy">Политика конфиденциальности</a>
+                    <a href="/privacy/">Политика конфиденциальности</a>
                 </div>
                 <div class="footer--bottom--copyrights-developer">
                     <a href="https://msk.lapkinlab.ru" target="_blank">Разработано

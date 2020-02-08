@@ -1288,7 +1288,7 @@ function deleteProductRow(target)
 
 	setAnalyticsDataLayer([], [delItem]);
 
-	document.location.href = target.href;
+	//document.location.href = target.href;
 	//document.location.href = "https://kalinza.ru/personal/cart/";
 	//alert("!");
 

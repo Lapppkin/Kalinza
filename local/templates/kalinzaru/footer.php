@@ -33,7 +33,7 @@ use Bitrix\Main\Application;
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap.bundle.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/owl.carousel.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.fancybox.min.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.inputmask.bundle.min.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.inputmask.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.malihu.PageScroll2id.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery.mCustomScrollbar.min.js');
 

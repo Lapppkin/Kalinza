@@ -141,7 +141,7 @@ use core\Helper;
 
             <div class="mobile-menu--catalog--favorites header--topbar--favorites">
                 Избранное &nbsp;
-                <a href="/favorites">
+                <a href="/favorites/">
                     <?= Helper::renderIcon('heart') ?>
                     <div class="header--topbar--favorites-counter">0</div>
                 </a>

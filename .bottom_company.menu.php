@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"О нас",
-		"/company/o-nas",
+		"/company/o-nas/",
 		Array(),
 		Array(),
 		""

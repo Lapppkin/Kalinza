@@ -340,7 +340,7 @@ $_SESSION['arElementResult'] = $arResult;
             if ($('#same-eyes').is(':checked')) {
 
                 $('#product-quantity').val(1);
-                $('#ckeeeeee').val(0);
+                $('#ckeeeeee').val(1);
 
                 props.forEach(function (item) {
                     $('#' + item).attr('disabled', true);
@@ -348,8 +348,8 @@ $_SESSION['arElementResult'] = $arResult;
 
             } else {
 
-                $('#product-quantity').val(1);
-                $('#ckeeeeee').val(1);
+                $('#product-quantity').val(2);
+                $('#ckeeeeee').val(2);
 
                 props.forEach(function (item) {
                     $('#' + item).removeAttr('disabled');
