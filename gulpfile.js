@@ -54,7 +54,7 @@ var path = {
             cookie: 'node_modules/jquery.cookie/jquery.cookie.js',
             fancybox: 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             ncsColor: sourcesPath + 'js/vendor/w3color.js',
-            inputmask: 'node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js',
+            inputmask: 'node_modules/inputmask/dist/jquery.inputmask.min.js',
             pageScrollToId: 'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
             blazy: 'node_modules/blazy/blazy.min.js'
         },
@@ -118,9 +118,9 @@ function imageSvgBuild() {
 // sprites (PNG)
 function spriteBuild() {
 
-    gulp.src(path.src.svg).
+    //gulp.src(path.src.svg).
         //pipe(svg2png()).
-        pipe(gulp.dest(path.src.sprite));
+        //pipe(gulp.dest(path.src.sprite));
 
     var spriteData =
         gulp.src(path.src.sprite).
