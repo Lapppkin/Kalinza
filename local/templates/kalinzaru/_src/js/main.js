@@ -51,13 +51,13 @@
         /**
          * Phone mask on input text field.
          *
-         * @param _this
+         * @param el
          */
-        phoneMask: function (_this) {
-            if ($.fn.inputmask) {
-                _this.inputmask({
-                    mask: '+7 999 999-99-99',
-                    placeholder: '*'
+        phoneMask: function (el) {
+            if ($.fn.inputmask && window.innerWidth > 1024) {
+                el.inputmask({
+                    mask: '+(7|8) 999 999-99-99',
+                    placeholder: '_'
                 });
             }
         },
@@ -65,31 +65,31 @@
         /**
          * Email mask for input text field.
          *
-         * @param _this
+         * @param el
          */
-        emailMask: function (_this) {
+        emailMask: function (el) {
             if ($.fn.inputmask) {
-                new Inputmask('email').mask(_this);
+                new Inputmask('email').mask(el);
             }
         },
 
         /**
          * Post index mask on input text field.
          *
-         * @param ths
+         * @param el
          */
-        indexMask: function (_this) {
+        indexMask: function (el) {
             if ($.fn.inputmask) {
-                _this.inputmask({
+                el.inputmask({
                     mask: '999999',
                     placeholder: '_'
                 })
             }
         },
 
-        innMask: function (_this) {
+        innMask: function (el) {
             if ($.fn.inputmask) {
-                _this.inputmask({
+                el.inputmask({
                     mask: '9999999999[99]',
                     placeholder: '_'
                 })
@@ -280,7 +280,7 @@
 
     // После завершения
     $(document).ajaxComplete(function () {
-        kalinza.masks();
+        //kalinza.masks();
     });
 
     // При прокрутке

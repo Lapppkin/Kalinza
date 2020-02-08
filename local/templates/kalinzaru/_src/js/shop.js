@@ -12,7 +12,7 @@ var shop = {
 
         // Quantity
         $(document).on('click', '.quan', function () {
-            let step = 1; //$('input#same-eyes') === 'undefined' ? 1 : $('input#same-eyes').is(':checked') ? 2 : 1;
+            let step = $('input#same-eyes') === 'undefined' ? 2 : $('input#same-eyes').is(':checked') ? 1 : 2;
             let input = $(this).siblings('input');
             let value = parseInt(input.val());
             if ($(this).hasClass('quan-plus')) {
@@ -32,6 +32,18 @@ var shop = {
             input.val(value);
             $(this).closest('.catalog-element-wrapper').find('.catalog-element-addtocart input').attr('data-quantity', value);
         });
+
+        /*
+        $(document).on('click', '.basket-item-amount-btn-plus', function (e) {
+            e.preventDefault();
+            var propertyItems = $(this).closest('.basket-items-list-item-container').find('.basket-items-list-item-descriptions .basket-item-block-info .basket-item-block-properties .basket-item-property').length;
+            if (propertyItems > 1 && propertyItems % 2 === 0) {
+                var value = parseInt($(this).siblings('.basket-item-amount-filed-block').find('input.basket-item-amount-filed').val());
+                $(this).siblings('.basket-item-amount-filed-block').find('input.basket-item-amount-filed').val(value + 1);
+                $(this).siblings('.basket-item-amount-filed-block').find('input.basket-item-amount-filed').data('value', value + 1);
+            }
+        });
+        */
 
         // Add to cart
         $(document).on('click', '[name="catalog-element-addtocart"]', function (e) {
