@@ -256,7 +256,7 @@ use core\Helper;
                             if ($actualItem['CAN_BUY']) {
                                 ?>
                                 <div class="product-item-button-container" id="<?= $itemIds['BASKET_ACTIONS'] ?>">
-                                    <button class="btn" onclick="openPreviewModal(<?= $item['ID'] ?>);">
+                                    <button class="btn js-open-preview-modal" id="open-preview-modal-<?= $item['ID'] ?>" onclick="openPreviewModal(<?= $item['ID'] ?>);">
                                         <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
                                     </button>
                                 </div>

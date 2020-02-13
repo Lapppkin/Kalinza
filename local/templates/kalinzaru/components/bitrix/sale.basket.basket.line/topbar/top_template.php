@@ -45,7 +45,7 @@ $compositeStub = (isset($arResult['COMPOSITE_STUB']) && $arResult['COMPOSITE_STU
 				$currentUrl = '#CURRENT_URL#';
 			} ?>
 			<?= Helper::renderIcon('user') ?>
-			<a class="button_modal" data-toggle="modal" data-target="#modal--auth" href="#">
+			<a class="button_modal js-button-auth" id="js-button-auth" data-toggle="modal" data-target="#modal--auth" href="#">
 				<?=GetMessage('TSB1_LOGIN')?>
 			</a>
 			<? if ($arParams['SHOW_REGISTRATION'] === 'N') {?>

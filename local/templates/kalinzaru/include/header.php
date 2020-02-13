@@ -52,7 +52,7 @@ use core\Helper;
         <?php $APPLICATION->IncludeFile('/include/company_phone.php'); ?>
     </div>
     <div class="header--header--contacts-callback">
-        <a href="#" data-toggle="modal" data-target="#modal--callback">Заказать звонок</a>
+        <a href="#" data-toggle="modal" data-target="#modal--callback" class="js-button-callback" id="js-button-callback">Заказать звонок</a>
     </div>
     <div class="header--header--contacts-messengers">
         <? $APPLICATION->IncludeFile('/include/messenger_icons_short.php') ?>

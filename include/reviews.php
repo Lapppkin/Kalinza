@@ -35,6 +35,7 @@
     ?>
     <div class="catalog-element-reviews--add-button">
         <button class="js-add-review btn"
+            id="add-review-button-<?= $PRODUCT_ID ?>"
             data-id="<?= $PRODUCT_ID ?>"
             backurl="<?= $APPLICATION->GetCurPage() ?>">Оставить отзыв</button>
     </div>

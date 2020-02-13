@@ -211,7 +211,8 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
 
             <!--добавить в корзину-->
             <div class="catalog-element-addtocart">
-                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart"
+                <input type="submit" class="btn btn-primary bx_big bx_bt_button bx_cart js-catalog-element-addtocart"
+                    id="js-catalog-element-addtocart"
                     value="Добавить в корзину"
                     form="select-properties"
                     name="catalog-element-addtocart"
